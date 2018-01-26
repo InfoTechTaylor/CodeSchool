@@ -37,7 +37,10 @@ public class MiniZork {
                 }
 
             } else if (action.equals("stick your hand in")){
-                
+                System.out.println("You get bitten by a grue.");
+                System.out.println("Go to the house or walk away? ");
+
+
             }
         } else if (action.equals("go to the house")){}
     } // end main
