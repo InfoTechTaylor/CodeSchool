@@ -11,7 +11,7 @@ public class HighRoller {
         System.out.println("How many sides does the dice have? ");
         String numSidesString = scanner.nextLine();
         int numSides = Integer.parseInt(numSidesString);
-        numSides++;
+        //numSides++;
 
         int rollResult = diceRoller.nextInt(numSides) + 1;
 
