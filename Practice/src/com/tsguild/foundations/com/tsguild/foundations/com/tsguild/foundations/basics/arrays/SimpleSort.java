@@ -7,10 +7,39 @@ public class SimpleSort {
 
         int[] wholeNumbers = new int[24];
 
-        // Sorting code should go here!
-        for(int i=0; i <wholeNumbers.length; i++){
+        // combine arrays into one
+        int wholeNumbersIndex = 0;
+        for (int i = 0; i < firstHalf.length; i++) {
+            if (wholeNumbers[wholeNumbersIndex] == 0) {
+                wholeNumbers[wholeNumbersIndex] = firstHalf[i];
+                wholeNumbersIndex++;
+            }
+        }
+        for (int i = 0; i < secondHalf.length; i++) {
+            if (wholeNumbers[wholeNumbersIndex] == 0) {
+                wholeNumbers[wholeNumbersIndex] = secondHalf[i];
+                wholeNumbersIndex++;
+            }
+        }
 
-            //for(int)
+
+        // Sorting code should go here!
+        int temp;
+        for (int i = 1; i < wholeNumbers.length; i++) {
+
+            for (int j = 0; j < wholeNumbers.length - 1; j++) {
+                if (wholeNumbers[j] > wholeNumbers[j + 1]) {
+                    temp = wholeNumbers[j];
+                    wholeNumbers[j] = wholeNumbers[j + 1];
+                    wholeNumbers[j + 1] = temp;
+                }
+
+            }
+        }
+
+        System.out.println("Here ya go - all nice and ordered: " );
+        for(int i=0; i < wholeNumbers.length; i++){
+            System.out.print(wholeNumbers[i] + " ");
         }
     }
 }
