@@ -5,7 +5,7 @@ public class LovesMe {
         System.out.println("Well here goes nothing...");
 
         int petalCount = 1;
-        while(petalCount <= 34){ // I chose a while instead of a do while because I only want it to execute if there are petals. 
+        while(petalCount <= 34){ // I chose a while instead of a do while because I only want it to execute if there are petals.
             if(petalCount % 2 != 0){
                 System.out.println("It loves me NOT!");
             } else {
