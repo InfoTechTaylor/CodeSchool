@@ -50,4 +50,5 @@ public class DogGenetics {
         return randomInt;
     }
 
+
 } // end class

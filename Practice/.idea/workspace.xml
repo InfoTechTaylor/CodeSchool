@@ -39,16 +39,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LovesMe.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/LovesMe.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="19" column="9" lean-forward="false" selection-start-line="4" selection-start-column="8" selection-end-line="19" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MaybeItLovesMe.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/MaybeItLovesMe.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -106,18 +96,28 @@
       <file leaf-file-name="ForTimesFor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimesFor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="660">
+            <state relative-caret-position="1020">
               <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TheCount.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TheCount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TheCount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="676">
-              <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+            <state relative-caret-position="840">
+              <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TwoForsAndTenYearsAgo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TwoForsAndTenYearsAgo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
               <folding />
             </state>
           </provider>
@@ -140,7 +140,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/ABeginning.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/CommentingCode.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/ProjectGutenberg.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/AllTheMaths.java" />
@@ -191,6 +190,7 @@
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimes.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimesFor.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TheCount.java" />
+        <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TwoForsAndTenYearsAgo.java" />
       </list>
     </option>
   </component>
@@ -215,9 +215,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -322,6 +321,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -341,32 +341,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.TheCount">
+  <component name="RunManager" selected="Application.TwoForsAndTenYearsAgo">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
-    </configuration>
-    <configuration name="BewareTheKraken" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.BewareTheKraken" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="PracticeExercises" />
-      <envs />
     </configuration>
     <configuration name="ForTimes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
@@ -433,6 +414,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.fors.TheCount" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="PracticeExercises" />
+      <envs />
+    </configuration>
+    <configuration name="TwoForsAndTenYearsAgo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.fors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.fors.TwoForsAndTenYearsAgo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -531,19 +531,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
-      <item index="1" class="java.lang.String" itemvalue="Application.LazyTeenager" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ForTimes" />
-      <item index="3" class="java.lang.String" itemvalue="Application.ForTimesFor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.TheCount" />
+      <item index="0" class="java.lang.String" itemvalue="Application.LazyTeenager" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ForTimes" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ForTimesFor" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TheCount" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TwoForsAndTenYearsAgo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TheCount" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ForTimesFor" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ForTimes" />
-        <item index="3" class="java.lang.String" itemvalue="Application.LazyTeenager" />
-        <item index="4" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
+        <item index="0" class="java.lang.String" itemvalue="Application.TwoForsAndTenYearsAgo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TheCount" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ForTimesFor" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ForTimes" />
+        <item index="4" class="java.lang.String" itemvalue="Application.LazyTeenager" />
       </list>
     </recent_temporary>
   </component>
@@ -690,13 +690,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/ABeginning.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/luckysevens/LuckySevens.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -1079,7 +1072,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimesFor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="660">
+        <state relative-caret-position="1020">
           <caret line="34" column="17" lean-forward="false" selection-start-line="34" selection-start-column="17" selection-end-line="34" selection-end-column="17" />
           <folding />
         </state>
@@ -1087,8 +1080,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TheCount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="676">
-          <caret line="28" column="24" lean-forward="true" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+        <state relative-caret-position="840">
+          <caret line="28" column="24" lean-forward="false" selection-start-line="28" selection-start-column="24" selection-end-line="28" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/TwoForsAndTenYearsAgo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="11" column="44" lean-forward="false" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
           <folding />
         </state>
       </provider>
