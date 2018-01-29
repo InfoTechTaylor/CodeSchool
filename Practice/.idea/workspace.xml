@@ -17,16 +17,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="WaitAWhile.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/WaitAWhile.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="4" column="23" lean-forward="false" selection-start-line="4" selection-start-column="23" selection-end-line="4" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="StayPositive.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/StayPositive.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,11 +103,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LazyTeenager.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LazyTeenager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/LazyTeenager.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ForTimes.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimes.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="540">
+              <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -189,6 +189,7 @@
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/GuessMeFinally.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/BewareTheKraken.java" />
         <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/whiles/LazyTeenager.java" />
+        <option value="$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimes.java" />
       </list>
     </option>
   </component>
@@ -339,7 +340,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.LazyTeenager">
+  <component name="RunManager" selected="Application.ForTimes">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -355,6 +356,25 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.BewareTheKraken" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="PracticeExercises" />
+      <envs />
+    </configuration>
+    <configuration name="ForTimes" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.fors.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.fors.ForTimes" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -393,25 +413,6 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.LazyTeenager" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="PracticeExercises" />
-      <envs />
-    </configuration>
-    <configuration name="LovesMe" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.tsguild.foundations.com.tsguild.foundations.flowcontrol.whiles.LovesMe" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -529,19 +530,19 @@
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.LovesMe" />
-      <item index="1" class="java.lang.String" itemvalue="Application.MaybeItLovesMe" />
-      <item index="2" class="java.lang.String" itemvalue="Application.GuessMeFinally" />
-      <item index="3" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
-      <item index="4" class="java.lang.String" itemvalue="Application.LazyTeenager" />
+      <item index="0" class="java.lang.String" itemvalue="Application.MaybeItLovesMe" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GuessMeFinally" />
+      <item index="2" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
+      <item index="3" class="java.lang.String" itemvalue="Application.LazyTeenager" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ForTimes" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.LazyTeenager" />
-        <item index="1" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
-        <item index="2" class="java.lang.String" itemvalue="Application.GuessMeFinally" />
-        <item index="3" class="java.lang.String" itemvalue="Application.MaybeItLovesMe" />
-        <item index="4" class="java.lang.String" itemvalue="Application.LovesMe" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ForTimes" />
+        <item index="1" class="java.lang.String" itemvalue="Application.LazyTeenager" />
+        <item index="2" class="java.lang.String" itemvalue="Application.BewareTheKraken" />
+        <item index="3" class="java.lang.String" itemvalue="Application.GuessMeFinally" />
+        <item index="4" class="java.lang.String" itemvalue="Application.MaybeItLovesMe" />
       </list>
     </recent_temporary>
   </component>
@@ -572,7 +573,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44615385" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.44615385" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -582,7 +583,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3048951" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3048951" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -682,13 +683,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/CommentingCode.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
-          <caret line="21" column="56" lean-forward="false" selection-start-line="21" selection-start-column="56" selection-end-line="21" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/basics/core/ProjectGutenberg.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
@@ -879,16 +873,16 @@
         <state relative-caret-position="540">
           <caret line="18" column="22" lean-forward="false" selection-start-line="18" selection-start-column="22" selection-end-line="18" selection-end-column="22" />
           <folding>
-            <element signature="e#777#778#0" expanded="true" />
-            <element signature="e#802#803#0" expanded="true" />
-            <element signature="e#841#842#0" expanded="true" />
-            <element signature="e#868#869#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#929#930#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#997#998#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1082#1083#0" expanded="true" />
+            <element signature="e#777#778#0" expanded="false" />
+            <element signature="e#802#803#0" expanded="false" />
+            <element signature="e#841#842#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#929#930#0" expanded="false" />
+            <element signature="e#970#971#0" expanded="false" />
+            <element signature="e#997#998#0" expanded="false" />
+            <element signature="e#1038#1039#0" expanded="false" />
+            <element signature="e#1082#1083#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1080,6 +1074,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/tsguild/foundations/com/tsguild/foundations/flowcontrol/fors/ForTimes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="18" column="5" lean-forward="true" selection-start-line="18" selection-start-column="5" selection-end-line="18" selection-end-column="5" />
           <folding />
         </state>
       </provider>
