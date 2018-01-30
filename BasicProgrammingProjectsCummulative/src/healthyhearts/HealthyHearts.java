@@ -7,7 +7,8 @@ public class HealthyHearts {
         Scanner newReader = new Scanner(System.in);
 
         System.out.println("What is your age? ");
-        int age = newReader.nextInt();
+        String ageString = newReader.nextLine();
+        int age = Integer.parseInt(ageString);
 
         double maxHeartRate = 220 - age;
         double targetHeartRateMin = maxHeartRate * .5;
