@@ -13,7 +13,7 @@ public class HealthyHearts {
         double targetHeartRateMin = maxHeartRate * .5;
         double targetHeartRateMax = maxHeartRate * .85;
 
-        System.out.println("Your maximum heart rate should be " + maxHeartRate + " beats per minute");
-        System.out.println("Your target HR Zone is " + targetHeartRateMin + " - " + targetHeartRateMax + " beats per minute");
+        System.out.println("Your maximum heart rate should be " + Math.round(maxHeartRate) + " beats per minute");
+        System.out.println("Your target HR Zone is " + Math.round(targetHeartRateMin) + " - " + Math.round(targetHeartRateMax) + " beats per minute");
     }
 }
