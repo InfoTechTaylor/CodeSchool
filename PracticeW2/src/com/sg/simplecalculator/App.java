@@ -6,29 +6,28 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+//        Scanner sc = new Scanner(System.in);
+        UserIOConsoleImpl appIO = new UserIOConsoleImpl(); // instantiate userIO class object;
+
         boolean isChoiceExit = false;
         int userChoice;
         double operand1, operand2, result=0;
 
         do {
-            System.out.println("Select a calculator option: ");
-            System.out.println("1. Add numbers ");
-            System.out.println("2. Subtract numbers ");
-            System.out.println("3. Divide numbers ");
-            System.out.println("4. Multiple numbers ");
-            System.out.println("5. Exit \n");
-
             // get user's input
-            userChoice = Integer.parseInt(sc.nextLine());
+            userChoice = appIO.readInt("Select a calculator option: \n" +
+                                        "1. Add numbers \n" +
+                                        "2. Subtract numbers \n" +
+                                        "3. Divide numbers \n" +
+                                        "4. Multiple numbers \n" +
+                                        "5. Exit \n", 1, 5);
 
             if(userChoice == 5){
                 isChoiceExit = true;
             } else {
-                System.out.println("Enter a number: ");
-                operand1 = Double.parseDouble(sc.nextLine());
-                System.out.println("Enter the second number: ");
-                operand2 = Double.parseDouble(sc.nextLine());
+                operand1 = appIO.readDouble("Enter a number: ");
+                operand2 = appIO.readDouble("Enter the second number: ");
+
 
             // call appropriate SimpleCalculator method depending on user's choice
             switch(userChoice) {
@@ -46,7 +45,7 @@ public class App {
                     break;
             } // end switch
 
-            System.out.println("Result: " + result + "\n");
+            appIO.print("Result: " + result + "\n");
 
             } // end else
         } while(isChoiceExit==false);
