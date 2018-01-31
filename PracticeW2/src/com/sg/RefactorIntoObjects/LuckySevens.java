@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class LuckySevens {
 
-    public static void main(String[] args) {
+    public void runLuckySevens(){
         Scanner scanner = new Scanner(System.in);
 
         int dollarAmount, maxAmount, dice1, dice2, totalRollCount = 0, maxRollCount = 1;
@@ -56,8 +56,6 @@ public class LuckySevens {
                     dollarAmount --;
                 }
 
-
-
             } else {
                 // user loses, no more money to play
                 System.out.println("You are broke after " + totalRollCount + " rolls.");
@@ -65,6 +63,5 @@ public class LuckySevens {
                 break;
             }
         }
-
-    } // end main method
+    }
 }

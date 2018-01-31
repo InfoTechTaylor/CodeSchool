@@ -10,7 +10,7 @@ public class RockPaperScissors {
 
     static int userWins, computerWins;
 
-    public static void main(String[] args) {
+    public void playGame() {
         String roundsToPlayString, userChoiceString, computerChoiceString, playAgainString;
         int roundsToPlay, numTies=0, userChoice, computerChoice;
         boolean playAgain = true;
