@@ -13,6 +13,9 @@ public class StudentQuizGrades {
         // create HashMap to store students in. student name is key and ArrayList of integers is the value
         HashMap<String, ArrayList> studentQuizScores = new HashMap<>();
 
+        // define set to get keys
+        Set<String> keys = studentQuizScores.keySet();
+
         // statically populate studentQuizScores HashMap
         ArrayList<Integer> quizScoresTaylor = new ArrayList<>();
         quizScoresTaylor.add(90);
@@ -52,7 +55,7 @@ public class StudentQuizGrades {
                     case 1:
                         appIO.print("\n Students in our system: \n");
                         // get the set of keys from the map
-                        Set<String> keys = studentQuizScores.keySet();
+
                         for(String k: keys){
                             // output student's name to console
                             appIO.print(k);
@@ -64,6 +67,16 @@ public class StudentQuizGrades {
                         studentQuizScores.put(name, newStudentScores);
                         break;
                     case 3:
+                        name = appIO.readString("Provide the name of the student to remove: ");
+
+                        boolean nameExists = true;
+                        for(String k: keys) {
+                            if (name.equals(k)) {
+                                studentQuizScores.remove(name);
+                                appIO.print("Successfully removed " + name + " from the system.");
+
+                            }
+                        }
                         break;
                     case 4:
                         break;
