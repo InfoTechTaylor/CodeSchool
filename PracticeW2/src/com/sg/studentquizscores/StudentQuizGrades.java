@@ -79,8 +79,33 @@ public class StudentQuizGrades {
                         }
                         break;
                     case 4:
+                        name = appIO.readString("Provide the name of the student to get scores: ");
+
+                        for(String k: keys){
+                            if(k.equals(name)){
+                                ArrayList<Integer> scores = studentQuizScores.get(k);
+                                for(Integer s: scores){
+                                    appIO.print(Integer.toString(s));
+                                }
+                            }
+                        }
                         break;
                     case 5:
+                        name = appIO.readString("Provide the name of the student to get scores: ");
+                        int sum = 0;
+                        int numScores = 0;
+
+                        for(String k: keys){
+                            if(k.equals(name)){
+                                ArrayList<Integer> scores2 = studentQuizScores.get(k);
+                                numScores = scores2.size();
+                                for(Integer s: scores2){
+                                    sum+=s;
+                                }
+                            }
+                        }
+                        appIO.print(name + "'s average quize score is: ");
+                        appIO.print(Integer.toString(sum/numScores));
                         break;
                 }
             }
