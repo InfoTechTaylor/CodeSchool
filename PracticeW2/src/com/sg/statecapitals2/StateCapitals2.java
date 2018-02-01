@@ -27,8 +27,8 @@ public class StateCapitals2 {
 
         // print the name, population and square mileage for each capital
         // along with its State name
-        System.out.println("STATE/CAPITAL PAIRS: ");
-        System.out.println("=======================");
+        appIO.print("STATE/CAPITAL PAIRS: ");
+        appIO.print("=======================");
         Set<String> keys = stateCapitals.keySet();
         for(String k: keys){
             appIO.print(k + " - " + stateCapitals.get(k).getName() +
@@ -48,7 +48,7 @@ public class StateCapitals2 {
 
         for(String k: keys){
             if(stateCapitals.get(k).getPopulation() >= userProvidedPopulation) {
-                System.out.println(k + " - " + stateCapitals.get(k).getName() +
+                appIO.print(k + " - " + stateCapitals.get(k).getName() +
                         " | Pop: " + stateCapitals.get(k).getPopulation() +
                         " | Area: " + stateCapitals.get(k).getSquareMileage() +
                         " sq mi");

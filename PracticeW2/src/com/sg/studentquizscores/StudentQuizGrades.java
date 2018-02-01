@@ -43,7 +43,8 @@ public class StudentQuizGrades {
                     "3. Remove a student from the system\n" +
                     "4. View a list of quiz scores for a given student\n" +
                     "5. View the average quiz score for a given student\n" +
-                    "6. Exit program", 1, 6);
+                    "6. Calculate the average quiz score for the entire class" +
+                    "7. Exit program", 1, 7);
 
             // if user chooses to exit program, exit loop and program
             if(userChoice == 6){
@@ -107,7 +108,13 @@ public class StudentQuizGrades {
                         appIO.print(name + "'s average quize score is: ");
                         appIO.print(Integer.toString(sum/numScores));
                         break;
-                }
+                    case 6:
+                        appIO.print("The average quiz score for the whole class is: ");
+                        for(String k: keys) {
+
+                        }
+                        break;
+                } // end switch statement
             }
 
         } while(programRunning);
