@@ -1,9 +1,31 @@
 package com.sg.studentquizscores;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Set;
+
 public class StudentQuizGrades {
     public static void main(String[] args) {
         boolean programRunning = true;
         int userChoice = 0;
+        String name;
+
+        // create HashMap to store students in. student name is key and ArrayList of integers is the value
+        HashMap<String, ArrayList> studentQuizScores = new HashMap<>();
+
+        // statically populate studentQuizScores HashMap
+        ArrayList<Integer> quizScoresTaylor = new ArrayList<>();
+        quizScoresTaylor.add(90);
+        quizScoresTaylor.add(80);
+        quizScoresTaylor.add(70);
+        quizScoresTaylor.add(100);
+        studentQuizScores.put("Taylor", quizScoresTaylor);
+        ArrayList<Integer> quizScoresBrett = new ArrayList<>();
+        quizScoresTaylor.add(90);
+        quizScoresTaylor.add(97);
+        quizScoresTaylor.add(95);
+        quizScoresTaylor.add(100);
+        studentQuizScores.put("Brett", quizScoresTaylor);
 
         // instantiate object for user input methods of the UserIOConsoleImpl() class
         UserIOConsoleImpl appIO = new UserIOConsoleImpl();
@@ -11,7 +33,7 @@ public class StudentQuizGrades {
         // do while to keep menu running as long as user doesn't select 6 to exit program
         do {
             // display menu options to user
-            userChoice = appIO.readInt("STUDENT SYSTEM MENU OPTIONS\n" +
+            userChoice = appIO.readInt("\nSTUDENT SYSTEM MENU OPTIONS\n" +
                     "==============================\n" +
                     "1. View a list of students in the system\n" +
                     "2. Add a student to the system\n" +
@@ -28,9 +50,18 @@ public class StudentQuizGrades {
                 // switch statement to determine what action to take based on user choice
                 switch(userChoice){
                     case 1:
-
+                        appIO.print("\n Students in our system: \n");
+                        // get the set of keys from the map
+                        Set<String> keys = studentQuizScores.keySet();
+                        for(String k: keys){
+                            // output student's name to console
+                            appIO.print(k);
+                        }
                         break;
                     case 2:
+                        ArrayList<Integer> newStudentScores = new ArrayList<>();
+                        name = appIO.readString("Provide the name of the new student: ");
+                        studentQuizScores.put(name, newStudentScores);
                         break;
                     case 3:
                         break;
