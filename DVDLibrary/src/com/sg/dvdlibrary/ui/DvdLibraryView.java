@@ -7,7 +7,12 @@ import java.util.List;
 public class DvdLibraryView {
 
     // initialize UserIO object of console implementation
-    UserIO io = new UserIOConsoleImpl();
+    private UserIO io;
+
+
+    public DvdLibraryView(UserIO io){
+        this.io = io;
+    }
 
 
     public int printMenuAndGetSelection(){
@@ -24,12 +29,12 @@ public class DvdLibraryView {
 
 
     public Dvd getNewDvdInfo(){
-        String title = io.readString("Enter dvd title: ");
-        String releaseDate = io.readString("Enter dvd release date: ");
-        String ratingMPAA = io.readString("Enter dvd MPAA rating: ");
-        String directorName = io.readString("Enter dvd director's name: ");
-        String studio = io.readString("Enter dvd studio: ");
-        String userRating = io.readString("Enter your rating of the dvd: ");
+        String title = io.readString("\tEnter dvd title: ");
+        String releaseDate = io.readString("\tEnter dvd release date: ");
+        String ratingMPAA = io.readString("\tEnter dvd MPAA rating: ");
+        String directorName = io.readString("\tEnter dvd director's name: ");
+        String studio = io.readString("\tEnter dvd studio: ");
+        String userRating = io.readString("\tEnter your rating of the dvd: ");
 
         Dvd newDvd = new Dvd(title, releaseDate, ratingMPAA, directorName, studio, userRating);
         return newDvd;
@@ -160,6 +165,16 @@ public class DvdLibraryView {
 
     public void displayRemoveSuccessBanner(){
         io.readString("Successfully removed DVD. Press enter to continue. ");
+    }
+
+
+    public void displayGoodBye(){
+        io.print("Good Bye!!");
+    }
+
+
+    public void displayUnknownCommandBanner() {
+        io.print("Unknown Command!!!");
     }
 
 }

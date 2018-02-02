@@ -1,5 +1,6 @@
 package com.sg.dvdlibrary.controller;
 
+import com.sg.dvdlibrary.dao.DvdLibraryDao;
 import com.sg.dvdlibrary.dao.DvdLibraryDaoException;
 import com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl;
 import com.sg.dvdlibrary.dto.Dvd;
@@ -11,9 +12,14 @@ import java.util.List;
 
 public class DvdController {
 
-    private DvdLibraryView view = new DvdLibraryView();
-    private DvdLibraryDaoFileImpl dao = new DvdLibraryDaoFileImpl();
-    private UserIO io = new UserIOConsoleImpl();
+    DvdLibraryDao dao;
+    DvdLibraryView view;
+
+
+    public DvdController(DvdLibraryDao dao, DvdLibraryView view) {
+        this.dao = dao;
+        this.view = view;
+    }
 
 
     public void run() {
@@ -45,10 +51,10 @@ public class DvdController {
                         break;
                     case 6:
                         keepGoing = false;
-                        io.print("GOOD BYE");
+                        exitMessage();
                         break;
                     default:
-                        io.print("UNKNOWN COMMAND");
+                        unknownCommand();
                 } // end switch(menuSelection)
 
             } // end while(keepGoing)
@@ -102,6 +108,16 @@ public class DvdController {
         String dvdTitle = view.getDvdTitleChoice();
         dao.removeDvd(dvdTitle);
         view.displayRemoveSuccessBanner();
+    }
+
+
+    private void unknownCommand() {
+        view.displayUnknownCommandBanner();
+    }
+
+
+    private void exitMessage() {
+        view.displayGoodBye();
     }
 
 } // end DvdController
