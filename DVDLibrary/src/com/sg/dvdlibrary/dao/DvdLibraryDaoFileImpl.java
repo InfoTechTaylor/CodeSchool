@@ -119,7 +119,10 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
                         + currentDvd.getStudio() + DELIMITER
                         + currentDvd.getUserRating());
             //force PrintWriter to write line to the file
-        }
+            out.flush();
+        } // end for
+        // clean up
+        out.close();
 
     }
 }
