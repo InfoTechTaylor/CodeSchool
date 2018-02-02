@@ -24,16 +24,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="dvds.txt" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/dvds.txt">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
           <file leaf-file-name="Dvd.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java">
               <provider selected="true" editor-type-id="text-editor">
@@ -71,11 +61,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DvdLibraryDao.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="DvdLibraryDao.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="270">
-                  <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
+                <state relative-caret-position="60">
+                  <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -86,16 +76,14 @@
           <file leaf-file-name="DvdLibraryDaoFileImpl.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="450">
-                  <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                <state relative-caret-position="360">
+                  <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#365#366#0" expanded="true" />
-                    <element signature="e#392#393#0" expanded="true" />
-                    <element signature="e#616#617#0" expanded="true" />
-                    <element signature="e#643#644#0" expanded="true" />
-                    <element signature="e#884#885#0" expanded="true" />
-                    <element signature="e#911#912#0" expanded="true" />
+                    <element signature="e#683#684#0" expanded="true" />
+                    <element signature="e#710#711#0" expanded="true" />
+                    <element signature="e#951#952#0" expanded="true" />
+                    <element signature="e#978#979#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -123,12 +111,12 @@
           <file leaf-file-name="DvdController.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1274">
-                  <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+                <state relative-caret-position="593">
+                  <caret line="81" column="57" lean-forward="false" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1875#1876#0" expanded="true" />
-                    <element signature="e#1929#1930#0" expanded="true" />
+                    <element signature="e#1858#1859#0" expanded="true" />
+                    <element signature="e#1912#1913#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -137,14 +125,18 @@
           <file leaf-file-name="DvdLibraryView.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="842">
-                  <caret line="67" column="24" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+                <state relative-caret-position="722">
+                  <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1340#1341#0" expanded="true" />
                     <element signature="e#1382#1383#0" expanded="true" />
                     <element signature="e#2116#2117#0" expanded="true" />
                     <element signature="e#2162#2163#0" expanded="true" />
+                    <element signature="e#2334#2335#0" expanded="true" />
+                    <element signature="e#2375#2376#0" expanded="true" />
+                    <element signature="e#2417#2418#0" expanded="true" />
+                    <element signature="e#2483#2484#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -174,10 +166,10 @@
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoException.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java" />
-        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" />
-        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java" />
+        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" />
       </list>
     </option>
   </component>
@@ -465,6 +457,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/dvds.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="720">
@@ -500,71 +508,57 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="21" column="61" lean-forward="false" selection-start-line="21" selection-start-column="61" selection-end-line="21" selection-end-column="61" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#392#393#0" expanded="true" />
-            <element signature="e#616#617#0" expanded="true" />
-            <element signature="e#643#644#0" expanded="true" />
-            <element signature="e#884#885#0" expanded="true" />
-            <element signature="e#911#912#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="842">
-          <caret line="67" column="24" lean-forward="false" selection-start-line="67" selection-start-column="24" selection-end-line="67" selection-end-column="24" />
+        <state relative-caret-position="722">
+          <caret line="94" column="5" lean-forward="true" selection-start-line="94" selection-start-column="5" selection-end-line="94" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1340#1341#0" expanded="true" />
             <element signature="e#1382#1383#0" expanded="true" />
             <element signature="e#2116#2117#0" expanded="true" />
             <element signature="e#2162#2163#0" expanded="true" />
+            <element signature="e#2334#2335#0" expanded="true" />
+            <element signature="e#2375#2376#0" expanded="true" />
+            <element signature="e#2417#2418#0" expanded="true" />
+            <element signature="e#2483#2484#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1274">
-          <caret line="78" column="5" lean-forward="true" selection-start-line="78" selection-start-column="5" selection-end-line="78" selection-end-column="5" />
+        <state relative-caret-position="593">
+          <caret line="81" column="57" lean-forward="false" selection-start-line="81" selection-start-column="57" selection-end-line="81" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-            <element signature="e#1929#1930#0" expanded="true" />
+            <element signature="e#1858#1859#0" expanded="true" />
+            <element signature="e#1912#1913#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/App.java">
+    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="360">
+          <caret line="15" column="66" lean-forward="false" selection-start-line="15" selection-start-column="66" selection-end-line="15" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+            <element signature="e#710#711#0" expanded="true" />
+            <element signature="e#951#952#0" expanded="true" />
+            <element signature="e#978#979#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dvds.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="60">
+          <caret line="14" column="58" lean-forward="false" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

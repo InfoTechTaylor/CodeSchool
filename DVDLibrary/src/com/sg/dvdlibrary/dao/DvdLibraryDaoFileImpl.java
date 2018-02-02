@@ -13,8 +13,9 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
 
     @Override
-    public Dvd getDvd(String title) {
-        return null;
+    public Dvd getDvd(String title) throws DvdLibraryDaoException {
+        loadCollection();
+        return dvds.get(title);
     }
 
     @Override

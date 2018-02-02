@@ -12,7 +12,7 @@ public interface DvdLibraryDao {
      * @param title
      * @return Dvd object
      */
-    Dvd getDvd(String title);
+    Dvd getDvd(String title) throws DvdLibraryDaoException;
 
 
     /**

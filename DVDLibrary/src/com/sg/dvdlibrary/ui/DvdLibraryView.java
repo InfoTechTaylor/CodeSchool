@@ -69,4 +69,29 @@ public class DvdLibraryView {
         io.print("\t" + errorMsg);
     }
 
+
+    public void displayDisplayDvdBanner() {
+        io.print("Display DVD: ");
+    }
+
+
+    public String getDvdTitleChoice() {
+        return io.readString("\tPlease enter DVD title: ");
+    }
+
+
+    public void displayDvd(Dvd dvd) {
+        if (dvd != null) {
+            io.print("\t" + dvd.getTitle());
+            io.print("\t" + dvd.getReleaseDate());
+            io.print("\t" + dvd.getRatingMPAA());
+            io.print("\t" + dvd.getDirectorName());
+            io.print("\t" + dvd.getStudio());
+            io.print("\t" + dvd.getUserRating());
+        } else {
+            io.print("\tNo such DVD");
+        }
+        io.readString("\tPlease hit enter to continue.");
+    }
+
 }

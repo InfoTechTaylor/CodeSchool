@@ -41,7 +41,7 @@ public class DvdController {
                         displayDvdList();
                         break;
                     case 5:
-                        io.print("SEARCH FOR DVD");
+                        viewDvd();
                         break;
                     case 6:
                         keepGoing = false;
@@ -76,6 +76,14 @@ public class DvdController {
         view.displayDisplayAllBanner();
         List<Dvd> dvdList = dao.getAllDvds();
         view.displayDvdList(dvdList);
+    }
+
+
+    private void viewDvd() throws DvdLibraryDaoException {
+        view.displayDisplayDvdBanner();
+        String dvdTitle = view.getDvdTitleChoice();
+        Dvd dvd = dao.getDvd(dvdTitle);
+        view.displayDvd(dvd);
     }
 
 } // end DvdController
