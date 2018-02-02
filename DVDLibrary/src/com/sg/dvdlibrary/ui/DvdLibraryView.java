@@ -16,7 +16,8 @@ public class DvdLibraryView {
 
 
     public int printMenuAndGetSelection(){
-        io.print("Main Menu:");
+        io.print("MAIN MENU:");
+        io.print("===================================================================");
         io.print("\t1. Add a DVD to the collection");
         io.print("\t2. Remove a DVD from the collection");
         io.print("\t3. Edit the information for an existing DVD in the collection");
@@ -24,7 +25,7 @@ public class DvdLibraryView {
         io.print("\t5. Search for a DVD by title");
         io.print("\t6. Exit program");
 
-        return io.readInt("Please select one of the above options: ");
+        return io.readInt("\nPlease select one of the above options: ");
     }
 
 
@@ -42,30 +43,27 @@ public class DvdLibraryView {
 
 
     public void displayCreateDvdBanner() {
-        io.print("Add DVD Menu: ");
+        io.print("\nADD DVD MENU: ");
+        io.print("===================================================================");
     }
 
 
     public void displayCreateSuccessBanner() {
-        io.readString("DVD created successfully. Please hit enter to continue.");
+        io.readString("\nDVD created successfully. Please hit enter to continue.");
     }
 
 
     public void displayDvdList(List<Dvd> dvdList){
         for (Dvd currentDvd : dvdList){
-            io.print("\t" + currentDvd.getTitle() + ": \n\t\t" +
-                        currentDvd.getReleaseDate() + "\n\t\t" +
-                        currentDvd.getRatingMPAA() + "\n\t\t" +
-                        currentDvd.getDirectorName() + "\n\t\t" +
-                        currentDvd.getStudio() + "\n\t\t" +
-                        currentDvd.getUserRating() + "\n\n\t\t");
+            io.print("\t" + currentDvd.getTitle() );
         }
-        io.readString("Please hit enter to continue.");
+        io.readString("\nPlease hit enter to continue.");
     }
 
 
     public void displayDisplayAllBanner() {
-        io.print("Display All Dvds: ");
+        io.print("\nDISPLAY ALL DVDS: ");
+        io.print("===================================================================");
     }
 
 
@@ -76,7 +74,8 @@ public class DvdLibraryView {
 
 
     public void displayDisplayDvdBanner() {
-        io.print("Display DVD: ");
+        io.print("\nDISPLAY DVD: ");
+        io.print("===================================================================");
     }
 
 
@@ -87,12 +86,12 @@ public class DvdLibraryView {
 
     public void displayDvd(Dvd dvd) {
         if (dvd != null) {
-            io.print("\t" + dvd.getTitle());
-            io.print("\t" + dvd.getReleaseDate());
-            io.print("\t" + dvd.getRatingMPAA());
-            io.print("\t" + dvd.getDirectorName());
-            io.print("\t" + dvd.getStudio());
-            io.print("\t" + dvd.getUserRating());
+            io.print("\tTitle: " + dvd.getTitle());
+            io.print("\tRelease Date: " + dvd.getReleaseDate());
+            io.print("\tMPAA Rating: " + dvd.getRatingMPAA());
+            io.print("\tDirector: " + dvd.getDirectorName());
+            io.print("\tStudio: " + dvd.getStudio());
+            io.print("\tUser Rating: " + dvd.getUserRating());
         } else {
             io.print("\tNo such DVD");
         }
@@ -154,17 +153,19 @@ public class DvdLibraryView {
 
 
     public void displayEditMenuBanner(){
-        io.print("EDIT MENU:");
+        io.print("\nEDIT MENU:");
+        io.print("===================================================================");
     }
 
 
     public void displayRemoveMenuBanner(){
-        io.print("REMOVE DVD MENU:");
+        io.print("\nREMOVE DVD MENU:");
+        io.print("===================================================================");
     }
 
 
     public void displayRemoveSuccessBanner(){
-        io.readString("Successfully removed DVD. Press enter to continue. ");
+        io.readString("\nSuccessfully removed DVD. Press enter to continue. ");
     }
 
 

@@ -12,6 +12,12 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     private Map<String, Dvd> dvds = new HashMap<>();
 
 
+    /**
+     * Gets a Dvd object that has matching title passed through parameter
+     * @param title of dvd to get
+     * @return dvd object with matching title provided through parameter
+     * @throws DvdLibraryDaoException
+     */
     @Override
     public Dvd getDvd(String title) throws DvdLibraryDaoException {
         loadCollection();
