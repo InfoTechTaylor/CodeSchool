@@ -1,5 +1,7 @@
 package com.sg.dvdlibrary.ui;
 
+import com.sg.dvdlibrary.dto.Dvd;
+
 public class DvdLibraryView {
 
     // initialize UserIO object of console implementation
@@ -16,6 +18,29 @@ public class DvdLibraryView {
         io.print("\t6. Exit program");
 
         return io.readInt("Please select one of the above options: ");
+    }
+
+
+    public Dvd getNewDvdInfo(){
+        String title = io.readString("Enter dvd title: ");
+        String releaseDate = io.readString("Enter dvd release date: ");
+        String ratingMPAA = io.readString("Enter dvd MPAA rating: ");
+        String directorName = io.readString("Enter dvd director's name: ");
+        String studio = io.readString("Enter dvd studio: ");
+        String userRating = io.readString("Enter your rating of the dvd: ");
+
+        Dvd newDvd = new Dvd(title, releaseDate, ratingMPAA, directorName, studio, userRating);
+        return newDvd;
+    }
+
+
+    public void displayCreateDvdBanner() {
+        io.print("Add DVD Menu: ");
+    }
+
+
+    public void displayCreateSuccessBanner() {
+        io.readString("DVD created successfully. Please hit enter to continue.");
     }
 
 }

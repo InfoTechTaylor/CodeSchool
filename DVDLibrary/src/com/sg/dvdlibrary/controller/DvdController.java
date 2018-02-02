@@ -1,6 +1,7 @@
 package com.sg.dvdlibrary.controller;
 
 import com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl;
+import com.sg.dvdlibrary.dto.Dvd;
 import com.sg.dvdlibrary.ui.DvdLibraryView;
 import com.sg.dvdlibrary.ui.UserIO;
 import com.sg.dvdlibrary.ui.UserIOConsoleImpl;
@@ -24,7 +25,7 @@ public class DvdController {
             // determine action based of menuSelection
             switch(menuSelection){
                 case 1:
-                    io.print("ADD DVD");
+                    createDvd();
                     break;
                 case 2:
                     io.print("REMOVE DVD");
@@ -53,6 +54,14 @@ public class DvdController {
 
     private int getMenuSelection() {
         return view.printMenuAndGetSelection();
+    }
+
+
+    private void createDvd(){
+        view.displayCreateDvdBanner();
+        Dvd newDvd = view.getNewDvdInfo();
+        dao.addDvd(newDvd.getTitle(), newDvd);
+        view.displayCreateSuccessBanner();
     }
 
 } // end DvdController

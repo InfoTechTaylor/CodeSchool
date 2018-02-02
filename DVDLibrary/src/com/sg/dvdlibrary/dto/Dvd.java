@@ -10,7 +10,12 @@ public class Dvd {
     private String userRating;
 
 
-    // constructor
+    // constructors
+    public Dvd(String title){
+        this.title = title;
+    }
+
+
     public Dvd(String title, String releaseDate, String ratingMPAA, String directorName, String studio, String userRating) {
         this.title = title;
         this.releaseDate = releaseDate;
