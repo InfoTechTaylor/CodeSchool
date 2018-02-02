@@ -32,7 +32,7 @@ public class AddressBookController {
                     createAddress();
                     break;
                 case 2:
-                    io.print("DELETE ADDRESS");
+                    removeAddress();
                     break;
                 case 3:
                     viewAddress();
@@ -75,5 +75,13 @@ public class AddressBookController {
         String addressLastName = view.getAddressLastNameChoice();
         Address address = dao.getAddress(addressLastName);
         view.displayAddress(address);
+    }
+
+
+    private void removeAddress(){
+        view.displayRemoveAddressBanner();
+        String lastName = view.getAddressLastNameChoice();
+        dao.deleteAddress(lastName);
+        view.displayRemoveAddressSuccessBanner();
     }
 }

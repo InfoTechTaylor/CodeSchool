@@ -78,4 +78,14 @@ public class AddressBookView {
         }
         io.readString("Please hit enter to continue.");
     }
+
+
+    public void displayRemoveAddressBanner() {
+        io.print("Delete Address Menu: ");
+    }
+
+
+    public void displayRemoveAddressSuccessBanner(){
+        io.readString("Address successfully removed. Please hit enter to continue. ");
+    }
 }

@@ -19,7 +19,8 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
 
     @Override
     public Address deleteAddress(String lastName) {
-        return null;
+        Address removedAddress = addresses.remove(lastName);
+        return removedAddress;
     }
 
     @Override
