@@ -19,7 +19,7 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
     @Override
     public ArrayList<Dvd> getAllDvds() {
-        return null;
+        return new ArrayList<Dvd>(dvds.values());
     }
 
     @Override

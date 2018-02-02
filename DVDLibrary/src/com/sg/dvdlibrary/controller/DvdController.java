@@ -6,6 +6,8 @@ import com.sg.dvdlibrary.ui.DvdLibraryView;
 import com.sg.dvdlibrary.ui.UserIO;
 import com.sg.dvdlibrary.ui.UserIOConsoleImpl;
 
+import java.util.List;
+
 public class DvdController {
 
     private DvdLibraryView view = new DvdLibraryView();
@@ -34,7 +36,7 @@ public class DvdController {
                     io.print("EDIT DVD");
                     break;
                 case 4:
-                    io.print("LIST ALL DVDs");
+                    displayDvdList();
                     break;
                 case 5:
                     io.print("SEARCH FOR DVD");
@@ -62,6 +64,13 @@ public class DvdController {
         Dvd newDvd = view.getNewDvdInfo();
         dao.addDvd(newDvd.getTitle(), newDvd);
         view.displayCreateSuccessBanner();
+    }
+
+
+    public void displayDvdList() {
+        view.displayDisplayAllBanner();
+        List<Dvd> dvdList = dao.getAllDvds();
+        view.displayDvdList(dvdList);
     }
 
 } // end DvdController

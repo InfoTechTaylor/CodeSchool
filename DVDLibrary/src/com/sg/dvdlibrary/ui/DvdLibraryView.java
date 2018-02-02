@@ -2,6 +2,8 @@ package com.sg.dvdlibrary.ui;
 
 import com.sg.dvdlibrary.dto.Dvd;
 
+import java.util.List;
+
 public class DvdLibraryView {
 
     // initialize UserIO object of console implementation
@@ -41,6 +43,24 @@ public class DvdLibraryView {
 
     public void displayCreateSuccessBanner() {
         io.readString("DVD created successfully. Please hit enter to continue.");
+    }
+
+
+    public void displayDvdList(List<Dvd> dvdList){
+        for (Dvd currentDvd : dvdList){
+            io.print(currentDvd.getTitle() + ": \n\t" +
+                        currentDvd.getReleaseDate() + "\n\t" +
+                        currentDvd.getRatingMPAA() + "\n\t" +
+                        currentDvd.getDirectorName() + "\n\t" +
+                        currentDvd.getStudio() + "\n\t" +
+                        currentDvd.getUserRating() + "\n\n\t");
+        }
+        io.readString("Please hit enter to continue.");
+    }
+
+
+    public void displayDisplayAllBanner() {
+        io.print("Display All Dvds: ");
     }
 
 }
