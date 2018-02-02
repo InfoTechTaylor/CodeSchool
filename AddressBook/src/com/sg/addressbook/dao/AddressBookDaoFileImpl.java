@@ -30,6 +30,7 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
 
     @Override
     public Address getAddressCount() {
+        ArrayList list = new ArrayList<Address>(addresses.values());
         return null;
     }
 
