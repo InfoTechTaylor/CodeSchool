@@ -152,4 +152,14 @@ public class DvdLibraryView {
         io.print("EDIT MENU:");
     }
 
+
+    public void displayRemoveMenuBanner(){
+        io.print("REMOVE DVD MENU:");
+    }
+
+
+    public void displayRemoveSuccessBanner(){
+        io.readString("Successfully removed DVD. Press enter to continue. ");
+    }
+
 }

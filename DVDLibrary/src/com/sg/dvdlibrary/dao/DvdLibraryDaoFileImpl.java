@@ -39,20 +39,6 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     }
 
 
-    @Override
-    public Dvd updateDvd(String title, Dvd dvd) throws DvdLibraryDaoException {
-        // call getDvd
-        // remove result of getDvd from the file
-        // add updatedDvd from parameter list to the file
-
-        // shouldn't need this method, call addDvd, removeDvd, then addDvd
-
-        Dvd updatedDvd = dvds.put(title, dvd);
-        writeCollection();
-        return updatedDvd;
-    }
-
-
     /**
      * Reads from DVD_FILE line by line and parses the lines to create a
      * map of Dvd objects. File format includes :: as a delimiter

@@ -40,15 +40,6 @@ public interface DvdLibraryDao {
     Dvd addDvd(String title, Dvd dvd) throws DvdLibraryDaoException;
 
 
-    /**
-     * Takes Dvd object and returns Dvd object after edits (done outside dao)
-     * @param title
-     * @param dvd
-     * @return
-     * @throws DvdLibraryDaoException
-     */
-    Dvd updateDvd(String title, Dvd dvd) throws DvdLibraryDaoException;
-
 
     /**
      * Method to use to load Dvds from a file
