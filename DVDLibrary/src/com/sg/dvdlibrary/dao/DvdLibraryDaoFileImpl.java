@@ -18,7 +18,8 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     }
 
     @Override
-    public ArrayList<Dvd> getAllDvds() {
+    public ArrayList<Dvd> getAllDvds() throws DvdLibraryDaoException {
+        loadCollection();
         return new ArrayList<Dvd>(dvds.values());
     }
 
@@ -28,8 +29,9 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     }
 
     @Override
-    public Dvd addDvd(String title, Dvd dvd) {
+    public Dvd addDvd(String title, Dvd dvd) throws DvdLibraryDaoException {
         Dvd newDvd = dvds.put(title, dvd);
+        writeCollection();
         return newDvd;
     }
 

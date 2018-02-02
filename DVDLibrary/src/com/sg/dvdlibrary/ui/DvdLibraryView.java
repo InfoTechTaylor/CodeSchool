@@ -63,4 +63,10 @@ public class DvdLibraryView {
         io.print("Display All Dvds: ");
     }
 
+
+    public void displayErrorMessage(String errorMsg) {
+        io.print("ERROR:");
+        io.print("\t" + errorMsg);
+    }
+
 }

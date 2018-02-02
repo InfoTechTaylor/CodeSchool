@@ -19,7 +19,7 @@ public interface DvdLibraryDao {
      * Gets all Dvds and returns as an ArrayList
      * @return ArrayList of Dvd objects
      */
-    ArrayList<Dvd> getAllDvds();
+    ArrayList<Dvd> getAllDvds() throws DvdLibraryDaoException;
 
 
     /**
@@ -37,7 +37,7 @@ public interface DvdLibraryDao {
      * @param dvd
      * @return Dvd object of newly added Dvd
      */
-    Dvd addDvd(String title, Dvd dvd);
+    Dvd addDvd(String title, Dvd dvd) throws DvdLibraryDaoException;
 
 
     /**

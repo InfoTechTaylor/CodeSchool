@@ -1,5 +1,6 @@
 package com.sg.dvdlibrary.controller;
 
+import com.sg.dvdlibrary.dao.DvdLibraryDaoException;
 import com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl;
 import com.sg.dvdlibrary.dto.Dvd;
 import com.sg.dvdlibrary.ui.DvdLibraryView;
@@ -19,38 +20,42 @@ public class DvdController {
         boolean keepGoing = true;
         int menuSelection = 0;
 
-        while(keepGoing){
+        try {
+            while (keepGoing) {
 
-            // get MenuSelection from user
-            menuSelection = getMenuSelection();
+                // get MenuSelection from user
+                menuSelection = getMenuSelection();
 
-            // determine action based of menuSelection
-            switch(menuSelection){
-                case 1:
-                    createDvd();
-                    break;
-                case 2:
-                    io.print("REMOVE DVD");
-                    break;
-                case 3:
-                    io.print("EDIT DVD");
-                    break;
-                case 4:
-                    displayDvdList();
-                    break;
-                case 5:
-                    io.print("SEARCH FOR DVD");
-                    break;
-                case 6:
-                    keepGoing = false;
-                    io.print("GOOD BYE");
-                    break;
-                default:
-                    io.print("UNKNOWN COMMAND");
-            } // end switch(menuSelection)
+                // determine action based of menuSelection
+                switch (menuSelection) {
+                    case 1:
+                        createDvd();
+                        break;
+                    case 2:
+                        io.print("REMOVE DVD");
+                        break;
+                    case 3:
+                        io.print("EDIT DVD");
+                        break;
+                    case 4:
+                        displayDvdList();
+                        break;
+                    case 5:
+                        io.print("SEARCH FOR DVD");
+                        break;
+                    case 6:
+                        keepGoing = false;
+                        io.print("GOOD BYE");
+                        break;
+                    default:
+                        io.print("UNKNOWN COMMAND");
+                } // end switch(menuSelection)
 
-        } // end while(keepGoing)
+            } // end while(keepGoing)
 
+        } catch (DvdLibraryDaoException e) {
+            view.displayErrorMessage(e.getMessage());
+        }
     } // end run()
 
 
@@ -59,7 +64,7 @@ public class DvdController {
     }
 
 
-    private void createDvd(){
+    private void createDvd() throws DvdLibraryDaoException {
         view.displayCreateDvdBanner();
         Dvd newDvd = view.getNewDvdInfo();
         dao.addDvd(newDvd.getTitle(), newDvd);
@@ -67,7 +72,7 @@ public class DvdController {
     }
 
 
-    public void displayDvdList() {
+    private void displayDvdList() throws DvdLibraryDaoException {
         view.displayDisplayAllBanner();
         List<Dvd> dvdList = dao.getAllDvds();
         view.displayDvdList(dvdList);
