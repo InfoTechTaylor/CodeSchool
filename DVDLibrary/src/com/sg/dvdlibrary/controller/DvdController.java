@@ -35,7 +35,7 @@ public class DvdController {
                         io.print("REMOVE DVD");
                         break;
                     case 3:
-                        io.print("EDIT DVD");
+                        editDvd();
                         break;
                     case 4:
                         displayDvdList();
@@ -84,6 +84,16 @@ public class DvdController {
         String dvdTitle = view.getDvdTitleChoice();
         Dvd dvd = dao.getDvd(dvdTitle);
         view.displayDvd(dvd);
+    }
+
+
+    private void editDvd() throws DvdLibraryDaoException {
+        view.displayEditMenuBanner();
+        String dvdTitle = view.getDvdTitleChoice();
+        Dvd dvd = dao.getDvd(dvdTitle);
+        dao.removeDvd(dvdTitle);
+        Dvd updatedDvd = view.displayEditMenuAndGetUpdates(dvd);
+        dao.addDvd(updatedDvd.getTitle(), updatedDvd);
     }
 
 } // end DvdController

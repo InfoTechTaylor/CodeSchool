@@ -94,4 +94,62 @@ public class DvdLibraryView {
         io.readString("\tPlease hit enter to continue.");
     }
 
+
+    public Dvd displayEditMenuAndGetUpdates(Dvd dvd){
+        int editItem = 0;
+        boolean continueEdit = true;
+
+        // while the user still wants to make edits
+        while(continueEdit) {
+            io.print("\t1. Title: " + dvd.getTitle());
+            io.print("\t2. Release Date: " + dvd.getReleaseDate());
+            io.print("\t3. MPAA Rating: " + dvd.getRatingMPAA());
+            io.print("\t4. Director: " + dvd.getDirectorName());
+            io.print("\t5. Studio: " + dvd.getStudio());
+            io.print("\t6. User Rating: " + dvd.getUserRating());
+            io.print("\t7. Exit Edit Menu");
+
+            editItem = io.readInt("Please select which item you'd like to edit.");
+
+            switch(editItem){
+                case 1:
+                    String newTitle = io.readString("Enter new title: ");
+                    dvd.setTitle(newTitle);
+                    break;
+                case 2:
+                    String newReleaseDate = io.readString("Enter new release date: ");
+                    dvd.setReleaseDate(newReleaseDate);
+                    break;
+                case 3:
+                    String newRatingMPAA = io.readString("Enter new MPAA Rating: ");
+                    dvd.setRatingMPAA(newRatingMPAA);
+                    break;
+                case 4:
+                    String newDirector = io.readString("Enter new director name: ");
+                    dvd.setDirectorName(newDirector);
+                    break;
+                case 5:
+                    String newStudio = io.readString("Enter new studio name: ");
+                    dvd.setStudio(newStudio);
+                    break;
+                case 6:
+                    String newUserRating = io.readString("Enter new user rating: ");
+                    dvd.setUserRating(newUserRating);
+                    break;
+                case 7:
+                    continueEdit = false;
+                    break;
+                default:
+                    io.print("Unrecognized entry.");
+            } // end switch
+        } // end while
+
+        return dvd;
+    } // end method
+
+
+    public void displayEditMenuBanner(){
+        io.print("EDIT MENU:");
+    }
+
 }

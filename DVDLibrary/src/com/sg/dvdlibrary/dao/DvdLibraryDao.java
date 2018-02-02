@@ -27,7 +27,7 @@ public interface DvdLibraryDao {
      * @param title
      * @return Dvd object that was removed
      */
-    Dvd removeDvd(String title);
+    Dvd removeDvd(String title) throws DvdLibraryDaoException;
 
 
     /**
@@ -42,10 +42,12 @@ public interface DvdLibraryDao {
 
     /**
      * Takes Dvd object and returns Dvd object after edits (done outside dao)
+     * @param title
      * @param dvd
-     * @return Dvd object of edited dvd
+     * @return
+     * @throws DvdLibraryDaoException
      */
-    Dvd editDvd(Dvd dvd);
+    Dvd updateDvd(String title, Dvd dvd) throws DvdLibraryDaoException;
 
 
     /**

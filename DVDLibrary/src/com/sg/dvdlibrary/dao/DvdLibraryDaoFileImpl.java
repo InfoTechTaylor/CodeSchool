@@ -25,8 +25,10 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     }
 
     @Override
-    public Dvd removeDvd(String title) {
-        return null;
+    public Dvd removeDvd(String title) throws DvdLibraryDaoException{
+        Dvd removedDvd = dvds.remove(title);
+        writeCollection();
+        return removedDvd;
     }
 
     @Override
@@ -38,8 +40,16 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
 
     @Override
-    public Dvd editDvd(Dvd dvd) {
-        return null;
+    public Dvd updateDvd(String title, Dvd dvd) throws DvdLibraryDaoException {
+        // call getDvd
+        // remove result of getDvd from the file
+        // add updatedDvd from parameter list to the file
+
+        // shouldn't need this method, call addDvd, removeDvd, then addDvd
+
+        Dvd updatedDvd = dvds.put(title, dvd);
+        writeCollection();
+        return updatedDvd;
     }
 
 
