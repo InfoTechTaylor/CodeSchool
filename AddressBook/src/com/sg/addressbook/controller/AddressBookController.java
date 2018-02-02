@@ -35,7 +35,7 @@ public class AddressBookController {
                     io.print("DELETE ADDRESS");
                     break;
                 case 3:
-                    io.print("FIND ADDRESS");
+                    viewAddress();
                     break;
                 case 4:
                     io.print("LIST ADDRESS COUNT");
@@ -67,5 +67,13 @@ public class AddressBookController {
         view.displayAllAddressesBanner();
         List<Address> addressList = dao.getAllAddresses();
         view.displayAddressList(addressList);
+    }
+
+
+    private void viewAddress() {
+        view.displayAddressBanner();
+        String addressLastName = view.getAddressLastNameChoice();
+        Address address = dao.getAddress(addressLastName);
+        view.displayAddress(address);
     }
 }

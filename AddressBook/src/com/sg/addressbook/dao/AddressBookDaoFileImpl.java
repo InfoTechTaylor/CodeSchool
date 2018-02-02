@@ -24,7 +24,7 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
 
     @Override
     public Address getAddress(String lastName) {
-        return null;
+        return addresses.get(lastName);
     }
 
     @Override

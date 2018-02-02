@@ -20,12 +20,12 @@ public class AddressBookView {
 
     public Address getNewAddressInfo(){
 
-        String firstName = io.readString("Please enter First Name: ");
-        String lastName = io.readString("Please enter Last Name: ");
-        String streetAddress = io.readString("Please enter Street Address: ");
-        String city = io.readString("Please enter City: ");
-        String state = io.readString("Please enter State: ");
-        int zip = io.readInt("Please enter Zip Code: ");
+        String firstName = io.readString("\tPlease enter First Name: ");
+        String lastName = io.readString("\tPlease enter Last Name: ");
+        String streetAddress = io.readString("\tPlease enter Street Address: ");
+        String city = io.readString("\tPlease enter City: ");
+        String state = io.readString("\tPlease enter State: ");
+        int zip = io.readInt("\tPlease enter Zip Code: ");
 
         Address newAddress = new Address(firstName,lastName,streetAddress,city,state,zip);
         return newAddress;
@@ -33,27 +33,49 @@ public class AddressBookView {
 
 
     public void displayCreateAddressBanner() {
-        io.print("=== Add New Address === ");
+        io.print("Add Address Menu:");
     }
 
 
     public void displayAddSuccessBanner() {
-        io.readString("Address added. Please hit enter to continue. ");
+        io.readString("\tAddress added. Please hit enter to continue. ");
     }
 
 
     public void displayAddressList(List<Address> addressList){
         for (Address currentAddress : addressList){
-            io.print(currentAddress.getFirstName() + " " + currentAddress.getLastName() + "\n" +
-                        currentAddress.getStreetAddress() + "\n" +
-                        currentAddress.getCity() + ", " + currentAddress.getState() + " " + currentAddress.getZip() + "\n\n");
+            io.print("\t" + currentAddress.getFirstName() + " " + currentAddress.getLastName() + "\n" +
+                    "\t" + currentAddress.getStreetAddress() + "\n" +
+                    "\t" + currentAddress.getCity() + ", " + currentAddress.getState() + " " + currentAddress.getZip() + "\n\n");
         }
 
-        io.readString("Please hit enter to continue.");
+        io.readString("\tPlease hit enter to continue.");
     }
 
 
     public void displayAllAddressesBanner() {
-        io.print("=== List Addresses Menu ===");
+        io.print("List Addresses Menu:");
+    }
+
+
+    public void displayAddressBanner(){
+        io.print("Find Address Menu:");
+    }
+
+
+    public String getAddressLastNameChoice(){
+        return io.readString("\tPlease enter the last name of address to find: ");
+    }
+
+
+    public void displayAddress(Address currentAddress){
+        if (currentAddress != null) {
+            io.print("\t" + currentAddress.getFirstName() + " " + currentAddress.getLastName() + "\n" +
+                    "\t" + currentAddress.getStreetAddress() + "\n" +
+                    "\t" + currentAddress.getCity() + ", " + currentAddress.getState() + " " + currentAddress.getZip() + "\n\n");
+        } else {
+            io.print("No such address.");
+        }
+        io.readString("Please hit enter to continue.");
     }
 }
