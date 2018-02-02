@@ -1,10 +1,14 @@
 package com.sg.dvdlibrary.controller;
 
+import com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl;
+import com.sg.dvdlibrary.ui.DvdLibraryView;
 import com.sg.dvdlibrary.ui.UserIO;
 import com.sg.dvdlibrary.ui.UserIOConsoleImpl;
 
 public class DvdController {
 
+    private DvdLibraryView view = new DvdLibraryView();
+    private DvdLibraryDaoFileImpl dao = new DvdLibraryDaoFileImpl();
     private UserIO io = new UserIOConsoleImpl();
 
 
@@ -13,15 +17,9 @@ public class DvdController {
         int menuSelection = 0;
 
         while(keepGoing){
-            io.print("Main Menu:");
-            io.print("\t1. Add a DVD to the collection");
-            io.print("\t2. Remove a DVD from the collection");
-            io.print("\t3. Edit the information for an existing DVD in the collection");
-            io.print("\t4. List all DVDs in the collection");
-            io.print("\t5. Search for a DVD by title");
-            io.print("\t6. Exit program");
 
-            menuSelection = io.readInt("Please select one of the above options: ");
+            // get MenuSelection from user
+            menuSelection = getMenuSelection();
 
             // determine action based of menuSelection
             switch(menuSelection){
@@ -43,6 +41,7 @@ public class DvdController {
                 case 6:
                     keepGoing = false;
                     io.print("GOOD BYE");
+                    break;
                 default:
                     io.print("UNKNOWN COMMAND");
             } // end switch(menuSelection)
@@ -50,5 +49,10 @@ public class DvdController {
         } // end while(keepGoing)
 
     } // end run()
+
+
+    private int getMenuSelection() {
+        return view.printMenuAndGetSelection();
+    }
 
 } // end DvdController
