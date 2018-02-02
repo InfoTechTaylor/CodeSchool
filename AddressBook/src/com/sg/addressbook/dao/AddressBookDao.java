@@ -2,6 +2,8 @@ package com.sg.addressbook.dao;
 
 import com.sg.addressbook.dto.Address;
 
+import java.util.List;
+
 public interface AddressBookDao {
     /**
      * Add the given contact name and address to the Address Book.
@@ -13,7 +15,7 @@ public interface AddressBookDao {
     Address addAddress(String lastName, Address address );
 
 
-    Address deleteAddress(String firstName, String lastName);
+    Address deleteAddress(String lastName);
 
 
     Address getAddress(String lastName);
@@ -22,5 +24,5 @@ public interface AddressBookDao {
     Address getAddressCount();
 
 
-    Address listAllAddresses();
+    List<Address> getAllAddresses();
 }

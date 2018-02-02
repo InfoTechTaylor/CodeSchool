@@ -7,6 +7,8 @@ import com.sg.addressbook.ui.AddressBookView;
 import com.sg.addressbook.ui.UserIO;
 import com.sg.addressbook.ui.UserIOConsoleImpl;
 
+import java.util.List;
+
 public class AddressBookController {
     AddressBookView view = new AddressBookView();
     // instantiate object of UserIOConsoleImpl in order to interact with user
@@ -39,7 +41,10 @@ public class AddressBookController {
                     io.print("LIST ADDRESS COUNT");
                     break;
                 case 5:
-                    io.print("LIST ALL ADDRESSES");
+                    getAllAddresses();
+                    break;
+                case 6:
+                    keepGoing = false;
                     break;
             }
 
@@ -56,5 +61,11 @@ public class AddressBookController {
         Address newAddress = view.getNewAddressInfo();
         dao.addAddress(newAddress.getLastName(), newAddress);
         view.displayAddSuccessBanner();
+    }
+
+    private void getAllAddresses() {
+        view.displayAllAddressesBanner();
+        List<Address> addressList = dao.getAllAddresses();
+        view.displayAddressList(addressList);
     }
 }

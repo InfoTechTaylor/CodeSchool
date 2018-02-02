@@ -2,7 +2,9 @@ package com.sg.addressbook.dao;
 
 import com.sg.addressbook.dto.Address;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class AddressBookDaoFileImpl implements AddressBookDao {
@@ -16,7 +18,7 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
     }
 
     @Override
-    public Address deleteAddress(String firstName, String lastName) {
+    public Address deleteAddress(String lastName) {
         return null;
     }
 
@@ -31,7 +33,7 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
     }
 
     @Override
-    public Address listAllAddresses() {
-        return null;
+    public List<Address> getAllAddresses() {
+        return new ArrayList<Address>(addresses.values());
     }
 }

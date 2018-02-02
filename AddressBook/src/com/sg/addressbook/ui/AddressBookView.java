@@ -2,6 +2,8 @@ package com.sg.addressbook.ui;
 
 import com.sg.addressbook.dto.Address;
 
+import java.util.List;
+
 public class AddressBookView {
     UserIO io = new UserIOConsoleImpl();
 
@@ -37,5 +39,21 @@ public class AddressBookView {
 
     public void displayAddSuccessBanner() {
         io.readString("Address added. Please hit enter to continue. ");
+    }
+
+
+    public void displayAddressList(List<Address> addressList){
+        for (Address currentAddress : addressList){
+            io.print(currentAddress.getFirstName() + " " + currentAddress.getLastName() + "\n" +
+                        currentAddress.getStreetAddress() + "\n" +
+                        currentAddress.getCity() + ", " + currentAddress.getState() + " " + currentAddress.getZip() + "\n\n");
+        }
+
+        io.readString("Please hit enter to continue.");
+    }
+
+
+    public void displayAllAddressesBanner() {
+        io.print("=== List Addresses Menu ===");
     }
 }
