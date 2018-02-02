@@ -112,7 +112,7 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="DvdController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="DvdController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="443">
@@ -126,17 +126,17 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="DvdLibraryView.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="DvdLibraryView.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="773">
-                  <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+                <state relative-caret-position="413">
+                  <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
                   <folding>
                     <element signature="imports" expanded="true" />
                     <element signature="e#1340#1341#0" expanded="true" />
                     <element signature="e#1382#1383#0" expanded="true" />
-                    <element signature="e#2097#2098#0" expanded="true" />
-                    <element signature="e#2143#2144#0" expanded="true" />
+                    <element signature="e#2116#2117#0" expanded="true" />
+                    <element signature="e#2162#2163#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -168,8 +168,8 @@
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dto/Dvd.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDao.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" />
-        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
         <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java" />
+        <option value="$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
       </list>
     </option>
   </component>
@@ -528,20 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1382#1383#0" expanded="true" />
-            <element signature="e#2097#2098#0" expanded="true" />
-            <element signature="e#2143#2144#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/controller/DvdController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="443">
@@ -550,6 +536,20 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1583#1584#0" expanded="true" />
             <element signature="e#1637#1638#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/sg/dvdlibrary/ui/DvdLibraryView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="413">
+          <caret line="50" column="24" lean-forward="false" selection-start-line="50" selection-start-column="24" selection-end-line="50" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1340#1341#0" expanded="true" />
+            <element signature="e#1382#1383#0" expanded="true" />
+            <element signature="e#2116#2117#0" expanded="true" />
+            <element signature="e#2162#2163#0" expanded="true" />
           </folding>
         </state>
       </provider>

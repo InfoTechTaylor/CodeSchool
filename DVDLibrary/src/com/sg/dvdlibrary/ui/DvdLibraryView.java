@@ -48,12 +48,12 @@ public class DvdLibraryView {
 
     public void displayDvdList(List<Dvd> dvdList){
         for (Dvd currentDvd : dvdList){
-            io.print(currentDvd.getTitle() + ": \n\t" +
-                        currentDvd.getReleaseDate() + "\n\t" +
-                        currentDvd.getRatingMPAA() + "\n\t" +
-                        currentDvd.getDirectorName() + "\n\t" +
-                        currentDvd.getStudio() + "\n\t" +
-                        currentDvd.getUserRating() + "\n\n\t");
+            io.print("\t" + currentDvd.getTitle() + ": \n\t\t" +
+                        currentDvd.getReleaseDate() + "\n\t\t" +
+                        currentDvd.getRatingMPAA() + "\n\t\t" +
+                        currentDvd.getDirectorName() + "\n\t\t" +
+                        currentDvd.getStudio() + "\n\t\t" +
+                        currentDvd.getUserRating() + "\n\n\t\t");
         }
         io.readString("Please hit enter to continue.");
     }
