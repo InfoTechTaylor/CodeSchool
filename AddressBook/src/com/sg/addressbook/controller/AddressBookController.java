@@ -1,12 +1,17 @@
 package com.sg.addressbook.controller;
 
+import com.sg.addressbook.dao.AddressBookDao;
+import com.sg.addressbook.dao.AddressBookDaoFileImpl;
+import com.sg.addressbook.dto.Address;
+import com.sg.addressbook.ui.AddressBookView;
 import com.sg.addressbook.ui.UserIO;
 import com.sg.addressbook.ui.UserIOConsoleImpl;
 
 public class AddressBookController {
-
+    AddressBookView view = new AddressBookView();
     // instantiate object of UserIOConsoleImpl in order to interact with user
     private UserIO io = new UserIOConsoleImpl();
+    AddressBookDao dao = new AddressBookDaoFileImpl();
 
     // create a run method for all the main controller logic
     public void run(){
@@ -17,13 +22,39 @@ public class AddressBookController {
         while(keepGoing){
             io.print("==========");
             io.print("Initial Menu:");
-            io.print("\tPlease select the operation you wish to perform:");
-            io.print("\t\t1. Add Address");
-            io.print("\t\t2. Delete Address");
-            io.print("\t\t3. Find Address");
-            io.print("\t\t4. List Address Count");
-            io.print("\t\t5. List All Addresses\n");
 
-        }
+            menuChoice = getMenuChoice();
+
+            switch(menuChoice){
+                case 1:
+                    createAddress();
+                    break;
+                case 2:
+                    io.print("DELETE ADDRESS");
+                    break;
+                case 3:
+                    io.print("FIND ADDRESS");
+                    break;
+                case 4:
+                    io.print("LIST ADDRESS COUNT");
+                    break;
+                case 5:
+                    io.print("LIST ALL ADDRESSES");
+                    break;
+            }
+
+        } // end while of run()
+    } // end run
+
+
+    private int getMenuChoice(){
+        return view.printMenuAndGetSelection();
+    }
+
+    private void createAddress() {
+        view.displayCreateAddressBanner();
+        Address newAddress = view.getNewAddressInfo();
+        dao.addAddress(newAddress.getLastName(), newAddress);
+        view.displayAddSuccessBanner();
     }
 }
