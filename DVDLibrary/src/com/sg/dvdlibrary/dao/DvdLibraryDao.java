@@ -41,6 +41,9 @@ public interface DvdLibraryDao {
 
 
 
+    Dvd editDvd(Dvd dvd) throws DvdLibraryDaoException;
+
+
     /**
      * Method to use to load Dvds from a file
      */

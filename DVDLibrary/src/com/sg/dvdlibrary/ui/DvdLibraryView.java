@@ -105,43 +105,44 @@ public class DvdLibraryView {
 
         if (dvd != null) {
             // while the user still wants to make edits
+//            io.print("Title: " + dvd.getTitle());
             while (continueEdit) {
-                io.print("\t1. Title: " + dvd.getTitle());
-                io.print("\t2. Release Date: " + dvd.getReleaseDate());
-                io.print("\t3. MPAA Rating: " + dvd.getRatingMPAA());
-                io.print("\t4. Director: " + dvd.getDirectorName());
-                io.print("\t5. Studio: " + dvd.getStudio());
-                io.print("\t6. User Rating: " + dvd.getUserRating());
-                io.print("\t7. Exit Edit Menu");
+                io.print("Title: " + dvd.getTitle());
+                io.print("\t1. Release Date: " + dvd.getReleaseDate());
+                io.print("\t2. MPAA Rating: " + dvd.getRatingMPAA());
+                io.print("\t3. Director: " + dvd.getDirectorName());
+                io.print("\t4. Studio: " + dvd.getStudio());
+                io.print("\t5. User Rating: " + dvd.getUserRating());
+                io.print("\t6. Exit Edit Menu");
 
                 editItem = io.readInt("Please select which item you'd like to edit.");
 
                 switch (editItem) {
+//                    case 1:
+//                        String newTitle = io.readString("Enter new title: ");
+//                        dvd.setTitle(newTitle);
+//                        break;
                     case 1:
-                        String newTitle = io.readString("Enter new title: ");
-                        dvd.setTitle(newTitle);
-                        break;
-                    case 2:
                         String newReleaseDate = io.readString("Enter new release date: ");
                         dvd.setReleaseDate(newReleaseDate);
                         break;
-                    case 3:
+                    case 2:
                         String newRatingMPAA = io.readString("Enter new MPAA Rating: ");
                         dvd.setRatingMPAA(newRatingMPAA);
                         break;
-                    case 4:
+                    case 3:
                         String newDirector = io.readString("Enter new director name: ");
                         dvd.setDirectorName(newDirector);
                         break;
-                    case 5:
+                    case 4:
                         String newStudio = io.readString("Enter new studio name: ");
                         dvd.setStudio(newStudio);
                         break;
-                    case 6:
+                    case 5:
                         String newUserRating = io.readString("Enter new user rating: ");
                         dvd.setUserRating(newUserRating);
                         break;
-                    case 7:
+                    case 6:
                         continueEdit = false;
                         break;
                     default:

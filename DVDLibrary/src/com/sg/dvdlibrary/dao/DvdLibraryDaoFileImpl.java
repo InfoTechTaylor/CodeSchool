@@ -56,6 +56,14 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     }
 
 
+    @Override
+    public Dvd editDvd(Dvd dvd) throws DvdLibraryDaoException {
+        Dvd updatedDvd = dvds.replace(dvd.getTitle(), dvd);
+        writeCollection();
+        return updatedDvd;
+    }
+
+
     /**
      * Reads from DVD_FILE line by line and parses the lines to create a
      * map of Dvd objects. File format includes :: as a delimiter

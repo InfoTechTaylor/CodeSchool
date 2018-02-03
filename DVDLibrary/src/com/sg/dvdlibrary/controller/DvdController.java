@@ -110,7 +110,6 @@ public class DvdController {
                 dvdTitle = view.getDvdTitleChoice();
                 dvd = dao.getDvd(dvdTitle);
                 if(dvd != null){
-                    view.displayNoSuchDvd();
                     titleNotFound = false;
                 } else{
                     view.displayNoSuchDvd();
@@ -120,9 +119,11 @@ public class DvdController {
                 view.displayErrorMessage(e.getMessage());
             }
         }
-        dao.removeDvd(dvdTitle);
-        Dvd updatedDvd = view.displayEditMenuAndGetUpdates(dvd);
-        dao.addDvd(updatedDvd.getTitle(), updatedDvd);
+//        dao.removeDvd(dvdTitle);
+//        Dvd updatedDvd = view.displayEditMenuAndGetUpdates(dvd);
+        view.displayEditMenuAndGetUpdates(dvd);
+        dao.editDvd(dvd);
+//        dao.addDvd(updatedDvd.getTitle(), updatedDvd);
     }
 
 
