@@ -82,10 +82,19 @@ public class DvdController {
 
 
     private void viewDvd() throws DvdLibraryDaoException {
+        boolean titleNotFound = true;
+
         view.displayDisplayDvdBanner();
-        String dvdTitle = view.getDvdTitleChoice();
-        Dvd dvd = dao.getDvd(dvdTitle);
-        view.displayDvd(dvd);
+        while(titleNotFound) {
+            String dvdTitle = view.getDvdTitleChoice();
+            Dvd dvd = dao.getDvd(dvdTitle);
+            if(dvd != null) {
+                view.displayDvd(dvd);
+                titleNotFound = false;
+            } else {
+                view.displayNoSuchDvd();
+            }
+        }
     }
 
 
@@ -101,7 +110,10 @@ public class DvdController {
                 dvdTitle = view.getDvdTitleChoice();
                 dvd = dao.getDvd(dvdTitle);
                 if(dvd != null){
+                    view.displayNoSuchDvd();
                     titleNotFound = false;
+                } else{
+                    view.displayNoSuchDvd();
                 }
 
             } catch (NullPointerException e) {
@@ -115,13 +127,18 @@ public class DvdController {
 
 
     private void removeDvd() throws DvdLibraryDaoException {
+        boolean titleNotFound = true;
+
         view.displayRemoveMenuBanner();
-        String dvdTitle = view.getDvdTitleChoice();
-        Dvd removedDvd = dao.removeDvd(dvdTitle);
-        if (removedDvd != null) {
-            view.displayRemoveSuccessBanner();
-        } else {
-            view.displayNoSuchDvd();
+        while(titleNotFound) {
+            String dvdTitle = view.getDvdTitleChoice();
+            Dvd removedDvd = dao.removeDvd(dvdTitle);
+            if (removedDvd != null) {
+                view.displayRemoveSuccessBanner();
+                titleNotFound = false;
+            } else {
+                view.displayNoSuchDvd();
+            }
         }
     }
 
