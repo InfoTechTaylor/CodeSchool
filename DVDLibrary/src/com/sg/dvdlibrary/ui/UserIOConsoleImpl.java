@@ -13,14 +13,28 @@ public class UserIOConsoleImpl implements UserIO{
         System.out.println(message);
     }
 
+
     @Override
     public double readDouble(String prompt) {
-        // display prompt
-        print(prompt);
-        // read in user input as a String
-        String numberString = inputReader.nextLine();
-        // convert user input to a Double
-        double number = Double.parseDouble(numberString);
+        double number = 0d;
+        boolean invalidInput = false;
+        do {
+            try {
+                // display prompt
+                print(prompt);
+                // read in user input as a String
+                String numberString = inputReader.nextLine();
+                // convert user input to a Double
+                number = Double.parseDouble(numberString);
+                invalidInput = false;
+            } catch (NumberFormatException e) { // if the string does not contain a parsable double
+                print("Please enter a valid number of type double.");
+                invalidInput = true;
+            } catch (NullPointerException e) {  // if the string is null
+                print("Please enter a valid number of type double");
+                invalidInput = true;
+            }
+        } while(invalidInput);
         // return a double
         return number;
     }
@@ -28,21 +42,32 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public double readDouble(String prompt, double min, double max) {
         boolean invalidInput = false;
-        double number = 0;
+        double number = 0d;
         do{
-            // display prompt
-            print(prompt);
+            try {
+                // display prompt
+                print(prompt);
 
-            // read in double from user as a String
-            String numberString = inputReader.nextLine();
+                // read in double from user as a String
+                String numberString = inputReader.nextLine();
 
-            // convert user number to a Double
-            number = Double.parseDouble(numberString);
+                // convert user number to a Double
+                number = Double.parseDouble(numberString);
 
-            // validate double is between min and max
-            if(number < min || number > max){
+                invalidInput = false;
+
+                // validate double is between min and max
+                if (number < min || number > max) {
+                    invalidInput = true;
+                    print("Invalid number. Please enter number between " + min + " and " + max);
+                }
+
+            } catch (NumberFormatException e) { // if the string does not contain a parsable double
+                print("Please enter a valid number of type double.");
                 invalidInput = true;
-                print("Invalid number. Please enter number between " + min + " and " + max);
+            } catch (NullPointerException e) {  // if the string is null
+                print("Please enter a valid number of type double");
+                invalidInput = true;
             }
 
         }while(invalidInput);
@@ -53,12 +78,25 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public float readFloat(String prompt) {
-        // display prompt
-        print(prompt);
-        // read in user input as a String
-        String numberString = inputReader.nextLine();
-        // convert user input to a float
-        float number = Float.parseFloat(numberString);
+        float number = 0f;
+        boolean invalidInput = false;
+        do {
+            try {
+                // display prompt
+                print(prompt);
+                // read in user input as a String
+                String numberString = inputReader.nextLine();
+                // convert user input to a float
+                number = Float.parseFloat(numberString);
+                invalidInput = false;
+            } catch (NumberFormatException e) { // if the string does not contain a parsable float
+                print("Please enter a valid number of type double.");
+                invalidInput = true;
+            } catch (NullPointerException e) {  // if the string is null
+                print("Please enter a valid number of type double");
+                invalidInput = true;
+            }
+        } while(invalidInput);
         // return a float
         return number;
     }
@@ -66,21 +104,32 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public float readFloat(String prompt, float min, float max) {
         boolean invalidInput = false;
-        float number = 0;
+        float number = 0f;
         do{
-            // display prompt
-            print(prompt);
+            try {
+                // display prompt
+                print(prompt);
 
-            // read in float from user as a String
-            String numberString = inputReader.nextLine();
+                // read in float from user as a String
+                String numberString = inputReader.nextLine();
 
-            // convert user number to a float
-            number = Float.parseFloat(numberString);
+                // convert user number to a float
+                number = Float.parseFloat(numberString);
 
-            // validate float is between min and max
-            if(number < min || number > max){
+                invalidInput = false;
+
+                // validate float is between min and max
+                if (number < min || number > max) {
+                    invalidInput = true;
+                    print("Invalid number. Please enter number between " + min + " and " + max);
+                }
+
+            } catch (NumberFormatException e) { // if the string does not contain a parsable float
+                print("Please enter a valid number of type double.");
                 invalidInput = true;
-                print("Invalid number. Please enter number between " + min + " and " + max);
+            } catch (NullPointerException e) {  // if the string is null
+                print("Please enter a valid number of type double");
+                invalidInput = true;
             }
 
         }while(invalidInput);
@@ -117,19 +166,26 @@ public class UserIOConsoleImpl implements UserIO{
         boolean invalidInput = false;
         int number = 0;
         do{
-            // display prompt
-            print(prompt);
+            try {
+                // display prompt
+                print(prompt);
 
-            // read in int from user as a String
-            String numberString = inputReader.nextLine();
+                // read in int from user as a String
+                String numberString = inputReader.nextLine();
 
-            // convert user number to a int
-            number = Integer.parseInt(numberString);
+                // convert user number to a int
+                number = Integer.parseInt(numberString);
+                invalidInput = false;
 
-            // validate int is between min and max
-            if(number < min || number > max){
+                // validate int is between min and max
+                if (number < min || number > max) {
+                    invalidInput = true;
+                    print("Invalid number. Please enter number between " + min + " and " + max);
+                }
+
+            } catch (NumberFormatException e) { // e is most often e or ex in code
+                print("Please enter a valid integer");
                 invalidInput = true;
-                print("Invalid number. Please enter number between " + min + " and " + max);
             }
 
         }while(invalidInput);
@@ -140,12 +196,22 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public long readLong(String prompt) {
-        // display prompt
-        print(prompt);
-        // read in user input as a String
-        String numberString = inputReader.nextLine();
-        // convert user input to a long
-        long number = Long.parseLong(numberString);
+        Long number = 0L;
+        boolean invalidInput = false;
+        do {
+            try {
+                // display prompt
+                print(prompt);
+                // read in user input as a String
+                String numberString = inputReader.nextLine();
+                // convert user input to a long
+                number = Long.parseLong(numberString);
+                invalidInput = false;
+            } catch (NumberFormatException e) { // if the string does not contain a parsable long
+                print("Please enter a valid integer");
+                invalidInput = true;
+            }
+        } while(invalidInput);
         // return a long
         return number;
     }
@@ -153,21 +219,28 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public long readLong(String prompt, long min, long max) {
         boolean invalidInput = false;
-        long number = 0;
+        long number = 0L;
         do{
-            // display prompt
-            print(prompt);
+            try {
+                // display prompt
+                print(prompt);
 
-            // read in long from user as a String
-            String numberString = inputReader.nextLine();
+                // read in long from user as a String
+                String numberString = inputReader.nextLine();
 
-            // convert user number to a long
-            number = Long.parseLong(numberString);
+                // convert user number to a long
+                number = Long.parseLong(numberString);
+                invalidInput = false;
 
-            // validate long is between min and max
-            if(number < min || number > max){
+                // validate long is between min and max
+                if (number < min || number > max) {
+                    invalidInput = true;
+                    print("Invalid number. Please enter number between " + min + " and " + max);
+                }
+
+            } catch (NumberFormatException e) { // if the string does not contain a parsable long
+                print("Please enter a valid integer");
                 invalidInput = true;
-                print("Invalid number. Please enter number between " + min + " and " + max);
             }
 
         }while(invalidInput);
