@@ -21,7 +21,14 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     @Override
     public Dvd getDvd(String title) throws DvdLibraryDaoException {
         loadCollection();
-        return dvds.get(title);
+        Dvd dvd = dvds.get(title);
+        if (dvd != null){
+            return dvds.get(title);
+        } else {
+            return null;
+        }
+
+
     }
 
     @Override
@@ -34,7 +41,11 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     public Dvd removeDvd(String title) throws DvdLibraryDaoException{
         Dvd removedDvd = dvds.remove(title);
         writeCollection();
-        return removedDvd;
+        if (removedDvd != null){
+            return removedDvd;
+        } else {
+            return null;
+        }
     }
 
     @Override
