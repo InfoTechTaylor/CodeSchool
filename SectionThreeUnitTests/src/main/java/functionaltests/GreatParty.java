@@ -14,17 +14,9 @@ public class GreatParty {
     public boolean greatParty(int cigars, boolean isWeekend){
 
         if(isWeekend){
-            if(cigars >= 40) {
-                return true;
-            } else {
-                return false;
-            }
+            return cigars >= 40;
         } else {
-            if (cigars >= 40 && cigars <=60) {
-                return true;
-            } else {
-                return false;
-            }
+            return (cigars >= 40) && (cigars <= 60);
         }
     }
 }

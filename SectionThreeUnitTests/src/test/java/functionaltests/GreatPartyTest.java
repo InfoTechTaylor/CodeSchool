@@ -8,18 +8,18 @@ import static org.junit.Assert.*;
 
 public class GreatPartyTest {
 
-    GreatParty party = new GreatParty();
+    private GreatParty party = new GreatParty();
 
     public GreatPartyTest() {
 
     }
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     /**
