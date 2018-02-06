@@ -16,40 +16,31 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
      * Gets a Dvd object that has matching title passed through parameter
      * @param title of dvd to get
      * @return dvd object with matching title provided through parameter
-     * @throws DvdLibraryDaoException
+     * @throws DvdLibraryPersistenceException
      */
     @Override
-    public Dvd getDvd(String title) throws DvdLibraryDaoException {
+    public Dvd getDvd(String title) throws DvdLibraryPersistenceException {
         loadCollection();
-        Dvd dvd = dvds.get(title);
-        if (dvd != null){
-            return dvds.get(title);
-        } else {
-            return null;
-        }
+        return dvds.get(title);
 
 
     }
 
     @Override
-    public ArrayList<Dvd> getAllDvds() throws DvdLibraryDaoException {
+    public ArrayList<Dvd> getAllDvds() throws DvdLibraryPersistenceException {
         loadCollection();
         return new ArrayList<Dvd>(dvds.values());
     }
 
     @Override
-    public Dvd removeDvd(String title) throws DvdLibraryDaoException{
+    public Dvd removeDvd(String title) throws DvdLibraryPersistenceException {
         Dvd removedDvd = dvds.remove(title);
         writeCollection();
-        if (removedDvd != null){
-            return removedDvd;
-        } else {
-            return null;
-        }
+        return removedDvd;
     }
 
     @Override
-    public Dvd addDvd(String title, Dvd dvd) throws DvdLibraryDaoException {
+    public Dvd addDvd(String title, Dvd dvd) throws DvdLibraryPersistenceException {
         Dvd newDvd = dvds.put(title, dvd);
         writeCollection();
         return newDvd;
@@ -57,7 +48,7 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
 
     @Override
-    public Dvd editDvd(Dvd dvd) throws DvdLibraryDaoException {
+    public Dvd editDvd(Dvd dvd) throws DvdLibraryPersistenceException {
         Dvd updatedDvd = dvds.replace(dvd.getTitle(), dvd);
         writeCollection();
         return updatedDvd;
@@ -67,10 +58,10 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
     /**
      * Reads from DVD_FILE line by line and parses the lines to create a
      * map of Dvd objects. File format includes :: as a delimiter
-     * @throws DvdLibraryDaoException if an error occurs reading from file
+     * @throws DvdLibraryPersistenceException if an error occurs reading from file
      */
-    @Override
-    public void loadCollection() throws DvdLibraryDaoException {
+
+    private void loadCollection() throws DvdLibraryPersistenceException {
         Scanner scanner;
 
         try {
@@ -79,7 +70,7 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
                     new BufferedReader(
                             new FileReader(DVD_FILE)));
         } catch (FileNotFoundException e) {
-            throw new DvdLibraryDaoException(
+            throw new DvdLibraryPersistenceException(
                     "-_- Could not load dvd data into memory.", e);
         }
 
@@ -118,16 +109,15 @@ public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
     /**
      * Writes all dvds in the collection out to DVD_FILE.
-     * @throws DvdLibraryDaoException if an error occurs writing to the file
+     * @throws DvdLibraryPersistenceException if an error occurs writing to the file
      */
-    @Override
-    public void writeCollection() throws DvdLibraryDaoException {
+    private void writeCollection() throws DvdLibraryPersistenceException {
         PrintWriter out;
 
         try {
             out = new PrintWriter(new FileWriter(DVD_FILE));
         } catch (IOException e) {
-            throw new DvdLibraryDaoException(
+            throw new DvdLibraryPersistenceException(
                     "Could not save student data.", e);
         }
 

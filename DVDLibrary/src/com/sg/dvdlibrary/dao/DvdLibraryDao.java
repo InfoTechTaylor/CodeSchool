@@ -12,14 +12,14 @@ public interface DvdLibraryDao {
      * @param title
      * @return Dvd object
      */
-    Dvd getDvd(String title) throws DvdLibraryDaoException;
+    Dvd getDvd(String title) throws DvdLibraryPersistenceException;
 
 
     /**
      * Gets all Dvds and returns as an ArrayList
      * @return ArrayList of Dvd objects
      */
-    ArrayList<Dvd> getAllDvds() throws DvdLibraryDaoException;
+    ArrayList<Dvd> getAllDvds() throws DvdLibraryPersistenceException;
 
 
     /**
@@ -27,7 +27,7 @@ public interface DvdLibraryDao {
      * @param title
      * @return Dvd object that was removed
      */
-    Dvd removeDvd(String title) throws DvdLibraryDaoException;
+    Dvd removeDvd(String title) throws DvdLibraryPersistenceException;
 
 
     /**
@@ -37,22 +37,12 @@ public interface DvdLibraryDao {
      * @param dvd
      * @return Dvd object of newly added Dvd
      */
-    Dvd addDvd(String title, Dvd dvd) throws DvdLibraryDaoException;
+    Dvd addDvd(String title, Dvd dvd) throws DvdLibraryPersistenceException;
 
 
 
-    Dvd editDvd(Dvd dvd) throws DvdLibraryDaoException;
+    Dvd editDvd(Dvd dvd) throws DvdLibraryPersistenceException;
 
 
-    /**
-     * Method to use to load Dvds from a file
-     */
-    void loadCollection() throws DvdLibraryDaoException;
-
-
-    /**
-     * Method to write Dvds to a file
-     */
-    void writeCollection() throws DvdLibraryDaoException;
 
 }

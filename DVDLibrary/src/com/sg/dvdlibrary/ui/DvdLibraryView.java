@@ -25,7 +25,7 @@ public class DvdLibraryView {
         io.print("\t5. Search for a DVD by title");
         io.print("\t6. Exit program");
 
-        return io.readInt("\nPlease select one of the above options: ");
+        return io.readInt("\nPlease select one of the above options: ", 1, 6);
     }
 
 
@@ -115,7 +115,7 @@ public class DvdLibraryView {
                 io.print("\t5. User Rating: " + dvd.getUserRating());
                 io.print("\t6. Exit Edit Menu");
 
-                editItem = io.readInt("Please select which item you'd like to edit.");
+                editItem = io.readInt("Please select which item you'd like to edit.", 1, 6);
 
                 switch (editItem) {
 //                    case 1:
