@@ -26,6 +26,7 @@ public class InvestmentCalculator {
         System.out.println("What is the interest rate? ");
         interestRateString = scanner.nextLine();
         interestRate = new BigDecimal(interestRateString);
+        interestRate = interestRate.divide(new BigDecimal("4"));
 
 
         System.out.println("How many years? ");
@@ -41,7 +42,8 @@ public class InvestmentCalculator {
 
 
             for(int quarter=0; quarter < 4; quarter++){
-                interestEarned = quarterlyRunningBalance.multiply(interestRate.divide(oneHundred, 2, RoundingMode.HALF_UP));
+
+                interestEarned = quarterlyRunningBalance.multiply(interestRate).divide(oneHundred, 2, RoundingMode.HALF_UP);
                 yearlyInterestEarned = yearlyInterestEarned.add(interestEarned);
                 quarterlyRunningBalance =  quarterlyRunningBalance.add(interestEarned);
 
