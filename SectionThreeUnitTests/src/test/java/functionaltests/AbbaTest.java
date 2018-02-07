@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
 
 public class AbbaTest {
 
-    Abba abba = new Abba();
+    private Abba abba = new Abba();
 
     public AbbaTest() {
 
