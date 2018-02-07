@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class CanHazTableTest {
 
-    CanHazTable table = new CanHazTable();
+    private CanHazTable table = new CanHazTable();
 
     public CanHazTableTest() {
 
