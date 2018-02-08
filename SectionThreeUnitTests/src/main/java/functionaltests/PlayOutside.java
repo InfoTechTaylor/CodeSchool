@@ -12,17 +12,9 @@ public class PlayOutside {
     // playOutside(95, true) → true
     public boolean playOutside(int temp, boolean isSummer) {
         if(isSummer){
-            if(temp >= 60 && temp <= 100){
-                return true;
-            } else {
-                return false;
-            }
+            return temp >= 60 && temp <= 100;
         } else {
-            if(temp >= 60 && temp <= 90){
-                return true;
-            } else {
-                return false;
-            }
+            return temp >= 60 && temp <= 90;
         }
     }
 }
