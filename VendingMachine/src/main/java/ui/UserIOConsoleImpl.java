@@ -17,7 +17,8 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public double readDouble(String prompt) {
         double number = 0d;
-        boolean invalidInput = false;
+        boolean invalidInput;
+
         do {
             try {
                 // display prompt
