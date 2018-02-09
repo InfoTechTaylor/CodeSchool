@@ -1,5 +1,6 @@
 package ui;
 
+import java.math.BigDecimal;
 import java.util.Scanner;
 
 public class UserIOConsoleImpl implements UserIO{
@@ -247,6 +248,11 @@ public class UserIOConsoleImpl implements UserIO{
 
         // return a String
         return string;
+    }
+
+    @Override
+    public BigDecimal readBigDecimal(String number) {
+        return null;
     }
 
 

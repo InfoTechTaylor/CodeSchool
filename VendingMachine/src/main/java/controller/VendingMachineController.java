@@ -52,14 +52,28 @@ public class VendingMachineController {
        } // end while(isRunning)
     } // end run()
 
-    //private void listAllAvailableItems() method
+    private void listAllAvailableItems(){
 
-    //private void retrieveMenuSelection() method
+    }
 
-    //private void addMoney() method
+    private void retrieveMenuSelection(){
 
-    // private void purchaseItem() method
+    }
 
-    // private void retrieveChange() method
+    private void addMoney(){
+
+    }
+
+    private void purchaseItem(){
+
+    }
+
+    private void retrieveChange() {
+
+    }
+
+    private void exit(){
+
+    }
 
 } // end class

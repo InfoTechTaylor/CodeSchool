@@ -1,5 +1,11 @@
 package ui;
 
+import dto.VendingMachineChange;
+import dto.VendingMachineItem;
+
+import java.math.BigDecimal;
+import java.util.List;
+
 public class VendingMachineView {
 
     private UserIO io;
@@ -22,5 +28,29 @@ public class VendingMachineView {
                 "3. Get Change\n" +
                 "4. Exit\n\n" +
                 "Enter your selection (1-4) and hit enter: ", 1, 4);
+    }
+
+    public String displayVendingMachineInventory(List<VendingMachineItem> itemList){
+        return null;
+    }
+
+    public BigDecimal promptForMoneyToAdd(){
+        return null;
+    }
+
+    public String promptForItemId(){
+        return null;
+    }
+
+    public void displayChange(VendingMachineChange change){
+
+    }
+
+    public void displayItem(VendingMachineItem item){
+
+    }
+
+    public void displayCurrentBalance(BigDecimal currentBalance){
+
     }
 }
