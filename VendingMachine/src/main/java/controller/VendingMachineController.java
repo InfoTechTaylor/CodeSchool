@@ -81,11 +81,32 @@ public class VendingMachineController {
         // update remainingMoney in the service layer
         BigDecimal remaingMoney = service.addMoneyToMemory(moneyAmount);
         // display current amount back to the user
+        view.displaySuccessAddMoneyBanner(moneyAmount);
         view.displayCurrentBalance(remaingMoney);
+        view.promptUserToHitEnter();
+
 
     }
 
     private void purchaseItem(){
+        try {
+            // get current inventory
+            List<VendingMachineItem> inventoryList = service.retrieveAllVendingMachineItems();
+            //redisplay options
+            view.displayVendingMachineInventory(inventoryList);
+            // get item selection from user
+            String itemIdChoice = view.promptForItemId();
+            // call purchaseItem in service which will validate item, deduct quantity, and deduct remainingMoney
+            VendingMachineItem purchasedItem = service.purchaseItem(itemIdChoice);
+            // print success banner to user
+            view.displaySuccessfulPurchaseBanner(purchasedItem);
+            // print current balance
+            BigDecimal currentBalance = service.retrieveRemainingMoney();
+            view.displayCurrentBalance(currentBalance);
+            view.promptUserToHitEnter();
+        } catch(VendingMachinePersistenceException e){
+            view.displayErrorMessage(e.getMessage());
+        }
 
     }
 

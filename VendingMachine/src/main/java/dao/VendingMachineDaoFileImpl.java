@@ -2,9 +2,7 @@ package dao;
 
 import dto.VendingMachineItem;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.*;
@@ -28,13 +26,15 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     }
 
     @Override
-    public void updateItem(VendingMachineItem item) {
-
+    public void updateItem(VendingMachineItem item) throws VendingMachinePersistenceException{
+        vendingMachineItemMap.replace(item.getItemId(), item);
+        writeVendingMachineItems();
     }
 
     @Override
-    public VendingMachineItem retrieveItemById(String itemId) {
-        return null;
+    public VendingMachineItem retrieveItemById(String itemId) throws VendingMachinePersistenceException{
+        loadVendingMachineItems();
+        return vendingMachineItemMap.get(itemId);
     }
 
     @Override
@@ -85,6 +85,26 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     } // end load method
 
     private void writeVendingMachineItems() throws VendingMachinePersistenceException{
+        PrintWriter out;
 
+        try {
+            out = new PrintWriter(new FileWriter(VENDING_MACHINE_ITEMS_TEXT));
+        } catch (IOException e){
+            throw new VendingMachinePersistenceException("Could not save vending machine data");
+        }
+
+        // Write out the VendingMachineItem objects to the file
+        List<VendingMachineItem> itemList = this.retrieveAllVendingMachineItems();
+        for (VendingMachineItem currentItem : itemList){
+            // write the VendingMachineItem object to the file
+            out.println(currentItem.getItemId() + STRING_DELIMITER
+                            + currentItem.getItemName() + STRING_DELIMITER
+                            + currentItem.getItemCost() + STRING_DELIMITER
+                            + currentItem.getItemQuantity());
+            // force PrintWriter to write line to the file
+            out.flush();
+        } // end enhanced for loop
+        // clean up
+        out.close();
     }
 }

@@ -30,8 +30,20 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public VendingMachineItem purchaseItem(String itemId) {
-        return null;
+    public VendingMachineItem purchaseItem(String itemId) throws VendingMachinePersistenceException{
+        VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
+        boolean isValidChoice = validateItemChoice(itemId);
+        boolean validFunds = validateFunds(itemToPurchase);
+
+        if(isValidChoice && validFunds){
+
+            // update VendingMachineItem quantity
+            itemToPurchase.setItemQuantity(itemToPurchase.getItemQuantity()-1);
+            dao.updateItem(itemToPurchase);
+            // update remainingMoney
+            updateMoneyAmountInMemory(itemToPurchase.getItemCost());
+        }
+        return itemToPurchase;
     }
 
     @Override
@@ -44,12 +56,25 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return remainingMoney;
     }
 
-    private void validateItemChoice(String itemId){
-
+    private boolean validateItemChoice(String itemId) throws VendingMachinePersistenceException{
+        boolean isValid;
+        VendingMachineItem itemToValidate = dao.retrieveItemById(itemId);
+        if(itemToValidate != null && itemToValidate.getItemQuantity() != 0){
+            isValid = true;
+        } else {
+            isValid = false;
+            // THROW NOITEMINVENTORYEXCEPTION
+        }
+        return isValid;
     }
 
-    private void validateFunds(VendingMachineItem item){
-
+    private boolean validateFunds(VendingMachineItem item){
+        if((item.getItemCost()).compareTo(remainingMoney) < 0){
+            return true;
+        } else {
+            return false;
+            // THROW INSUFFICIENTFUNDSEXCEPTION
+        }
     }
 
     private void resetRemainingMoneyToZero(){
@@ -57,7 +82,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     private BigDecimal updateMoneyAmountInMemory(BigDecimal amount){
-        return null;
+        return remainingMoney = remainingMoney.subtract(amount);
     }
 
     private void updateItemQuantity(int quantity){

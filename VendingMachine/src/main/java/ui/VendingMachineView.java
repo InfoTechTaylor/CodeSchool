@@ -23,7 +23,7 @@ public class VendingMachineView {
     }
 
     public int displayMenuAndPromptSelection(){
-        return io.readInt("\nMAIN MENU: \n" +
+        return io.readInt("\nOPTIONS: \n" +
                 "===========================================\n" +
                 "1. Add Money\n" +
                 "2. Purchase an Item\n" +
@@ -33,7 +33,8 @@ public class VendingMachineView {
     }
 
     public void displayVendingMachineInventory(List<VendingMachineItem> itemList){
-
+        io.print("ITEMS FOR PURCHASE");
+        io.print("===========================================");
         io.print("Item Id, Name, Cost, Quantity");
         for(VendingMachineItem currentItem : itemList){
             if(currentItem.getItemQuantity() != 0) {
@@ -48,7 +49,7 @@ public class VendingMachineView {
     }
 
     public String promptForItemId(){
-        return null;
+        return io.readString("Enter the item ID of the product you want to buy: ");
     }
 
     public void displayChange(VendingMachineChange change){
@@ -71,5 +72,17 @@ public class VendingMachineView {
 
     public void displaySuccessExitBanner(){
         io.print("Exit Successful. Good bye! ");
+    }
+
+    public void displaySuccessfulPurchaseBanner(VendingMachineItem purchasedItem){
+        io.print("Successfully purchased " + purchasedItem.getItemName() + " for $" +purchasedItem.getItemCost());
+    }
+
+    public void promptUserToHitEnter(){
+        io.readString("Hit enter to continue: ");
+    }
+
+    public void displaySuccessAddMoneyBanner(BigDecimal amount){
+        io.print("Successfully added $" + amount + " to the machine.");
     }
 }
