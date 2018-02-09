@@ -52,8 +52,12 @@ public class VendingMachineView {
         return io.readString("Enter the item ID of the product you want to buy: ");
     }
 
-    public void displayChange(VendingMachineChange change){
-
+    public void displayChange(VendingMachineChange amountOfCoins){
+        io.print("Here is your change: ");
+        io.print(amountOfCoins.getQuarters() + " Quarters");
+        io.print(amountOfCoins.getDimes() + " Dimes");
+        io.print(amountOfCoins.getNickels() + " Nickels");
+        io.print(amountOfCoins.getPennies() + " Pennies");
     }
 
     public void displayItem(VendingMachineItem item){
@@ -85,4 +89,5 @@ public class VendingMachineView {
     public void displaySuccessAddMoneyBanner(BigDecimal amount){
         io.print("Successfully added $" + amount + " to the machine.");
     }
+
 }

@@ -47,8 +47,44 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public VendingMachineChange convertDollarsToChange() {
-        return null;
+    public VendingMachineChange convertDollarsToCoinsAndGetChange() {
+        // convert remainingMoney to pennies and from BigDecimal to int
+        int amountOfPennies = (remainingMoney.movePointRight(2)).intValueExact();
+        // create VendingMachineChange object
+        VendingMachineChange countsOfCoins = new VendingMachineChange();
+        int remainderOfPennies =0;
+
+        // get count of quarters
+        if(amountOfPennies >= 25) {
+            remainderOfPennies = amountOfPennies % 25;
+            int countOfQuarters = (amountOfPennies - remainderOfPennies) / 25;
+            countsOfCoins.setQuarters(countOfQuarters);
+            amountOfPennies = remainderOfPennies;
+        }
+
+        if(amountOfPennies >= 10){
+            remainderOfPennies = amountOfPennies % 10;
+            int countOfDimes = (amountOfPennies - remainderOfPennies) / 10;
+            countsOfCoins.setDimes(countOfDimes);
+            amountOfPennies = remainderOfPennies;
+        }
+
+        if(amountOfPennies >= 5 ){
+            remainderOfPennies = amountOfPennies % 5;
+            int countOfNickels = (amountOfPennies - remainderOfPennies) / 5;
+            countsOfCoins.setNickels(countOfNickels);
+            amountOfPennies = remainderOfPennies;
+        }
+
+        if(amountOfPennies >= 1){
+            int countOfPennies = remainderOfPennies;
+            countsOfCoins.setPennies(countOfPennies);
+            amountOfPennies = amountOfPennies - remainderOfPennies;
+        }
+
+        resetRemainingMoneyToZero();
+
+        return countsOfCoins;
     }
 
     @Override
@@ -78,7 +114,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     private void resetRemainingMoneyToZero(){
-
+        remainingMoney = new BigDecimal("0");
     }
 
     private BigDecimal updateMoneyAmountInMemory(BigDecimal amount){

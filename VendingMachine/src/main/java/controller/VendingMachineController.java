@@ -1,7 +1,9 @@
 package controller;
 
 import dao.VendingMachinePersistenceException;
+import dto.VendingMachineChange;
 import dto.VendingMachineItem;
+import javafx.collections.ListChangeListener;
 import service.VendingMachineServiceLayer;
 import ui.VendingMachineView;
 
@@ -111,7 +113,14 @@ public class VendingMachineController {
     }
 
     private void retrieveChange() {
-
+        // get current amount
+        BigDecimal currentBalance = service.retrieveRemainingMoney();
+        // convert amount to coins and reset amount
+        VendingMachineChange amountOfChange = service.convertDollarsToCoinsAndGetChange();
+        // display change
+        view.displayChange(amountOfChange);
+        //prompt user to hit enter
+        view.promptUserToHitEnter();
     }
 
     private void displayCurrentBalance(){
