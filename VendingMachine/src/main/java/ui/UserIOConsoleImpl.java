@@ -251,8 +251,24 @@ public class UserIOConsoleImpl implements UserIO{
     }
 
     @Override
-    public BigDecimal readBigDecimal(String number) {
-        return new BigDecimal(number);
+    public BigDecimal readBigDecimal(String prompt) {
+        boolean invalidInput = true;
+        BigDecimal number = new BigDecimal("0");
+
+        while(invalidInput) {
+            try {
+                //display prompt
+                print(prompt);
+
+                // read in string from user as a BigDecimal
+                number = new BigDecimal(inputReader.nextLine());
+                invalidInput = false;
+            } catch (NumberFormatException e) {
+                print("Please enter a valid number");
+                invalidInput = true;
+            }
+        }
+        return number;
     }
 
 
