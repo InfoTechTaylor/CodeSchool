@@ -252,7 +252,7 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public BigDecimal readBigDecimal(String number) {
-        return null;
+        return new BigDecimal(number);
     }
 
 
