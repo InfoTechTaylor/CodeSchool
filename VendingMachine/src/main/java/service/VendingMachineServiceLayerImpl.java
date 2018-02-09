@@ -12,7 +12,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     private VendingMachineDao dao;
     private VendingMachineChange remainingChange;
-    private BigDecimal remainingMoney;
+    private BigDecimal remainingMoney = new BigDecimal("0");
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao){
         this.dao = dao;
@@ -25,7 +25,8 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public BigDecimal addMoneyToMemory(BigDecimal amount) {
-        return null;
+        remainingMoney = remainingMoney.add(amount);
+        return remainingMoney;
     }
 
     @Override
@@ -40,7 +41,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public BigDecimal retrieveRemainingMoney() {
-        return null;
+        return remainingMoney;
     }
 
     private void validateItemChoice(String itemId){

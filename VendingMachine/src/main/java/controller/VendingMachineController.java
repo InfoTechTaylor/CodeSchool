@@ -5,6 +5,7 @@ import dto.VendingMachineItem;
 import service.VendingMachineServiceLayer;
 import ui.VendingMachineView;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,22 +31,25 @@ public class VendingMachineController {
         while(isRunning){
             // display inventory to user, pass ArrayList<VendingMachineItem>
             listAllAvailableItems();
+            // display current balance
+            displayCurrentBalance();
             // display menu to user and get selection (int between 1-4)
-            userSelection = view.displayMenuAndPromptSelection();
+            userSelection = retrieveMenuSelection();
 
             // enter switch statement
             switch(userSelection) {
                 case 1:
-                    //add money
+                    addMoney();
                     break;
                 case 2:
-                    //purchase item
+                    purchaseItem();
                     break;
                 case 3:
-                    // Get change
+                    retrieveChange();
                     break;
                 case 4:
                     isRunning = false;
+                    exit();
                     break;
                 default:
                     // default throw error to user, allow program to loop back to menu options
@@ -66,11 +70,18 @@ public class VendingMachineController {
         }
     }
 
-    private void retrieveMenuSelection(){
+    private int retrieveMenuSelection(){
+        return view.displayMenuAndPromptSelection();
 
     }
 
     private void addMoney(){
+        // ask user for how much money to add to machine
+        BigDecimal moneyAmount = view.promptForMoneyToAdd();
+        // update remainingMoney in the service layer
+        BigDecimal remaingMoney = service.addMoneyToMemory(moneyAmount);
+        // display current amount back to the user
+        view.displayCurrentBalance(remaingMoney);
 
     }
 
@@ -82,8 +93,13 @@ public class VendingMachineController {
 
     }
 
-    private void exit(){
+    private void displayCurrentBalance(){
+        BigDecimal currentBalance = service.retrieveRemainingMoney();
+        view.displayCurrentBalance(currentBalance);
+    }
 
+    private void exit(){
+        view.displaySuccessExitBanner();
     }
 
 } // end class
