@@ -15,32 +15,41 @@ public class VendingMachineController {
 
     public void run(){
         // declare variables
-        //boolean isRunning = true;
+        boolean isRunning = true;
+        int userSelection = 0;
 
         // display welcome banner
+        view.displayWelcomeBanner();
 
         // start while loop for a running vending machine
-        //while(isRunning){
+        while(isRunning){
 
             // load inventory from file and store in an ArrayList<VendingMachineItem>
 
             // display inventory to user, pass ArrayList<VendingMachineItem>
 
             // display menu to user and get selection (int between 1-4)
+            userSelection = view.displayMenuAndPromptSelection();
 
-            // if selection is to exit (4), set isRunning to false
-
-            // else, enter switch statement on user's selection
-
-                //case 1 add money
-
-                //case 2 purchase item
-
-                //case 3 get change
-
-                // default throw error to user, allow program to loop back to menu options
-
-       // } // end while(isRunning)
+            // enter switch statement
+            switch(userSelection) {
+                case 1:
+                    //add money
+                    break;
+                case 2:
+                    //purchase item
+                    break;
+                case 3:
+                    // Get change
+                    break;
+                case 4:
+                    isRunning = false;
+                    break;
+                default:
+                    // default throw error to user, allow program to loop back to menu options
+                    break;
+            } // end switch
+       } // end while(isRunning)
     } // end run()
 
     //private void listAllAvailableItems() method
