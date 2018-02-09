@@ -11,6 +11,8 @@ import java.util.List;
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
 
     private VendingMachineDao dao;
+    private VendingMachineChange remainingChange;
+    private BigDecimal remainingMoney;
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao){
         this.dao = dao;
@@ -18,7 +20,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException {
-        return null;
+        return dao.retrieveAllVendingMachineItems();
     }
 
     @Override

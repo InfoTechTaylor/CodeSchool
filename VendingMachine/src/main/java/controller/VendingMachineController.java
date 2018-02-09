@@ -1,7 +1,12 @@
 package controller;
 
+import dao.VendingMachinePersistenceException;
+import dto.VendingMachineItem;
 import service.VendingMachineServiceLayer;
 import ui.VendingMachineView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class VendingMachineController {
 
@@ -16,18 +21,15 @@ public class VendingMachineController {
     public void run(){
         // declare variables
         boolean isRunning = true;
-        int userSelection = 0;
+        int userSelection;
 
         // display welcome banner
         view.displayWelcomeBanner();
 
         // start while loop for a running vending machine
         while(isRunning){
-
-            // load inventory from file and store in an ArrayList<VendingMachineItem>
-
             // display inventory to user, pass ArrayList<VendingMachineItem>
-
+            listAllAvailableItems();
             // display menu to user and get selection (int between 1-4)
             userSelection = view.displayMenuAndPromptSelection();
 
@@ -53,7 +55,15 @@ public class VendingMachineController {
     } // end run()
 
     private void listAllAvailableItems(){
-
+        try {
+            // call the service for a list of available items
+            List<VendingMachineItem> allItemsList = service.retrieveAllVendingMachineItems();
+            //print all items calling the view
+            view.displayVendingMachineInventory(allItemsList);
+        } catch (VendingMachinePersistenceException e){
+            // call the view to display error
+            view.displayErrorMessage(e.getMessage());
+        }
     }
 
     private void retrieveMenuSelection(){

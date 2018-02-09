@@ -4,6 +4,7 @@ import dto.VendingMachineChange;
 import dto.VendingMachineItem;
 
 import java.math.BigDecimal;
+import java.util.Formatter;
 import java.util.List;
 
 public class VendingMachineView {
@@ -16,7 +17,7 @@ public class VendingMachineView {
 
     public void displayWelcomeBanner(){
         io.print("===========================================");
-        io.print("                  WELCOME!");
+        io.print("      WELCOME TO THE VENDING MACHINE!");
         io.print("===========================================");
     }
 
@@ -30,8 +31,13 @@ public class VendingMachineView {
                 "Enter your selection (1-4) and hit enter: ", 1, 4);
     }
 
-    public String displayVendingMachineInventory(List<VendingMachineItem> itemList){
-        return null;
+    public void displayVendingMachineInventory(List<VendingMachineItem> itemList){
+
+        io.print("Item Id, Name, Cost, Quantity");
+        for(VendingMachineItem currentItem : itemList){
+            io.print(currentItem.getItemId() + "," + currentItem.getItemName() +
+                    "," + currentItem.getItemCost() + "," + currentItem.getItemQuantity());
+        }
     }
 
     public BigDecimal promptForMoneyToAdd(){
@@ -52,5 +58,11 @@ public class VendingMachineView {
 
     public void displayCurrentBalance(BigDecimal currentBalance){
 
+    }
+
+    public void displayErrorMessage(String message){
+        io.print("ERROR");
+        io.print("===========================================");
+        io.print(message);
     }
 }

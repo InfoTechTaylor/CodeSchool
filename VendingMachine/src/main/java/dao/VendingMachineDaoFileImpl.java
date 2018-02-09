@@ -5,11 +5,9 @@ import dto.VendingMachineItem;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.lang.reflect.Array;
 import java.math.BigDecimal;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
+import java.util.*;
 
 public class VendingMachineDaoFileImpl implements VendingMachineDao {
 
@@ -24,8 +22,9 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
 
 
     @Override
-    public List<VendingMachineItem> retrieveAllVendingMachineItems() {
-        return null;
+    public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException{
+        loadVendingMachineItems();
+        return new ArrayList<VendingMachineItem>(vendingMachineItemMap.values());
     }
 
     @Override

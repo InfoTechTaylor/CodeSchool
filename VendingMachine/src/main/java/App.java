@@ -15,7 +15,7 @@ public class App {
         // Instantiate the view and wire teh UserIO implementation into it
         VendingMachineView myView = new VendingMachineView(myIo);
         // Instantiate the Dao
-        VendingMachineDao myDao = new VendingMachineDaoFileImpl();
+        VendingMachineDao myDao = new VendingMachineDaoFileImpl("vendingMachineItems_prod.txt");
         // Instantiate the service layer and wire the dao into it
         VendingMachineServiceLayer myService = new VendingMachineServiceLayerImpl(myDao);
         // instantiate the controller and wire the service layer into it and the view
