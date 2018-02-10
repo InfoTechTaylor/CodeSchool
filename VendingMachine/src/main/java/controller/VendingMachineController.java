@@ -3,12 +3,12 @@ package controller;
 import dao.VendingMachinePersistenceException;
 import dto.VendingMachineChange;
 import dto.VendingMachineItem;
-import javafx.collections.ListChangeListener;
+import service.InsufficientFundsException;
+import service.NoItemInventoryException;
 import service.VendingMachineServiceLayer;
 import ui.VendingMachineView;
 
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachineController {
@@ -106,7 +106,7 @@ public class VendingMachineController {
             BigDecimal currentBalance = service.retrieveRemainingMoney();
             view.displayCurrentBalance(currentBalance);
             view.promptUserToHitEnter();
-        } catch(VendingMachinePersistenceException e){
+        } catch(VendingMachinePersistenceException | InsufficientFundsException | NoItemInventoryException e){
             view.displayErrorMessage(e.getMessage());
         }
 
@@ -115,10 +115,14 @@ public class VendingMachineController {
     private void retrieveChange() {
         // get current amount
         BigDecimal currentBalance = service.retrieveRemainingMoney();
-        // convert amount to coins and reset amount
-        VendingMachineChange amountOfChange = service.convertDollarsToCoinsAndGetChange();
-        // display change
-        view.displayChange(amountOfChange);
+        try {
+            // convert amount to coins and reset amount
+            VendingMachineChange amountOfChange = service.convertDollarsToCoinsAndGetChange();
+            // display change
+            view.displayChange(amountOfChange);
+        } catch (InsufficientFundsException e){
+            view.displayErrorMessage(e.getMessage());
+        }
         //prompt user to hit enter
         view.promptUserToHitEnter();
     }
