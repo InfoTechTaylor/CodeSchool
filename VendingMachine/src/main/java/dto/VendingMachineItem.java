@@ -1,6 +1,7 @@
 package dto;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class VendingMachineItem {
 
@@ -41,5 +42,22 @@ public class VendingMachineItem {
 
     public void setItemQuantity(int itemQuantity) {
         this.itemQuantity = itemQuantity;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VendingMachineItem that = (VendingMachineItem) o;
+        return itemQuantity == that.itemQuantity &&
+                Objects.equals(itemId, that.itemId) &&
+                Objects.equals(itemName, that.itemName) &&
+                Objects.equals(itemCost, that.itemCost);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(itemId, itemName, itemCost, itemQuantity);
     }
 }

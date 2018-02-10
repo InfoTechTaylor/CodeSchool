@@ -1,5 +1,7 @@
 package dto;
 
+import java.util.Objects;
+
 public class VendingMachineChange {
     private int quarters;
     private int dimes;
@@ -36,5 +38,22 @@ public class VendingMachineChange {
 
     public void setPennies(int pennies) {
         this.pennies = pennies;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        VendingMachineChange that = (VendingMachineChange) o;
+        return quarters == that.quarters &&
+                dimes == that.dimes &&
+                nickels == that.nickels &&
+                pennies == that.pennies;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(quarters, dimes, nickels, pennies);
     }
 }
