@@ -61,13 +61,13 @@ public class VendingMachineView {
         io.print(amountOfCoins.getPennies() + " Pennies");
     }
 
-    public void displayItem(VendingMachineItem item){
-        io.print("Item ID: " + item.getItemId());
-        io.print("Name: " + item.getItemName());
-        io.print("Price: " + item.getItemCost());
-        io.print("Quantity: " + item.getItemQuantity());
-
-    }
+//    public void displayItem(VendingMachineItem item){
+//        io.print("Item ID: " + item.getItemId());
+//        io.print("Name: " + item.getItemName());
+//        io.print("Price: " + item.getItemCost());
+//        io.print("Quantity: " + item.getItemQuantity());
+//
+//    }
 
     public void displayCurrentBalance(BigDecimal currentBalance){
         io.print("\nCurrent Balance: " + NumberFormat.getCurrencyInstance().format(currentBalance) +"\n");

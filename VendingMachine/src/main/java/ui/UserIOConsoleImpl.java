@@ -40,7 +40,7 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public double readDouble(String prompt, double min, double max) {
-        boolean invalidInput = false;
+        boolean invalidInput;
         double number = 0d;
         do{
             try {
@@ -75,7 +75,7 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public float readFloat(String prompt) {
         float number = 0f;
-        boolean invalidInput = false;
+        boolean invalidInput;
         do {
             try {
                 // display prompt
@@ -96,7 +96,7 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public float readFloat(String prompt, float min, float max) {
-        boolean invalidInput = false;
+        boolean invalidInput;
         float number = 0f;
         do{
             try {
@@ -131,7 +131,7 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public int readInt(String prompt) {
         int number = 0;
-        boolean invalidInput = false;
+        boolean invalidInput;
         do {
             try {
                 // display the prompt using existing method of this class to print
@@ -153,7 +153,7 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public int readInt(String prompt, int min, int max) {
-        boolean invalidInput = false;
+        boolean invalidInput;
         int number = 0;
         do{
             try {
@@ -187,7 +187,7 @@ public class UserIOConsoleImpl implements UserIO{
     @Override
     public long readLong(String prompt) {
         Long number = 0L;
-        boolean invalidInput = false;
+        boolean invalidInput;
         do {
             try {
                 // display prompt
@@ -208,7 +208,7 @@ public class UserIOConsoleImpl implements UserIO{
 
     @Override
     public long readLong(String prompt, long min, long max) {
-        boolean invalidInput = false;
+        boolean invalidInput;
         long number = 0L;
         do{
             try {
@@ -243,11 +243,8 @@ public class UserIOConsoleImpl implements UserIO{
     public String readString(String prompt) {
         // display prompt
         print(prompt);
-        // read in user input as a String
-        String string = inputReader.nextLine();
-
-        // return a String
-        return string;
+        // read input into a string and return
+        return inputReader.nextLine();
     }
 
     @Override

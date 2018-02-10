@@ -4,13 +4,11 @@ import dao.VendingMachineDao;
 import dao.VendingMachineDaoStubImpl;
 
 import dto.VendingMachineChange;
-import dto.VendingMachineItem;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
-import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -20,12 +18,12 @@ public class VendingMachineServiceLayerTest {
     private VendingMachineServiceLayerImpl service = new VendingMachineServiceLayerImpl(daoStub);
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp()  {
         service.setRemainingMoney(new BigDecimal("0"));
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tearDown() {
     }
 
     @Test
@@ -35,12 +33,12 @@ public class VendingMachineServiceLayerTest {
 
     @Test
     public void testAddMoneyToMemory() throws Exception{
-        BigDecimal currentAmount = service.retrieveRemainingMoney();
         service.addMoneyToMemory(new BigDecimal("1.00"));
+        assertEquals(new BigDecimal("1.00"), service.retrieveRemainingMoney());
     }
 
     @Test
-    public void testAddMoneyInsufficientFundsException() throws Exception {
+    public void testAddMoneyInsufficientFundsException() {
         // arrange
         //act
         try {
@@ -101,7 +99,7 @@ public class VendingMachineServiceLayerTest {
     }
 
     @Test
-    public void testConvertDollarsToChangeInsufficientFunds() throws Exception {
+    public void testConvertDollarsToChangeInsufficientFunds() {
         // arrange - remainingBalance is set to zero in setUp()
         try{
             // act

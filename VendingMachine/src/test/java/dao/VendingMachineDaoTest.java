@@ -1,7 +1,7 @@
 package dao;
 
 import dto.VendingMachineItem;
-import org.junit.After;
+//import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -12,7 +12,7 @@ import static org.junit.Assert.*;
 
 public class VendingMachineDaoTest {
 
-    VendingMachineDao dao = new VendingMachineDaoFileImpl("vendingMachineItems_test.txt");
+    private VendingMachineDao dao = new VendingMachineDaoFileImpl("vendingMachineItems_test.txt");
 
     @Before
     public void setUp() throws Exception {
@@ -22,10 +22,10 @@ public class VendingMachineDaoTest {
         }
     }
 
-    @After
-    public void tearDown() throws Exception {
-
-    }
+//    @After
+//    public void tearDown() throws Exception {
+//
+//    }
 
     @Test
     public void retrieveAllVendingMachineItems() throws Exception{
@@ -92,6 +92,7 @@ public class VendingMachineDaoTest {
 
         // assert
         assertEquals(item, itemFromDao);
+        assertNotNull(item);
 
     }
 }
