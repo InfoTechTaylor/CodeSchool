@@ -13,7 +13,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     private VendingMachineDao dao;
     private BigDecimal remainingMoney = new BigDecimal("0");
 
-    public VendingMachineServiceLayerImpl(VendingMachineDao dao){
+    public VendingMachineServiceLayerImpl(VendingMachineDao dao) {
         this.dao = dao;
     }
 
@@ -23,8 +23,8 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public BigDecimal addMoneyToMemory(BigDecimal amount) throws InsufficientFundsException{
-        if(amount.compareTo(new BigDecimal("0")) > 0) {
+    public BigDecimal addMoneyToMemory(BigDecimal amount) throws InsufficientFundsException {
+        if (amount.compareTo(new BigDecimal("0")) > 0) {
             remainingMoney = remainingMoney.add(amount);
         } else {
             throw new InsufficientFundsException("Must add positive amount to the machine.");
@@ -33,24 +33,25 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public VendingMachineItem purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException{
+    public VendingMachineItem purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
         VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
         boolean isValidChoice = validateItemChoice(itemId);
         boolean validFunds = validateFunds(itemToPurchase);
 
-        if(isValidChoice && validFunds){
+        if (isValidChoice && validFunds) {
 
             // update VendingMachineItem quantity
-            itemToPurchase.setItemQuantity(itemToPurchase.getItemQuantity()-1);
+            itemToPurchase.setItemQuantity(itemToPurchase.getItemQuantity() - 1);
             dao.updateItem(itemToPurchase);
             // update remainingMoney
             updateMoneyAmountInMemory(itemToPurchase.getItemCost());
         }
+
         return itemToPurchase;
     }
 
     @Override
-    public VendingMachineChange convertDollarsToCoinsAndGetChange() throws InsufficientFundsException{
+    public VendingMachineChange convertDollarsToCoinsAndGetChange() throws InsufficientFundsException {
         // create VendingMachineChange object
         VendingMachineChange countsOfCoins = new VendingMachineChange();
         BigDecimal zero = new BigDecimal("0");
@@ -99,20 +100,22 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return remainingMoney;
     }
 
-    private boolean validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException{
+    private boolean validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
 
         VendingMachineItem itemToValidate = dao.retrieveItemById(itemId);
-        if(itemToValidate != null && itemToValidate.getItemQuantity() != 0){
+        if (itemToValidate != null && itemToValidate.getItemQuantity() != 0) {
             return true;
-        } else {
+        } else if (itemToValidate != null && itemToValidate.getItemQuantity() == 0) {
 //            return false;
-            throw new NoItemInventoryException("There are no items in our inventory with the provided item ID. ");
+            throw new NoItemInventoryException("That item is currently out of stock. ");
+        } else {
+            throw new NoItemInventoryException("Cannot find item with given ID. ");
         }
 
     }
 
-    private boolean validateFunds(VendingMachineItem item) throws InsufficientFundsException{
-        if((item.getItemCost()).compareTo(remainingMoney) <= 0){
+    private boolean validateFunds(VendingMachineItem item) throws InsufficientFundsException {
+        if ((item.getItemCost()).compareTo(remainingMoney) <= 0) {
             return true;
         } else {
 //            return false;
@@ -120,14 +123,13 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         }
     }
 
-    private void resetRemainingMoneyToZero(){
+    private void resetRemainingMoneyToZero() {
         remainingMoney = new BigDecimal("0");
     }
 
-    private void updateMoneyAmountInMemory(BigDecimal amount){
+    private void updateMoneyAmountInMemory(BigDecimal amount) {
         remainingMoney = remainingMoney.subtract(amount);
     }
-
 
 
     protected void setRemainingMoney(BigDecimal remainingMoney) {

@@ -92,7 +92,7 @@ public class VendingMachineView {
     }
 
     public void displaySuccessAddMoneyBanner(BigDecimal amount){
-        io.print("Successfully added $" + amount + " to the machine.");
+        io.print("Successfully added " + NumberFormat.getCurrencyInstance().format(amount) + " to the machine.");
     }
 
 }
