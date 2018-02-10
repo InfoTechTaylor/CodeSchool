@@ -89,6 +89,7 @@ public class VendingMachineController {
 
         } catch (InsufficientFundsException e){
             view.displayErrorMessage(e.getMessage());
+
         }
         view.promptUserToHitEnter();
 
@@ -111,8 +112,13 @@ public class VendingMachineController {
             BigDecimal currentBalance = service.retrieveRemainingMoney();
             view.displayCurrentBalance(currentBalance);
 
-        } catch(VendingMachinePersistenceException | InsufficientFundsException | NoItemInventoryException e){
+        } catch(VendingMachinePersistenceException | NoItemInventoryException e){
             view.displayErrorMessage(e.getMessage());
+
+        } catch (InsufficientFundsException e){
+            view.displayErrorMessage(e.getMessage());
+            BigDecimal currentBalance = service.retrieveRemainingMoney();
+            view.displayCurrentBalance(currentBalance);
         }
         view.promptUserToHitEnter();
 
