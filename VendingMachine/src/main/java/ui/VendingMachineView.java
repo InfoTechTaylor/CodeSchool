@@ -35,10 +35,10 @@ public class VendingMachineView {
         io.print("\nITEMS FOR PURCHASE:");
         io.print("===========================================");
         io.print(String.format("%-7s %-15s %-7s %-4s", "Id", "Name", "Cost", "Quantity"));
-        io.print("-------------------------------------------\n");
+        io.print("-------------------------------------------");
         for(VendingMachineItem currentItem : itemList){
             if(currentItem.getItemQuantity() != 0) {
-                io.print(String.format("%-7s %-15s %-7s %-4s\n", currentItem.getItemId(), currentItem.getItemName(),
+                io.print(String.format("%-7s %-15s %-7s %-4s", currentItem.getItemId(), currentItem.getItemName(),
                         currentItem.getItemCost(),currentItem.getItemQuantity()));
             }
         }

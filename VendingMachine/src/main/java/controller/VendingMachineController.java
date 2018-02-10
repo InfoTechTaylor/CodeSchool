@@ -80,11 +80,16 @@ public class VendingMachineController {
     private void addMoney(){
         // ask user for how much money to add to machine
         BigDecimal moneyAmount = view.promptForMoneyToAdd();
-        // update remainingMoney in the service layer
-        BigDecimal remaingMoney = service.addMoneyToMemory(moneyAmount);
-        // display current amount back to the user
-        view.displaySuccessAddMoneyBanner(moneyAmount);
-        view.displayCurrentBalance(remaingMoney);
+        try {
+            // update remainingMoney in the service layer
+            BigDecimal remaingMoney = service.addMoneyToMemory(moneyAmount);
+            // display current amount back to the user
+            view.displaySuccessAddMoneyBanner(moneyAmount);
+            view.displayCurrentBalance(remaingMoney);
+
+        } catch (InsufficientFundsException e){
+            view.displayErrorMessage(e.getMessage());
+        }
         view.promptUserToHitEnter();
 
 
@@ -105,10 +110,11 @@ public class VendingMachineController {
             // print current balance
             BigDecimal currentBalance = service.retrieveRemainingMoney();
             view.displayCurrentBalance(currentBalance);
-            view.promptUserToHitEnter();
+
         } catch(VendingMachinePersistenceException | InsufficientFundsException | NoItemInventoryException e){
             view.displayErrorMessage(e.getMessage());
         }
+        view.promptUserToHitEnter();
 
     }
 
