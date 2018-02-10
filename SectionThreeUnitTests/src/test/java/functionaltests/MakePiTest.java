@@ -18,6 +18,8 @@ public class MakePiTest {
         // makePi(3) -> {3, 1, 4}
 
         int[] piArray = {3,1,4};
-        assertEquals(pi.makePi(3), piArray);
+        assertEquals(pi.makePi(3)[0], piArray[0]);
+        assertEquals(pi.makePi(3)[1], piArray[1]);
+        assertEquals(pi.makePi(3)[2], piArray[2]);
     }
 }
