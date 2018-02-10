@@ -109,7 +109,7 @@ public class VendingMachineController {
             // print success banner to user
             view.displaySuccessfulPurchaseBanner(purchasedItem);
             // print current balance
-            BigDecimal currentBalance = service.retrieveRemainingMoney();
+            BigDecimal currentBalance = service.getRemainingMoney();
             view.displayCurrentBalance(currentBalance);
 
         } catch(VendingMachinePersistenceException | NoItemInventoryException e){
@@ -117,7 +117,7 @@ public class VendingMachineController {
 
         } catch (InsufficientFundsException e){
             view.displayErrorMessage(e.getMessage());
-            BigDecimal currentBalance = service.retrieveRemainingMoney();
+            BigDecimal currentBalance = service.getRemainingMoney();
             view.displayCurrentBalance(currentBalance);
         }
         view.promptUserToHitEnter();
@@ -139,7 +139,7 @@ public class VendingMachineController {
     }
 
     private void displayCurrentBalance(){
-        BigDecimal currentBalance = service.retrieveRemainingMoney();
+        BigDecimal currentBalance = service.getRemainingMoney();
         view.displayCurrentBalance(currentBalance);
     }
 

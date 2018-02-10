@@ -13,7 +13,7 @@ public interface VendingMachineServiceLayer {
     BigDecimal addMoneyToMemory(BigDecimal amount) throws InsufficientFundsException;
     VendingMachineItem purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException;
     VendingMachineChange convertDollarsToCoinsAndGetChange() throws InsufficientFundsException;
-    BigDecimal retrieveRemainingMoney();
+    BigDecimal getRemainingMoney();
 
 
 }

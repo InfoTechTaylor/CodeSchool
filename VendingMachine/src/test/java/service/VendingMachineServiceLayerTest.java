@@ -34,7 +34,7 @@ public class VendingMachineServiceLayerTest {
     @Test
     public void testAddMoneyToMemory() throws Exception{
         service.addMoneyToMemory(new BigDecimal("1.00"));
-        assertEquals(new BigDecimal("1.00"), service.retrieveRemainingMoney());
+        assertEquals(new BigDecimal("1.00"), service.getRemainingMoney());
     }
 
     @Test
@@ -58,7 +58,7 @@ public class VendingMachineServiceLayerTest {
         service.purchaseItem("1");
         //assert, may not need the first assert as update is tested in dao tests
         assertEquals(2, daoStub.retrieveItemById("1").getItemQuantity());
-        assertEquals(new BigDecimal("0.00"), service.retrieveRemainingMoney());
+        assertEquals(new BigDecimal("0.00"), service.getRemainingMoney());
     }
 
     @Test
@@ -116,6 +116,6 @@ public class VendingMachineServiceLayerTest {
         // arrange
         service.addMoneyToMemory(new BigDecimal("1.00"));
         // act & assert
-        assertEquals(new BigDecimal("1.00"), service.retrieveRemainingMoney());
+        assertEquals(new BigDecimal("1.00"), service.getRemainingMoney());
     }
 }

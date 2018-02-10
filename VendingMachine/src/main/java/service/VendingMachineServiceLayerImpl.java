@@ -6,6 +6,7 @@ import dto.VendingMachineChange;
 import dto.VendingMachineItem;
 
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.List;
 
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
@@ -25,7 +26,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     @Override
     public BigDecimal addMoneyToMemory(BigDecimal amount) throws InsufficientFundsException {
         if (amount.compareTo(new BigDecimal("0")) > 0) {
-            remainingMoney = remainingMoney.add(amount);
+            remainingMoney = (remainingMoney.add(amount)).setScale(2, RoundingMode.HALF_UP);
         } else {
             throw new InsufficientFundsException("Must add positive amount to the machine.");
         }
@@ -57,7 +58,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         BigDecimal zero = new BigDecimal("0");
         if (remainingMoney.compareTo(zero) > 0) {
             // convert remainingMoney to pennies and from BigDecimal to int
-            int amountOfPennies = (remainingMoney.movePointRight(2)).intValueExact();
+            int amountOfPennies = (remainingMoney.movePointRight(2)).setScale(2, RoundingMode.HALF_UP).intValueExact();
 
             int remainderOfPennies = 0;
 
@@ -95,10 +96,6 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return countsOfCoins;
     }
 
-    @Override
-    public BigDecimal retrieveRemainingMoney() {
-        return remainingMoney;
-    }
 
     private boolean validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
 
@@ -134,5 +131,8 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     protected void setRemainingMoney(BigDecimal remainingMoney) {
         this.remainingMoney = remainingMoney;
+    }
+    public BigDecimal getRemainingMoney() {
+        return remainingMoney;
     }
 }
