@@ -128,4 +128,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         remainingMoney = remainingMoney.subtract(amount);
     }
 
+
+
+    protected void setRemainingMoney(BigDecimal remainingMoney) {
+        this.remainingMoney = remainingMoney;
+    }
 }

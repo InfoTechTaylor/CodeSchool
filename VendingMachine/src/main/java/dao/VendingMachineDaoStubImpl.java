@@ -8,8 +8,9 @@ import java.util.List;
 
 public class VendingMachineDaoStubImpl implements VendingMachineDao{
 
-    VendingMachineItem onlyVendingMachineItem;
-    ArrayList<VendingMachineItem> vendingMachineItemList = new ArrayList<>();
+    private VendingMachineItem onlyVendingMachineItem;
+    private ArrayList<VendingMachineItem> vendingMachineItemList = new ArrayList<>();
+
 
     public VendingMachineDaoStubImpl(){
         this.onlyVendingMachineItem = new VendingMachineItem("1");
@@ -17,6 +18,7 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
         onlyVendingMachineItem.setItemCost(new BigDecimal("1.00"));
         onlyVendingMachineItem.setItemQuantity(3);
         vendingMachineItemList.add(onlyVendingMachineItem);
+
     }
 
     @Override

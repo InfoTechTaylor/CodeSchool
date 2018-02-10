@@ -24,6 +24,7 @@ public class VendingMachineDaoTest {
 
     @After
     public void tearDown() throws Exception {
+
     }
 
     @Test
