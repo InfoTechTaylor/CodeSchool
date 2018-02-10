@@ -5,7 +5,6 @@ import dto.VendingMachineItem;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
-import java.util.Formatter;
 import java.util.List;
 
 public class VendingMachineView {
@@ -33,15 +32,17 @@ public class VendingMachineView {
     }
 
     public void displayVendingMachineInventory(List<VendingMachineItem> itemList){
-        io.print("ITEMS FOR PURCHASE");
+        io.print("\nITEMS FOR PURCHASE:");
         io.print("===========================================");
-        io.print("Item Id, Name, Cost, Quantity");
+        io.print(String.format("%-7s %-15s %-7s %-4s", "Id", "Name", "Cost", "Quantity"));
+        io.print("-------------------------------------------\n");
         for(VendingMachineItem currentItem : itemList){
             if(currentItem.getItemQuantity() != 0) {
-                io.print(currentItem.getItemId() + "," + currentItem.getItemName() +
-                        "," + currentItem.getItemCost() + "," + currentItem.getItemQuantity());
+                io.print(String.format("%-7s %-15s %-7s %-4s\n", currentItem.getItemId(), currentItem.getItemName(),
+                        currentItem.getItemCost(),currentItem.getItemQuantity()));
             }
         }
+        io.print("-------------------------------------------");
     }
 
     public BigDecimal promptForMoneyToAdd(){
@@ -61,6 +62,10 @@ public class VendingMachineView {
     }
 
     public void displayItem(VendingMachineItem item){
+        io.print("Item ID: " + item.getItemId());
+        io.print("Name: " + item.getItemName());
+        io.print("Price: " + item.getItemCost());
+        io.print("Quantity: " + item.getItemQuantity());
 
     }
 

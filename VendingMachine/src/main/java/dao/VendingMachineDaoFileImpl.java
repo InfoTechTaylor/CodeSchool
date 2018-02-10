@@ -3,7 +3,6 @@ package dao;
 import dto.VendingMachineItem;
 
 import java.io.*;
-import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.util.*;
 
@@ -22,7 +21,7 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     @Override
     public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException{
         loadVendingMachineItems();
-        return new ArrayList<VendingMachineItem>(vendingMachineItemMap.values());
+        return new ArrayList<>(vendingMachineItemMap.values());
     }
 
     @Override
@@ -38,13 +37,17 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     }
 
     @Override
-    public VendingMachineItem removeVendingMachineItem(String item) {
-        return null;
+    public VendingMachineItem removeVendingMachineItem(String itemId) throws VendingMachinePersistenceException{
+        VendingMachineItem itemToRemove = vendingMachineItemMap.remove(itemId);
+        writeVendingMachineItems();
+        return itemToRemove;
     }
 
     @Override
-    public VendingMachineItem createVendingMachineItem(VendingMachineItem item) {
-        return null;
+    public VendingMachineItem createVendingMachineItem(VendingMachineItem item) throws VendingMachinePersistenceException {
+        VendingMachineItem itemToCreate = vendingMachineItemMap.put(item.getItemId(), item);
+        writeVendingMachineItems();
+        return itemToCreate;
     }
 
     private void loadVendingMachineItems() throws VendingMachinePersistenceException{

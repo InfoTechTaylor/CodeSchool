@@ -11,7 +11,6 @@ import java.util.List;
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
 
     private VendingMachineDao dao;
-    private VendingMachineChange remainingChange;
     private BigDecimal remainingMoney = new BigDecimal("0");
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao){
@@ -77,9 +76,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         }
 
         if(amountOfPennies >= 1){
-            int countOfPennies = remainderOfPennies;
-            countsOfCoins.setPennies(countOfPennies);
-            amountOfPennies = amountOfPennies - remainderOfPennies;
+            countsOfCoins.setPennies(remainderOfPennies);
         }
 
         resetRemainingMoneyToZero();
@@ -121,7 +118,4 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return remainingMoney = remainingMoney.subtract(amount);
     }
 
-    private void updateItemQuantity(int quantity){
-
-    }
 }
