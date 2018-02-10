@@ -113,8 +113,7 @@ public class VendingMachineController {
     }
 
     private void retrieveChange() {
-        // get current amount
-        BigDecimal currentBalance = service.retrieveRemainingMoney();
+
         try {
             // convert amount to coins and reset amount
             VendingMachineChange amountOfChange = service.convertDollarsToCoinsAndGetChange();
