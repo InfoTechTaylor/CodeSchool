@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+<!--// Instantiate the UserIO implementation
+        UserIO myIo = new UserIOConsoleImpl();
+        // Instantiate the view and wire the UserIO implementation into it
+        DvdLibraryView myView = new DvdLibraryView(myIo);
+        // Instantiate the DAO
+        DvdLibraryDao myDao = new DvdLibraryDaoFileImpl();
+        // Instantiate the Audit DAO
+        DvdLibraryAuditDao myAuditDao = new DvdLibraryAuditDaoFileImpl();
+        // Instantiate the Service layer adn wire the DAO and Audit DAO into it
+        DvdLibraryServiceLayer myService = new DvdLibraryServiceLayerImpl(myDao, myAuditDao);
+        // Instantiate teh Controller and wire teh Service Layer into it
+        DvdController controller = new DvdController(myService, myView);
+        // kick off the controller
+        controller.run();-->
+
+    <bean id="userIO" class="com.sg.dvdlibrary.ui.UserIOConsoleImpl"/>
+
+    <bean id="view" class="com.sg.dvdlibrary.ui.DvdLibraryView">
+        <constructor-arg ref="userIO"/>
+    </bean>
+
+    <bean id="DvdLibraryDao"
+          class="com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl"/>
+
+    <bean id="auditDao"
+          class="com.sg.dvdlibrary.dao.DvdLibraryAuditDaoFileImpl"/>
+
+    <bean id="serviceLayer"
+          class="com.sg.dvdlibrary.service.DvdLibraryServiceLayerImpl">
+        <constructor-arg ref="DvdLibraryDao"/>
+        <constructor-arg ref="auditDao"/>
+    </bean>
+
+    <bean id="controller"
+          class="com.sg.dvdlibrary.controller.DvdController">
+        <constructor-arg ref="serviceLayer"/>
+        <constructor-arg ref="view"/>
+    </bean>
+
+
+</beans>

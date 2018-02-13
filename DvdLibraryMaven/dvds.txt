@@ -1,4 +1,0 @@
-Thor::2000-03-02::PG::unknown::fox::very good
-Superman::2018-08-02::PG::unknown::fox::good
-Batman::2016-02-03::PG::Director unknown::foxs::great movie
-Frozen::2016-03-02::PG::Director ::fox::good
