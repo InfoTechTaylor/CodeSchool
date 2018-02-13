@@ -4,6 +4,7 @@ import dao.VendingMachinePersistenceException;
 import dto.VendingMachineChange;
 import dto.VendingMachineItem;
 import service.InsufficientFundsException;
+import service.InvalidAmountException;
 import service.NoItemInventoryException;
 import service.VendingMachineServiceLayer;
 import ui.VendingMachineView;
@@ -87,7 +88,7 @@ public class VendingMachineController {
             view.displaySuccessAddMoneyBanner(moneyAmount);
             view.displayCurrentBalance(remaingMoney);
 
-        } catch (InsufficientFundsException e){
+        } catch (InvalidAmountException e){
             view.displayErrorMessage(e.getMessage());
 
         }
