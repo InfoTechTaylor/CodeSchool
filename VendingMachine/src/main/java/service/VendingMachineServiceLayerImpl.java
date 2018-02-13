@@ -32,11 +32,11 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public BigDecimal addMoneyToMemory(BigDecimal amount) throws InsufficientFundsException {
+    public BigDecimal addMoneyToMemory(BigDecimal amount) throws InvalidAmountException {
         if (amount.compareTo(new BigDecimal("0")) > 0) {
             remainingMoney = (remainingMoney.add(amount)).setScale(2, RoundingMode.HALF_UP);
         } else {
-            throw new InsufficientFundsException("Must add positive amount to the machine.");
+            throw new InvalidAmountException("Must add positive amount to the machine.");
         }
         return remainingMoney;
     }

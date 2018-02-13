@@ -53,13 +53,13 @@ public class VendingMachineServiceLayerTest {
     }
 
     @Test
-    public void testAddMoneyInsufficientFundsException() {
+    public void testAddMoneyInvalidAmountException() {
         // arrange
         //act
         try {
             service.addMoneyToMemory(new BigDecimal("-1"));
             fail("Expected InsufficientFundsException was not thrown");
-        } catch (InsufficientFundsException e){
+        } catch (InvalidAmountException e){
             // do nothing, test passes
         }
 
