@@ -24,11 +24,11 @@
           class="com.sg.dvdlibrary.dao.DvdLibraryDaoStubImpl"/>
 
     <bean id="auditDaoStub"
-          class="com.sg.dvdlibrary.dao.DvdLibraryAuditDaoStubImpl"/>
+          class="com.sg.dvdlibrary.dao.DvdLibraryAuditStubImpl"/>
 
     <bean id="serviceLayer"
           class="com.sg.dvdlibrary.service.DvdLibraryServiceLayerImpl">
-        <constructor-arg ref="classRosterDaoStub"/>
+        <constructor-arg ref="DvdLibraryDaoStub"/>
         <constructor-arg ref="auditDaoStub"/>
     </bean>
 

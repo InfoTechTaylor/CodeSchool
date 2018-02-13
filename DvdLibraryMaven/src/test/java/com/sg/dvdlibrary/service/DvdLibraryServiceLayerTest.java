@@ -5,6 +5,8 @@ import com.sg.dvdlibrary.dto.Dvd;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -14,12 +16,13 @@ import static org.junit.Assert.*;
 
 public class DvdLibraryServiceLayerTest {
 
-    DvdLibraryDao dao = new DvdLibraryDaoStubImpl();
-    DvdLibraryAuditDao auditDao = new DvdLibraryAuditStubImpl();
-    DvdLibraryServiceLayer service = new DvdLibraryServiceLayerImpl(dao,auditDao);
+//    DvdLibraryDao dao = new DvdLibraryDaoStubImpl();
+//    DvdLibraryAuditDao auditDao = new DvdLibraryAuditStubImpl();
+    DvdLibraryServiceLayer service;
 
     public DvdLibraryServiceLayerTest() {
-
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        service = ctx.getBean("serviceLayer", DvdLibraryServiceLayer.class);
     }
 
     @Before

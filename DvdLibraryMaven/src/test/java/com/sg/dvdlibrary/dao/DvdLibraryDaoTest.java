@@ -1,9 +1,12 @@
 package com.sg.dvdlibrary.dao;
 
 import com.sg.dvdlibrary.dto.Dvd;
+import com.sg.dvdlibrary.service.DvdLibraryServiceLayer;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -13,10 +16,11 @@ import static org.junit.Assert.*;
 
 public class DvdLibraryDaoTest {
 
-    private DvdLibraryDao dao = new DvdLibraryDaoFileImpl();
+    private DvdLibraryDao dao;
 
     public DvdLibraryDaoTest() {
-
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        dao = ctx.getBean("DvdLibraryDao", DvdLibraryDaoFileImpl.class);
     }
 
 
