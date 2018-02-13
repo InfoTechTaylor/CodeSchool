@@ -7,6 +7,7 @@ import dto.VendingMachineItem;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.util.ArrayList;
 import java.util.List;
 
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
@@ -20,7 +21,14 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException {
-        return dao.retrieveAllVendingMachineItems();
+        List<VendingMachineItem> itemList = dao.retrieveAllVendingMachineItems();
+        List<VendingMachineItem> filteredList = new ArrayList<>();
+        for(VendingMachineItem currentItem : itemList){
+            if(currentItem.getItemQuantity() != 0){
+                filteredList.add(currentItem);
+            }
+        }
+        return filteredList;
     }
 
     @Override

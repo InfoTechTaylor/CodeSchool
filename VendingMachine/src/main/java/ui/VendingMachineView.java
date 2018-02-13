@@ -37,10 +37,8 @@ public class VendingMachineView {
         io.print(String.format("%-7s %-15s %-7s %-4s", "Id", "Name", "Cost", "Quantity"));
         io.print("-------------------------------------------");
         for(VendingMachineItem currentItem : itemList){
-            if(currentItem.getItemQuantity() != 0) {
                 io.print(String.format("%-7s %-15s %-7s %-4s", currentItem.getItemId(), currentItem.getItemName(),
                         currentItem.getItemCost(),currentItem.getItemQuantity()));
-            }
         }
         io.print("-------------------------------------------");
     }

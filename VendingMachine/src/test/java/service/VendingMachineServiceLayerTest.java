@@ -4,11 +4,13 @@ import dao.VendingMachineDao;
 import dao.VendingMachineDaoStubImpl;
 
 import dto.VendingMachineChange;
+import dto.VendingMachineItem;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -29,6 +31,19 @@ public class VendingMachineServiceLayerTest {
     @Test
     public void testRetrieveAllVendingMachineItems() throws Exception{
         assertEquals(1, service.retrieveAllVendingMachineItems().size());
+    }
+
+    @Test
+    public void testAllItemsHaveQuantityGreaterThan0() throws Exception {
+        // arrange -- all set in stub, created two items, one with a quantity of zero
+
+        // act
+        List<VendingMachineItem> listToValidate = service.retrieveAllVendingMachineItems();
+
+        // assert
+        for(VendingMachineItem currentItem : listToValidate){
+            assertNotEquals(0, currentItem.getItemQuantity());
+        }
     }
 
     @Test
