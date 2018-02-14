@@ -39,7 +39,7 @@ public class DvdLibraryServiceLayerImpl implements DvdLibraryServiceLayer {
         dao.addDvd(dvd.getTitle(), dvd);
 
         // the student was successfully created, now write to the audit file
-        auditDao.writeAuditEntry("Dvd " + dvd.getTitle() + " CREATED.");
+//        auditDao.writeAuditEntry("Dvd " + dvd.getTitle() + " CREATED.");
     }
 
 
@@ -59,7 +59,7 @@ public class DvdLibraryServiceLayerImpl implements DvdLibraryServiceLayer {
     public Dvd removeDvd(String title) throws DvdLibraryPersistenceException {
         Dvd removedDvd = dao.removeDvd(title);
         //write to audit log
-        auditDao.writeAuditEntry("Dvd " + title + " REMOVED.");
+//        auditDao.writeAuditEntry("Dvd " + title + " REMOVED.");
         return removedDvd;
     }
 

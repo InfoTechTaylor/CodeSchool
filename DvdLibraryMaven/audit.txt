@@ -1,12 +1,7 @@
-2018-02-05T13:58:50.075 : Dvd Batman CREATED.
-2018-02-05T14:11:19.010 : Dvd superman REMOVED.
-2018-02-05T14:14:40.992 : Dvd Batman REMOVED.
-2018-02-05T14:17:41.508 : Dvd Batman CREATED.
-2018-02-07T10:43:04.734 : Dvd Batman REMOVED.
-2018-02-07T10:44:21.818 : Dvd Batman CREATED.
-2018-02-13T10:33:25.308 : Dvd Wonder Woman CREATED.
-2018-02-13T11:04:30.853 : Dvd Frozen CREATED.
-2018-02-13T11:08:54.599 : Dvd Batman CREATED.
-2018-02-13T11:11:53.755 : Dvd Superman CREATED.
-2018-02-13T11:18:39.927 : Dvd Thor CREATED.
-2018-02-13T11:56:11.906 : Dvd Frozen REMOVED.
+2018-02-14T10:52:11.544 : createDvd: Dvd{title='Thor 2', releaseDate=2018-03-04, ratingMPAA='PG-13', directorName='unknown', studio='fox', userRating='TBD'}
+2018-02-14T10:53:33.333 : createDvd: Dvd{title='1', releaseDate=2005-03-20, ratingMPAA='PG', directorName='unknown', studio='fox', userRating='great'}
+2018-02-14T11:17:03.252 : createDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='fox', userRating='great movie'}
+2018-02-14T11:17:40.836 : removeDvd: Batman
+2018-02-14T11:20:43.636 : createDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='Fox', userRating='hmm'}
+2018-02-14T11:21:07.485 : editDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='Fox Studio', userRating='One of my favorites'}
+2018-02-14T11:31:09.107 : createDvd: Dvd{title='Wonder Woman', releaseDate=2000-09-30, ratingMPAA='PG-13', directorName='Uknown', studio='Fox', userRating='fantastic'}

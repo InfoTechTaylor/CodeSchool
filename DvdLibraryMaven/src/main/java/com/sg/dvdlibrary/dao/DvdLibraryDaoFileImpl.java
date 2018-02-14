@@ -10,9 +10,12 @@ import java.util.*;
 public class DvdLibraryDaoFileImpl implements DvdLibraryDao {
 
     private final String DELIMITER = "::";
-    private final String DVD_FILE = "dvds.txt";
+    private String DVD_FILE;
     private Map<String, Dvd> dvds = new HashMap<>();
 
+    public DvdLibraryDaoFileImpl(String DVD_FILE){
+        this.DVD_FILE = DVD_FILE;
+    }
 
     /**
      * Gets a Dvd object that has matching title passed through parameter

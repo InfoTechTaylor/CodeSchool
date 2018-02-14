@@ -103,4 +103,16 @@ public class Dvd {
         return Objects.hash(title, releaseDate, ratingMPAA, directorName, studio, userRating);
     }
 
+
+    @Override
+    public String toString() {
+        return "Dvd{" +
+                "title='" + title + '\'' +
+                ", releaseDate=" + releaseDate +
+                ", ratingMPAA='" + ratingMPAA + '\'' +
+                ", directorName='" + directorName + '\'' +
+                ", studio='" + studio + '\'' +
+                ", userRating='" + userRating + '\'' +
+                '}';
+    }
 }

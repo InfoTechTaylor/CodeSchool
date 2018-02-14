@@ -18,7 +18,9 @@
     <!-- Bean definitions go here -->
 
     <bean id="DvdLibraryDao"
-          class="com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl"/>
+          class="com.sg.dvdlibrary.dao.DvdLibraryDaoFileImpl">
+        <constructor-arg value="dvds_test.txt"/>
+    </bean>
 
     <bean id="DvdLibraryDaoStub"
           class="com.sg.dvdlibrary.dao.DvdLibraryDaoStubImpl"/>
