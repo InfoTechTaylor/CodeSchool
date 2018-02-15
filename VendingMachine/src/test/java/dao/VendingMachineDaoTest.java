@@ -4,6 +4,9 @@ import dto.VendingMachineItem;
 //import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import service.VendingMachineServiceLayer;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -12,7 +15,13 @@ import static org.junit.Assert.*;
 
 public class VendingMachineDaoTest {
 
-    private VendingMachineDao dao = new VendingMachineDaoFileImpl("vendingMachineItems_test.txt");
+//    private VendingMachineDao dao = new VendingMachineDaoFileImpl("vendingMachineItems_test.txt");
+    private VendingMachineDao dao;
+
+    public VendingMachineDaoTest(){
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        dao = ctx.getBean("vendingMachineDao", VendingMachineDao.class);
+    }
 
     @Before
     public void setUp() throws Exception {

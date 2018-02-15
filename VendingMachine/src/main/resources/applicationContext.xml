@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+    <!--// Instantiate the UserIO implementation-->
+    <!--UserIO myIo = new UserIOConsoleImpl();-->
+    <!--// Instantiate the view and wire teh UserIO implementation into it-->
+    <!--VendingMachineView myView = new VendingMachineView(myIo);-->
+    <!--// Instantiate the Dao-->
+    <!--VendingMachineDao myDao = new VendingMachineDaoFileImpl("vendingMachineItems_prod.txt");-->
+    <!--// Instantiate the service layer and wire the dao into it-->
+    <!--VendingMachineServiceLayer myService = new VendingMachineServiceLayerImpl(myDao);-->
+    <!--// instantiate the controller and wire the service layer into it and the view-->
+    <!--VendingMachineController myController = new VendingMachineController(myView, myService);-->
+    <!--// kick off the controller-->
+    <!--myController.run();-->
+
+    <bean id="userIO" class="ui.UserIOConsoleImpl" />
+
+    <bean id="view" class="ui.VendingMachineView">
+        <constructor-arg ref="userIO" />
+    </bean>
+
+    <bean id="vendingMachineDao" class="dao.VendingMachineDaoFileImpl">
+        <constructor-arg value="vendingMachineItems_prod.txt" />
+    </bean>
+
+    <bean id="vendingMachineAuditDao" class="dao.VendingMachineAuditDaoFileImpl" />
+
+    <bean id="serviceLayer" class="service.VendingMachineServiceLayerImpl">
+        <constructor-arg ref="vendingMachineDao" />
+        <constructor-arg ref="vendingMachineAuditDao" />
+    </bean>
+
+    <bean id="controller" class="controller.VendingMachineController">
+        <constructor-arg ref="serviceLayer" />
+        <constructor-arg ref="view" />
+    </bean>
+
+
+
+</beans>

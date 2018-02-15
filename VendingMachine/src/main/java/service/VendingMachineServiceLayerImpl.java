@@ -1,5 +1,6 @@
 package service;
 
+import dao.VendingMachineAuditDao;
 import dao.VendingMachineDao;
 import dao.VendingMachinePersistenceException;
 import dto.VendingMachineChange;
@@ -13,10 +14,13 @@ import java.util.List;
 public class VendingMachineServiceLayerImpl implements VendingMachineServiceLayer {
 
     private VendingMachineDao dao;
+    private VendingMachineAuditDao auditDao;
     private BigDecimal remainingMoney = new BigDecimal("0");
 
-    public VendingMachineServiceLayerImpl(VendingMachineDao dao) {
+    public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao auditDao) {
+
         this.dao = dao;
+        this.auditDao = auditDao;
     }
 
     @Override
@@ -137,10 +141,15 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
 
-    protected void setRemainingMoney(BigDecimal remainingMoney) {
-        this.remainingMoney = remainingMoney;
-    }
+//    public void setRemainingMoney(BigDecimal remainingMoney) {
+//        this.remainingMoney = remainingMoney;
+//    }
+
     public BigDecimal getRemainingMoney() {
         return remainingMoney;
+    }
+
+    public VendingMachineItem retrieveVendingMachineItemById(String itemId) throws VendingMachinePersistenceException {
+        return dao.retrieveItemById(itemId);
     }
 }
