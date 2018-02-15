@@ -8,6 +8,8 @@ import dto.VendingMachineItem;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -16,12 +18,21 @@ import static org.junit.Assert.*;
 
 public class VendingMachineServiceLayerTest {
 
-    private VendingMachineDao daoStub = new VendingMachineDaoStubImpl();
-    private VendingMachineServiceLayerImpl service = new VendingMachineServiceLayerImpl(daoStub);
+//    private VendingMachineDao daoStub = new VendingMachineDaoStubImpl();
+//    private VendingMachineServiceLayerImpl service = new VendingMachineServiceLayerImpl(daoStub);
+
+    private VendingMachineServiceLayer service;
+
+
+    public VendingMachineServiceLayerTest() {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        service = ctx.getBean("serviceLayer", VendingMachineServiceLayer.class);
+    }
+
 
     @Before
-    public void setUp()  {
-        service.setRemainingMoney(new BigDecimal("0"));
+    public void setUp() throws Exception {
+
     }
 
     @After
@@ -68,11 +79,11 @@ public class VendingMachineServiceLayerTest {
     @Test
     public void testPurchaseItemQuantityAndRemainingMoney() throws Exception{
         //arrange
-        service.setRemainingMoney(new BigDecimal("1.00"));
+        service.addMoneyToMemory(new BigDecimal("1.00"));
         //act, id of 1 is our only item in the daoStubImpl
         service.purchaseItem("1");
         //assert, may not need the first assert as update is tested in dao tests
-        assertEquals(2, daoStub.retrieveItemById("1").getItemQuantity());
+        assertEquals(2, service.retrieveAllVendingMachineItems().get(0).getItemQuantity());
         assertEquals(new BigDecimal("0.00"), service.getRemainingMoney());
     }
 

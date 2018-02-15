@@ -51,6 +51,18 @@
         <constructor-arg ref="view" />
     </bean>
 
+    <bean id="loggingAdvice" class="advice.LoggingAdvice">
+        <constructor-arg ref="vendingMachineAuditDao"/>
+    </bean>
 
+    <aop:config>
+        <aop:aspect ref="loggingAdvice">
+            <aop:after-returning
+                    method="createAuditEntry"
+                    pointcut="execution(* service.VendingMachineServiceLayer.purchaseItem(..))"
+            />
+
+        </aop:aspect>
+    </aop:config>
 
 </beans>

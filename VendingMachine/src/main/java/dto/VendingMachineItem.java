@@ -60,4 +60,14 @@ public class VendingMachineItem {
 
         return Objects.hash(itemId, itemName, itemCost, itemQuantity);
     }
+
+    @Override
+    public String toString() {
+        return "VendingMachineItem{" +
+                "itemId='" + itemId + '\'' +
+                ", itemName='" + itemName + '\'' +
+                ", itemCost=" + itemCost +
+                ", itemQuantity=" + itemQuantity +
+                '}';
+    }
 }
