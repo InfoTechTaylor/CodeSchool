@@ -5,6 +5,8 @@ import dto.Team;
 import service.BaseballLeagueServiceLayer;
 import ui.BaseballLeagueView;
 
+import java.util.List;
+
 public class BaseballLeagueController {
 
     private BaseballLeagueView view;
@@ -32,6 +34,7 @@ public class BaseballLeagueController {
                 case 2:
                     break;
                 case 3:
+                    ListAllTeams();
                     break;
                 case 4:
                     break;
@@ -81,5 +84,14 @@ public class BaseballLeagueController {
         }
 
 
+    }
+
+    public void ListAllTeams(){
+        try {
+            List<Team> allTeams = service.retrieveAllTeams();
+            view.displayAllTeams(allTeams);
+        } catch(BaseballLeaguePersistenceException e){
+            view.displayError(e.getMessage());
+        }
     }
 }

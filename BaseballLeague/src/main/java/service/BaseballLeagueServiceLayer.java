@@ -10,7 +10,7 @@ public interface BaseballLeagueServiceLayer {
 
     Team createTeam(String teamName, String teamLeague) throws BaseballLeaguePersistenceException;
 
-    List<Team> retrieveAllTeams();
+    List<Team> retrieveAllTeams() throws BaseballLeaguePersistenceException;
 
     Player createPlayer(Player newPlayer);
 

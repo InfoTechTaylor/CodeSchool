@@ -58,8 +58,8 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
     }
 
     @Override
-    public List<Team> retrieveAllTeams() {
-        return null;
+    public List<Team> retrieveAllTeams() throws BaseballLeaguePersistenceException{
+        return teamDao.retrieveAllTeams();
     }
 
     @Override

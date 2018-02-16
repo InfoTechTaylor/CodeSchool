@@ -2,6 +2,8 @@ package ui;
 
 import dto.Team;
 
+import java.util.List;
+
 public class BaseballLeagueView {
 
     UserIO io;
@@ -54,5 +56,15 @@ public class BaseballLeagueView {
 
     public void displaySuccessCreateNewTeam(Team newTeam){
         io.print("Successfully created new team: " + newTeam.getTeamName() + " in the " + newTeam.getTeamLeague() + ".");
+    }
+
+    public void displayAllTeams(List<Team> allTeams){
+        io.print("Current Teams:");
+        io.print("================================================");
+        for(Team currentTeam : allTeams){
+            if(currentTeam !=null) {
+                io.print(currentTeam.getTeamName());
+            }
+        }
     }
 }
