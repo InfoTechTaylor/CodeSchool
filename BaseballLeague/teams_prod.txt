@@ -1,0 +1,3 @@
+0::test name::test league
+1::Red Sox::American League
+2::New York Yankees::American

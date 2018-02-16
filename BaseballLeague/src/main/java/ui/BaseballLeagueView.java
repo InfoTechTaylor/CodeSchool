@@ -1,5 +1,7 @@
 package ui;
 
+import dto.Team;
+
 public class BaseballLeagueView {
 
     UserIO io;
@@ -37,5 +39,20 @@ public class BaseballLeagueView {
 
     public String promptForTeamName(){
         return io.readString("Please enter the name of the team you want to create: ");
+    }
+
+    public String promptForTeamLeague(){
+        return io.readString("Please enter the league name of the new team: ");
+    }
+
+    public void displayError(String message){
+        io.print("ERROR");
+        io.print("================================================");
+        io.print(message);
+        io.print("================================================");
+    }
+
+    public void displaySuccessCreateNewTeam(Team newTeam){
+        io.print("Successfully created new team: " + newTeam.getTeamName() + " in the " + newTeam.getTeamLeague() + ".");
     }
 }

@@ -1,5 +1,7 @@
 package controller;
 
+import dao.BaseballLeaguePersistenceException;
+import dto.Team;
 import service.BaseballLeagueServiceLayer;
 import ui.BaseballLeagueView;
 
@@ -58,11 +60,25 @@ public class BaseballLeagueController {
     }
 
     private void createTeam(){
-        // get new team name from the user
-        view.promptForTeamName();
-        // validate the team name doesn't already exist
 
-        // call service createTeam()
+        try {
+            // get new team name & league from the user
+            String teamName = view.promptForTeamName();
+            String leagueName = view.promptForTeamLeague();
+
+            // call service to create team
+            Team newTeam = service.createTeam(teamName, leagueName);
+
+            if(newTeam != null) {
+                //display success
+                view.displaySuccessCreateNewTeam(newTeam);
+            }
+
+            view.promptUserToHitEnterToContinue();
+
+        }catch (BaseballLeaguePersistenceException e){
+            view.displayError(e.getMessage());
+        }
 
 
     }
