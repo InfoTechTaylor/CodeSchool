@@ -25,6 +25,7 @@ public class BaseballLeagueController {
 
             switch(userSelection){
                 case 1:
+                    createTeam();
                     break;
                 case 2:
                     break;
@@ -54,5 +55,15 @@ public class BaseballLeagueController {
 
     private void displayExitMessage(){
         view.displayExitMessage();
+    }
+
+    private void createTeam(){
+        // get new team name from the user
+        view.promptForTeamName();
+        // validate the team name doesn't already exist
+
+        // call service createTeam()
+
+
     }
 }
