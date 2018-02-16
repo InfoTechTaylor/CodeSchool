@@ -56,11 +56,39 @@
     </bean>
 
     <aop:config>
-        <aop:aspect ref="loggingAdvice">
-            <aop:after-returning
-                    method="createAuditEntry"
-                    pointcut="execution(* service.VendingMachineServiceLayer.purchaseItem(..))"
-            />
+        <aop:aspect id="log" ref="loggingAdvice">
+            <!--Pointcut (method) for PurchaseItem() defining the WHERE)-->
+            <aop:pointcut id="purchaseItem"
+                          expression = "execution(* service.VendingMachineServiceLayerImpl.purchaseItem(..))" />
+
+                <!--The below two tags are the advice (what and when) for the purchaseItem pointcut-->
+                <aop:after-returning pointcut-ref="purchaseItem"
+                        returning = "itemToPurchase" method="createAuditEntry" />
+
+                <aop:after-throwing pointcut-ref = "purchaseItem"
+                                    throwing = "e" method="createExceptionAuditEntry" />
+
+            <!--Pointcut for convertDollarsToCoinsAndGetChange() defining WHERE -->
+            <aop:pointcut id="getChange"
+                          expression = "execution(* service.VendingMachineServiceLayerImpl.convertDollarsToCoinsAndGetChange(..))" />
+
+            <!--below tags are for the advice for pointcut getChange-->
+            <aop:after-returning pointcut-ref="getChange"
+                                 returning="countsOfCoins" method="createAuditEntry" />
+
+            <aop:after-throwing pointcut-ref="getChange"
+                                throwing = "e" method="createExceptionAuditEntry" />
+
+            <!--Pointcut for addMoney()-->
+            <aop:pointcut id="addMoney"
+                          expression = "execution(* service.VendingMachineServiceLayerImpl.addMoneyToMemory(..))" />
+
+            <aop:after-returning pointcut-ref="addMoney"
+                                 returning = "remainingMoney" method="createAuditEntry" />
+
+            <aop:after-throwing pointcut-ref="addMoney"
+                                throwing = "e" method="createExceptionAuditEntry" />
+
 
         </aop:aspect>
     </aop:config>

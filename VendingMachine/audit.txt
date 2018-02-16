@@ -1,1 +1,8 @@
-2018-02-15T10:49:38.026 : purchaseItem: 1
+2018-02-15T19:48:35.567 : addMoneyToMemory: user input: -1 :Throws service.InvalidAmountException: Must add positive amount to the machine.
+2018-02-15T19:48:42.183 : addMoneyToMemory:  user input: 1.20 :successful.
+2018-02-15T19:48:50.386 : purchaseItem: user input: 4 :Throws service.NoItemInventoryException: That item is currently out of stock. 
+2018-02-15T19:48:58.370 : purchaseItem: user input: 234 :Throws service.NoItemInventoryException: Cannot find item with given ID. 
+2018-02-15T19:49:05.174 : purchaseItem: user input: 3 :Throws service.InsufficientFundsException: Not enough money available to make purchase.
+2018-02-15T19:49:11.635 : purchaseItem:  user input: 2 :successful.
+2018-02-15T19:49:15.248 : convertDollarsToCoinsAndGetChange: successful.
+2018-02-15T19:49:18.401 : convertDollarsToCoinsAndGetChange :Throws service.InsufficientFundsException: No money left to get change.
