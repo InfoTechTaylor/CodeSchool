@@ -6,6 +6,7 @@ public class App {
     public static void main(String[] args) {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         BaseballLeagueController controller = ctx.getBean("controller", BaseballLeagueController.class);
+        controller.run();
 
     }
 }
