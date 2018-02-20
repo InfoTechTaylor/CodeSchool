@@ -12,4 +12,8 @@ public class FlooringController {
         this.view = view;
         this.service = service;
     }
+
+    public void run(){
+        System.out.println("test");
+    }
 }

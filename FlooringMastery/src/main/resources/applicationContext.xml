@@ -29,10 +29,13 @@
     </bean>
     <bean id="productsDao" class="dao.FlooringDaoProductsFileImpl" />
     <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" />
+    <bean id="auditDao" class="dao.FlooringDaoAuditFileImpl" />
 
 
     <bean id="serviceLayer" class="service.FlooringServiceLayerImpl">
         <constructor-arg ref="prodOrderDao" />
+        <constructor-arg ref="taxesDao" />
+        <constructor-arg ref="productsDao" />
     </bean>
 
     <bean id="controller" class="controller.FlooringController">
@@ -40,8 +43,8 @@
         <constructor-arg ref="view" />
     </bean>
 
-    <bean id="loggingAdvice" class="advice.LoggingAdvice">
-        <constructor-arg ref="FlooringAuditDao"/>
-    </bean>
+    <!--<bean id="loggingAdvice" class="advice.LoggingAdvice">-->
+        <!--<constructor-arg ref="FlooringAuditDao"/>-->
+    <!--</bean>-->
 
 </beans>
