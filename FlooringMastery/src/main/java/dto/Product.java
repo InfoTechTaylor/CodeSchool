@@ -1,6 +1,7 @@
 package dto;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Product {
     private String productType;
@@ -35,5 +36,21 @@ public class Product {
 
     public void setLaborCostPerSquareFoot(BigDecimal laborCostPerSquareFoot) {
         this.laborCostPerSquareFoot = laborCostPerSquareFoot;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return Objects.equals(productType, product.productType) &&
+                Objects.equals(materialCostPerSquareFoot, product.materialCostPerSquareFoot) &&
+                Objects.equals(laborCostPerSquareFoot, product.laborCostPerSquareFoot);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(productType, materialCostPerSquareFoot, laborCostPerSquareFoot);
     }
 }

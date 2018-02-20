@@ -1,6 +1,7 @@
 package dto;
 
 import java.math.BigDecimal;
+import java.util.Objects;
 
 public class Tax {
 
@@ -26,5 +27,20 @@ public class Tax {
 
     public void setTaxRate(BigDecimal taxRate) {
         this.taxRate = taxRate;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Tax tax = (Tax) o;
+        return Objects.equals(state, tax.state) &&
+                Objects.equals(taxRate, tax.taxRate);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(state, taxRate);
     }
 }
