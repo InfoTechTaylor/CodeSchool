@@ -17,4 +17,31 @@
 
     <!-- Bean definitions go here -->
 
+    <bean id="userIO" class="ui.UserIOConsoleImpl" />
+
+    <bean id="view" class="ui.FlooringView">
+        <constructor-arg ref="userIO" />
+    </bean>
+
+    <bean id="prodOrderDao" class="dao.FlooringDaoOrderProdFileImpl">
+    </bean>
+    <bean id="trainingOrderDao" class="dao.FlooringDaoOrderTrainingFileImpl">
+    </bean>
+    <bean id="productsDao" class="dao.FlooringDaoProductsFileImpl" />
+    <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" />
+
+
+    <bean id="serviceLayer" class="service.FlooringServiceLayerImpl">
+        <constructor-arg ref="prodOrderDao" />
+    </bean>
+
+    <bean id="controller" class="controller.FlooringController">
+        <constructor-arg ref="serviceLayer" />
+        <constructor-arg ref="view" />
+    </bean>
+
+    <bean id="loggingAdvice" class="advice.LoggingAdvice">
+        <constructor-arg ref="FlooringAuditDao"/>
+    </bean>
+
 </beans>
