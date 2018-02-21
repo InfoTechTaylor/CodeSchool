@@ -42,7 +42,6 @@ public class FlooringDaoTaxesFileImpl implements FlooringDaoTaxes {
 
     @Override
     public void removeTax(Tax taxObject) throws FlooringPersistenceException{
-        //loadTaxes();
         taxRateByStateMap.remove(taxObject.getState());
         writeTaxes();
     }
