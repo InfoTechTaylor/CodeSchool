@@ -2,6 +2,7 @@ package dao;
 
 import dto.Product;
 import dto.Tax;
+import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -18,6 +19,16 @@ public class FlooringDaoProductsTest {
     public FlooringDaoProductsTest(){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         daoProducts = ctx.getBean("productsDao", FlooringDaoProducts.class);
+    }
+
+    @Before
+    public void setUp() throws Exception{
+
+        List<Product> allProductObjects = daoProducts.retrieveAllProducts();
+        for(Product currentProduct : allProductObjects){
+            daoProducts.removeProduct(currentProduct);
+        }
+
     }
 
     @Test
