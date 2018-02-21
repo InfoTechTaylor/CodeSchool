@@ -28,7 +28,9 @@
     <bean id="trainingOrderDao" class="dao.FlooringDaoOrderTrainingFileImpl">
     </bean>
     <bean id="productsDao" class="dao.FlooringDaoProductsFileImpl" />
-    <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" />
+    <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" >
+        <constructor-arg value="Taxes.txt" />
+    </bean>
     <bean id="auditDao" class="dao.FlooringDaoAuditFileImpl" />
 
 

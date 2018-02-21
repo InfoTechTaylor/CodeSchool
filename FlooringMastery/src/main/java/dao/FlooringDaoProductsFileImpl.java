@@ -9,6 +9,7 @@ import java.util.Map;
 public class FlooringDaoProductsFileImpl implements FlooringDaoProducts {
 
     private Map<String, Product> productMap = new HashMap<>();
+    private final String FILENAME = "Products.txt";
 
     @Override
     public Product retrieveProductByMaterial(String material) {

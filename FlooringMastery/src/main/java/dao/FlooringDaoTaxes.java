@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface FlooringDaoTaxes {
 
-    Tax retrieveTaxByState(String state);
-    List<Tax> retrieveAllTaxes();
-    void createTax(Tax taxObject);
-    void updateTax(Tax taxObject);
-    void removeTax(Tax taxObject);
+    Tax retrieveTaxByState(String state) throws FlooringPersistenceException;
+    List<Tax> retrieveAllTaxes() throws FlooringPersistenceException;
+    void createTax(Tax taxObject) throws FlooringPersistenceException;
+    void updateTax(Tax taxObject) throws FlooringPersistenceException;
+    void removeTax(Tax taxObject) throws FlooringPersistenceException;
 }
