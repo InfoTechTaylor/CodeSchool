@@ -7,9 +7,9 @@ import java.util.List;
 
 public interface FlooringDaoOrder {
 
-    List<Order> retrieveOrdersByDate(LocalDate orderDate);
-    Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber);
-    Order createOrder(Order orderObj);
-    void updateOrder(Order orderObj);
-    void removeOrder(Order orderObj);
+    List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException;
+    Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException;
+    void createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException;
+    void updateOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException;
+    void removeOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException;
 }
