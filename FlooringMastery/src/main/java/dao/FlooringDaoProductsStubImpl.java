@@ -3,12 +3,13 @@ package dao;
 import dto.Product;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlooringDaoProductsStubImpl implements FlooringDaoProducts {
 
     Product onlyProduct;
-    List<Product> allProducts;
+    List<Product> allProducts = new ArrayList<>();
 
     public FlooringDaoProductsStubImpl(){
         onlyProduct = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));

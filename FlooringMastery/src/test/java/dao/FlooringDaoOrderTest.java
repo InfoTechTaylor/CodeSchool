@@ -23,7 +23,7 @@ public class FlooringDaoOrderTest {
 
     public FlooringDaoOrderTest(){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
-        orderDao = ctx.getBean("prodOrderDao", FlooringDaoOrder.class);
+        orderDao = ctx.getBean("orderDao", FlooringDaoOrder.class);
     }
 
     @Before

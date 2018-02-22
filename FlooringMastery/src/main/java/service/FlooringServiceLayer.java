@@ -7,7 +7,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public interface FlooringServiceLayer {
-    List<Order> retrieveAllOrdersByDate();
+    List<Order> retrieveAllOrdersByDate(LocalDate orderDate);
     List<Order> retrieveAllProducts();
     List<Tax> retrieveAllTaxes();
     Order processOrder(Order orderObj);

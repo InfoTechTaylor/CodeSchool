@@ -3,12 +3,13 @@ package dao;
 import dto.Tax;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 public class FlooringDaoTaxesStubImpl implements FlooringDaoTaxes {
 
     Tax onlyTaxObject;
-    List<Tax> allTaxes;
+    List<Tax> allTaxes = new ArrayList<>();
 
     public FlooringDaoTaxesStubImpl(){
         onlyTaxObject = new Tax("NH", new BigDecimal("3.5"));

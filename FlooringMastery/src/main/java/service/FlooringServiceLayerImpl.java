@@ -23,7 +23,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public List<Order> retrieveAllOrdersByDate() {
+    public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) {
         return null;
     }
 
