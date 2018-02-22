@@ -34,7 +34,7 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
     }
 
     @Override
-    public void createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
+    public Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
         // generate ID
         orderObj.setOrderNumber(generateOrderNumber(orderDate));
         if(ordersByDateMap.get(orderDate) == null) {
@@ -44,7 +44,7 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
             ordersByDateMap.get(orderDate).put(orderObj.getOrderNumber(), orderObj);
         }
         writeOrders();
-        //return orderObj;
+        return orderObj;
     }
 
     @Override
@@ -54,8 +54,8 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException{
-        ordersByDateMap.get(orderDate).remove(orderObj.getOrderNumber());
+    public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException{
+        ordersByDateMap.get(orderDate).remove(orderNum);
         writeOrders();
     }
 

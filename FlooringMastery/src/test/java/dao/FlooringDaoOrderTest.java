@@ -33,7 +33,7 @@ public class FlooringDaoOrderTest {
         if(allOrders != null) {
             for (Order currentOrder : allOrders) {
                 if (currentOrder != null) {
-                    orderDao.removeOrder(orderDate, currentOrder);
+                    orderDao.removeOrder(orderDate, currentOrder.getOrderNumber());
                 }
             }
         }
@@ -165,7 +165,7 @@ public class FlooringDaoOrderTest {
         orderDao.createOrder(orderDate, orderObj);
 
         // act
-        orderDao.removeOrder(orderDate, orderObj);
+        orderDao.removeOrder(orderDate, orderObj.getOrderNumber());
 
         //assert
         assertEquals(0, orderDao.retrieveAllOrdersByDate(orderDate).size());

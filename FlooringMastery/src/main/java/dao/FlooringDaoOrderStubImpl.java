@@ -39,7 +39,8 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
 
     @Override
     public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException {
-        if(orderDate == (onlyOrder.getOrderDate())){
+        LocalDate onlyOrderDate = onlyOrder.getOrderDate();
+        if(orderDate.equals(onlyOrderDate)){
             return allOrders;
         } else {
             return null;
@@ -48,7 +49,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
 
     @Override
     public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
-        if((orderDate == onlyOrder.getOrderDate()) && (orderNumber == onlyOrder.getOrderNumber())){
+        if((orderDate.equals(onlyOrder.getOrderDate())) && (orderNumber == onlyOrder.getOrderNumber())){
             return onlyOrder;
         } else {
             return null;
@@ -56,8 +57,8 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public void createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
-
+    public Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
+        return null;
     }
 
     @Override
@@ -66,7 +67,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
+    public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException {
 
     }
 }

@@ -3,6 +3,7 @@ package service;
 import dao.FlooringDaoOrder;
 import dao.FlooringDaoProducts;
 import dao.FlooringDaoTaxes;
+import dao.FlooringPersistenceException;
 import dto.Order;
 import dto.Product;
 import dto.Tax;
@@ -23,18 +24,18 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) {
-        return null;
+    public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException {
+        return daoOrder.retrieveAllOrdersByDate(orderDate);
     }
 
     @Override
-    public List<Order> retrieveAllProducts() {
-        return null;
+    public List<Product> retrieveAllProducts() throws FlooringPersistenceException {
+        return daoProducts.retrieveAllProducts();
     }
 
     @Override
-    public List<Tax> retrieveAllTaxes() {
-        return null;
+    public List<Tax> retrieveAllTaxes() throws FlooringPersistenceException {
+        return daoTaxes.retrieveAllTaxes();
     }
 
     @Override
@@ -43,23 +44,24 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public Order addOrder(Order orderObj) {
-        return null;
+    public Order addOrder(Order orderObj) throws FlooringPersistenceException {
+        return daoOrder.createOrder(orderObj.getOrderDate(), orderObj);
     }
 
     @Override
-    public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) {
-        return null;
+    public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
+        return daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber);
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNumber) {
-
+    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
+        daoOrder.removeOrder(orderDate, orderNumber);
     }
 
     @Override
-    public Order editOrder(Order orderObj) {
-        return null;
+    public Order editOrder(Order orderObj) throws FlooringPersistenceException {
+        daoOrder.updateOrder(orderObj.getOrderDate(), orderObj);
+        return orderObj;
     }
 
     @Override
