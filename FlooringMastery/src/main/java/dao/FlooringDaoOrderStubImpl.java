@@ -26,7 +26,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
         onlyOrder.setTaxObject(onlyTaxObject);
         onlyOrder.setOrderNumber(1);
         onlyOrder.setProductObject(onlyProductObject);
-        onlyOrder.setCustomerName("TaylorLapointe");
+        onlyOrder.setCustomerName("Taylor Lapointe");
         onlyOrder.setOrderDate(orderDate);
         onlyOrder.setArea(new BigDecimal("5"));
 //        onlyOrder.setTotalCost(new BigDecimal("5"));

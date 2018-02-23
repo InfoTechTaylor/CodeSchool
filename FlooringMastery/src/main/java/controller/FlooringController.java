@@ -73,6 +73,7 @@ public class FlooringController {
             List<Order> allOrdersForDateList = service.retrieveAllOrdersByDate(ordersDate);
             // display orders in list
             view.displayOrdersByDate(allOrdersForDateList);
+            view.promptUserToHitEnter();
         } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException e){
             view.displayError(e.getMessage());
         }
