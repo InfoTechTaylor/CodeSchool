@@ -2,6 +2,7 @@ package controller;
 
 import dao.FlooringPersistenceException;
 import dto.Order;
+import service.DateNotFoundException;
 import service.FlooringServiceLayer;
 import service.OrderNotFoundException;
 import ui.FlooringView;
@@ -72,7 +73,7 @@ public class FlooringController {
             List<Order> allOrdersForDateList = service.retrieveAllOrdersByDate(ordersDate);
             // display orders in list
             view.displayOrdersByDate(allOrdersForDateList);
-        } catch (FlooringPersistenceException | OrderNotFoundException e){
+        } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException e){
             view.displayError(e.getMessage());
         }
 

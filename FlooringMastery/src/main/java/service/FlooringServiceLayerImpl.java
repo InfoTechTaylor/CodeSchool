@@ -25,7 +25,8 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException {
+    public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
+        validateDateExists(orderDate);
         validateOrdersExistForDate(orderDate);
         return daoOrder.retrieveAllOrdersByDate(orderDate);
     }
@@ -80,13 +81,15 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     @Override
     public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException,
-            OrderNotFoundException {
+            OrderNotFoundException, DateNotFoundException {
+        validateDateExists(orderDate);
         validateOrdersExistForDate(orderDate);
         return daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber);
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException {
+    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
+        validateDateExists(orderDate);
         validateOrdersExistForDate(orderDate);
         daoOrder.removeOrder(orderDate, orderNumber);
     }
@@ -105,6 +108,14 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     public boolean activateTrainingMode() {
         return false;
+    }
+
+    private void validateDateExists(LocalDate dateToValidate) throws FlooringPersistenceException, DateNotFoundException {
+        try {
+            daoOrder.retrieveAllOrdersByDate(dateToValidate);
+        } catch(FlooringPersistenceException e){
+            throw new DateNotFoundException("Date does not exist.");
+        }
     }
 
     private void validateOrdersExistForDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException {

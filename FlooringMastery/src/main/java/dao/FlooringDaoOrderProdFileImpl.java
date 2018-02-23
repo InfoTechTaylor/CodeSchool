@@ -80,7 +80,7 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
 
     }
 
-    private void loadOrders(LocalDate orderDate)  {
+    private void loadOrders(LocalDate orderDate) throws FlooringPersistenceException {
 
         Scanner scanner = null;
         // convert local date to string and create a filename with the Orders_MMDDYYYY.txt format
@@ -90,6 +90,7 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
             scanner = new Scanner(new BufferedReader(new FileReader(filename)));
         }catch(FileNotFoundException e){
             ordersByDateMap.put(orderDate, new HashMap<>());
+            throw new FlooringPersistenceException("No orders exist for given date.");
         }
 
         String currentLine;
