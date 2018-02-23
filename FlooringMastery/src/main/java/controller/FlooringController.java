@@ -1,7 +1,13 @@
 package controller;
 
+import dao.FlooringPersistenceException;
+import dto.Order;
 import service.FlooringServiceLayer;
+import service.OrderNotFoundException;
 import ui.FlooringView;
+
+import java.time.LocalDate;
+import java.util.List;
 
 public class FlooringController {
 
@@ -37,6 +43,9 @@ public class FlooringController {
                     saveAllOrders();
                     break;
                 case 6:
+                    trainingMode();
+                    break;
+                case 7:
                     exit();
                     isRunning = false;
                     break;
@@ -56,6 +65,16 @@ public class FlooringController {
     }
 
     private void displayOrdersByDate(){
+        try {
+            // get date from user
+            LocalDate ordersDate = view.promptForDate();
+            // get orders list for date given
+            List<Order> allOrdersForDateList = service.retrieveAllOrdersByDate(ordersDate);
+            // display orders in list
+            view.displayOrdersByDate(allOrdersForDateList);
+        } catch (FlooringPersistenceException | OrderNotFoundException e){
+            view.displayError(e.getMessage());
+        }
 
     }
 

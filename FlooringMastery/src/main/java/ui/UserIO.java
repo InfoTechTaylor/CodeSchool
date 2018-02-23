@@ -1,6 +1,7 @@
 package ui;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
 
 public interface UserIO {
 
@@ -26,6 +27,5 @@ public interface UserIO {
 
     BigDecimal readBigDecimal(String prompt);
 
-
-
+    LocalDate readLocalDate(String date);
 }

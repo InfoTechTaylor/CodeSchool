@@ -1,6 +1,9 @@
 package ui;
 
 import java.math.BigDecimal;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.Scanner;
 
 public class UserIOConsoleImpl implements UserIO{
@@ -266,6 +269,26 @@ public class UserIOConsoleImpl implements UserIO{
             }
         }
         return number;
+    }
+
+
+    @Override
+    public LocalDate readLocalDate(String prompt){
+        LocalDate date = null;
+        boolean isInvalid = true;
+        while(isInvalid) {
+            try {
+                print(prompt);
+                String input = inputReader.nextLine();
+                date = LocalDate.parse(input, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+                isInvalid = false;
+            } catch (DateTimeParseException e) {
+                print("Please enter a valid date in MM/dd/yyyy format.");
+                isInvalid = true;
+            }
+        }
+        return date;
+
     }
 
 
