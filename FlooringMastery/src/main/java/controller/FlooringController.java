@@ -14,12 +14,45 @@ public class FlooringController {
     }
 
     public void run(){
-        System.out.println("test");
+        boolean isRunning = true;
+        int userSelection;
+
+        while(isRunning){
+            userSelection = printMenuAndRetrieveSelection();
+
+            switch(userSelection){
+                case 1:
+                    displayOrdersByDate();
+                    break;
+                case 2:
+                    addNewOrder();
+                    break;
+                case 3:
+                    editOrder();
+                    break;
+                case 4:
+                    removeOrder();
+                    break;
+                case 5:
+                    saveAllOrders();
+                    break;
+                case 6:
+                    exit();
+                    isRunning = false;
+                    break;
+                default:
+                    unknownCommand();
+                    break;
+            }
+
+        }
+
+
     }
 
     private int printMenuAndRetrieveSelection(){
 
-        return 0;
+        return view.displayMenuAndPromptForSelection();
     }
 
     private void displayOrdersByDate(){
@@ -43,7 +76,11 @@ public class FlooringController {
     }
 
     private void exit(){
+        view.displayGoodBye();
+    }
 
+    private void unknownCommand(){
+        view.displayUnknownCommand();
     }
 
     private void trainingMode(){

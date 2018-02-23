@@ -16,8 +16,8 @@ public class FlooringView {
     }
 
     public int displayMenuAndPromptForSelection(){
-        return userIO.readInt("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n +" +
-                        "*  <<Flooring Program>>\n +" +
+        return userIO.readInt("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n" +
+                        "*  <<Flooring Program>>\n" +
                         "* 1. Display Orders\n" +
                         "* 2. Add an Order\n" +
                         "* 3. Edit an Order\n" +
@@ -66,5 +66,13 @@ public class FlooringView {
 
     public boolean promptForSaveAllOrders(){
         return true;
+    }
+
+    public void displayUnknownCommand(){
+        userIO.print("Unknown command");
+    }
+
+    public void displayGoodBye(){
+        userIO.print("Exiting program. Goodbye!");
     }
 }
