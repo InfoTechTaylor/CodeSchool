@@ -197,6 +197,8 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
 
     } // end method
 
-
+    public void saveOrders() throws FlooringPersistenceException {
+        writeOrders();
+    }
 
 }

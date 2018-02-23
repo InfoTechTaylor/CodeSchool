@@ -4,10 +4,7 @@ import dto.Order;
 import dto.Product;
 import dto.Tax;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -20,69 +17,86 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
     @Override
     public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException {
-        loadOrders(orderDate);
+
+        if (!ordersByDateMap.containsKey(orderDate)) {
+            loadOrders(orderDate);
+        }
         return new ArrayList<>(ordersByDateMap.get(orderDate).values());
     }
 
     @Override
     public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
-        loadOrders(orderDate);
-        return ordersByDateMap.get(orderDate).get(orderNumber);
+        if(!ordersByDateMap.containsKey(orderDate)) {
+            loadOrders(orderDate);
+        }
+        Map<Integer, Order> ordersMap = ordersByDateMap.get(orderDate);
+
+
+        return ordersMap.get(orderNumber);
     }
 
     @Override
     public Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
         // generate ID
         orderObj.setOrderNumber(generateOrderNumber(orderDate));
-        ordersByDateMap.get(orderDate).put(orderObj.getOrderNumber(), orderObj);
+        if(ordersByDateMap.get(orderDate) == null) {
+            ordersByDateMap.put(orderDate, new HashMap<>());
+            ordersByDateMap.get(orderDate).put(orderObj.getOrderNumber(), orderObj);
+        } else {
+            ordersByDateMap.get(orderDate).put(orderObj.getOrderNumber(), orderObj);
+        }
+//        writeOrders();
         return orderObj;
     }
 
     @Override
     public void updateOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
         ordersByDateMap.get(orderDate).replace(orderObj.getOrderNumber(), orderObj);
-
+//        writeOrders();
     }
 
     @Override
     public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException{
         ordersByDateMap.get(orderDate).remove(orderNum);
-
+//        writeOrders();
     }
 
     private int generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
 
-        int nextAvailableId = 0;
-        Set<LocalDate> allDates = ordersByDateMap.keySet();
-        for(LocalDate currentDate : allDates){
-            List<Order> allOrders = retrieveAllOrdersByDate(currentDate);
-            for(Order currentOrder : allOrders){
-                if(currentOrder.getOrderNumber() > nextAvailableId){
-                    nextAvailableId = currentOrder.getOrderNumber();
+        int highestUsedOrderNumber = 0;
+
+        List<Order> allOrders = retrieveAllOrdersByDate(dateForFile);
+
+        if(allOrders.size() != 0) {
+            for (Order currentOrder : allOrders) {
+                if (currentOrder.getOrderNumber() > highestUsedOrderNumber) {
+                    highestUsedOrderNumber = currentOrder.getOrderNumber();
                 }
             }
         }
 
-//        return nextAvailableId + 1;
-        return 0;
+
+        return highestUsedOrderNumber + 1;
+//        return 0;
+
     }
 
-    private void loadOrders(LocalDate orderDate) throws FlooringPersistenceException {
+    private void loadOrders(LocalDate orderDate)  {
 
-        Scanner scanner;
+        Scanner scanner = null;
         // convert local date to string and create a filename with the Orders_MMDDYYYY.txt format
         String filename = "Orders_" + orderDate.format(DateTimeFormatter.ofPattern("MMddyyyy")) + ".txt";
 
         try{
             scanner = new Scanner(new BufferedReader(new FileReader(filename)));
         }catch(FileNotFoundException e){
-            File file = new File(filename);  // create a file for that date
             ordersByDateMap.put(orderDate, new HashMap<>());
-            throw new FlooringPersistenceException("unable to load orders from file");
         }
 
         String currentLine;
         String[] currentTokens;
+
+        ordersByDateMap.put(orderDate, new HashMap<>());
 
         while(scanner.hasNextLine()){
             currentLine = scanner.nextLine();
@@ -113,9 +127,8 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
             currentOrder.setTotalLaborCost(new BigDecimal(currentTokens[9]));
             currentOrder.setTotalTax(new BigDecimal(currentTokens[10]));
             currentOrder.setTotalCost(new BigDecimal(currentTokens[11]));
+            currentOrder.setOrderDate(orderDate);
 
-            // create an entry in outer map for orderDate
-            ordersByDateMap.put(orderDate, new HashMap<>());
             // add currentOrder to inner map within the OrderDate outer map entry
             ordersByDateMap.get(orderDate).put(currentOrder.getOrderNumber(), currentOrder);
         }
@@ -123,7 +136,9 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
     }
 
-
+    public void saveOrders() throws FlooringPersistenceException {
+        //writeOrders();
+    }
 
 
 }

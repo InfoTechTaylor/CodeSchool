@@ -29,10 +29,10 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
         onlyOrder.setCustomerName("TaylorLapointe");
         onlyOrder.setOrderDate(orderDate);
         onlyOrder.setArea(new BigDecimal("5"));
-        onlyOrder.setTotalCost(new BigDecimal("5"));
-        onlyOrder.setTotalTax(new BigDecimal("5"));
-        onlyOrder.setTotalMaterialCost(new BigDecimal("5"));
-        onlyOrder.setTotalLaborCost(new BigDecimal("5"));
+//        onlyOrder.setTotalCost(new BigDecimal("5"));
+//        onlyOrder.setTotalTax(new BigDecimal("5"));
+//        onlyOrder.setTotalMaterialCost(new BigDecimal("5"));
+//        onlyOrder.setTotalLaborCost(new BigDecimal("5"));
 
         allOrders.add(onlyOrder);
     }
@@ -73,6 +73,11 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
 
     @Override
     public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException {
+
+    }
+
+    @Override
+    public void saveOrders() throws FlooringPersistenceException {
 
     }
 }

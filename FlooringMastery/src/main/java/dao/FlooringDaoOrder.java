@@ -12,4 +12,5 @@ public interface FlooringDaoOrder {
     Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException;
     void updateOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException;
     void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException;
+    void saveOrders() throws FlooringPersistenceException;
 }

@@ -16,4 +16,37 @@ public class FlooringController {
     public void run(){
         System.out.println("test");
     }
+
+    private int printMenuAndRetrieveSelection(){
+
+        return 0;
+    }
+
+    private void displayOrdersByDate(){
+
+    }
+
+    private void addNewOrder(){
+
+    }
+
+    private void removeOrder(){
+
+    }
+
+    private void editOrder(){
+
+    }
+
+    private void saveAllOrders(){
+
+    }
+
+    private void exit(){
+
+    }
+
+    private void trainingMode(){
+
+    }
 }

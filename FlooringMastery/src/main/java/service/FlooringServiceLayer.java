@@ -15,9 +15,9 @@ public interface FlooringServiceLayer {
     Order processOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException;
     Order addOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException;
     Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException;
-    void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException;
+    void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException;
     Order editOrder(Order orderObj) throws FlooringPersistenceException;
-    void saveAllOrders();
+    void saveAllOrders() throws FlooringPersistenceException;
     boolean activateTrainingMode();
 
 }

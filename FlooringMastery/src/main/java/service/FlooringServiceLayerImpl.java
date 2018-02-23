@@ -44,6 +44,8 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     public Order processOrder(Order orderObj) throws FlooringPersistenceException,
             TaxStateNotFoundException, ProductMaterialNotFoundException {
 
+        // should we validate the date
+
         // check that tax state exists
         String state = orderObj.getTaxObject().getState();
         if(retrieveTaxObject(state) == null){
@@ -68,6 +70,10 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         // validate input for orderObj (state and material type)
         processOrder(orderObj);
         // calculate and set totals on orderObj
+        orderObj = calculateAndSetTotalMaterialCost(orderObj);
+        orderObj = calculateAndSetTotalLaborCost(orderObj);
+        orderObj = calculateAndSetTotalTax(orderObj);
+        orderObj = calculateAndSetTotalCost(orderObj);
 
         return daoOrder.createOrder(orderObj.getOrderDate(), orderObj);
     }
@@ -80,7 +86,8 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
+    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException {
+        validateOrdersExistForDate(orderDate);
         daoOrder.removeOrder(orderDate, orderNumber);
     }
 
@@ -91,7 +98,9 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public void saveAllOrders() {
+    public void saveAllOrders() throws FlooringPersistenceException {
+        // write everything in the map to a file
+        daoOrder.saveOrders();
     }
 
     public boolean activateTrainingMode() {
@@ -112,19 +121,6 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         return daoProducts.retrieveProductByMaterial(materialProductType);
     }
 
-    // 0 order number - int
-    // 1 customer name - String
-    // 2 State, - String
-    // 3 TaxRate, - BD
-    // 4 ProductType, - String
-    // 5 Area, - BD
-    // 6 Material - CostPerSquareFoot, - BD
-    // 7 LaborCost - PerSquareFoot,- BD
-    // 8 total MaterialCost, -BD
-    // 9 total LaborCost,-BD
-    // 10 total Tax, -BD
-    // 11 total Cost - BD
-
     private Order calculateAndSetTotalMaterialCost(Order orderToUpdate){
         // material costPerSquareFoot x area
         BigDecimal area = orderToUpdate.getArea();
@@ -135,15 +131,32 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     private Order calculateAndSetTotalLaborCost(Order orderToUpdate) {
-
-        return null;
+        // labor cost per square foot x area
+        BigDecimal area = orderToUpdate.getArea();
+        BigDecimal laborCostPerSquareFoot = orderToUpdate.getProductObject().getLaborCostPerSquareFoot();
+        BigDecimal totalLaborCost = area.multiply(laborCostPerSquareFoot);
+        orderToUpdate.setTotalLaborCost(totalLaborCost);
+        return orderToUpdate;
     }
 
     private Order calculateAndSetTotalTax(Order orderToUpdate) {
-        return null;
+        // tax rate times (total material cost + total labor cost)
+        BigDecimal totalMaterialCost = orderToUpdate.getTotalMaterialCost();
+        BigDecimal totalLaborCost = orderToUpdate.getTotalLaborCost();
+        BigDecimal taxRate = (orderToUpdate.getTaxObject().getTaxRate()).movePointLeft(2);
+        BigDecimal sumCost = totalLaborCost.add(totalMaterialCost);
+        BigDecimal totalTax = taxRate.multiply(sumCost);
+        orderToUpdate.setTotalTax(totalTax);
+        return orderToUpdate;
     }
 
-    private Order calculateAndSetTotalCost(Order ordertToUpdate) {
-        return null;
+    private Order calculateAndSetTotalCost(Order orderToUpdate) {
+        // total cost = total labor cost + total material cost + total tax
+        BigDecimal totalLaborCost = orderToUpdate.getTotalLaborCost();
+        BigDecimal totalMaterialCost = orderToUpdate.getTotalMaterialCost();
+        BigDecimal totalTax = orderToUpdate.getTotalTax();
+        BigDecimal totalCost = totalLaborCost.add(totalMaterialCost).add(totalTax);
+        orderToUpdate.setTotalCost(totalCost);
+        return orderToUpdate;
     }
 }
