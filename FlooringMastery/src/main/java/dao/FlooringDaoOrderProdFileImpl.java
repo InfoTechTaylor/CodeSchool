@@ -30,7 +30,8 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
         }
         Map<Integer, Order> ordersMap = ordersByDateMap.get(orderDate);
 
-        return ordersByDateMap.get(orderDate).get(orderNumber);
+
+        return ordersMap.get(orderNumber);
     }
 
     @Override

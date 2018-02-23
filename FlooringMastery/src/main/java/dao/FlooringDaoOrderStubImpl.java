@@ -58,7 +58,12 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
 
     @Override
     public Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
-        return null;
+        LocalDate onlyOrderDate = onlyOrder.getOrderDate();
+        if(orderDate.equals(onlyOrderDate)){
+            return onlyOrder;
+        } else {
+            return null;
+        }
     }
 
     @Override
