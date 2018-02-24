@@ -14,6 +14,7 @@ import java.util.List;
 public class FlooringView {
 
     private UserIO userIO;
+    private final String EMPTY_STRING = "";
 
     public FlooringView(UserIO userIO) {
         this.userIO = userIO;
@@ -121,7 +122,26 @@ public class FlooringView {
     }
 
     public Order promptForOrderUpdates(Order orderToUpdate){
-        return null;
+        userIO.print("Enter new values for each prompt or hit enter to keep existing value: ");
+        String updatedCustomerName = userIO.readString("Customer Name (" + orderToUpdate.getCustomerName() + "): ");
+        String updatedState = userIO.readString("State (" + orderToUpdate.getTaxObject().getState() + "): ");
+        String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
+        BigDecimal updatedArea = userIO.readBigDecimal("Area (" + (orderToUpdate.getArea()).toString() + "): ");
+
+        if(!updatedCustomerName.equals(EMPTY_STRING)){
+            orderToUpdate.setCustomerName(updatedCustomerName);
+        }
+        if(!updatedState.equals(EMPTY_STRING)){
+            orderToUpdate.getTaxObject().setState(updatedState);
+        }
+        if(!updatedMaterial.equals(EMPTY_STRING)){
+            orderToUpdate.getProductObject().setProductType(updatedMaterial);
+        }
+        if(!(updatedArea).toString().equals(EMPTY_STRING)){
+            orderToUpdate.setArea(updatedArea);
+        }
+
+        return orderToUpdate;
     }
 
     public boolean promptForSaveAllOrders(){
@@ -154,6 +174,10 @@ public class FlooringView {
         userIO.print("=====================================================");
         userIO.print("CREATE NEW ORDER ");
         userIO.print("=====================================================");
+    }
+
+    public void displaySuccessfulUpdateBanner(){
+        userIO.print("Successfully updated order.");
     }
 
 

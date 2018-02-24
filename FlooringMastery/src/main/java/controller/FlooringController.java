@@ -138,6 +138,35 @@ public class FlooringController {
     }
 
     private void editOrder(){
+        try {
+            // ask for date of order
+            LocalDate orderDate = view.promptForDate();
+            // display orders for that date
+            List<Order> allOrders = service.retrieveAllOrdersByDate(orderDate);
+            view.displayOrdersByDate(allOrders);
+            // prompt for order ID
+            int orderNumber = view.promptForOrderId();
+            Order orderToEdit = service.retrieveOrderByDateAndId(orderDate, orderNumber);
+            // display edit order prompt
+            orderToEdit = view.promptForOrderUpdates(orderToEdit);
+            // display changes back to the user
+            view.displayOrderSummary(orderToEdit);
+            // prompt if user wants to commit changes
+            if(view.promptToCommitToMemory()){
+                // commit changes & display success banner if yes to commit
+                service.editOrder(orderToEdit);
+                view.displaySuccessfulUpdateBanner();
+            } else {
+                // display confirm revert changes if no to commit
+                view.displayConfirmRevertChanges();
+            }
+
+
+        } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException |
+                TaxStateNotFoundException | ProductMaterialNotFoundException e){
+            view.displayError(e.getMessage());
+        }
+
 
     }
 
