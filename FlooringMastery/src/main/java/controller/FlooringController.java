@@ -8,6 +8,7 @@ import service.*;
 import ui.FlooringView;
 
 import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 public class FlooringController {
@@ -110,6 +111,29 @@ public class FlooringController {
     }
 
     private void removeOrder(){
+        try {
+            // ask user for date of order
+            LocalDate orderDate = view.promptForDate();
+            // display all orders for that date
+            List<Order> orderList = service.retrieveAllOrdersByDate(orderDate);
+            view.displayOrdersByDate(orderList);
+            // ask user for order number
+            int orderNumber = view.promptForOrderId();
+            Order orderToRemove = service.retrieveOrderByDateAndId(orderDate, orderNumber);
+            view.displayOrderSummary(orderToRemove);
+            // prompt user if they are sure they want to remove
+            if(view.promptToConfirmRemoval()){
+                // remove
+                service.removeOrder(orderDate, orderNumber);
+                // confirm removal
+                view.displayConfirmRemoval();
+            } else {
+                // confirm abort removal
+                view.displayConfirmAbortRemoval();
+            }
+        } catch(FlooringPersistenceException | OrderNotFoundException | DateNotFoundException e){
+            view.displayError(e.getMessage());
+        }
 
     }
 

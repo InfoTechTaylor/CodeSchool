@@ -38,8 +38,8 @@ public class FlooringView {
         return userIO.readLocalDate("Please enter a date to get orders: ");
     }
 
-    public String promptForOrderId(){
-        return null;
+    public int promptForOrderId(){
+        return userIO.readInt("Enter order number: ");
     }
 
 
@@ -86,6 +86,19 @@ public class FlooringView {
     public boolean promptToCommitToMemory(){
         String userChoice = userIO.readString("Commit order(s) to memory? (y/n)");
         return userChoice.toUpperCase().equals("Y");
+    }
+
+    public boolean promptToConfirmRemoval(){
+        String userChoice = userIO.readString("Are you sure you want to remove the above order? (y/n)");
+        return userChoice.toUpperCase().equals("Y");
+    }
+
+    public void displayConfirmRemoval(){
+        userIO.print("Removed order successfully!");
+    }
+
+    public void displayConfirmAbortRemoval(){
+        userIO.print("Aborted removal of order. ");
     }
 
     public Order promptForNewOrderDetails(){
