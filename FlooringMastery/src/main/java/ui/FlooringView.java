@@ -112,7 +112,8 @@ public class FlooringView {
     }
 
     public boolean promptForSaveAllOrders(){
-        return true;
+        String userChoice = userIO.readString("Are you sure you want to save? (y/n) ");
+        return userChoice.toUpperCase().equals("Y");
     }
 
     public void displayUnknownCommand(){
@@ -133,7 +134,7 @@ public class FlooringView {
     }
 
     public void displayConfirmRevertChanges(){
-        userIO.print("Changes reverted and will not be saved. ");
+        userIO.print("Changes not saved to permanent storage. ");
     }
 
     public void displayCreateNewOrderBanner(){

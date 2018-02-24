@@ -119,13 +119,18 @@ public class FlooringController {
 
     private void saveAllOrders(){
         try {
-            service.saveAllOrders();
+            if(view.promptForSaveAllOrders()) {
+                service.saveAllOrders();
+            } else {
+                view.displayConfirmRevertChanges();
+            }
         } catch(FlooringPersistenceException e){
             view.displayError(e.getMessage());
         }
     }
 
     private void exit(){
+        saveAllOrders();
         view.displayGoodBye();
     }
 
