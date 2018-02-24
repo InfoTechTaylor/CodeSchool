@@ -21,9 +21,9 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
             loadOrders(orderDate);  // throws null pointer exception if file does not exist
         }
 
-//        if(ordersByDateMap.get(orderDate).get(1) == null){
-//            throw new FlooringPersistenceException("No orders for given date. ");
-//        }
+        if(ordersByDateMap.get(orderDate).get(1) == null){
+            throw new FlooringPersistenceException("No orders for given date. ");
+        }
         return new ArrayList<>(ordersByDateMap.get(orderDate).values());
     }
 

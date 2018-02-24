@@ -96,7 +96,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     @Override
     public Order editOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException {
-        processOrder(orderObj);
+        orderObj = processOrder(orderObj);
         orderObj = calculateAndSetTotalMaterialCost(orderObj);
         orderObj = calculateAndSetTotalLaborCost(orderObj);
         orderObj = calculateAndSetTotalTax(orderObj);
