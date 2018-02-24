@@ -2,9 +2,9 @@ package controller;
 
 import dao.FlooringPersistenceException;
 import dto.Order;
-import service.DateNotFoundException;
-import service.FlooringServiceLayer;
-import service.OrderNotFoundException;
+import dto.Product;
+import dto.Tax;
+import service.*;
 import ui.FlooringView;
 
 import java.time.LocalDate;
@@ -81,6 +81,31 @@ public class FlooringController {
     }
 
     private void addNewOrder(){
+        try {
+            view.displayCreateNewOrderBanner();
+            // get lists of products and available states
+            List<Tax> allTaxObjList = service.retrieveAllTaxes();
+            List<Product> allProductObjList = service.retrieveAllProducts();
+            view.displayAllTaxes(allTaxObjList);
+            view.displayAllProducts(allProductObjList);
+            // get order details from user
+            LocalDate orderDate = view.promptForDate();
+            Order newOrder = view.promptForNewOrderDetails();
+            newOrder.setOrderDate(orderDate);
+            // display order summary back to user
+            view.displayOrderSummary(newOrder);
+            // confirm commit new order to memory, if true add order
+            if(view.promptToCommitToMemory()) {
+                // add order
+                service.addOrder(newOrder);
+            } else {
+                view.displayConfirmRevertChanges();
+            }
+            view.promptUserToHitEnter();
+
+        } catch(FlooringPersistenceException | TaxStateNotFoundException | ProductMaterialNotFoundException e){
+            view.displayError(e.getMessage());
+        }
 
     }
 
@@ -93,7 +118,11 @@ public class FlooringController {
     }
 
     private void saveAllOrders(){
-
+        try {
+            service.saveAllOrders();
+        } catch(FlooringPersistenceException e){
+            view.displayError(e.getMessage());
+        }
     }
 
     private void exit(){

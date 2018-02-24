@@ -4,7 +4,11 @@ import dto.Order;
 import dto.Product;
 import dto.Tax;
 
+import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.time.format.FormatStyle;
 import java.util.List;
 
 public class FlooringView {
@@ -38,16 +42,6 @@ public class FlooringView {
         return null;
     }
 
-//    private int orderNumber;
-//    private LocalDate orderDate;
-//    private String customerName;
-//    private Tax taxObject;
-//    private Product productObject;
-//    private BigDecimal area;
-//    private BigDecimal totalMaterialCost;
-//    private BigDecimal totalLaborCost;
-//    private BigDecimal totalTax;
-//    private BigDecimal totalCost;
 
     public void displayOrdersByDate(List<Order> ordersList) {
         userIO.print("Orders for " + ordersList.get(0).getOrderDate() + ": ");
@@ -59,31 +53,58 @@ public class FlooringView {
             userIO.print("\tTax Rate: " + currentOrder.getTaxObject().getTaxRate() + "%");
             userIO.print("\tProduct Type: " + currentOrder.getProductObject().getProductType());
             userIO.print("\tArea: " + currentOrder.getArea() + " sq. ft.");
-            userIO.print("\tTotal Material Cost: $" + currentOrder.getTotalMaterialCost());
-            userIO.print("\tTotal Labor Cost: $" + currentOrder.getTotalLaborCost());
-            userIO.print("\tTotal Taxes: $" + currentOrder.getTotalTax());
-            userIO.print("\tTotal Cost: $" + currentOrder.getTotalCost() + "\n");
+            userIO.print("\tTotal Material Cost: " + NumberFormat.getCurrencyInstance().format(currentOrder.getTotalMaterialCost()));
+            userIO.print("\tTotal Labor Cost: " + NumberFormat.getCurrencyInstance().format(currentOrder.getTotalLaborCost()));
+            userIO.print("\tTotal Taxes: " + NumberFormat.getCurrencyInstance().format(currentOrder.getTotalTax()));
+            userIO.print("\tTotal Cost: " + NumberFormat.getCurrencyInstance().format(currentOrder.getTotalCost()) + "\n");
         }
     }
 
     public void displayAllProducts(List<Product> productsList){
-
+        userIO.print("Available products to choose from: ");
+        for(Product currentProduct : productsList){
+            userIO.print("\t" + currentProduct.getProductType());
+        }
     }
 
     public void displayAllTaxes(List<Tax> allTaxObjectsList){
-
+        userIO.print("Available states we support: ");
+        for(Tax currentTaxObj : allTaxObjectsList){
+            userIO.print("\t" + currentTaxObj.getState());
+        }
     }
 
     public void displayOrderSummary(Order orderToDisplay){
-
+        userIO.print("ORDER SUMMARY: ");
+        userIO.print("\tOrder Date: " + orderToDisplay.getOrderDate().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)));
+        userIO.print("\tCustomer Name: " + orderToDisplay.getCustomerName());
+        userIO.print("\tState: " + orderToDisplay.getTaxObject().getState());
+        userIO.print("\tProduct Selected: " + orderToDisplay.getProductObject().getProductType());
+        userIO.print("\tArea in square feet: " + orderToDisplay.getArea());
     }
 
     public boolean promptToCommitToMemory(){
-        return true;
+        String userChoice = userIO.readString("Commit order(s) to memory? (y/n)");
+        return userChoice.toUpperCase().equals("Y");
     }
 
     public Order promptForNewOrderDetails(){
-        return null;
+        Order newOrder = new Order();
+
+//        userIO.print("Follow the below prompts to complete new order: ");
+        String customerName = userIO.readString("Enter customer name: ");
+        String state = userIO.readString("Enter your state: ");
+        String productType = userIO.readString("Select the product you want: ");
+        BigDecimal area = userIO.readBigDecimal("Enter the size of your floor in square feet: ");
+
+        newOrder.setCustomerName(customerName);
+        Tax taxObj = new Tax(state);
+            newOrder.setTaxObject(taxObj);
+        Product productObj = new Product(productType);
+            newOrder.setProductObject(productObj);
+        newOrder.setArea(area);
+
+        return newOrder;
     }
 
     public Order promptForOrderUpdates(Order orderToUpdate){
@@ -110,4 +131,16 @@ public class FlooringView {
     public void promptUserToHitEnter(){
         userIO.readString("Hit enter to continue: ");
     }
+
+    public void displayConfirmRevertChanges(){
+        userIO.print("Changes reverted and will not be saved. ");
+    }
+
+    public void displayCreateNewOrderBanner(){
+        userIO.print("=====================================================");
+        userIO.print("CREATE NEW ORDER ");
+        userIO.print("=====================================================");
+    }
+
+
 }

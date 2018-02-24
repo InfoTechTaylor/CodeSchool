@@ -13,6 +13,10 @@ public class Tax {
         this.taxRate = taxRate;
     }
 
+    public Tax(String state) {
+        this.state = state;
+    }
+
     public String getState() {
         return state;
     }
