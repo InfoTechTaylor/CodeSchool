@@ -82,7 +82,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException,
+    public Order retrieveOrderByDateAndId(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException,
             OrderNotFoundException {
         validateOrdersExistForDate(orderDate);
         try{
@@ -94,7 +94,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
+    public void removeOrder(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
 
         validateOrdersExistForDate(orderDate);
         daoOrder.removeOrder(orderDate, orderNumber);

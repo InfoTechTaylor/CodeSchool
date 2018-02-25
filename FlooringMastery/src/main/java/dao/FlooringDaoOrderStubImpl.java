@@ -24,7 +24,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
         onlyProductObject = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));
         onlyOrder = new Order();
         onlyOrder.setTaxObject(onlyTaxObject);
-        onlyOrder.setOrderNumber(1);
+        onlyOrder.setOrderNumber("1");
         onlyOrder.setProductObject(onlyProductObject);
         onlyOrder.setCustomerName("Taylor Lapointe");
         onlyOrder.setOrderDate(orderDate);
@@ -48,8 +48,8 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
-        if((orderDate.equals(onlyOrder.getOrderDate())) && (orderNumber == onlyOrder.getOrderNumber())){
+    public Order retrieveOrderByDateAndId(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException {
+        if((orderDate.equals(onlyOrder.getOrderDate())) && (orderNumber.equals(onlyOrder.getOrderNumber()))){
             return onlyOrder;
         } else {
             return null;
@@ -72,7 +72,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException {
+    public void removeOrder(LocalDate orderDate, String orderNum) throws FlooringPersistenceException {
 
     }
 

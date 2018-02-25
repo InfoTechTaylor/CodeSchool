@@ -136,7 +136,7 @@ public class FlooringController {
             view.displayOrdersByDate(orderList);
 
             // ask user for order number
-            int orderNumber = view.promptForOrderId();
+            String orderNumber = view.promptForOrderId();
             Order orderToRemove = service.retrieveOrderByDateAndId(orderDate, orderNumber);
             view.displayOrderSummary(orderToRemove);
 
@@ -163,7 +163,7 @@ public class FlooringController {
             view.displayOrdersByDate(allOrders);
 
             // prompt for order ID & make edits
-            int orderNumber = view.promptForOrderId();
+            String orderNumber = view.promptForOrderId();
             Order orderToEdit = service.retrieveOrderByDateAndId(orderDate, orderNumber);
             orderToEdit = view.promptForOrderUpdates(orderToEdit);
 

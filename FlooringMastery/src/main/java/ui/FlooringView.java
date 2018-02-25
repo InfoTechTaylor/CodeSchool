@@ -40,8 +40,8 @@ public class FlooringView {
         return userIO.readLocalDate("Please enter a date to get orders: ");
     }
 
-    public int promptForOrderId(){
-        return userIO.readInt("Enter order number: ");
+    public String promptForOrderId(){
+        return userIO.readString("Enter order number: ");
     }
 
 

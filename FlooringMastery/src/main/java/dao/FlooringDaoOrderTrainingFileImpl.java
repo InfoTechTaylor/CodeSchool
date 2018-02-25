@@ -12,7 +12,7 @@ import java.util.*;
 
 public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
-    private Map<LocalDate, HashMap<Integer, Order>> ordersByDateMap = new HashMap<>();
+    private Map<LocalDate, HashMap<String, Order>> ordersByDateMap = new HashMap<>();
     private static final String STRING_DELIMITER = ",";
 
     @Override
@@ -29,11 +29,14 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
+    public Order retrieveOrderByDateAndId(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException {
         if(!ordersByDateMap.containsKey(orderDate)) {
             loadOrders(orderDate);
         }
-        Map<Integer, Order> ordersMap = ordersByDateMap.get(orderDate);
+        if(!ordersByDateMap.get(orderDate).containsKey(orderNumber)){
+            throw new FlooringPersistenceException("No orders with that number exist for that date.");
+        }
+        Map<String, Order> ordersMap = ordersByDateMap.get(orderDate);
 
 
         return ordersMap.get(orderNumber);
@@ -60,27 +63,27 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
     }
 
     @Override
-    public void removeOrder(LocalDate orderDate, int orderNum) throws FlooringPersistenceException{
+    public void removeOrder(LocalDate orderDate, String orderNum) throws FlooringPersistenceException{
         ordersByDateMap.get(orderDate).remove(orderNum);
         //writeOrders();
     }
 
-    private int generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
+    private String generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
 
-        int highestUsedOrderNumber = 0;
+//        int highestUsedOrderNumber = 0;
+//
+//        List<Order> allOrders = retrieveAllOrdersByDate(dateForFile);
+//
+//        if(allOrders.size() != 0) {
+//            for (Order currentOrder : allOrders) {
+//                if (currentOrder.getOrderNumber() > highestUsedOrderNumber) {
+//                    highestUsedOrderNumber = currentOrder.getOrderNumber();
+//                }
+//            }
+//        }
 
-        List<Order> allOrders = retrieveAllOrdersByDate(dateForFile);
 
-        if(allOrders.size() != 0) {
-            for (Order currentOrder : allOrders) {
-                if (currentOrder.getOrderNumber() > highestUsedOrderNumber) {
-                    highestUsedOrderNumber = currentOrder.getOrderNumber();
-                }
-            }
-        }
-
-
-        return highestUsedOrderNumber + 1;
+        return "1";
 //        return 0;
 
     }
@@ -123,7 +126,7 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
                 // create order object
                 Order currentOrder = new Order();
-                currentOrder.setOrderNumber(Integer.parseInt(currentTokens[0]));
+                currentOrder.setOrderNumber(currentTokens[0]);
                 currentOrder.setCustomerName(currentTokens[1]);
                 currentOrder.setTaxObject(new Tax(currentTokens[2], new BigDecimal(currentTokens[3])));
                 currentOrder.setProductObject(new Product(currentTokens[4], new BigDecimal(currentTokens[6]),
@@ -145,9 +148,8 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
     }
 
-
     public void saveOrders() throws FlooringPersistenceException {
-//        writeOrders();
+        //writeOrders();
     }
 
 

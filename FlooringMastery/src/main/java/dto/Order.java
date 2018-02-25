@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public class Order {
 
-    private int orderNumber;
+    private String orderNumber;
     private LocalDate orderDate;
     private String customerName;
     private Tax taxObject;
@@ -17,11 +17,11 @@ public class Order {
     private BigDecimal totalTax;
     private BigDecimal totalCost;
 
-    public int getOrderNumber() {
+    public String getOrderNumber() {
         return orderNumber;
     }
 
-    public void setOrderNumber(int orderNumber) {
+    public void setOrderNumber(String orderNumber) {
         this.orderNumber = orderNumber;
     }
 

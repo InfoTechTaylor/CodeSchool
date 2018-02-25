@@ -45,19 +45,19 @@ public class FlooringServiceLayerTest {
 
     @Test
     public void processOrder() throws Exception{
-        service.processOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        service.processOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
     }
 
     @Test
     public void testProcessAllOrderTaxProductExists() throws Exception{
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         // passes if it doesn't throw exception
     }
 
     @Test
     public void testProcessOrderTaxStateDoesNotExist() throws Exception{
         // arrange
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         Tax taxObj = new Tax("PA", new BigDecimal(3.2));
         orderToValidate.setTaxObject(taxObj);
 
@@ -74,7 +74,7 @@ public class FlooringServiceLayerTest {
     @Test
     public void testProcessOrderProductMaterialDoesNotExist() throws Exception{
         // arrange
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         Product productObj = new Product("Tile",new BigDecimal("2.25"),new BigDecimal("2.10"));
         orderToValidate.setProductObject(productObj);
 
@@ -105,51 +105,51 @@ public class FlooringServiceLayerTest {
 
     @Test
     public void addOrder() throws Exception{
-        Order orderObj = service.retrieveOrderByDateAndId(orderDate, 1);
+        Order orderObj = service.retrieveOrderByDateAndId(orderDate, "1");
         service.addOrder(orderObj);
     }
 
 
     @Test
     public void testCalculateAndSetTotalMaterialCost() throws Exception{
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         assertEquals(new BigDecimal("11.25"), orderToValidate.getTotalMaterialCost());
     }
 
     @Test
     public void testCalculateAndSetTotalLaborCost() throws Exception{
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         assertEquals(new BigDecimal("10.50"), orderToValidate.getTotalLaborCost());
     }
 
     @Test
     public void testCalculateAndSetTotalTax() throws Exception{
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         assertEquals(new BigDecimal(".76125"), orderToValidate.getTotalTax());
     }
 
     @Test
     public void testCalculateAndSetTotalCost() throws Exception{
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
         assertEquals(new BigDecimal("22.51125"), orderToValidate.getTotalCost());
     }
 
     @Test
     public void retrieveOrderByDateAndId() throws Exception{
         //there is only one Order object in our FlooringDaoOrderStubImpl
-        assertNotNull(service.retrieveOrderByDateAndId(orderDate, 1));
-        assertNull(service.retrieveOrderByDateAndId(orderDate, 2));
+        assertNotNull(service.retrieveOrderByDateAndId(orderDate, "1"));
+        assertNull(service.retrieveOrderByDateAndId(orderDate, "2"));
     }
 
     @Test
     public void removeOrder() throws Exception {
         // remove the order in the stub with id of 1
-        service.removeOrder(orderDate, 2);
+        service.removeOrder(orderDate, "2");
     }
 
     @Test
     public void editOrder() throws Exception{
-        service.editOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        service.editOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
     }
 
     @Test

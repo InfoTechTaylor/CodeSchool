@@ -14,8 +14,8 @@ public interface FlooringServiceLayer {
     List<Tax> retrieveAllTaxes() throws FlooringPersistenceException;
     Order processOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException;
     Order addOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException;
-    Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException;
-    void removeOrder(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException;
+    Order retrieveOrderByDateAndId(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException;
+    void removeOrder(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException;
     Order editOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException, OrderNotFoundException;
     void saveAllOrders() throws FlooringPersistenceException;
     boolean activateTrainingMode(boolean userSelection);
