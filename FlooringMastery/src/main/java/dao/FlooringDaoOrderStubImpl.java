@@ -43,7 +43,7 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
         if(orderDate.equals(onlyOrderDate)){
             return allOrders;
         } else {
-            return null;
+            return new ArrayList<>();
         }
     }
 

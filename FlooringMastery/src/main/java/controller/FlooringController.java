@@ -8,13 +8,14 @@ import service.*;
 import ui.FlooringView;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public class FlooringController {
 
     private FlooringView view;
     private FlooringServiceLayer service;
+    private boolean isModeTraining = false;
+
 
     public FlooringController(FlooringView view, FlooringServiceLayer service){
         this.view = view;
@@ -45,7 +46,7 @@ public class FlooringController {
                     saveAllOrders();
                     break;
                 case 6:
-                    trainingMode();
+                    changeProgramMode();
                     break;
                 case 7:
                     exit();
@@ -62,11 +63,11 @@ public class FlooringController {
     }
 
     private int printMenuAndRetrieveSelection(){
-
-        return view.displayMenuAndPromptForSelection();
+        return view.displayMenuAndPromptForSelection(isModeTraining);
     }
 
     private void displayOrdersByDate(){
+        view.displaySubMenuBanner("display all orders");
         try {
             // get date from user
             LocalDate ordersDate = view.promptForDate();
@@ -82,53 +83,68 @@ public class FlooringController {
     }
 
     private void addNewOrder(){
-        try {
-            view.displayCreateNewOrderBanner();
-            // get lists of products and available states
-            List<Tax> allTaxObjList = service.retrieveAllTaxes();
-            List<Product> allProductObjList = service.retrieveAllProducts();
-            view.displayAllTaxes(allTaxObjList);
-            view.displayAllProducts(allProductObjList);
-            // get order details from user
-            LocalDate orderDate = view.promptForDate();
-            Order newOrder = view.promptForNewOrderDetails();
-            newOrder.setOrderDate(orderDate);
-            // display order summary back to user
-            view.displayOrderSummary(newOrder);
-            // confirm commit new order to memory, if true add order
-            if(view.promptToCommitToMemory()) {
-                // add order
-                service.addOrder(newOrder);
-            } else {
-                view.displayConfirmRevertChanges();
-            }
-            view.promptUserToHitEnter();
+        boolean isInvalidInput = true;
+        Order newOrder = new Order();
+        int loopCount = 0;
 
-        } catch(FlooringPersistenceException | TaxStateNotFoundException | ProductMaterialNotFoundException e){
-            view.displayError(e.getMessage());
+        while(isInvalidInput) {
+            try {
+                view.displaySubMenuBanner("add new order");
+                // get lists of products and available states
+                List<Tax> allTaxObjList = service.retrieveAllTaxes();
+                List<Product> allProductObjList = service.retrieveAllProducts();
+                view.displayAllTaxes(allTaxObjList);
+                view.displayAllProducts(allProductObjList);
+                // get order details from user
+                if(loopCount == 0) {
+                    LocalDate orderDate = view.promptForDate();
+                    newOrder = view.promptForNewOrderDetails();
+                    newOrder.setOrderDate(orderDate);
+                } else {
+                    newOrder = view.promptForOrderUpdates(newOrder);
+                }
+
+                // display order summary back to user
+                view.displayOrderSummary(newOrder);
+                // confirm commit new order to memory, if true add order
+                if (view.promptToCommitToMemory()) {
+                    // add order
+                    service.addOrder(newOrder);
+                    view.displaySuccessfulAdd();
+                    isInvalidInput = false;
+                } else {
+                    view.displayConfirmRevertChanges();
+                }
+                view.promptUserToHitEnter();
+
+            } catch (FlooringPersistenceException | TaxStateNotFoundException | ProductMaterialNotFoundException e) {
+                view.displayError(e.getMessage());
+                isInvalidInput = true;
+                loopCount++;
+                view.promptUserToHitEnter();
+
+            }
         }
 
     }
 
     private void removeOrder(){
+        view.displaySubMenuBanner("remove order");
         try {
-            // ask user for date of order
             LocalDate orderDate = view.promptForDate();
-            // display all orders for that date
             List<Order> orderList = service.retrieveAllOrdersByDate(orderDate);
             view.displayOrdersByDate(orderList);
+
             // ask user for order number
             int orderNumber = view.promptForOrderId();
             Order orderToRemove = service.retrieveOrderByDateAndId(orderDate, orderNumber);
             view.displayOrderSummary(orderToRemove);
+
             // prompt user if they are sure they want to remove
             if(view.promptToConfirmRemoval()){
-                // remove
                 service.removeOrder(orderDate, orderNumber);
-                // confirm removal
                 view.displayConfirmRemoval();
             } else {
-                // confirm abort removal
                 view.displayConfirmAbortRemoval();
             }
         } catch(FlooringPersistenceException | OrderNotFoundException | DateNotFoundException e){
@@ -139,25 +155,24 @@ public class FlooringController {
 
     private void editOrder(){
         try {
-            // ask for date of order
+            view.displaySubMenuBanner("edit order");
+
+            // get orders that can be edited
             LocalDate orderDate = view.promptForDate();
-            // display orders for that date
             List<Order> allOrders = service.retrieveAllOrdersByDate(orderDate);
             view.displayOrdersByDate(allOrders);
-            // prompt for order ID
+
+            // prompt for order ID & make edits
             int orderNumber = view.promptForOrderId();
             Order orderToEdit = service.retrieveOrderByDateAndId(orderDate, orderNumber);
-            // display edit order prompt
             orderToEdit = view.promptForOrderUpdates(orderToEdit);
-            // display changes back to the user
+
+            // display order and confirm if changes should be saved
             view.displayOrderSummary(orderToEdit);
-            // prompt if user wants to commit changes
             if(view.promptToCommitToMemory()){
-                // commit changes & display success banner if yes to commit
                 service.editOrder(orderToEdit);
                 view.displaySuccessfulUpdateBanner();
             } else {
-                // display confirm revert changes if no to commit
                 view.displayConfirmRevertChanges();
             }
 
@@ -171,9 +186,11 @@ public class FlooringController {
     }
 
     private void saveAllOrders(){
+        view.displaySubMenuBanner("save all orders");
         try {
             if(view.promptForSaveAllOrders()) {
                 service.saveAllOrders();
+                view.displaySuccesfullSave();
             } else {
                 view.displayConfirmRevertChanges();
             }
@@ -191,7 +208,15 @@ public class FlooringController {
         view.displayUnknownCommand();
     }
 
-    private void trainingMode(){
-
+    private void changeProgramMode(){
+        view.displaySubMenuBanner("change program mode");
+        boolean oppositeMode;
+        if(view.promptForProgramMode(isModeTraining)){
+            // if user prompts yes, change mode to opposite of current mode
+            oppositeMode = !isModeTraining;
+            isModeTraining = service.activateTrainingMode(oppositeMode);
+        } else {
+            view.displayDidNotChangeMode();
+        }
     }
 }

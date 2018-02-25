@@ -20,7 +20,8 @@ public class FlooringView {
         this.userIO = userIO;
     }
 
-    public int displayMenuAndPromptForSelection(){
+    public int displayMenuAndPromptForSelection(boolean isModeTraining){
+        displayChangeModeBanner(isModeTraining);
         return userIO.readInt("* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *\n" +
                         "*  <<Flooring Program>>\n" +
                         "* 1. Display Orders\n" +
@@ -28,7 +29,7 @@ public class FlooringView {
                         "* 3. Edit an Order\n" +
                         "* 4. Remove an Order\n" +
                         "* 5. Save Current Work\n" +
-                        "* 6. Enter Training Mode\n" +
+                        "* 6. Change Program Mode\n" +
                         "* 7. Quit\n" +
                         "* \n" +
                         "* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * " +
@@ -45,8 +46,10 @@ public class FlooringView {
 
 
     public void displayOrdersByDate(List<Order> ordersList) {
-        userIO.print("Orders for " + ordersList.get(0).getOrderDate() + ": ");
-        userIO.print("=====================================================");
+        if(ordersList.size() != 0) {
+            userIO.print("Orders for " + ordersList.get(0).getOrderDate() + ": ");
+        }
+        userIO.print("=====================================================================");
         for(Order currentOrder : ordersList){
             userIO.print("\tOrder Number: " + currentOrder.getOrderNumber());
             userIO.print("\tCustomer Name: " + currentOrder.getCustomerName());
@@ -62,17 +65,28 @@ public class FlooringView {
     }
 
     public void displayAllProducts(List<Product> productsList){
-        userIO.print("Available products to choose from: ");
+        userIO.print("AVAILABLE PRODUCTS: ");
+        userIO.print("--------------------------------------------");
+        userIO.print(String.format("%-15s %-15s %-15s","PRODUCT TYPE", "MATERIAL COST", "LABOR COST"));
         for(Product currentProduct : productsList){
-            userIO.print("\t" + currentProduct.getProductType());
+            userIO.print(String.format("%-15s %-15s %-15s", currentProduct.getProductType(),
+                            NumberFormat.getCurrencyInstance().format(currentProduct.getMaterialCostPerSquareFoot()),
+                            NumberFormat.getCurrencyInstance().format(currentProduct.getLaborCostPerSquareFoot())));
         }
+        userIO.print("***Note: Above costs are per square foot. \n");
     }
 
     public void displayAllTaxes(List<Tax> allTaxObjectsList){
-        userIO.print("Available states we support: ");
+        userIO.print("SUPPORTED STATES: ");
+        userIO.print("--------------------------------------------");
+        userIO.print(String.format("%-7s %-7s", "STATE", "TAX RATE"));
+
+
         for(Tax currentTaxObj : allTaxObjectsList){
-            userIO.print("\t" + currentTaxObj.getState());
+            userIO.print(String.format("%-7s %-7s",currentTaxObj.getState(),
+                            currentTaxObj.getTaxRate() + "%"));
         }
+        userIO.print("");
     }
 
     public void displayOrderSummary(Order orderToDisplay){
@@ -126,7 +140,7 @@ public class FlooringView {
         String updatedCustomerName = userIO.readString("Customer Name (" + orderToUpdate.getCustomerName() + "): ");
         String updatedState = userIO.readString("State (" + orderToUpdate.getTaxObject().getState() + "): ");
         String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
-        BigDecimal updatedArea = userIO.readBigDecimal("Area (" + (orderToUpdate.getArea()).toString() + "): ");
+        String updatedArea = userIO.readString("Area (" + (orderToUpdate.getArea()).toString() + "): ");
 
         if(!updatedCustomerName.equals(EMPTY_STRING)){
             orderToUpdate.setCustomerName(updatedCustomerName);
@@ -137,8 +151,9 @@ public class FlooringView {
         if(!updatedMaterial.equals(EMPTY_STRING)){
             orderToUpdate.getProductObject().setProductType(updatedMaterial);
         }
-        if(!(updatedArea).toString().equals(EMPTY_STRING)){
-            orderToUpdate.setArea(updatedArea);
+        if(!(updatedArea).equals(EMPTY_STRING)){
+            BigDecimal updatedAreaBD = new BigDecimal(updatedArea);
+            orderToUpdate.setArea(updatedAreaBD);
         }
 
         return orderToUpdate;
@@ -170,15 +185,45 @@ public class FlooringView {
         userIO.print("Changes not saved to permanent storage. ");
     }
 
-    public void displayCreateNewOrderBanner(){
-        userIO.print("=====================================================");
-        userIO.print("CREATE NEW ORDER ");
-        userIO.print("=====================================================");
+    public void displaySubMenuBanner(String subMenuName){
+        userIO.print("=====================================================================");
+        userIO.print(subMenuName.toUpperCase());
+        userIO.print("=====================================================================");
     }
 
     public void displaySuccessfulUpdateBanner(){
         userIO.print("Successfully updated order.");
     }
 
+    public void displaySuccesfullSave(){
+        userIO.print("Successfully saved orders.");
+    }
+
+    public boolean promptForProgramMode(boolean isModeTraining){
+        String userSelection;
+        if(isModeTraining) {
+            userSelection = userIO.readString("Are you sure you want to switch to production mode? (y/n): ");
+        } else {
+            userSelection = userIO.readString("Are you sure you want to switch to training mode? (y/n): ");
+        }
+        return userSelection.toUpperCase().equals("Y");
+
+    }
+
+    public void displayChangeModeBanner(boolean isModeTraining){
+        if(isModeTraining) {
+            displaySubMenuBanner("you are now in training mode");
+        } else {
+            displaySubMenuBanner("you are now in production mode");
+        }
+    }
+
+    public void displayDidNotChangeMode(){
+        userIO.print("Mode not changed.");
+    }
+
+    public void displaySuccessfulAdd(){
+        userIO.print("Successfully committed new order.");
+    }
 
 }

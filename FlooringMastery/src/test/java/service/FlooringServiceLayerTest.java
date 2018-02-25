@@ -90,7 +90,7 @@ public class FlooringServiceLayerTest {
     @Test
     public void testValidateOrdersDoNotExistForDate() throws Exception {
         // arrange
-        Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
+        //Order orderToValidate = service.addOrder(service.retrieveOrderByDateAndId(orderDate, 1));
         LocalDate orderDate = LocalDate.parse("02212000", DateTimeFormatter.ofPattern("MMddyyyy"));
 
         //act
@@ -102,16 +102,6 @@ public class FlooringServiceLayerTest {
         }
     }
 
-    @Test
-    public void testValidateDateExists() throws Exception {
-        LocalDate orderDate = LocalDate.parse("02212000", DateTimeFormatter.ofPattern("MMddyyyy"));
-        try{
-            service.retrieveAllOrdersByDate(orderDate);
-            fail("Expected DateNotFoundException never thrown.");
-        } catch (DateNotFoundException e){
-            return;
-        }
-    }
 
     @Test
     public void addOrder() throws Exception{
@@ -169,6 +159,6 @@ public class FlooringServiceLayerTest {
 
     @Test
     public void activateTrainingMode() {
-        service.activateTrainingMode();
+        service.activateTrainingMode(true);
     }
 }

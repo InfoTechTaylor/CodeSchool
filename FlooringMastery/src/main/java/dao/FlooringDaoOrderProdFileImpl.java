@@ -21,9 +21,9 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
             loadOrders(orderDate);  // throws null pointer exception if file does not exist
         }
 
-        if(ordersByDateMap.get(orderDate).get(1) == null){
-            throw new FlooringPersistenceException("No orders for given date. ");
-        }
+//        if(ordersByDateMap.get(orderDate).get(1) == null){
+//            throw new FlooringPersistenceException("No orders for given date. ");
+//        }
         return new ArrayList<>(ordersByDateMap.get(orderDate).values());
     }
 
@@ -168,23 +168,24 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
         // for every LocalDate in the Map
         for ( LocalDate currentDate : allOrderDates ) {
 
-            // get file name for the order date
-            filename = "Orders_" + currentDate.format(DateTimeFormatter.ofPattern("MMddyyyy")) + ".txt";
+            //if (ordersByDateMap.get(currentDate).size() != 0) {
+                // get file name for the order date
+                filename = "Orders_" + currentDate.format(DateTimeFormatter.ofPattern("MMddyyyy")) + ".txt";
 
-            // create instance of PrintWriter, pass it the file name
-            try{
-                out = new PrintWriter(new FileWriter(filename));
-            } catch(IOException e){
-                throw new FlooringPersistenceException("Unable to write orders to file");
-            }
+                // create instance of PrintWriter, pass it the file name
+                try {
+                    out = new PrintWriter(new FileWriter(filename));
+                } catch (IOException e) {
+                    throw new FlooringPersistenceException("Unable to write orders to file");
+                }
 
-            // create a list of all orders for that date
-            List<Order> allOrders = this.retrieveAllOrdersByDate(currentDate);
-            // loop through all the orders
+                // create a list of all orders for that date
+                List<Order> allOrders = this.retrieveAllOrdersByDate(currentDate);
+                // loop through all the orders
 
-            for(Order currentOrder : allOrders){
-                // for each order, write as a line to the file
-                out.println(currentOrder.getOrderNumber() + STRING_DELIMITER +
+                for (Order currentOrder : allOrders) {
+                    // for each order, write as a line to the file
+                    out.println(currentOrder.getOrderNumber() + STRING_DELIMITER +
                             currentOrder.getCustomerName() + STRING_DELIMITER +
                             currentOrder.getTaxObject().getState() + STRING_DELIMITER +
                             currentOrder.getTaxObject().getTaxRate() + STRING_DELIMITER +
@@ -196,12 +197,13 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
                             currentOrder.getTotalLaborCost() + STRING_DELIMITER +
                             currentOrder.getTotalTax() + STRING_DELIMITER +
                             currentOrder.getTotalCost());
-                // force the write to the file
-                out.flush();
-            } // end inner for loop
-            // close the PrintWriter
-            out.close();
-        } // end outer for loop
+                    // force the write to the file
+                    out.flush();
+                } // end inner for loop
+                // close the PrintWriter
+                out.close();
+           // }// close if orders is != 0
+            } // end outer for loop
 
 
     } // end method

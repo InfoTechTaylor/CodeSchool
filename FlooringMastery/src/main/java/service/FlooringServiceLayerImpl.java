@@ -7,6 +7,8 @@ import dao.FlooringPersistenceException;
 import dto.Order;
 import dto.Product;
 import dto.Tax;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -17,6 +19,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     private FlooringDaoOrder daoOrder;
     private FlooringDaoTaxes daoTaxes;
     private FlooringDaoProducts daoProducts;
+    //private boolean isModeTraining = false;
 
     public FlooringServiceLayerImpl(FlooringDaoOrder daoOrder, FlooringDaoTaxes daoTaxes, FlooringDaoProducts daoProducts) {
         this.daoOrder = daoOrder;
@@ -49,14 +52,14 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         // check that tax state exists
         String state = orderObj.getTaxObject().getState();
         if(retrieveTaxObject(state) == null){
-            throw new TaxStateNotFoundException("Unable to find tax information for provided state. ");
+            throw new TaxStateNotFoundException("Sorry, we do not support the state you provided. Please try again with one of our supported states. ");
         } else {
             orderObj.setTaxObject(retrieveTaxObject(state));
         }
         // check that product material exists
         String productMaterial = orderObj.getProductObject().getProductType();
         if(retrieveProductObject(productMaterial) == null){
-            throw new ProductMaterialNotFoundException("Unable to find product material type provided. ");
+            throw new ProductMaterialNotFoundException("Sorry, we do not offer the product you provided. Please try again with one of our supported states. ");
         } else {
             orderObj.setProductObject(retrieveProductObject(productMaterial));
         }
@@ -110,12 +113,22 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         daoOrder.saveOrders();
     }
 
-    public boolean activateTrainingMode() {
-        return false;
+    public boolean activateTrainingMode(boolean userSelection) {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        if(userSelection){
+
+            daoOrder = ctx.getBean("trainingOrderDao", FlooringDaoOrder.class);
+            return true;
+        } else {
+            daoOrder = ctx.getBean("prodOrderDao", FlooringDaoOrder.class);
+            return false;
+        }
+
     }
 
     private void validateOrdersExistForDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException {
-        if(daoOrder.retrieveAllOrdersByDate(orderDate) == null){
+//        if(daoOrder.retrieveAllOrdersByDate(orderDate) == null){
+        if(daoOrder.retrieveAllOrdersByDate(orderDate).size() == 0){
             throw new OrderNotFoundException("No orders found for given date. ");
         }
     }
@@ -166,4 +179,5 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         orderToUpdate.setTotalCost(totalCost);
         return orderToUpdate;
     }
+
 }
