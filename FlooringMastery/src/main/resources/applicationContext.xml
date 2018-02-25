@@ -26,7 +26,7 @@
     <bean id="prodOrderDao" class="dao.FlooringDaoOrderProdFileImpl">
     </bean>
     <bean id="trainingOrderDao" class="dao.FlooringDaoOrderTrainingFileImpl">
-    </bean>
+</bean>
     <bean id="productsDao" class="dao.FlooringDaoProductsFileImpl" >
         <constructor-arg value="Products.txt" />
     </bean>

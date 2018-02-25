@@ -3,6 +3,7 @@ package dao;
 import dto.Order;
 import dto.Product;
 import dto.Tax;
+import service.OrderNotFoundException;
 
 import java.io.*;
 import java.math.BigDecimal;
@@ -31,6 +32,9 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
     public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException {
         if(!ordersByDateMap.containsKey(orderDate)) {
             loadOrders(orderDate);
+        }
+        if(!ordersByDateMap.get(orderDate).containsKey(orderNumber)){
+            throw new FlooringPersistenceException("No orders with that number exist for that date.");
         }
         Map<Integer, Order> ordersMap = ordersByDateMap.get(orderDate);
 

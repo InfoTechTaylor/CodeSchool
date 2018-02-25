@@ -83,10 +83,14 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     @Override
     public Order retrieveOrderByDateAndId(LocalDate orderDate, int orderNumber) throws FlooringPersistenceException,
-            OrderNotFoundException, DateNotFoundException {
-
+            OrderNotFoundException {
         validateOrdersExistForDate(orderDate);
-        return daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber);
+        try{
+            return daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber);
+        } catch(FlooringPersistenceException e){
+            throw new OrderNotFoundException("No orders exist with provided order ID. ");
+        }
+
     }
 
     @Override
@@ -97,7 +101,8 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public Order editOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException {
+    public Order editOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException, OrderNotFoundException {
+        validateOrdersExistForDate(orderObj.getOrderDate());
         orderObj = processOrder(orderObj);
         orderObj = calculateAndSetTotalMaterialCost(orderObj);
         orderObj = calculateAndSetTotalLaborCost(orderObj);
@@ -131,6 +136,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         if(daoOrder.retrieveAllOrdersByDate(orderDate).size() == 0){
             throw new OrderNotFoundException("No orders found for given date. ");
         }
+
     }
 
     private Tax retrieveTaxObject(String taxState) throws FlooringPersistenceException {
