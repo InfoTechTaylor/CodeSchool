@@ -50,8 +50,21 @@
         <constructor-arg ref="view" />
     </bean>
 
-    <!--<bean id="loggingAdvice" class="advice.LoggingAdvice">-->
-        <!--<constructor-arg ref="FlooringAuditDao"/>-->
-    <!--</bean>-->
+    <bean id="loggingAdvice" class="advice.LoggingAdvice">
+        <constructor-arg ref="auditDao"/>
+    </bean>
+
+    <!--AOP ****************************************************************-->
+
+    <aop:config>
+        <aop:aspect id="log" ref="loggingAdvice">
+            <aop:pointcut id="addOrder"
+                          expression = "execution(* service.FlooringServiceLayerImpl.addOrder(..)) " />
+
+                <aop:after-returning pointcut-ref="addOrder" method="createSuccessAuditEntry" />
+                <aop:after-throwing pointcut-ref="addOrder" throwing="e" method="createExceptionAuditEntry" />
+        </aop:aspect>
+    </aop:config>
+
 
 </beans>

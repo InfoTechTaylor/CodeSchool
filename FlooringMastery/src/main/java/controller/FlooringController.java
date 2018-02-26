@@ -100,22 +100,27 @@ public class FlooringController {
                     LocalDate orderDate = view.promptForDate();
                     newOrder = view.promptForNewOrderDetails();
                     newOrder.setOrderDate(orderDate);
+
+                    // display order summary back to user
+                    view.displayOrderSummary(newOrder);
+                    // confirm commit new order to memory, if true add order
+                    if (view.promptToCommitToMemory()) {
+                        // add order
+                        service.addOrder(newOrder);
+                        view.displaySuccessfulAdd();
+                        isInvalidInput = false;
+                    } else {
+                        view.displayConfirmRevertChanges();
+                        isInvalidInput = false;
+                    }
                 } else {
                     newOrder = view.promptForOrderUpdates(newOrder);
-                }
-
-                // display order summary back to user
-                view.displayOrderSummary(newOrder);
-                // confirm commit new order to memory, if true add order
-                if (view.promptToCommitToMemory()) {
-                    // add order
                     service.addOrder(newOrder);
                     view.displaySuccessfulAdd();
                     isInvalidInput = false;
-                } else {
-                    view.displayConfirmRevertChanges();
-                    isInvalidInput = false;
                 }
+
+
                 view.promptUserToHitEnter();
 
             } catch (FlooringPersistenceException | TaxStateNotFoundException | ProductMaterialNotFoundException e) {

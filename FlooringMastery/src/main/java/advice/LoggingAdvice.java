@@ -1,6 +1,7 @@
 package advice;
 
 import dao.FlooringDaoAudit;
+import dao.FlooringPersistenceException;
 import org.aspectj.lang.JoinPoint;
 
 public class LoggingAdvice {
@@ -27,8 +28,32 @@ public class LoggingAdvice {
             auditEntry += " user input: " + itemInfo + " : SUCCESS";
         }
 
-//        try{
-//            auditDao.writeAuditEn
-//        }
+        try{
+            auditDao.writeAuditEntry(auditEntry);
+        } catch (FlooringPersistenceException e){
+            System.err.println("ERROR: Could not create audit entry in LoggingAdvice.");
+        }
+    }
+
+    public void createExceptionAuditEntry(JoinPoint jp, Exception e){
+        Object[] args = jp.getArgs();
+
+        String auditEntry;
+        String itemInfo = "";
+        for(Object currentArg : args) {
+            itemInfo += currentArg;
+        }
+
+        if(itemInfo != "") {
+            auditEntry = jp.getSignature().getName() + ": user input: " + itemInfo + " :Throws " + e.toString();
+        } else {
+            auditEntry = jp.getSignature().getName() + " :Throws " + e.toString();
+        }
+
+        try {
+            auditDao.writeAuditEntry(auditEntry);
+        } catch (FlooringPersistenceException ex){
+            System.err.println("ERROR: Could not create audit entry in LoggingAdvice.");
+        }
     }
 }

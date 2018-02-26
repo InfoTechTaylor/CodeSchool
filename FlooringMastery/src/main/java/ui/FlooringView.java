@@ -37,7 +37,7 @@ public class FlooringView {
     }
 
     public LocalDate promptForDate(){
-        return userIO.readLocalDate("Please enter a date to get orders: ");
+        return userIO.readLocalDate("Please enter a date: ");
     }
 
     public String promptForOrderId(){
@@ -163,7 +163,7 @@ public class FlooringView {
                 BigDecimal updatedAreaBD = new BigDecimal(updatedArea);
                 orderToUpdate.setArea(updatedAreaBD);
             }
-            displaySuccessfulUpdateBanner();
+            //displaySuccessfulUpdateBanner();
         } else {
             displayConfirmRevertChanges();
         }
