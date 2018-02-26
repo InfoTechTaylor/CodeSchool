@@ -137,12 +137,12 @@ public class FlooringDaoOrderTest {
 
         //act
         Order orderToUpdate = orderDao.retrieveOrderByDateAndId(orderDate, orderObj.getOrderNumber());
-        orderToUpdate.setTotalCost(new BigDecimal("3000.00"));
         orderToUpdate.setCustomerName("Brett Hicklin");
         orderDao.updateOrder(orderDate, orderToUpdate);
 
         // assert
-        assertNotEquals(orderObj, orderToUpdate);
+        assertNotEquals("Taylor Lapointe", orderToUpdate.getCustomerName());
+
 
 
     }
