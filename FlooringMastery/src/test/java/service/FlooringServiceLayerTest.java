@@ -149,7 +149,7 @@ public class FlooringServiceLayerTest {
 
     @Test
     public void editOrder() throws Exception{
-        service.editOrder(service.retrieveOrderByDateAndId(orderDate, "1"));
+        service.editOrder(orderDate, service.retrieveOrderByDateAndId(orderDate, "1"));
     }
 
     @Test

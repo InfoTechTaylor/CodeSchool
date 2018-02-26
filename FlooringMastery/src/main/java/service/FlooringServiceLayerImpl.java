@@ -101,14 +101,21 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     }
 
     @Override
-    public Order editOrder(Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException, OrderNotFoundException {
-        validateOrdersExistForDate(orderObj.getOrderDate());
+    public Order editOrder(LocalDate originalDate, Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException, OrderNotFoundException, DateNotFoundException {
+        //validateOrdersExistForDate(orderObj.getOrderDate());
         orderObj = processOrder(orderObj);
         orderObj = calculateAndSetTotalMaterialCost(orderObj);
         orderObj = calculateAndSetTotalLaborCost(orderObj);
         orderObj = calculateAndSetTotalTax(orderObj);
         orderObj = calculateAndSetTotalCost(orderObj);
-        daoOrder.updateOrder(orderObj.getOrderDate(), orderObj);
+
+        // check if originalDate is same as date of object
+        if(!originalDate.equals(orderObj.getOrderDate())){
+            removeOrder(originalDate, orderObj.getOrderNumber());
+            addOrder(orderObj);
+        } else {
+            daoOrder.updateOrder(orderObj.getOrderDate(), orderObj);
+        }
         return orderObj;
     }
 

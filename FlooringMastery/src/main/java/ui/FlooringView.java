@@ -137,12 +137,18 @@ public class FlooringView {
 
     public Order promptForOrderUpdates(Order orderToUpdate){
         userIO.print("Enter new values for each prompt or hit enter to keep existing value: ");
+        String updatedDate = userIO.readString("Order Date (" + orderToUpdate.getOrderDate() + "): ");
         String updatedCustomerName = userIO.readString("Customer Name (" + orderToUpdate.getCustomerName() + "): ");
         String updatedState = userIO.readString("State (" + orderToUpdate.getTaxObject().getState() + "): ");
         String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
         String updatedArea = userIO.readString("Area (" + (orderToUpdate.getArea()).toString() + "): ");
 
         if(promptToCommitToMemory()) {
+
+            if(!updatedDate.equals(EMPTY_STRING)){
+                LocalDate newDate = LocalDate.parse(updatedDate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+                orderToUpdate.setOrderDate(newDate);
+            }
 
             if (!updatedCustomerName.equals(EMPTY_STRING)) {
                 orderToUpdate.setCustomerName(updatedCustomerName);

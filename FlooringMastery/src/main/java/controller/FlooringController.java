@@ -166,8 +166,9 @@ public class FlooringController {
             // prompt for order ID & make edits
             String orderNumber = view.promptForOrderId();
             Order orderToEdit = service.retrieveOrderByDateAndId(orderDate, orderNumber);
+            LocalDate originalDate = orderToEdit.getOrderDate();
             orderToEdit = view.promptForOrderUpdates(orderToEdit);
-            service.editOrder(orderToEdit);
+            service.editOrder(originalDate, orderToEdit);
 
 
         } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException |
