@@ -27,16 +27,23 @@
     <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" >
         <constructor-arg value="test_Taxes.txt" />
     </bean>
+    <bean id="configDao" class="dao.ConfigDaoImpl" >
+        <constructor-arg value="test_config.txt" />
+    </bean>
 
     <!-- stub dao beans for service layer tests-->
     <bean id="stubOrderDao" class="dao.FlooringDaoOrderStubImpl"/>
     <bean id="stubProductsDao" class="dao.FlooringDaoProductsStubImpl" />
     <bean id="stubTaxesDao" class="dao.FlooringDaoTaxesStubImpl" />
+    <bean id="stubConfigDao" class="dao.ConfigDaoStubImpl" >
+
+    </bean>
 
     <bean id="service" class="service.FlooringServiceLayerImpl">
         <constructor-arg ref="stubOrderDao" />
         <constructor-arg ref="stubProductsDao" />
         <constructor-arg ref="stubTaxesDao" />
+        <constructor-arg ref="configDao" />
     </bean>
 
 </beans>

@@ -73,7 +73,7 @@ public class FlooringDaoOrderTest {
         //act
         List<Order> allOrdersForOneDate = orderDao.retrieveAllOrdersByDate(orderDate);
         //assert
-        assertEquals(2, allOrdersForOneDate.size());
+        assertEquals(1, allOrdersForOneDate.size());
 
     }
 

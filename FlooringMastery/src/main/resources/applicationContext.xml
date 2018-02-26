@@ -34,12 +34,15 @@
         <constructor-arg value="Taxes.txt" />
     </bean>
     <bean id="auditDao" class="dao.FlooringDaoAuditFileImpl" />
-
+    <bean id="configDao" class="dao.ConfigDaoImpl" >
+        <constructor-arg value="orderNumberConfig.txt" />
+    </bean>
 
     <bean id="serviceLayer" class="service.FlooringServiceLayerImpl">
         <constructor-arg ref="prodOrderDao" />
         <constructor-arg ref="taxesDao" />
         <constructor-arg ref="productsDao" />
+        <constructor-arg ref="configDao" />
     </bean>
 
     <bean id="controller" class="controller.FlooringController">

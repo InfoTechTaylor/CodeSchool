@@ -44,8 +44,11 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
 
     @Override
     public Order createOrder(LocalDate orderDate, Order orderObj) throws FlooringPersistenceException {
-        // generate ID
-        orderObj.setOrderNumber(generateOrderNumber(orderDate));
+        if(!ordersByDateMap.containsKey(orderDate)) {
+            loadOrders(orderDate);
+        }
+
+        //orderObj.setOrderNumber(generateOrderNumber(orderDate));
         if(ordersByDateMap.get(orderDate) == null) {
             ordersByDateMap.put(orderDate, new HashMap<>());
             ordersByDateMap.get(orderDate).put(orderObj.getOrderNumber(), orderObj);
@@ -68,25 +71,11 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
         //writeOrders();
     }
 
-    private String generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
-
-//        int highestUsedOrderNumber = 0;
+//    private String generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
 //
-//        List<Order> allOrders = retrieveAllOrdersByDate(dateForFile);
+//        return UUID.randomUUID().toString();
 //
-//        if(allOrders.size() != 0) {
-//            for (Order currentOrder : allOrders) {
-//                if (currentOrder.getOrderNumber() > highestUsedOrderNumber) {
-//                    highestUsedOrderNumber = currentOrder.getOrderNumber();
-//                }
-//            }
-//        }
-        return UUID.randomUUID().toString();
-
-//        return "1";
-//        return 0;
-
-    }
+//    }
 
     private void loadOrders(LocalDate orderDate) throws FlooringPersistenceException {
 

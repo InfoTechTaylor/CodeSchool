@@ -70,21 +70,7 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
     private String generateOrderNumber(LocalDate dateForFile) throws FlooringPersistenceException{
 
-//        int highestUsedOrderNumber = 0;
-//
-//        List<Order> allOrders = retrieveAllOrdersByDate(dateForFile);
-//
-//        if(allOrders.size() != 0) {
-//            for (Order currentOrder : allOrders) {
-//                if (currentOrder.getOrderNumber() > highestUsedOrderNumber) {
-//                    highestUsedOrderNumber = currentOrder.getOrderNumber();
-//                }
-//            }
-//        }
-
-
-        return "1";
-//        return 0;
+        return UUID.randomUUID().toString();
 
     }
 
@@ -144,8 +130,6 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
 
             scanner.close();
         }
-
-
     }
 
     public void saveOrders() throws FlooringPersistenceException {

@@ -1,9 +1,6 @@
 package service;
 
-import dao.FlooringDaoOrder;
-import dao.FlooringDaoProducts;
-import dao.FlooringDaoTaxes;
-import dao.FlooringPersistenceException;
+import dao.*;
 import dto.Order;
 import dto.Product;
 import dto.Tax;
@@ -19,12 +16,15 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     private FlooringDaoOrder daoOrder;
     private FlooringDaoTaxes daoTaxes;
     private FlooringDaoProducts daoProducts;
+    private ConfigDao daoConfig;
     //private boolean isModeTraining = false;
 
-    public FlooringServiceLayerImpl(FlooringDaoOrder daoOrder, FlooringDaoTaxes daoTaxes, FlooringDaoProducts daoProducts) {
+    public FlooringServiceLayerImpl(FlooringDaoOrder daoOrder, FlooringDaoTaxes daoTaxes, FlooringDaoProducts daoProducts,
+                                    ConfigDao daoConfig) {
         this.daoOrder = daoOrder;
         this.daoTaxes = daoTaxes;
         this.daoProducts = daoProducts;
+        this.daoConfig = daoConfig;
     }
 
     @Override
@@ -77,6 +77,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         orderObj = calculateAndSetTotalLaborCost(orderObj);
         orderObj = calculateAndSetTotalTax(orderObj);
         orderObj = calculateAndSetTotalCost(orderObj);
+        orderObj.setOrderNumber(daoConfig.generateOrderNumber());
 
         return daoOrder.createOrder(orderObj.getOrderDate(), orderObj);
     }
