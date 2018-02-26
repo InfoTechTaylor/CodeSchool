@@ -169,15 +169,6 @@ public class FlooringController {
             orderToEdit = view.promptForOrderUpdates(orderToEdit);
             service.editOrder(orderToEdit);
 
-            // display order and confirm if changes should be saved
-//            view.displayOrderSummary(orderToEdit);
-//            if(view.promptToCommitToMemory()){
-//                service.editOrder(orderToEdit);
-//                view.displaySuccessfulUpdateBanner();
-//            } else {
-//                view.displayConfirmRevertChanges();
-//            }
-
 
         } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException |
                 TaxStateNotFoundException | ProductMaterialNotFoundException e){
