@@ -47,7 +47,7 @@ public class FlooringView {
 
     public void displayOrdersByDate(List<Order> ordersList) {
         if(ordersList.size() != 0) {
-            userIO.print("Orders for " + ordersList.get(0).getOrderDate() + ": ");
+            userIO.print("Orders for " + ordersList.get(0).getOrderDate().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)) + ": ");
         }
         userIO.print("=====================================================================");
         for(Order currentOrder : ordersList){
@@ -142,18 +142,24 @@ public class FlooringView {
         String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
         String updatedArea = userIO.readString("Area (" + (orderToUpdate.getArea()).toString() + "): ");
 
-        if(!updatedCustomerName.equals(EMPTY_STRING)){
-            orderToUpdate.setCustomerName(updatedCustomerName);
-        }
-        if(!updatedState.equals(EMPTY_STRING)){
-            orderToUpdate.getTaxObject().setState(updatedState);
-        }
-        if(!updatedMaterial.equals(EMPTY_STRING)){
-            orderToUpdate.getProductObject().setProductType(updatedMaterial);
-        }
-        if(!(updatedArea).equals(EMPTY_STRING)){
-            BigDecimal updatedAreaBD = new BigDecimal(updatedArea);
-            orderToUpdate.setArea(updatedAreaBD);
+        if(promptToCommitToMemory()) {
+
+            if (!updatedCustomerName.equals(EMPTY_STRING)) {
+                orderToUpdate.setCustomerName(updatedCustomerName);
+            }
+            if (!updatedState.equals(EMPTY_STRING)) {
+                orderToUpdate.getTaxObject().setState(updatedState);
+            }
+            if (!updatedMaterial.equals(EMPTY_STRING)) {
+                orderToUpdate.getProductObject().setProductType(updatedMaterial);
+            }
+            if (!(updatedArea).equals(EMPTY_STRING)) {
+                BigDecimal updatedAreaBD = new BigDecimal(updatedArea);
+                orderToUpdate.setArea(updatedAreaBD);
+            }
+            displaySuccessfulUpdateBanner();
+        } else {
+            displayConfirmRevertChanges();
         }
 
         return orderToUpdate;

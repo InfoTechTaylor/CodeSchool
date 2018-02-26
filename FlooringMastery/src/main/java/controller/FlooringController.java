@@ -114,6 +114,7 @@ public class FlooringController {
                     isInvalidInput = false;
                 } else {
                     view.displayConfirmRevertChanges();
+                    isInvalidInput = false;
                 }
                 view.promptUserToHitEnter();
 
@@ -166,15 +167,16 @@ public class FlooringController {
             String orderNumber = view.promptForOrderId();
             Order orderToEdit = service.retrieveOrderByDateAndId(orderDate, orderNumber);
             orderToEdit = view.promptForOrderUpdates(orderToEdit);
+            service.editOrder(orderToEdit);
 
             // display order and confirm if changes should be saved
-            view.displayOrderSummary(orderToEdit);
-            if(view.promptToCommitToMemory()){
-                service.editOrder(orderToEdit);
-                view.displaySuccessfulUpdateBanner();
-            } else {
-                view.displayConfirmRevertChanges();
-            }
+//            view.displayOrderSummary(orderToEdit);
+//            if(view.promptToCommitToMemory()){
+//                service.editOrder(orderToEdit);
+//                view.displaySuccessfulUpdateBanner();
+//            } else {
+//                view.displayConfirmRevertChanges();
+//            }
 
 
         } catch (FlooringPersistenceException | OrderNotFoundException | DateNotFoundException |
