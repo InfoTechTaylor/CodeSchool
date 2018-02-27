@@ -147,7 +147,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
         if(orderNumber != null) {
             if (daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber) == null) {
-                throw new FlooringPersistenceException("No orders with that number exist for that date.");
+                throw new OrderNotFoundException("No orders with that number exist for that date.");
             }
         }
 

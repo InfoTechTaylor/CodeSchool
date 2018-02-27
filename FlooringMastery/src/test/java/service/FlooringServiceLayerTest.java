@@ -138,13 +138,23 @@ public class FlooringServiceLayerTest {
     public void retrieveOrderByDateAndId() throws Exception{
         //there is only one Order object in our FlooringDaoOrderStubImpl
         assertNotNull(service.retrieveOrderByDateAndId(orderDate, "1"));
-        assertNull(service.retrieveOrderByDateAndId(orderDate, "2"));
+        //assertNull(service.retrieveOrderByDateAndId(orderDate, "2"));
+    }
+
+    @Test
+    public void retrieveOrderByDateAndIdThrowsException() throws Exception{
+        try {
+            assertNull(service.retrieveOrderByDateAndId(orderDate, "2"));
+            fail("expected OrderNotFoundException never thrown");
+        } catch(OrderNotFoundException e){
+            // pass
+        }
     }
 
     @Test
     public void removeOrder() throws Exception {
         // remove the order in the stub with id of 1
-        service.removeOrder(orderDate, "2");
+        service.removeOrder(orderDate, "1");
     }
 
     @Test
