@@ -26,6 +26,7 @@ public interface UserIO {
     String readString(String prompt);
 
     BigDecimal readBigDecimal(String prompt);
+    BigDecimal readBigDecimalAllowNull(String prompt);
 
     LocalDate readLocalDate(String date);
 }

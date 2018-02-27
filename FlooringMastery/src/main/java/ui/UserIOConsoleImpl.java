@@ -271,6 +271,33 @@ public class UserIOConsoleImpl implements UserIO{
         return number;
     }
 
+    @Override
+    public BigDecimal readBigDecimalAllowNull(String prompt) {
+        boolean invalidInput = true;
+        BigDecimal number = new BigDecimal("0");
+
+        while(invalidInput) {
+            try {
+                //display prompt
+                print(prompt);
+
+                String nextLine = inputReader.nextLine();
+
+                // read in string from user as a BigDecimal
+                if(nextLine.equals("")) {
+                    number = null;
+                } else {
+                    number = new BigDecimal(nextLine);
+                }
+                invalidInput = false;
+            } catch (NumberFormatException e) {
+                print("Please enter a valid number");
+                invalidInput = true;
+            }
+        }
+        return number;
+    }
+
 
     @Override
     public LocalDate readLocalDate(String prompt){

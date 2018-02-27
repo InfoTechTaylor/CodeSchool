@@ -141,7 +141,7 @@ public class FlooringView {
         String updatedCustomerName = userIO.readString("Customer Name (" + orderToUpdate.getCustomerName() + "): ");
         String updatedState = userIO.readString("State (" + orderToUpdate.getTaxObject().getState() + "): ");
         String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
-        String updatedArea = userIO.readString("Area (" + (orderToUpdate.getArea()).toString() + "): ");
+        BigDecimal updatedArea = userIO.readBigDecimalAllowNull("Area (" + (orderToUpdate.getArea()).toString() + "): ");
 
         if(promptToCommitToMemory()) {
 
@@ -159,9 +159,8 @@ public class FlooringView {
             if (!updatedMaterial.equals(EMPTY_STRING)) {
                 orderToUpdate.getProductObject().setProductType(updatedMaterial);
             }
-            if (!(updatedArea).equals(EMPTY_STRING)) {
-                BigDecimal updatedAreaBD = new BigDecimal(updatedArea);
-                orderToUpdate.setArea(updatedAreaBD);
+            if (updatedArea != null) {
+                orderToUpdate.setArea(updatedArea);
             }
             //displaySuccessfulUpdateBanner();
         } else {
