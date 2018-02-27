@@ -29,7 +29,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     @Override
     public List<Order> retrieveAllOrdersByDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
-        validateOrdersExistForDate(orderDate);
+        validateOrdersExistForDate(orderDate, null);
         return daoOrder.retrieveAllOrdersByDate(orderDate);
     }
 
@@ -85,7 +85,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     @Override
     public Order retrieveOrderByDateAndId(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException,
             OrderNotFoundException {
-        validateOrdersExistForDate(orderDate);
+        validateOrdersExistForDate(orderDate, orderNumber);
         try{
             return daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber);
         } catch(FlooringPersistenceException e){
@@ -97,7 +97,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     @Override
     public void removeOrder(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException, OrderNotFoundException, DateNotFoundException {
 
-        validateOrdersExistForDate(orderDate);
+        validateOrdersExistForDate(orderDate, orderNumber);
         daoOrder.removeOrder(orderDate, orderNumber);
     }
 
@@ -139,10 +139,16 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
 
     }
 
-    private void validateOrdersExistForDate(LocalDate orderDate) throws FlooringPersistenceException, OrderNotFoundException {
+    private void validateOrdersExistForDate(LocalDate orderDate, String orderNumber) throws FlooringPersistenceException, OrderNotFoundException {
 //        if(daoOrder.retrieveAllOrdersByDate(orderDate) == null){
         if(daoOrder.retrieveAllOrdersByDate(orderDate).size() == 0){
             throw new OrderNotFoundException("No orders found for given date. ");
+        }
+
+        if(orderNumber != null) {
+            if (daoOrder.retrieveOrderByDateAndId(orderDate, orderNumber) == null) {
+                throw new FlooringPersistenceException("No orders with that number exist for that date.");
+            }
         }
 
     }

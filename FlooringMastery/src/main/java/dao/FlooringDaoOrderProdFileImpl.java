@@ -33,9 +33,7 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
         if(!ordersByDateMap.containsKey(orderDate)) {
             loadOrders(orderDate);
         }
-        if(!ordersByDateMap.get(orderDate).containsKey(orderNumber)){
-            throw new FlooringPersistenceException("No orders with that number exist for that date.");
-        }
+
         Map<String, Order> ordersMap = ordersByDateMap.get(orderDate);
 
 
