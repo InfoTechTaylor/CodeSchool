@@ -3,6 +3,7 @@ package ui;
 import dto.Order;
 import dto.Product;
 import dto.Tax;
+import org.springframework.cglib.core.Local;
 
 import java.math.BigDecimal;
 import java.text.NumberFormat;
@@ -137,7 +138,7 @@ public class FlooringView {
 
     public Order promptForOrderUpdates(Order orderToUpdate){
         userIO.print("Enter new values for each prompt or hit enter to keep existing value: ");
-        String updatedDate = userIO.readString("Order Date (" + orderToUpdate.getOrderDate() + "): ");
+        LocalDate updatedDate = userIO.readLocalDateAllowNull("Order Date (" + orderToUpdate.getOrderDate() + "): ");
         String updatedCustomerName = userIO.readString("Customer Name (" + orderToUpdate.getCustomerName() + "): ");
         String updatedState = userIO.readString("State (" + orderToUpdate.getTaxObject().getState() + "): ");
         String updatedMaterial = userIO.readString("Product Type (" + orderToUpdate.getProductObject().getProductType() + "): ");
@@ -145,9 +146,9 @@ public class FlooringView {
 
         if(promptToCommitToMemory()) {
 
-            if(!updatedDate.equals(EMPTY_STRING)){
-                LocalDate newDate = LocalDate.parse(updatedDate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
-                orderToUpdate.setOrderDate(newDate);
+            if(updatedDate != null){
+                //LocalDate newDate = LocalDate.parse(updatedDate, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+                orderToUpdate.setOrderDate(updatedDate);
             }
 
             if (!updatedCustomerName.equals(EMPTY_STRING)) {

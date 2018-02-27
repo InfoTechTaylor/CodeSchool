@@ -29,4 +29,5 @@ public interface UserIO {
     BigDecimal readBigDecimalAllowNull(String prompt);
 
     LocalDate readLocalDate(String date);
+    LocalDate readLocalDateAllowNull(String date);
 }

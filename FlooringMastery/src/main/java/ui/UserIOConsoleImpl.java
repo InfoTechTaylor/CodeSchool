@@ -318,5 +318,32 @@ public class UserIOConsoleImpl implements UserIO{
 
     }
 
+    @Override
+    public LocalDate readLocalDateAllowNull(String prompt){
+        LocalDate date = null;
+        boolean isInvalid = true;
+        while(isInvalid) {
+            try {
+                print(prompt);
+                String input = inputReader.nextLine();
+
+
+                // read in string from user as a BigDecimal
+                if(input.equals("")) {
+                    date = null;
+                } else {
+                    date = LocalDate.parse(input, DateTimeFormatter.ofPattern("MM/dd/yyyy"));
+                }
+
+                isInvalid = false;
+            } catch (DateTimeParseException e) {
+                print("Please enter a valid date in MM/dd/yyyy format.");
+                isInvalid = true;
+            }
+        }
+        return date;
+
+    }
+
 
 }
