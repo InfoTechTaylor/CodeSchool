@@ -1,0 +1,1585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bcc4408b-8d11-4a25-8fcf-319295aaece9" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/src/test/java/service/BaseballLeagueServiceLayerTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/advice/LoggingAdvice.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/resources/applicationContext.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/resources/applicationContext.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/test_config.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/src/main/java/datetimecodealong/App.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/src/main/java/dto/Person.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ServerInventory/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_13_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/players_prod.txt" afterPath="$PROJECT_DIR$/../BaseballLeague/players_prod.txt" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDao.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" />
+      <change beforePath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
+      <change beforePath="$PROJECT_DIR$/Orders_02202000.txt" afterPath="$PROJECT_DIR$/Orders_02202000.txt" />
+      <change beforePath="$PROJECT_DIR$/orderNumberConfig.txt" afterPath="$PROJECT_DIR$/orderNumberConfig.txt" />
+      <change beforePath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachine/audit.txt" afterPath="$PROJECT_DIR$/../VendingMachine/audit.txt" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachine/src/main/java/advice/LoggingAdvice.java" afterPath="$PROJECT_DIR$/../VendingMachine/src/main/java/advice/LoggingAdvice.java" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachine/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../VendingMachine/src/main/resources/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachine/vendingMachineItems_prod.txt" afterPath="$PROJECT_DIR$/../VendingMachine/vendingMachineItems_prod.txt" />
+    </list>
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/FlooringMastery$FlooringDaoOrderTest_retrieveOrderByDateAndId.coverage" NAME="FlooringDaoOrderTest.retrieveOrderByDateAndId Coverage Results" MODIFIED="1519249138240" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>dao.*</FILTER>
+    </SUITE>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="FlooringController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoTaxesFileImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2100">
+              <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#372#373#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoOrderProdFileImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5430">
+              <caret line="190" column="40" lean-forward="false" selection-start-line="190" selection-start-column="40" selection-end-line="190" selection-end-column="40" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringView.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/FlooringView.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3900">
+              <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserIOConsoleImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="9990">
+              <caret line="339" column="72" lean-forward="false" selection-start-line="339" selection-start-column="72" selection-end-line="339" selection-end-column="72" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="900">
+              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringServiceLayerTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4020">
+              <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="64" />
+              <folding>
+                <element signature="e#5845#5846#0" expanded="true" />
+                <element signature="e#5895#5896#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Taxes.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Taxes.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="103">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringServiceLayerImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="3720">
+              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit4 Test Class" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/Orders_06012013.txt" />
+        <option value="$PROJECT_DIR$/Products.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/App.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxes.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringPersistenceException.java" />
+        <option value="$PROJECT_DIR$/Taxes.txt" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoProducts.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/FlooringDaoProductsTest.java" />
+        <option value="$PROJECT_DIR$/Orders_02202018.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsStubImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesStubImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/OrderNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/ProductMaterialNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/TaxStateNotFoundException.java" />
+        <option value="$PROJECT_DIR$/test_Taxes.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/service/DateNotFoundException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/Tax.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/Product.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/Order.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/FlooringServiceLayer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoAudit.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoAuditFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ConfigDao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ConfigDaoStubImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/ConfigDaoImpl.java" />
+        <option value="$PROJECT_DIR$/orderNumberConfig.txt" />
+        <option value="$PROJECT_DIR$/test_config.txt" />
+        <option value="$PROJECT_DIR$/src/test/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/test/java/dao/FlooringDaoOrderTest.java" />
+        <option value="$PROJECT_DIR$/Orders_02202000.txt" />
+        <option value="$PROJECT_DIR$/Orders_01022001.txt" />
+        <option value="$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderTrainingFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/controller/FlooringController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/UserIO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/ui/FlooringView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="2582" />
+    <option name="height" value="1416" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="advice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dto" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BaseballLeague" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="service" />
+      <recent name="dao" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\FlooringMastery\orders" />
+      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\FlooringMastery" />
+      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\FlooringMastery\src\main\java\ui" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JUnit.All in FlooringMastery">
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="App" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="FlooringMastery" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration name="All in FlooringMastery" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="FlooringMastery" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="FlooringServiceLayerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FlooringMastery" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FlooringServiceLayerTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="FlooringServiceLayerTest.activateTrainingMode" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FlooringMastery" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FlooringServiceLayerTest" />
+      <option name="METHOD_NAME" value="activateTrainingMode" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="FlooringMastery" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="service" />
+      <option name="MAIN_CLASS_NAME" value="service.FlooringServiceLayerTest" />
+      <option name="METHOD_NAME" value="testValidateOrdersDoNotExistForDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <list size="5">
+      <item index="0" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" />
+      <item index="2" class="java.lang.String" itemvalue="Application.App" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.All in FlooringMastery" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.activateTrainingMode" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.All in FlooringMastery" />
+        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.activateTrainingMode" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bcc4408b-8d11-4a25-8fcf-319295aaece9" name="Default" comment="" />
+      <created>1519142737821</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1519142737821</updated>
+    </task>
+    <task id="LOCAL-00001" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
+      <created>1519146095976</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1519146095976</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 wired up the application">
+      <created>1519150989977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1519150989977</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 fixed bean reference error, wiring test works">
+      <created>1519151608651</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1519151608651</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-96 implemented three DTOs for Order, Product, and Tax">
+      <created>1519152307315</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1519152307315</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 added equals and hashcode methods for each DTO">
+      <created>1519152404550</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1519152404550</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-87 setup initial shells of methods and added parameters to all the DAO interfaces and implementations">
+      <created>1519154645573</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1519154645573</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-87 implemented Taxes dao and taxes dao unit tests. Additionally added a test file implementation by having the dao accept a filename as a parameter in the constructor.">
+      <created>1519172238693</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1519172238693</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-87 implemented methods and unit tests for products dao and taxes dao, still need to do for orders dao">
+      <created>1519227000366</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1519227000366</updated>
+    </task>
+    <task id="LOCAL-00009" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 implemented loadOrders() method">
+      <created>1519231875382</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1519231875382</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-87 implemented all unit tests, worked out some issues on load and implemented generate ID">
+      <created>1519318711881</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1519318711881</updated>
+    </task>
+    <task id="LOCAL-00011" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-88 implemented stub daos for tax, product and order for service layer testing">
+      <created>1519325148373</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1519325148373</updated>
+    </task>
+    <task id="LOCAL-00012" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-88 implemented BASIC service layer unit tests, no tests for any business logic or application errors">
+      <created>1519329564939</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1519329564939</updated>
+    </task>
+    <task id="LOCAL-00013" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-88 implemented retrieve, add, remove and edit methods in the service layer">
+      <created>1519333512827</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1519333512827</updated>
+    </task>
+    <task id="LOCAL-00014" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-88 added exceptions for tax and product not found. Implemented process order method to check that state and material provided exists. started creating 'helper' methods that will calculate the totals in the order and set">
+      <created>1519398694035</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1519398694035</updated>
+    </task>
+    <task id="LOCAL-00015" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-88 implemented all service layer methods except the trainingMode() method with associated unit tests">
+      <created>1519414378677</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1519414378677</updated>
+    </task>
+    <task id="LOCAL-00016" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 implemented menu and exit functionality in the controller to build off of">
+      <created>1519415089212</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1519415089212</updated>
+    </task>
+    <task id="LOCAL-00017" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 implemented happy path for display all orders by date">
+      <created>1519416364512</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1519416364512</updated>
+    </task>
+    <task id="LOCAL-00018" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 fixed loadOrders() method to throw an exception if a file does not exist for the order date provided, then added a validateDateExists method in the service layer to catch that exception and re throw a datenotfound exception">
+      <created>1519421614084</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1519421614084</updated>
+    </task>
+    <task id="LOCAL-00019" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 cleaned up implementation for display order by date">
+      <created>1519422230809</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1519422230809</updated>
+    </task>
+    <task id="LOCAL-00020" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-90 completed add new order story and save orders file stories! Had to fix an issue in load to check if scanner is equal to null">
+      <created>1519481726709</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1519481726709</updated>
+    </task>
+    <task id="LOCAL-00021" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 updated to prompt user if they want to save before actually saving">
+      <created>1519482475561</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1519482475561</updated>
+    </task>
+    <task id="LOCAL-00022" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-91 implemented remove order method">
+      <created>1519484064461</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1519484064461</updated>
+    </task>
+    <task id="LOCAL-00023" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-92 implemented edit method, working well">
+      <created>1519487421703</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1519487421703</updated>
+    </task>
+    <task id="LOCAL-00024" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery fixed null pointer exception/validate methods">
+      <created>1519488692366</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1519488692366</updated>
+    </task>
+    <task id="LOCAL-00025" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery removed validateDateExists method">
+      <created>1519488905566</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1519488905566</updated>
+    </task>
+    <task id="LOCAL-00026" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented edit an order, training mode, did a lot of clean up in the view, adding new banners">
+      <created>1519578192723</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1519578192723</updated>
+    </task>
+    <task id="LOCAL-00027" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented all but globally unique IDs and ability to edit date">
+      <created>1519588759836</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1519588759836</updated>
+    </task>
+    <task id="LOCAL-00028" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented UUID using random, had to convert orderNumber DTO parameter to String, everything seems to be working. Will need to create an alias for the UUID to make it display to the user in a more friendly way">
+      <created>1519590192394</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1519590192394</updated>
+    </task>
+    <task id="LOCAL-00029" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery modified edit so that it will not commit to memory (call setters on the object) until after user selects yes to commit">
+      <created>1519608353247</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1519608353247</updated>
+    </task>
+    <task id="LOCAL-00030" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 removed some commented out code">
+      <created>1519608473209</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1519608473209</updated>
+    </task>
+    <task id="LOCAL-00031" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Fixed failing unit test, all are now passing">
+      <created>1519609117560</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1519609117560</updated>
+    </task>
+    <task id="LOCAL-00032" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 implemented refactored edit mode to allow user to edit date! Only remaining thing is to have the UUID be more user friendly">
+      <created>1519610314670</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1519610314670</updated>
+    </task>
+    <task id="LOCAL-00033" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 refactored orderNumber to use a config file rather than the UUID class so that the numbers can be user friendly and fixed an error found where on add new of initial run, it would overwite any existing orders">
+      <created>1519658811118</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1519658811118</updated>
+    </task>
+    <task id="LOCAL-00034" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed view issue on add, implemented logging for addOrder method of service layer">
+      <created>1519661797700</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1519661797700</updated>
+    </task>
+    <task id="LOCAL-00035" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 moved a validation in the FlooringDaoOrderProdFileImpl in retrieveAllOrdersByDate to the service layer. Modified validateDateExists in service later to accept two parameters to make this work.">
+      <created>1519739326507</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1519739326507</updated>
+    </task>
+    <task id="LOCAL-00036" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 updated some unit tests so they are all now passing with the new changes">
+      <created>1519741771108</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1519741771108</updated>
+    </task>
+    <task id="LOCAL-00037" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed bug so orderDate is only reset if it is empty">
+      <created>1519745248464</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1519745248464</updated>
+    </task>
+    <task id="LOCAL-00038" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 implemented a readBigDecimalAllowNull method to be called in edit methods so that it will allow user to hit enter and not make changes to a BigDecimal parameter">
+      <created>1519745974504</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1519745974504</updated>
+    </task>
+    <task id="LOCAL-00039" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 created a method in the view to readLocalDateAllow null to be called in an edit method">
+      <created>1519746584378</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1519746584378</updated>
+    </task>
+    <task id="LOCAL-00040" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed issue where null pointer exception is thrown if I add a new order">
+      <created>1519748776898</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1519748776898</updated>
+    </task>
+    <task id="LOCAL-00041" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 simplified check to see if orderNumber is == to null then call generateOrderID in the service layer">
+      <created>1519749153318</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1519749153318</updated>
+    </task>
+    <task id="LOCAL-00042" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 files">
+      <created>1519831869341</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1519831869341</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 09h 19m 50s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 09h 24m 17s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 09h 25m 37s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 09h 28m 39s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 10h 16m 40s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_FlooringMastery - 2018.02.27 at 14h 42m 50s.xml">
+      <configuration name="All in FlooringMastery" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringServiceLayerTest - 2018.02.25 at 09h 51m 54s.xml">
+      <configuration name="FlooringServiceLayerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringServiceLayerTest - 2018.02.25 at 09h 59m 33s.xml">
+      <configuration name="FlooringServiceLayerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringServiceLayerTest_activateTrainingMode - 2018.02.25 at 14h 43m 50s.xml">
+      <configuration name="FlooringServiceLayerTest.activateTrainingMode" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringServiceLayerTest_testValidateOrdersDoNotExistForDate - 2018.02.25 at 09h 55m 11s.xml">
+      <configuration name="FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13723916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25507814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.44492844" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3293623" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 fixed loadOrders() method to throw an exception if a file does not exist for the order date provided, then added a validateDateExists method in the service layer to catch that exception and re throw a datenotfound exception" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 cleaned up implementation for display order by date" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-90 completed add new order story and save orders file stories! Had to fix an issue in load to check if scanner is equal to null" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 updated to prompt user if they want to save before actually saving" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-91 implemented remove order method" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-92 implemented edit method, working well" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery fixed null pointer exception/validate methods" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery removed validateDateExists method" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented edit an order, training mode, did a lot of clean up in the view, adding new banners" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented all but globally unique IDs and ability to edit date" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery implemented UUID using random, had to convert orderNumber DTO parameter to String, everything seems to be working. Will need to create an alias for the UUID to make it display to the user in a more friendly way" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring Mastery modified edit so that it will not commit to memory (call setters on the object) until after user selects yes to commit" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 removed some commented out code" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Fixed failing unit test, all are now passing" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 implemented refactored edit mode to allow user to edit date! Only remaining thing is to have the UUID be more user friendly" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 refactored orderNumber to use a config file rather than the UUID class so that the numbers can be user friendly and fixed an error found where on add new of initial run, it would overwite any existing orders" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed view issue on add, implemented logging for addOrder method of service layer" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 moved a validation in the FlooringDaoOrderProdFileImpl in retrieveAllOrdersByDate to the service layer. Modified validateDateExists in service later to accept two parameters to make this work." />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 updated some unit tests so they are all now passing with the new changes" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed bug so orderDate is only reset if it is empty" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 implemented a readBigDecimalAllowNull method to be called in edit methods so that it will allow user to hit enter and not make changes to a BigDecimal parameter" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 created a method in the view to readLocalDateAllow null to be called in an edit method" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed issue where null pointer exception is thrown if I add a new order" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 simplified check to see if orderNumber is == to null then call generateOrderID in the service layer" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 files" />
+    <option name="LAST_COMMIT_MESSAGE" value="TAYLORLAPOINTEINDIVIDUALWORK-85 files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java</url>
+          <line>44</line>
+          <properties />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java</url>
+          <line>26</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoOrderTest.java</url>
+          <line>73</line>
+          <properties />
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoOrderTest.java</url>
+          <line>143</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java</url>
+          <line>42</line>
+          <properties />
+          <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java</url>
+          <line>72</line>
+          <properties />
+          <option name="timeStamp" value="31" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java</url>
+          <line>93</line>
+          <properties />
+          <option name="timeStamp" value="34" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java</url>
+          <line>174</line>
+          <properties />
+          <option name="timeStamp" value="39" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="41" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/TaxStateNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_Taxes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="12" column="70" lean-forward="true" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="11" column="42" lean-forward="false" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2550">
+          <caret line="91" column="20" lean-forward="false" selection-start-line="91" selection-start-column="20" selection-end-line="91" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/DateNotFoundException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="11" column="1" lean-forward="true" selection-start-line="11" selection-start-column="1" selection-end-line="11" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/Tax.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="15" column="30" lean-forward="false" selection-start-line="15" selection-start-column="30" selection-end-line="15" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="8" column="8" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_03212017.txt" />
+    <entry file="file://$PROJECT_DIR$/Orders_01012000.txt" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoProductsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/Orders_01012001.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_02242018.txt" />
+    <entry file="file://$PROJECT_DIR$/Orders_01012001.txt" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="18" column="44" lean-forward="false" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoAuditFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoAudit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConfigDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConfigDaoStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ConfigDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="592">
+          <caret line="51" column="20" lean-forward="false" selection-start-line="51" selection-start-column="20" selection-end-line="51" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_config.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="755">
+          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orderNumberConfig.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="2" lean-forward="true" selection-start-line="0" selection-start-column="2" selection-end-line="0" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_03212018.txt" />
+    <entry file="file://$PROJECT_DIR$/Orders_02212018.txt" />
+    <entry file="file://$PROJECT_DIR$/Orders_06012013.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_02202000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_01022001.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoOrderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="75" column="52" lean-forward="true" selection-start-line="75" selection-start-column="52" selection-end-line="75" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="52" column="13" lean-forward="false" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderTrainingFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_02262018.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/audit.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/Product.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="16" column="38" lean-forward="false" selection-start-line="16" selection-start-column="38" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="900">
+          <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9990">
+          <caret line="339" column="72" lean-forward="false" selection-start-line="339" selection-start-column="72" selection-end-line="339" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/FlooringView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3900">
+          <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2100">
+          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#372#373#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5430">
+          <caret line="190" column="40" lean-forward="false" selection-start-line="190" selection-start-column="40" selection-end-line="190" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3720">
+          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4020">
+          <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="64" />
+          <folding>
+            <element signature="e#5845#5846#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Taxes.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>FlooringMastery</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

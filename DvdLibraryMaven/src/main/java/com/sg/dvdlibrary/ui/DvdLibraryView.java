@@ -11,6 +11,7 @@ public class DvdLibraryView {
 
     // initialize UserIO object of console implementation
     private UserIO io;
+    private final String EMPTY_STRING = "";
 
 
     public DvdLibraryView(UserIO io){
@@ -107,51 +108,35 @@ public class DvdLibraryView {
         boolean continueEdit = true;
 
         if (dvd != null) {
-            // while the user still wants to make edits
-//            io.print("Title: " + dvd.getTitle());
-            while (continueEdit) {
-                io.print("Title: " + dvd.getTitle());
-                io.print("\t1. Release Date: " + dvd.getReleaseDate().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)));
-                io.print("\t2. MPAA Rating: " + dvd.getRatingMPAA());
-                io.print("\t3. Director: " + dvd.getDirectorName());
-                io.print("\t4. Studio: " + dvd.getStudio());
-                io.print("\t5. User Rating: " + dvd.getUserRating());
-                io.print("\t6. Exit Edit Menu");
 
-                editItem = io.readInt("Please select which item you'd like to edit.", 1, 6);
+            io.print("Title: " + dvd.getTitle());
+            LocalDate editedReleaseDate = io.readLocalDate("\tRelease Date (" + dvd.getReleaseDate().format(DateTimeFormatter.ofLocalizedDate(FormatStyle.SHORT)) +"): ");
+            String editedMPAARating = io.readString("\tMPAA Rating (" + dvd.getRatingMPAA() + "): ");
+            String editedDirector = io.readString("\tDirector (" + dvd.getDirectorName() + "): ");
+            String editedStudio = io.readString("\tStudio (" + dvd.getStudio() + "): ");
+            String editedUserRating = io.readString("\tUser Rating (" + dvd.getUserRating() +"): ");
 
-                switch (editItem) {
-//                    case 1:
-//                        String newTitle = io.readString("Enter new title: ");
-//                        dvd.setTitle(newTitle);
-//                        break;
-                    case 1:
-                        LocalDate newReleaseDate = io.readLocalDate("Enter new release date: ");
-                        dvd.setReleaseDate(newReleaseDate);
-                        break;
-                    case 2:
-                        String newRatingMPAA = io.readString("Enter new MPAA Rating: ");
-                        dvd.setRatingMPAA(newRatingMPAA);
-                        break;
-                    case 3:
-                        String newDirector = io.readString("Enter new director name: ");
-                        dvd.setDirectorName(newDirector);
-                        break;
-                    case 4:
-                        String newStudio = io.readString("Enter new studio name: ");
-                        dvd.setStudio(newStudio);
-                        break;
-                    case 5:
-                        String newUserRating = io.readString("Enter new user rating: ");
-                        dvd.setUserRating(newUserRating);
-                        break;
-                    case 6:
-                        continueEdit = false;
-                        break;
-                    default:
-                        io.print("Unrecognized entry.");
-                } // end switch
-            } // end while
+
+            if(!EMPTY_STRING.equals(editedReleaseDate)){
+                dvd.setReleaseDate(editedReleaseDate);
+            }
+
+            if(!EMPTY_STRING.equals(editedMPAARating)){
+                dvd.setRatingMPAA(editedMPAARating);
+            }
+
+            if(!EMPTY_STRING.equals(editedDirector)){
+                dvd.setDirectorName(editedDirector);
+            }
+
+            if(!EMPTY_STRING.equals(editedStudio)){
+                dvd.setStudio(editedStudio);
+            }
+
+            if(!EMPTY_STRING.equals(editedUserRating)){
+                dvd.setUserRating(editedUserRating);
+            }
+
         } else {
             io.print("No such DVD exists. ");
         }

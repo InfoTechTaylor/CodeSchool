@@ -5,3 +5,5 @@
 2018-02-14T11:20:43.636 : createDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='Fox', userRating='hmm'}
 2018-02-14T11:21:07.485 : editDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='Fox Studio', userRating='One of my favorites'}
 2018-02-14T11:31:09.107 : createDvd: Dvd{title='Wonder Woman', releaseDate=2000-09-30, ratingMPAA='PG-13', directorName='Uknown', studio='Fox', userRating='fantastic'}
+2018-02-19T19:56:56.553 : editDvd: Dvd{title='Batman', releaseDate=2008-05-20, ratingMPAA='PG-13', directorName='Unknown', studio='Fox Studio', userRating='One of my favorites'}
+2018-02-19T20:03:39.872 : editDvd: Dvd{title='Batman', releaseDate=2010-06-01, ratingMPAA='PG', directorName='Unknown', studio='Fox Studio', userRating='One of my favorites'}

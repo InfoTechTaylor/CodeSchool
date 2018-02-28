@@ -8,6 +8,8 @@ import com.sg.classroster.dto.Student;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import static org.junit.Assert.*;
 
@@ -16,9 +18,12 @@ public class ClassRosterServiceLayerTest {
     private ClassRosterServiceLayer service;
 
     public ClassRosterServiceLayerTest() {
-        ClassRosterDao dao = new ClassRosterDaoStubImpl();
-        ClassRosterAuditDao auditDao = new ClassRosterAuditDaoStubImpl();
-        service = new ClassRosterServiceLayerImpl(dao, auditDao);
+//        ClassRosterDao dao = new ClassRosterDaoStubImpl();
+//        ClassRosterAuditDao auditDao = new ClassRosterAuditDaoStubImpl();
+//        service = new ClassRosterServiceLayerImpl(dao, auditDao);
+
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
+        service = ctx.getBean("serviceLayer", ClassRosterServiceLayer.class);
     }
 
     @Before

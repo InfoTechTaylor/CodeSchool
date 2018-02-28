@@ -56,4 +56,14 @@ public class Student {
 
         return Objects.hash(firstName, lastName, studentId, cohort);
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", studentId='" + studentId + '\'' +
+                ", cohort='" + cohort + '\'' +
+                '}';
+    }
 }

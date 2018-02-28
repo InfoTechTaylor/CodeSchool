@@ -17,18 +17,21 @@ public class LoggingAdvice {
 
     // creates an audit entry for a successful method call
     public void createAuditEntry(JoinPoint jp) {
-        Object[] args = jp.getArgs();
-        String auditEntry = jp.getSignature().getName() + ": ";
+        Object[] args = jp.getArgs(); // args are the parameters of the JoinPoint (method called)
+        String auditEntry = jp.getSignature().getName() + ": "; // get the method name of the pointcut
 
+        // loop through the method's arguments to get the value of the parameter
         String itemInfo="";
         for (Object currentArg : args) {
             itemInfo += currentArg;
         }
+        // check if there are any parameter values, structure audit entry accordingly
         if(itemInfo.equals("")){
             auditEntry += "successful.";
         } else {
             auditEntry += " user input: " + itemInfo + " :successful.";
         }
+        // write audit entry or catch persistence exception
         try {
             auditDao.writeAuditEntry(auditEntry);
         } catch (VendingMachinePersistenceException e){

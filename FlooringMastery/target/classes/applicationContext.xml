@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+          http://www.springframework.org/schema/beans/spring-beans.xsd
+          http://www.springframework.org/schema/mvc
+          http://www.springframework.org/schema/mvc/spring-mvc.xsd
+          http://www.springframework.org/schema/tx
+          http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+          http://www.springframework.org/schema/context
+          http://www.springframework.org/schema/context/spring-context.xsd
+          http://www.springframework.org/schema/aop
+          http://www.springframework.org/schema/aop/spring-aop-3.2.xsd">
+
+    <!-- Bean definitions go here -->
+
+    <bean id="userIO" class="ui.UserIOConsoleImpl" />
+
+    <bean id="view" class="ui.FlooringView">
+        <constructor-arg ref="userIO" />
+    </bean>
+
+    <bean id="prodOrderDao" class="dao.FlooringDaoOrderProdFileImpl">
+    </bean>
+    <bean id="trainingOrderDao" class="dao.FlooringDaoOrderTrainingFileImpl">
+</bean>
+    <bean id="productsDao" class="dao.FlooringDaoProductsFileImpl" >
+        <constructor-arg value="Products.txt" />
+    </bean>
+    <bean id="taxesDao" class="dao.FlooringDaoTaxesFileImpl" >
+        <constructor-arg value="Taxes.txt" />
+    </bean>
+    <bean id="auditDao" class="dao.FlooringDaoAuditFileImpl" />
+    <bean id="configDao" class="dao.ConfigDaoImpl" >
+        <constructor-arg value="orderNumberConfig.txt" />
+    </bean>
+
+    <bean id="serviceLayer" class="service.FlooringServiceLayerImpl">
+        <constructor-arg ref="prodOrderDao" />
+        <constructor-arg ref="taxesDao" />
+        <constructor-arg ref="productsDao" />
+        <constructor-arg ref="configDao" />
+    </bean>
+
+    <bean id="controller" class="controller.FlooringController">
+        <constructor-arg ref="serviceLayer" />
+        <constructor-arg ref="view" />
+    </bean>
+
+    <bean id="loggingAdvice" class="advice.LoggingAdvice">
+        <constructor-arg ref="auditDao"/>
+    </bean>
+
+    <!--AOP ****************************************************************-->
+
+    <aop:config>
+        <aop:aspect id="log" ref="loggingAdvice">
+            <aop:pointcut id="addOrder"
+                          expression = "execution(* service.FlooringServiceLayerImpl.addOrder(..)) " />
+
+                <aop:after-returning pointcut-ref="addOrder" method="createSuccessAuditEntry" />
+                <aop:after-throwing pointcut-ref="addOrder" throwing="e" method="createExceptionAuditEntry" />
+        </aop:aspect>
+    </aop:config>
+
+
+</beans>
