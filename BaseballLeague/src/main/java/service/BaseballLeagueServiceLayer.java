@@ -14,7 +14,7 @@ public interface BaseballLeagueServiceLayer {
 
     Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException, TeamNotFoundException;
 
-    List<Player> retrieveAllPlayersWithTeamId(String teamId);
+    List<Player> retrieveAllPlayersWithTeamName(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException;
 
     void tradePlayers(String playerOneId, String PlayerTwoId);
 

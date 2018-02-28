@@ -15,6 +15,8 @@ public interface BaseballLeagueDaoPlayer {
     // R - retrieve all objects
     List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException;
 
+    List<Player> retrieveAllPlayersOnTeam(String teamName) throws BaseballLeaguePersistenceException;
+
     // U - update an Object
     Player updatePlayer(Player updatedPlayer);
 

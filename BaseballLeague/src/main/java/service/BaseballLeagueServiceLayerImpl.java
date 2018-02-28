@@ -84,8 +84,9 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
     }
 
     @Override
-    public List<Player> retrieveAllPlayersWithTeamId(String teamId) {
-        return null;
+    public List<Player> retrieveAllPlayersWithTeamName(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException {
+        Team teamObj = validateTeamExists(teamName);
+        return playerDao.retrieveAllPlayersOnTeam(teamObj.getTeamId());
     }
 
     @Override

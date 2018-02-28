@@ -40,12 +40,15 @@ public class BaseballLeagueController {
                     ListAllTeams();
                     break;
                 case 4:
+                    displayAllPlayersOnATeam();
                     break;
                 case 5:
                     break;
                 case 6:
                     break;
                 case 7:
+                    break;
+                case 8:
                     isRunning = false;
                     displayExitMessage();
                     break;
@@ -109,4 +112,16 @@ public class BaseballLeagueController {
             view.displayError(e.getMessage());
         }
     }
+
+    private void displayAllPlayersOnATeam(){
+        try {
+            String teamName = view.promptForTeamName();
+            List<Player> allPlayers = service.retrieveAllPlayersWithTeamName(teamName);
+            view.displayAllPlayers(allPlayers);
+        } catch(TeamNotFoundException | BaseballLeaguePersistenceException e){
+            view.displayError(e.getMessage());
+        }
+    }
+
+
 }

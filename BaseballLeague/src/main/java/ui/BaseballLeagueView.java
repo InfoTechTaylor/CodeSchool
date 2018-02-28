@@ -28,8 +28,9 @@ public class BaseballLeagueView {
                 "4. List all players on a team\n" +
                 "5. Trade two players\n" +
                 "6. Remove a player\n" +
-                "7. Exit\n" +
-                "Your selection: ", 1, 7);
+                "7. Remove a team\n" +
+                "8. Exit\n" +
+                "Your selection: ", 1, 8);
     }
 
     public void displayExitMessage(){
@@ -41,7 +42,7 @@ public class BaseballLeagueView {
     }
 
     public String promptForTeamName(){
-        return io.readString("Please enter the name of the team you want to create: ");
+        return io.readString("Please enter the name of a team: ");
     }
 
     public String promptForTeamLeague(){
@@ -86,5 +87,13 @@ public class BaseballLeagueView {
 
     }
 
+    public void displayAllPlayers(List<Player> allPlayers){
+        for(Player currentPlayer : allPlayers){
+            io.print("\nPlayer ID: " + currentPlayer.getPlayerId());
+            io.print("First Name: " + currentPlayer.getPlayerFirstName());
+            io.print("Last Name: " + currentPlayer.getPlayerLastName());
+            io.print("Team: " + currentPlayer.getPlayersTeam().getTeamName());
+        }
+    }
 
 }
