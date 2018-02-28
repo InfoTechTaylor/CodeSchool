@@ -1,6 +1,7 @@
 package controller;
 
 import dao.BaseballLeaguePersistenceException;
+import dto.Player;
 import dto.Team;
 import service.BaseballLeagueServiceLayer;
 import ui.BaseballLeagueView;
@@ -32,6 +33,7 @@ public class BaseballLeagueController {
                     createTeam();
                     break;
                 case 2:
+                    createPlayer();
                     break;
                 case 3:
                     ListAllTeams();
@@ -86,10 +88,22 @@ public class BaseballLeagueController {
 
     }
 
-    public void ListAllTeams(){
+    private void ListAllTeams(){
         try {
             List<Team> allTeams = service.retrieveAllTeams();
             view.displayAllTeams(allTeams);
+        } catch(BaseballLeaguePersistenceException e){
+            view.displayError(e.getMessage());
+        }
+    }
+
+    private void createPlayer(){
+
+        try {
+            // get new player details from user
+            Player newPlayer = view.promptForNewPlayerInfo();
+            // pass to service
+            service.createPlayer(newPlayer);
         } catch(BaseballLeaguePersistenceException e){
             view.displayError(e.getMessage());
         }

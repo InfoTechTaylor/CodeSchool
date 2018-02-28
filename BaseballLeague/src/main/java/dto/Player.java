@@ -10,14 +10,19 @@ public class Player {
     public Player(String playerId){
         this.playerId = playerId;
     }
+    public Player(){
+
+    }
 
     public String getPlayerId() {
         return playerId;
     }
 
-//    public void setPlayerId(String playerId) {
-//        this.playerId = playerId;
-//    }
+
+
+    public void setPlayerId(String playerId) {
+        this.playerId = playerId;
+    }
 
     public String getPlayerFirstName() {
         return playerFirstName;

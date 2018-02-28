@@ -63,8 +63,9 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
     }
 
     @Override
-    public Player createPlayer(Player newPlayer) {
-        return null;
+    public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException {
+
+        return playerDao.createPlayer(newPlayer);
     }
 
     @Override

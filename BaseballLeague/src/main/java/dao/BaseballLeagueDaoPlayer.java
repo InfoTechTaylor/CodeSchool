@@ -7,7 +7,7 @@ import java.util.List;
 public interface BaseballLeagueDaoPlayer {
 
     // C - CREATE
-    Player createPlayer();
+    Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException;
 
     // R - READ
     Player retrievePlayerById(String playerId);

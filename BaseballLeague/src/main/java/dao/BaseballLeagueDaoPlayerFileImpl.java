@@ -1,12 +1,16 @@
 package dao;
 
 import dto.Player;
+import dto.Team;
 
-import java.util.List;
+import java.io.*;
+import java.util.*;
 
 public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer {
 
     private static String filename;
+    private static final String STRING_DELIMITER = "::";
+    Map<String, Player> playerMap = new HashMap<>();
 
     public BaseballLeagueDaoPlayerFileImpl(String filename) {
         this.filename = filename;
@@ -14,8 +18,10 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
 
 
     @Override
-    public Player createPlayer() {
-        return null;
+    public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException {
+        playerMap.put(newPlayer.getPlayerId(), newPlayer);
+        writePlayers();
+        return newPlayer;
     }
 
     @Override
@@ -25,7 +31,7 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
 
     @Override
     public List<Player> retrieveAllPlayers() {
-        return null;
+        return new ArrayList<>(playerMap.values());
     }
 
     @Override
@@ -38,5 +44,53 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
         return null;
     }
 
+    private void loadPlayers() throws BaseballLeaguePersistenceException {
+        Scanner scanner;
+
+        try{
+            scanner = new Scanner(new BufferedReader(new FileReader(filename)));
+        } catch (FileNotFoundException e){
+            throw new BaseballLeaguePersistenceException("Unable to load player file.");
+        }
+
+        String currentLine;
+        String[] currentTokens;
+
+        while(scanner.hasNextLine()){
+            currentLine = scanner.nextLine();
+            currentTokens = currentLine.split(STRING_DELIMITER);
+
+            Player currentPlayer = new Player();
+            currentPlayer.setPlayerId(currentTokens[0]);
+            currentPlayer.setPlayerFirstName(currentTokens[1]);
+            currentPlayer.setPlayerLastName(currentTokens[2]);
+            currentPlayer.setPlayerPosition(currentTokens[3]);
+            currentPlayer.setPlayersTeam(new Team(currentTokens[4]));
+            playerMap.put(currentPlayer.getPlayerId(), currentPlayer);
+        }
+        scanner.close();
+    }
+
+
+    private void writePlayers() throws BaseballLeaguePersistenceException {
+        PrintWriter out;
+
+        try {
+            out = new PrintWriter(new FileWriter(filename));
+        } catch(IOException e){
+            throw new BaseballLeaguePersistenceException("Unable to save players to file.");
+        }
+
+        List<Player> allPlayers = this.retrieveAllPlayers();
+        for(Player currentPlayer : allPlayers){
+            out.println(currentPlayer.getPlayerId() + STRING_DELIMITER
+                        + currentPlayer.getPlayerFirstName() + STRING_DELIMITER
+                        + currentPlayer.getPlayerLastName() + STRING_DELIMITER
+                        + currentPlayer.getPlayerPosition() + STRING_DELIMITER);
+        }
+        out.flush();
+        out.close();
+    }
+    
 
 }

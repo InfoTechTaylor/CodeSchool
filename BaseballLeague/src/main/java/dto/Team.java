@@ -14,6 +14,10 @@ public class Team {
         this.teamId = teamId;
     }
 
+    public Team(){
+
+    }
+
     public String getTeamId() {
         return teamId;
     }
