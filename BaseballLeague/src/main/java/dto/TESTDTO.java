@@ -5,5 +5,6 @@ public class TESTDTO {
         System.out.println("TEST");
         System.out.println("new");
         System.out.println("new");
+        System.out.println("new");
     }
 }
