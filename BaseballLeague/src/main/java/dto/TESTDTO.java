@@ -8,5 +8,6 @@ public class TESTDTO {
         System.out.println("new");
         System.out.println();
         System.out.println("TEST");
+        System.out.println("TEST");
     }
 }
