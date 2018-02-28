@@ -74,14 +74,12 @@ public class BaseballLeagueView {
         io.print("================================================");
         String firstName = io.readString("Enter player's first name: ");
         String lastName = io.readString("Enter player's last name: ");
-        String position = io.readString("Enter the player's position: ");
         String teamName = io.readString("Enter the player's team: ");
         Team teamObj = new Team();
         teamObj.setTeamName(teamName);
         Player newPlayer = new Player();
         newPlayer.setPlayerFirstName(firstName);
         newPlayer.setPlayerLastName(lastName);
-        newPlayer.setPlayerPosition(position);
         newPlayer.setPlayersTeam(teamObj);
 
         return newPlayer;

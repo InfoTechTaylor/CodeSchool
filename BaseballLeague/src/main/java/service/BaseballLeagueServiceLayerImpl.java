@@ -57,14 +57,29 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
 
     }
 
+    private String retrieveNextAvailablePlayerId() throws BaseballLeaguePersistenceException {
+        List<Player> allPlayers = playerDao.retrieveAllPlayers();
+        int highestIdValue = 0;
+        for(Player currentPlayer : allPlayers){
+            if(Integer.parseInt(currentPlayer.getPlayerId()) > highestIdValue){
+                highestIdValue = Integer.parseInt(currentPlayer.getPlayerId());
+            }
+        }
+        highestIdValue++;
+        return Integer.toString(highestIdValue);
+    }
+
     @Override
     public List<Team> retrieveAllTeams() throws BaseballLeaguePersistenceException{
         return teamDao.retrieveAllTeams();
     }
 
     @Override
-    public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException {
-
+    public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException, TeamNotFoundException {
+        Team teamObj = validateTeamExists(newPlayer.getPlayersTeam().getTeamName());
+        newPlayer.setPlayersTeam(teamObj);
+        String playerId = retrieveNextAvailablePlayerId();
+        newPlayer.setPlayerId(playerId);
         return playerDao.createPlayer(newPlayer);
     }
 
@@ -83,8 +98,25 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
         return null;
     }
 
-    private boolean validateTeamExists(String teamId){
-        return false;
+    private Team validateTeamExists(String teamName) throws TeamNotFoundException {
+        boolean doesTeamExist = false;
+        Team validatedTeam = null;
+        try{
+            List<Team> allTeams = retrieveAllTeams();
+            for(Team currentTeam : allTeams){
+                if(currentTeam.getTeamName().toUpperCase().equals(teamName.toUpperCase())) {
+                    doesTeamExist = true;
+                    validatedTeam = currentTeam;
+                    break;
+                }
+            }
+            if (!doesTeamExist) {
+                throw new TeamNotFoundException("Unable to find team with provided name.");
+            }
+        } catch(BaseballLeaguePersistenceException e){
+            throw new TeamNotFoundException(e.getMessage());
+        }
+        return validatedTeam;
     }
 
     private boolean validatePlayerExists(String playerId){

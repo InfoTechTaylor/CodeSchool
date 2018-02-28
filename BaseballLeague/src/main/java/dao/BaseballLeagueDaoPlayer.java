@@ -13,7 +13,7 @@ public interface BaseballLeagueDaoPlayer {
     Player retrievePlayerById(String playerId);
 
     // R - retrieve all objects
-    List<Player> retrieveAllPlayers();
+    List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException;
 
     // U - update an Object
     Player updatePlayer(Player updatedPlayer);

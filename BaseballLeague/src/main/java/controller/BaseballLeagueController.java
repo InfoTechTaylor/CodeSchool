@@ -4,6 +4,7 @@ import dao.BaseballLeaguePersistenceException;
 import dto.Player;
 import dto.Team;
 import service.BaseballLeagueServiceLayer;
+import service.TeamNotFoundException;
 import ui.BaseballLeagueView;
 
 import java.util.List;
@@ -104,7 +105,7 @@ public class BaseballLeagueController {
             Player newPlayer = view.promptForNewPlayerInfo();
             // pass to service
             service.createPlayer(newPlayer);
-        } catch(BaseballLeaguePersistenceException e){
+        } catch(BaseballLeaguePersistenceException | TeamNotFoundException e){
             view.displayError(e.getMessage());
         }
     }

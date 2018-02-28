@@ -4,7 +4,6 @@ public class Player {
     private String playerId;
     private String playerFirstName;
     private String playerLastName;
-    private String playerPosition;
     private Team playersTeam;
 
     public Player(String playerId){
@@ -38,14 +37,6 @@ public class Player {
 
     public void setPlayerLastName(String playerLastName) {
         this.playerLastName = playerLastName;
-    }
-
-    public String getPlayerPosition() {
-        return playerPosition;
-    }
-
-    public void setPlayerPosition(String playerPosition) {
-        this.playerPosition = playerPosition;
     }
 
     public Team getPlayersTeam() {

@@ -8,9 +8,9 @@ import java.util.*;
 
 public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer {
 
-    private static String filename;
+    private String filename;
     private static final String STRING_DELIMITER = "::";
-    Map<String, Player> playerMap = new HashMap<>();
+    private Map<String, Player> playerMap = new HashMap<>();
 
     public BaseballLeagueDaoPlayerFileImpl(String filename) {
         this.filename = filename;
@@ -30,7 +30,8 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
     }
 
     @Override
-    public List<Player> retrieveAllPlayers() {
+    public List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException {
+        loadPlayers();
         return new ArrayList<>(playerMap.values());
     }
 
@@ -64,8 +65,7 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
             currentPlayer.setPlayerId(currentTokens[0]);
             currentPlayer.setPlayerFirstName(currentTokens[1]);
             currentPlayer.setPlayerLastName(currentTokens[2]);
-            currentPlayer.setPlayerPosition(currentTokens[3]);
-            currentPlayer.setPlayersTeam(new Team(currentTokens[4]));
+            currentPlayer.setPlayersTeam(new Team(currentTokens[3]));
             playerMap.put(currentPlayer.getPlayerId(), currentPlayer);
         }
         scanner.close();
@@ -86,7 +86,7 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
             out.println(currentPlayer.getPlayerId() + STRING_DELIMITER
                         + currentPlayer.getPlayerFirstName() + STRING_DELIMITER
                         + currentPlayer.getPlayerLastName() + STRING_DELIMITER
-                        + currentPlayer.getPlayerPosition() + STRING_DELIMITER);
+                        + currentPlayer.getPlayersTeam().getTeamId());
         }
         out.flush();
         out.close();
