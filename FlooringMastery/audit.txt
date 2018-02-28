@@ -1,0 +1,22 @@
+2018-02-26T10:54:09.846 : addOrder:  user input: dto.Order@8522fba9 : SUCCESS
+2018-02-26T10:54:31.124 : addOrder: user input: dto.Order@fe72c86a :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T10:55:03.891 : addOrder: user input: dto.Order@c7aabe13 :Throws service.ProductMaterialNotFoundException: Sorry, we do not offer the product you provided. Please try again with one of our supported states. 
+2018-02-26T10:55:22.193 : addOrder:  user input: dto.Order@1229bd68 : SUCCESS
+2018-02-26T11:07:26.076 : addOrder: user input: dto.Order@cbc5a78b :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T11:10:00.328 : addOrder: user input: dto.Order@13009dc7 :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T11:12:05.498 : addOrder: user input: dto.Order@cbc5a78b :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T11:12:23.933 : addOrder:  user input: dto.Order@6732e87 : SUCCESS
+2018-02-26T11:13:41.131 : addOrder: user input: dto.Order@210ee3c3 :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T11:13:56.568 : addOrder:  user input: dto.Order@476e071e : SUCCESS
+2018-02-26T11:14:22.995 : addOrder: user input: dto.Order@cbc5a78b :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-26T11:14:34.049 : addOrder: user input: dto.Order@26fe1a33 :Throws service.ProductMaterialNotFoundException: Sorry, we do not offer the product you provided. Please try again with one of our supported states. 
+2018-02-26T11:14:54.249 : addOrder:  user input: dto.Order@ef0610c5 : SUCCESS
+2018-02-26T15:36:15.415 : addOrder:  user input: dto.Order@99cfce7f : SUCCESS
+2018-02-27T11:20:02.761 : addOrder: user input: dto.Order@26fba66c :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-27T11:20:32.111 : addOrder: user input: dto.Order@eeffaa8c :Throws java.lang.NullPointerException
+2018-02-27T11:23:32.280 : addOrder:  user input: dto.Order@eeffaa8c : SUCCESS
+2018-02-27T11:30:18.033 : addOrder:  user input: dto.Order@d3201164 : SUCCESS
+2018-02-27T13:48:52.349 : addOrder:  user input: dto.Order@d16fca0e : SUCCESS
+2018-02-27T13:49:14.912 : addOrder: user input: dto.Order@92b7376b :Throws service.TaxStateNotFoundException: Sorry, we do not support the state you provided. Please try again with one of our supported states. 
+2018-02-27T13:49:36.146 : addOrder: user input: dto.Order@a3f77e2a :Throws service.ProductMaterialNotFoundException: Sorry, we do not offer the product you provided. Please try again with one of our supported states. 
+2018-02-27T13:49:46.098 : addOrder:  user input: dto.Order@c5b93b2d : SUCCESS
