@@ -40,17 +40,20 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
     public List<Player> retrieveAllPlayersOnTeam(String teamId) throws BaseballLeaguePersistenceException {
         loadPlayers();
         List<Player> allPlayers = new ArrayList<>(playerMap.values());
+        List<Player> allPlayersOnTeam = new ArrayList<>();
         for(Player currentPlayer : allPlayers){
-            if(!currentPlayer.getPlayersTeam().getTeamId().equals(teamId)){
-                allPlayers.remove(currentPlayer);
+            if(currentPlayer.getPlayersTeam().getTeamId().equals(teamId)){
+                allPlayersOnTeam.add(currentPlayer);
             }
         }
-        return allPlayers;
+        return allPlayersOnTeam;
     }
 
     @Override
-    public Player updatePlayer(Player updatedPlayer) {
-        return null;
+    public Player updatePlayer(Player updatedPlayer) throws BaseballLeaguePersistenceException {
+        Player playerObj = playerMap.replace(updatedPlayer.getPlayerId(), updatedPlayer);
+        writePlayers();
+        return playerObj;
     }
 
     @Override

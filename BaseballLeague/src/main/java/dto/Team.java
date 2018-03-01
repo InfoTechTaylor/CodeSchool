@@ -8,7 +8,6 @@ public class Team {
     private String teamId;
     private String teamName;
     private String teamLeague;
-    private List<Player> teamRoster;
 
     public Team(String teamId){
         this.teamId = teamId;
@@ -42,13 +41,6 @@ public class Team {
         this.teamLeague = teamLeague;
     }
 
-    public List<Player> getTeamRoster() {
-        return teamRoster;
-    }
-
-    public void setTeamRoster(List<Player> teamRoster) {
-        this.teamRoster = teamRoster;
-    }
 
     @Override
     public boolean equals(Object o) {
@@ -57,13 +49,12 @@ public class Team {
         Team team = (Team) o;
         return Objects.equals(teamId, team.teamId) &&
                 Objects.equals(teamName, team.teamName) &&
-                Objects.equals(teamLeague, team.teamLeague) &&
-                Objects.equals(teamRoster, team.teamRoster);
+                Objects.equals(teamLeague, team.teamLeague);
     }
 
     @Override
     public int hashCode() {
 
-        return Objects.hash(teamId, teamName, teamLeague, teamRoster);
+        return Objects.hash(teamId, teamName, teamLeague);
     }
 }

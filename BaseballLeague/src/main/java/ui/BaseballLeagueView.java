@@ -38,7 +38,7 @@ public class BaseballLeagueView {
     }
 
     public void promptUserToHitEnterToContinue(){
-        io.readString("Hit Enter to continue: ");
+        io.readString("\nHit Enter to continue: ");
     }
 
     public String promptForTeamName(){
@@ -69,17 +69,17 @@ public class BaseballLeagueView {
     public void displayAllTeams(List<Team> allTeams){
         io.print("Current Teams:");
         io.print("================================================");
+        io.print(String.format("%-8s %-25s %-15s", "Team ID", "Team Name", "League"));
+        io.print("------------------------------------------------");
         for(Team currentTeam : allTeams){
             if(currentTeam !=null) {
-                io.print(currentTeam.getTeamName());
+                io.print(String.format("%-8s %-25s %-15s", currentTeam.getTeamId(), currentTeam.getTeamName(), currentTeam.getTeamLeague()));
             }
         }
     }
 
     public Player promptForNewPlayerInfo(){
-        io.print("NEW PLAYER CREATION");
-        io.print("================================================");
-        String firstName = io.readString("Enter player's first name: ");
+        String firstName = io.readString("\nEnter player's first name: ");
         String lastName = io.readString("Enter player's last name: ");
         String teamName = io.readString("Enter the player's team: ");
         Team teamObj = new Team();

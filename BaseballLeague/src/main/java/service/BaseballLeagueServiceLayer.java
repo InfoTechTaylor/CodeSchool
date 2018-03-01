@@ -16,11 +16,11 @@ public interface BaseballLeagueServiceLayer {
 
     List<Player> retrieveAllPlayersWithTeamName(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException;
 
-    void tradePlayers(String playerOneId, String PlayerTwoId);
+    void tradePlayers(String playerOneId, String PlayerTwoId) throws BaseballLeaguePersistenceException, PlayerNotFoundException;
 
     Player removePlayer(String playerToRemoveId) throws PlayerNotFoundException, BaseballLeaguePersistenceException;
 
-    Team removeTeam(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException;
+    Team removeTeam(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException, PlayersExistOnTeamException;
 
     List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException;
 

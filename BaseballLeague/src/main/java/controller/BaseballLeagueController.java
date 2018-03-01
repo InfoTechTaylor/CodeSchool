@@ -5,6 +5,7 @@ import dto.Player;
 import dto.Team;
 import service.BaseballLeagueServiceLayer;
 import service.PlayerNotFoundException;
+import service.PlayersExistOnTeamException;
 import service.TeamNotFoundException;
 import ui.BaseballLeagueView;
 
@@ -109,10 +110,13 @@ public class BaseballLeagueController {
 
         try {
             view.displaySubMenu("Create a Player");
+            List<Team> allTeams = service.retrieveAllTeams();
+            view.displayAllTeams(allTeams);
             // get new player details from user
             Player newPlayer = view.promptForNewPlayerInfo();
             // pass to service
             service.createPlayer(newPlayer);
+            view.displayBanner("Successfully created new player.");
         } catch(BaseballLeaguePersistenceException | TeamNotFoundException e){
             view.displayError(e.getMessage());
         }
@@ -138,6 +142,7 @@ public class BaseballLeagueController {
             view.displayAllPlayers(allPlayers);
             String playerId = view.promptForPlayerId();
             service.removePlayer(playerId);
+            view.displayBanner("Successfully removed player.");
         } catch(PlayerNotFoundException | BaseballLeaguePersistenceException e){
             view.displayError(e.getMessage());
         }
@@ -152,16 +157,29 @@ public class BaseballLeagueController {
             view.displayAllTeams(allTeams);
             String teamName = view.promptForTeamName();
             service.removeTeam(teamName);
-        }catch(BaseballLeaguePersistenceException | TeamNotFoundException e){
+            view.displayBanner("Successfully removed team.");
+        }catch(BaseballLeaguePersistenceException | TeamNotFoundException | PlayersExistOnTeamException e){
             view.displayError(e.getMessage());
         }
         view.promptUserToHitEnterToContinue();
 
     }
 
-    private void tradePlayers(){
+    private void tradePlayers()  {
+        try {
+            List<Player> allPlayers = service.retrieveAllPlayers();
+            view.displayAllPlayers(allPlayers);
+            view.displayBanner("Please select the two players you want to trade: ");
+            String playerId1 = view.promptForPlayerId();
+            String playerId2 = view.promptForPlayerId();
+            service.tradePlayers(playerId1, playerId2);
+            view.displayBanner("Successfully traded players.");
+        } catch(BaseballLeaguePersistenceException | PlayerNotFoundException e){
+            view.displayError(e.getMessage());
+        }
         view.promptUserToHitEnterToContinue();
     }
+
 
 
 }
