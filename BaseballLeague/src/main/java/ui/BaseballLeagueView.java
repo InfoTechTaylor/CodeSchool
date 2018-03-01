@@ -56,8 +56,14 @@ public class BaseballLeagueView {
         io.print("================================================");
     }
 
+    public void displaySubMenu(String menuSubTitle){
+        io.print("================================================");
+        io.print(menuSubTitle.toUpperCase());
+        io.print("================================================");
+    }
+
     public void displaySuccessCreateNewTeam(Team newTeam){
-        io.print("Successfully created new team: " + newTeam.getTeamName() + " in the " + newTeam.getTeamLeague() + ".");
+        io.print("Successfully created new team: " + newTeam.getTeamName() + " in the " + newTeam.getTeamLeague() + " league.");
     }
 
     public void displayAllTeams(List<Team> allTeams){
@@ -94,6 +100,14 @@ public class BaseballLeagueView {
             io.print("Last Name: " + currentPlayer.getPlayerLastName());
             io.print("Team: " + currentPlayer.getPlayersTeam().getTeamName());
         }
+    }
+
+    public String promptForPlayerId(){
+        return io.readString("Enter player's ID: ");
+    }
+
+    public void displayBanner(String message){
+        io.print(message);
     }
 
 }

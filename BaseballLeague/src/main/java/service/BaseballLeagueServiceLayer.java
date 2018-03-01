@@ -18,6 +18,10 @@ public interface BaseballLeagueServiceLayer {
 
     void tradePlayers(String playerOneId, String PlayerTwoId);
 
-    Player removePlayer(String playerToRemoveId);
+    Player removePlayer(String playerToRemoveId) throws PlayerNotFoundException, BaseballLeaguePersistenceException;
+
+    Team removeTeam(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException;
+
+    List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException;
 
 }

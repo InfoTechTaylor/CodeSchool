@@ -10,7 +10,7 @@ public interface BaseballLeagueDaoPlayer {
     Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException;
 
     // R - READ
-    Player retrievePlayerById(String playerId);
+    Player retrievePlayerById(String playerId) throws BaseballLeaguePersistenceException;
 
     // R - retrieve all objects
     List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException;
@@ -21,7 +21,7 @@ public interface BaseballLeagueDaoPlayer {
     Player updatePlayer(Player updatedPlayer);
 
     // D - remove object
-    Player removePlayer(String playerId);
+    Player removePlayer(String playerId) throws BaseballLeaguePersistenceException;
 
 
 }

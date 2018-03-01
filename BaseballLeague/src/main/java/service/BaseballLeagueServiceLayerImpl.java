@@ -75,6 +75,11 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
     }
 
     @Override
+    public List<Player> retrieveAllPlayers() throws BaseballLeaguePersistenceException {
+        return playerDao.retrieveAllPlayers();
+    }
+
+    @Override
     public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException, TeamNotFoundException {
         Team teamObj = validateTeamExists(newPlayer.getPlayersTeam().getTeamName());
         newPlayer.setPlayersTeam(teamObj);
@@ -95,8 +100,16 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
     }
 
     @Override
-    public Player removePlayer(String playerToRemoveId) {
-        return null;
+    public Player removePlayer(String playerToRemoveId) throws PlayerNotFoundException, BaseballLeaguePersistenceException {
+        validatePlayerExists(playerToRemoveId);
+        return playerDao.removePlayer(playerToRemoveId);
+    }
+
+    @Override
+    public Team removeTeam(String teamName) throws TeamNotFoundException, BaseballLeaguePersistenceException {
+        Team teamToRemove = validateTeamExists(teamName);
+        teamDao.removeTeam(teamToRemove.getTeamId());
+        return teamToRemove;
     }
 
     private Team validateTeamExists(String teamName) throws TeamNotFoundException {
@@ -120,8 +133,11 @@ public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLaye
         return validatedTeam;
     }
 
-    private boolean validatePlayerExists(String playerId){
-        return false;
+    private void validatePlayerExists(String playerId) throws PlayerNotFoundException, BaseballLeaguePersistenceException {
+        if(playerDao.retrievePlayerById(playerId) == null){
+            throw new PlayerNotFoundException("Unable to locate player with provided ID.");
+        }
+
     }
 
 }

@@ -25,8 +25,9 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
     }
 
     @Override
-    public Player retrievePlayerById(String playerId) {
-        return null;
+    public Player retrievePlayerById(String playerId) throws BaseballLeaguePersistenceException {
+        loadPlayers();
+        return playerMap.get(playerId);
     }
 
     @Override
@@ -53,8 +54,10 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
     }
 
     @Override
-    public Player removePlayer(String playerId) {
-        return null;
+    public Player removePlayer(String playerId) throws BaseballLeaguePersistenceException {
+        Player playerToRemove = playerMap.remove(playerId);
+        writePlayers();
+        return playerToRemove;
     }
 
     private void loadPlayers() throws BaseballLeaguePersistenceException {
