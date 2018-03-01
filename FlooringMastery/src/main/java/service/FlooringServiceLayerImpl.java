@@ -73,10 +73,8 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         // validate input for orderObj (state and material type)
         processOrder(orderObj);
         // calculate and set totals on orderObj
-        orderObj = calculateAndSetTotalMaterialCost(orderObj);
-        orderObj = calculateAndSetTotalLaborCost(orderObj);
-        orderObj = calculateAndSetTotalTax(orderObj);
-        orderObj = calculateAndSetTotalCost(orderObj);
+        orderObj = calculateAndSetTotals(orderObj);
+
         if(orderObj.getOrderNumber() == null) {
             orderObj.setOrderNumber(daoConfig.generateOrderNumber());
         }
@@ -107,10 +105,7 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
     public Order editOrder(LocalDate originalDate, Order orderObj) throws FlooringPersistenceException, TaxStateNotFoundException, ProductMaterialNotFoundException, OrderNotFoundException, DateNotFoundException {
         //validateOrdersExistForDate(orderObj.getOrderDate());
         orderObj = processOrder(orderObj);
-        orderObj = calculateAndSetTotalMaterialCost(orderObj);
-        orderObj = calculateAndSetTotalLaborCost(orderObj);
-        orderObj = calculateAndSetTotalTax(orderObj);
-        orderObj = calculateAndSetTotalCost(orderObj);
+        orderObj = calculateAndSetTotals(orderObj);
 
         // check if originalDate is same as date of object
         if(!originalDate.equals(orderObj.getOrderDate())){
@@ -163,43 +158,25 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         return daoProducts.retrieveProductByMaterial(materialProductType);
     }
 
-    private Order calculateAndSetTotalMaterialCost(Order orderToUpdate){
-        // material costPerSquareFoot x area
+    private Order calculateAndSetTotals(Order orderToUpdate){
         BigDecimal area = orderToUpdate.getArea();
         BigDecimal materialCostPerSquareFoot = orderToUpdate.getProductObject().getMaterialCostPerSquareFoot();
-        BigDecimal totalMaterialCost = area.multiply(materialCostPerSquareFoot);
-        orderToUpdate.setTotalMaterialCost(totalMaterialCost);
-        return orderToUpdate;
-    }
-
-    private Order calculateAndSetTotalLaborCost(Order orderToUpdate) {
-        // labor cost per square foot x area
-        BigDecimal area = orderToUpdate.getArea();
         BigDecimal laborCostPerSquareFoot = orderToUpdate.getProductObject().getLaborCostPerSquareFoot();
+        BigDecimal totalMaterialCost = area.multiply(materialCostPerSquareFoot);
         BigDecimal totalLaborCost = area.multiply(laborCostPerSquareFoot);
-        orderToUpdate.setTotalLaborCost(totalLaborCost);
-        return orderToUpdate;
-    }
-
-    private Order calculateAndSetTotalTax(Order orderToUpdate) {
-        // tax rate times (total material cost + total labor cost)
-        BigDecimal totalMaterialCost = orderToUpdate.getTotalMaterialCost();
-        BigDecimal totalLaborCost = orderToUpdate.getTotalLaborCost();
         BigDecimal taxRate = (orderToUpdate.getTaxObject().getTaxRate()).movePointLeft(2);
         BigDecimal sumCost = totalLaborCost.add(totalMaterialCost);
         BigDecimal totalTax = taxRate.multiply(sumCost);
+        BigDecimal totalCost = totalLaborCost.add(totalMaterialCost).add(totalTax);
+
+        orderToUpdate.setTotalMaterialCost(totalMaterialCost);
+        orderToUpdate.setTotalLaborCost(totalLaborCost);
         orderToUpdate.setTotalTax(totalTax);
+        orderToUpdate.setTotalCost(totalCost);
+
         return orderToUpdate;
     }
 
-    private Order calculateAndSetTotalCost(Order orderToUpdate) {
-        // total cost = total labor cost + total material cost + total tax
-        BigDecimal totalLaborCost = orderToUpdate.getTotalLaborCost();
-        BigDecimal totalMaterialCost = orderToUpdate.getTotalMaterialCost();
-        BigDecimal totalTax = orderToUpdate.getTotalTax();
-        BigDecimal totalCost = totalLaborCost.add(totalMaterialCost).add(totalTax);
-        orderToUpdate.setTotalCost(totalCost);
-        return orderToUpdate;
-    }
+
 
 }
