@@ -19,6 +19,7 @@ public class BaseballLeagueDaoPlayerFileImpl implements BaseballLeagueDaoPlayer 
 
     @Override
     public Player createPlayer(Player newPlayer) throws BaseballLeaguePersistenceException {
+        loadPlayers();
         playerMap.put(newPlayer.getPlayerId(), newPlayer);
         writePlayers();
         return newPlayer;

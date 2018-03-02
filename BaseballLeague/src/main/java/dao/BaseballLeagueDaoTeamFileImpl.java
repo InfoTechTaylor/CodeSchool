@@ -18,6 +18,7 @@ public class BaseballLeagueDaoTeamFileImpl implements BaseballLeagueDaoTeam {
 
     @Override
     public Team createTeam(Team newTeam) throws BaseballLeaguePersistenceException{
+        loadTeams();
         teamMap.put(newTeam.getTeamId(), newTeam);
         writeTeams();
         return newTeam;

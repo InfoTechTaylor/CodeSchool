@@ -1,9 +1,6 @@
 package service;
 
-import dao.BaseballLeagueAuditDao;
-import dao.BaseballLeagueDaoPlayerFileImpl;
-import dao.BaseballLeagueDaoTeamFileImpl;
-import dao.BaseballLeaguePersistenceException;
+import dao.*;
 import dto.Player;
 import dto.Team;
 
@@ -13,13 +10,13 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 public class BaseballLeagueServiceLayerImpl implements BaseballLeagueServiceLayer {
 
-    private BaseballLeagueDaoTeamFileImpl teamDao;
-    private BaseballLeagueDaoPlayerFileImpl playerDao;
+    private BaseballLeagueDaoTeam teamDao;
+    private BaseballLeagueDaoPlayer playerDao;
     private BaseballLeagueAuditDao auditDao;
 //    private static AtomicInteger uniqueId=new AtomicInteger();
 
-    public BaseballLeagueServiceLayerImpl(BaseballLeagueDaoTeamFileImpl teamDao,
-                                          BaseballLeagueDaoPlayerFileImpl playerDao, BaseballLeagueAuditDao auditDao) {
+    public BaseballLeagueServiceLayerImpl(BaseballLeagueDaoTeam teamDao,
+                                          BaseballLeagueDaoPlayer playerDao, BaseballLeagueAuditDao auditDao) {
         this.teamDao = teamDao;
         this.playerDao = playerDao;
         this.auditDao = auditDao;

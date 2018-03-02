@@ -21,9 +21,9 @@ public class Team {
         return teamId;
     }
 
-//    public void setTeamId(String teamId) {
-//        this.teamId = teamId;
-//    }
+    public void setTeamId(String teamId) {
+        this.teamId = teamId;
+    }
 
     public String getTeamName() {
         return teamName;
