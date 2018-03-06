@@ -1,10 +1,7 @@
 package service;
 
-import dao.BaseballLeagueAuditDao;
-import dao.BaseballLeagueDaoPlayer;
-import dao.BaseballLeagueDaoTeam;
-import org.junit.After;
-import org.junit.Before;
+import dto.Player;
+import dto.Team;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -14,41 +11,56 @@ import static org.junit.Assert.*;
 public class BaseballLeagueServiceLayerTest {
 
     private BaseballLeagueServiceLayer service;
+    Team teamToTest;
+    Player playerToTest;
 
     public BaseballLeagueServiceLayerTest(){
         ApplicationContext ctx = new ClassPathXmlApplicationContext("applicationContext.xml");
         service = ctx.getBean("serviceLayer", BaseballLeagueServiceLayer.class);
-    }
 
-    @Before
-    public void setUp() throws Exception {
-    }
-
-    @After
-    public void tearDown() throws Exception {
+        teamToTest = new Team();
+        teamToTest.setTeamId("1");
+        teamToTest.setTeamName("Red Sox");
+        teamToTest.setTeamLeague("American");
     }
 
     @Test
-    public void createTeam() {
+    public void createTeam() throws Exception{
+        service.createTeam(teamToTest.getTeamName(), teamToTest.getTeamLeague());
+        assertEquals(1, service.retrieveAllTeams().size());
     }
 
     @Test
-    public void retrieveAllTeams() {
+    public void retrieveAllTeams() throws Exception{
+        service.createTeam(teamToTest.getTeamName(), teamToTest.getTeamLeague());
+        assertEquals(1, service.retrieveAllTeams().size());
     }
 
     @Test
-    public void createPlayer() {
+    public void createPlayer() throws Exception {
+        service.createPlayer(playerToTest);
+        assertEquals(1, service.retrieveAllPlayers().size());
     }
 
     @Test
-    public void retrieveAllPlayersWithTeamId() {
+    public void retrieveAllPlayersWithTeamName() throws Exception{
+        assertEquals(1, service.retrieveAllPlayersWithTeamName("Red Sox").size());
+
     }
 
     @Test
-    public void tradePlayers() {
+    public void tradePlayers() throws Exception {
     }
 
     @Test
-    public void removePlayer() {
+    public void removePlayer() throws Exception {
+    }
+
+    @Test
+    public void removeTeam() throws Exception {
+    }
+
+    @Test
+    public void retrieveAllPlayers() throws Exception {
     }
 }

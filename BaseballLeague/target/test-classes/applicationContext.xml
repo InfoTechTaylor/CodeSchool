@@ -30,9 +30,15 @@
 
     <bean id="auditDao" class="dao.BaseballLeagueAuditDaoImpl" />
 
+
+    <!--*********************************************************************-->
+
+    <bean id="playerStubDao" class="dao.BaseballLeagueDaoPlayerStubImpl" />
+    <bean id="teamStubDao" class="dao.BaseballLeagueDaoTeamStubImpl" />
+
     <bean id="serviceLayer" class="service.BaseballLeagueServiceLayerImpl">
-        <constructor-arg ref="teamDao"/>
-        <constructor-arg ref="playerDao"/>
+        <constructor-arg ref="teamStubDao"/>
+        <constructor-arg ref="playerStubDao"/>
         <constructor-arg ref="auditDao" />
     </bean>
 

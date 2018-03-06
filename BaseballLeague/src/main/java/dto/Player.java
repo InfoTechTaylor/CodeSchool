@@ -1,5 +1,7 @@
 package dto;
 
+import java.util.Objects;
+
 public class Player {
     private String playerId;
     private String playerFirstName;
@@ -45,5 +47,22 @@ public class Player {
 
     public void setPlayersTeam(Team playersTeam) {
         this.playersTeam = playersTeam;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Player player = (Player) o;
+        return Objects.equals(playerId, player.playerId) &&
+                Objects.equals(playerFirstName, player.playerFirstName) &&
+                Objects.equals(playerLastName, player.playerLastName) &&
+                Objects.equals(playersTeam, player.playersTeam);
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(playerId, playerFirstName, playerLastName, playersTeam);
     }
 }

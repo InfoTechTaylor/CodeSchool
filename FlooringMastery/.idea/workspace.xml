@@ -2,120 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc4408b-8d11-4a25-8fcf-319295aaece9" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/src/test/java/service/BaseballLeagueServiceLayerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/advice/LoggingAdvice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/resources/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/resources/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/test_config.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/src/main/java/datetimecodealong/App.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/src/main/java/dto/Person.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ServerInventory/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_13_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_javassist_javassist_3_22_0_GA.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_1_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/BaseballLeague.iml" afterPath="$PROJECT_DIR$/../BaseballLeague/BaseballLeague.iml" />
       <change beforePath="$PROJECT_DIR$/../BaseballLeague/players_prod.txt" afterPath="$PROJECT_DIR$/../BaseballLeague/players_prod.txt" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" />
-      <change beforePath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
-      <change beforePath="$PROJECT_DIR$/Orders_02202000.txt" afterPath="$PROJECT_DIR$/Orders_02202000.txt" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/players_test.txt" afterPath="$PROJECT_DIR$/../BaseballLeague/players_test.txt" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Player.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Player.java" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/TESTDTO.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/test/java/dao/BaseballLeagueDaoPlayerTest.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/test/java/dao/BaseballLeagueDaoPlayerTest.java" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/test/java/service/BaseballLeagueServiceLayerTest.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/test/java/service/BaseballLeagueServiceLayerTest.java" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/controller/BaseballLeagueController.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/controller/BaseballLeagueController.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoPlayer.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoPlayer.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoPlayerFileImpl.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoPlayerFileImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoTeamFileImpl.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/dao/BaseballLeagueDaoTeamFileImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/dto/Player.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/dto/Player.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/dto/Team.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/dto/Team.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/service/BaseballLeagueServiceLayer.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/service/BaseballLeagueServiceLayer.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/service/BaseballLeagueServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/service/BaseballLeagueServiceLayerImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/classes/ui/BaseballLeagueView.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/classes/ui/BaseballLeagueView.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/test-classes/applicationContext.xml" afterPath="$PROJECT_DIR$/../BaseballLeague/target/test-classes/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/target/test-classes/service/BaseballLeagueServiceLayerTest.class" afterPath="$PROJECT_DIR$/../BaseballLeague/target/test-classes/service/BaseballLeagueServiceLayerTest.class" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/teams_prod.txt" afterPath="$PROJECT_DIR$/../BaseballLeague/teams_prod.txt" />
+      <change beforePath="$PROJECT_DIR$/../BaseballLeague/teams_test.txt" afterPath="$PROJECT_DIR$/../BaseballLeague/teams_test.txt" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/FlooringMastery.iml" afterPath="$PROJECT_DIR$/FlooringMastery.iml" />
+      <change beforePath="$PROJECT_DIR$/audit.txt" afterPath="$PROJECT_DIR$/audit.txt" />
       <change beforePath="$PROJECT_DIR$/orderNumberConfig.txt" afterPath="$PROJECT_DIR$/orderNumberConfig.txt" />
-      <change beforePath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/audit.txt" afterPath="$PROJECT_DIR$/../VendingMachine/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/src/main/java/advice/LoggingAdvice.java" afterPath="$PROJECT_DIR$/../VendingMachine/src/main/java/advice/LoggingAdvice.java" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../VendingMachine/src/main/resources/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/vendingMachineItems_prod.txt" afterPath="$PROJECT_DIR$/../VendingMachine/vendingMachineItems_prod.txt" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/FlooringServiceLayerImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/FlooringServiceLayerImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../TESTPROXY/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -133,35 +48,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="FlooringController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java">
+      <file leaf-file-name="FlooringDaoOrderProdFileImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="43" />
+            <state relative-caret-position="455">
+              <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlooringDaoTaxesFileImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java">
+      <file leaf-file-name="FlooringDaoOrderStubImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
-              <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#412#413#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="385">
+              <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="66" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlooringDaoOrderProdFileImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
+      <file leaf-file-name="FlooringDaoProductsStubImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsStubImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5430">
-              <caret line="190" column="40" lean-forward="false" selection-start-line="190" selection-start-column="40" selection-end-line="190" selection-end-column="40" />
+            <state relative-caret-position="140">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoTaxesTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1575">
+              <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -170,38 +101,18 @@
       <file leaf-file-name="FlooringView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/FlooringView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3900">
+            <state relative-caret-position="4550">
               <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserIOConsoleImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9990">
-              <caret line="339" column="72" lean-forward="false" selection-start-line="339" selection-start-column="72" selection-end-line="339" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserIO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="900">
-              <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlooringServiceLayerTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlooringServiceLayerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4020">
-              <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="64" />
+            <state relative-caret-position="1113">
+              <caret line="157" column="5" lean-forward="false" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
               <folding>
                 <element signature="e#5845#5846#0" expanded="true" />
                 <element signature="e#5895#5896#0" expanded="true" />
@@ -210,21 +121,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Taxes.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Taxes.txt">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="7" />
+            <state relative-caret-position="560">
+              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+            <state relative-caret-position="2205">
+              <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -233,8 +144,8 @@
       <file leaf-file-name="FlooringServiceLayerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3720">
-              <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
+            <state relative-caret-position="350">
+              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -304,19 +215,44 @@
         <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/src/main/java/controller/FlooringController.java" />
         <option value="$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/UserIO.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/ui/FlooringView.java" />
+        <option value="$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2582" />
     <option name="height" value="1416" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>General</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>Duplicates</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -336,9 +272,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
@@ -449,17 +382,13 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -467,7 +396,10 @@
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../BaseballLeague" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -498,7 +430,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in FlooringMastery">
+  <component name="RunManager" selected="Application.App">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -697,8 +629,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in FlooringMastery" />
-        <item index="1" class="java.lang.String" itemvalue="Application.App" />
+        <item index="0" class="java.lang.String" itemvalue="Application.App" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in FlooringMastery" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.activateTrainingMode" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" />
@@ -718,6 +650,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1519142737821</updated>
+      <workItem from="1519844391017" duration="1843000" />
+      <workItem from="1519913720851" duration="2761000" />
+      <workItem from="1519998997357" duration="4244000" />
+      <workItem from="1520257503801" duration="1175000" />
+      <workItem from="1520277246679" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
       <created>1519146095976</created>
@@ -1013,7 +950,14 @@
       <option name="project" value="LOCAL" />
       <updated>1519831869341</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 refactored service layer calculateAndSet methods to be one method calculateAndSetTotals()">
+      <created>1519936816695</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1519936816695</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1048,9 +992,11 @@
       <configuration name="FlooringServiceLayerTest.testValidateOrdersDoNotExistForDate" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="10073000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
-    <editor active="true" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1059,12 +1005,14 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13723916" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22215308" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25507814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1081,11 +1029,13 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 fixed loadOrders() method to throw an exception if a file does not exist for the order date provided, then added a validateDateExists method in the service layer to catch that exception and re throw a datenotfound exception" />
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-89 cleaned up implementation for display order by date" />
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-90 completed add new order story and save orders file stories! Had to fix an issue in load to check if scanner is equal to null" />
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 updated to prompt user if they want to save before actually saving" />
@@ -1110,7 +1060,8 @@
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 fixed issue where null pointer exception is thrown if I add a new order" />
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 simplified check to see if orderNumber is == to null then call generateOrderID in the service layer" />
     <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 files" />
-    <option name="LAST_COMMIT_MESSAGE" value="TAYLORLAPOINTEINDIVIDUALWORK-85 files" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-85 refactored service layer calculateAndSet methods to be one method calculateAndSetTotals()" />
+    <option name="LAST_COMMIT_MESSAGE" value="TAYLORLAPOINTEINDIVIDUALWORK-85 refactored service layer calculateAndSet methods to be one method calculateAndSetTotals()" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1251,14 +1202,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Orders_02242018.txt" />
     <entry file="file://$PROJECT_DIR$/Orders_01012001.txt" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="360">
@@ -1305,14 +1248,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="1" lean-forward="false" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="755">
-          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,13 +1303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderTrainingFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3900">
-          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Orders_02262018.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -1382,33 +1310,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1890">
-          <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/audit.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsStubImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="66" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,7 +1326,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
+        <state relative-caret-position="750">
           <caret line="31" column="50" lean-forward="false" selection-start-line="31" selection-start-column="50" selection-end-line="31" selection-end-column="50" />
           <folding />
         </state>
@@ -1429,71 +1334,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/UserIOConsoleImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9990">
+        <state relative-caret-position="0">
           <caret line="339" column="72" lean-forward="false" selection-start-line="339" selection-start-column="72" selection-end-line="339" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/ui/FlooringView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3900">
-          <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5430">
-          <caret line="190" column="40" lean-forward="false" selection-start-line="190" selection-start-column="40" selection-end-line="190" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3720">
-          <caret line="133" column="0" lean-forward="false" selection-start-line="133" selection-start-column="0" selection-end-line="133" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/controller/FlooringController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="280">
           <caret line="16" column="43" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="43" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoTaxesFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4020">
-          <caret line="147" column="64" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="64" />
+        <state relative-caret-position="2660">
+          <caret line="76" column="33" lean-forward="false" selection-start-line="76" selection-start-column="33" selection-end-line="76" selection-end-column="33" />
           <folding>
-            <element signature="e#5845#5846#0" expanded="true" />
-            <element signature="e#5895#5896#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#412#413#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderTrainingFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
+        <state relative-caret-position="4550">
+          <caret line="138" column="0" lean-forward="false" selection-start-line="138" selection-start-column="0" selection-end-line="138" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1502,7 +1372,89 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="3" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="560">
+          <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2205">
+          <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ui/FlooringView.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4550">
+          <caret line="150" column="54" lean-forward="false" selection-start-line="150" selection-start-column="54" selection-end-line="150" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/FlooringServiceLayerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="350">
+          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderProdFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="455">
+          <caret line="22" column="9" lean-forward="false" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoOrderStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="385">
+          <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="66" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1575">
+          <caret line="45" column="39" lean-forward="false" selection-start-line="45" selection-start-column="39" selection-end-line="45" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/FlooringDaoProductsStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1113">
+          <caret line="157" column="5" lean-forward="false" selection-start-line="157" selection-start-column="5" selection-end-line="157" selection-end-column="5" />
+          <folding>
+            <element signature="e#5845#5846#0" expanded="true" />
+            <element signature="e#5895#5896#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1523,7 +1475,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Spring</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1558,12 +1510,11 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>FlooringMastery</last-edited>
+          <last-edited>Spring|FlooringMastery</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
@@ -1571,6 +1522,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>Maven: commons-logging:commons-logging:1.2</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
