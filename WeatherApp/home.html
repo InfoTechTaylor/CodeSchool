@@ -8,15 +8,18 @@
 <div id="heading" class="text-center">
     <h1>Weather Page</h1>
     <hr/>
+    <ul id="errorMessages" class="list-group"></ul>
+    <br />
 </div>
 
 <!-- MAIN DIV FORM ---------------------------------------------------->
 <div id="mainDiv" class="container">
+
     <form id="weatherForm" class="form-horizontal" role="form">
 
         <label for="zipcode" class="col-md-3 control-label">Zipcode:</label>
         <div class="col-md-2">
-            <input type="text" id="zipcode" class="form-control" maxlength="5" placeholder="Enter Zipcode" required/>
+            <input type="text" id="zipcode" title="Five digit zip code" pattern="[0-9]{5}" class="form-control" maxlength="5" placeholder="Enter Zipcode" required/>
         </div>
 
         <label for="unitSelect" class="col-md-1 control-label">Units: </label>
@@ -42,6 +45,12 @@
 
 <!--FIVE DAY FORECAST------------------------------------------------>
 <div id="fiveDayForecastDiv" class="container" style="display:none">
+    <h2>Five Day Forecast</h2>
+    <div id="day0" class="col-md-2"></div>
+    <div id="day1" class="col-md-2"></div>
+    <div id="day2" class="col-md-2"></div>
+    <div id="day3" class="col-md-2"></div>
+    <div id="day4" class="col-md-2"></div>
 
 </div>
 
