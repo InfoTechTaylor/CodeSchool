@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/taylor-lapointe-individual-work.iml" filepath="$PROJECT_DIR$/.idea/taylor-lapointe-individual-work.iml" />
+      <module fileurl="file://$PROJECT_DIR$/taylor-lapointe-individual-work.iml" filepath="$PROJECT_DIR$/taylor-lapointe-individual-work.iml" />
     </modules>
   </component>
 </project>

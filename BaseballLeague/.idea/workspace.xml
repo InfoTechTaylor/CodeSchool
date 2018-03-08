@@ -2,35 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f16a43d5-39a9-4164-873b-88d27cec2998" name="Default" comment="testing git config settings with px">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/inspectionProfiles/Project_Default.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/BaseballLeague.iml" afterPath="$PROJECT_DIR$/BaseballLeague.iml" />
-      <change beforePath="$PROJECT_DIR$/players_prod.txt" afterPath="$PROJECT_DIR$/players_prod.txt" />
-      <change beforePath="$PROJECT_DIR$/players_test.txt" afterPath="$PROJECT_DIR$/players_test.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/Player.java" afterPath="$PROJECT_DIR$/src/main/java/dto/Player.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dto/TESTDTO.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dao/BaseballLeagueDaoPlayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/dao/BaseballLeagueDaoPlayerTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/service/BaseballLeagueServiceLayerTest.java" afterPath="$PROJECT_DIR$/src/test/java/service/BaseballLeagueServiceLayerTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/controller/BaseballLeagueController.class" afterPath="$PROJECT_DIR$/target/classes/controller/BaseballLeagueController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoPlayer.class" afterPath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoPlayer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoPlayerFileImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoPlayerFileImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoTeamFileImpl.class" afterPath="$PROJECT_DIR$/target/classes/dao/BaseballLeagueDaoTeamFileImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Player.class" afterPath="$PROJECT_DIR$/target/classes/dto/Player.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dto/Team.class" afterPath="$PROJECT_DIR$/target/classes/dto/Team.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/BaseballLeagueServiceLayer.class" afterPath="$PROJECT_DIR$/target/classes/service/BaseballLeagueServiceLayer.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/service/BaseballLeagueServiceLayerImpl.class" afterPath="$PROJECT_DIR$/target/classes/service/BaseballLeagueServiceLayerImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ui/BaseballLeagueView.class" afterPath="$PROJECT_DIR$/target/classes/ui/BaseballLeagueView.class" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/applicationContext.xml" afterPath="$PROJECT_DIR$/target/test-classes/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/service/BaseballLeagueServiceLayerTest.class" afterPath="$PROJECT_DIR$/target/test-classes/service/BaseballLeagueServiceLayerTest.class" />
-      <change beforePath="$PROJECT_DIR$/teams_prod.txt" afterPath="$PROJECT_DIR$/teams_prod.txt" />
-      <change beforePath="$PROJECT_DIR$/teams_test.txt" afterPath="$PROJECT_DIR$/teams_test.txt" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/FlooringMastery.iml" afterPath="$PROJECT_DIR$/../FlooringMastery/FlooringMastery.iml" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/audit.txt" afterPath="$PROJECT_DIR$/../FlooringMastery/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/orderNumberConfig.txt" afterPath="$PROJECT_DIR$/../FlooringMastery/orderNumberConfig.txt" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/target/classes/service/FlooringServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../FlooringMastery/target/classes/service/FlooringServiceLayerImpl.class" />
-      <change beforePath="$PROJECT_DIR$/../TESTPROXY/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TESTPROXY/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/Contact-List-REST-Service.zip" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/ContactListRESTService.jar" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/eq-height-row.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/sticky-footer.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/home.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/jquery-2.2.4.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/jquery-3.0.0.min.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -219,11 +212,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="3829" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
     <option name="y" value="-11" />
-    <option name="width" value="2902" />
-    <option name="height" value="1777" />
+    <option name="width" value="2582" />
+    <option name="height" value="1416" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -261,9 +254,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -389,6 +381,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -667,6 +660,7 @@
       <workItem from="1519998994668" duration="10793000" />
       <workItem from="1520257492806" duration="1189000" />
       <workItem from="1520277231089" duration="63000" />
+      <workItem from="1520447412743" duration="26000" />
     </task>
     <task id="LOCAL-00001" summary="TAYLORLAPOINTEINDIVIDUALWORK-84 setup initial package and file structure with dependencies for unit testing, maven and spring. Added shell of classes and wired together using applicationContext.xml for dependency injection">
       <created>1518744088805</created>
@@ -837,10 +831,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31529000" />
+    <option name="totallyTimeSpent" value="31555000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="3829" y="-11" width="2902" height="1777" extended-state="7" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -855,7 +850,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21736111" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21640626" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />

@@ -1,0 +1,54 @@
+<!DOCTYPE>
+<html>
+<head>
+    <title>My Weather</title>
+    <link href="css/bootstrap.css" rel="stylesheet"/>
+</head>
+<body>
+<div id="heading" class="text-center">
+    <h1>Weather Page</h1>
+    <hr/>
+</div>
+
+<!-- MAIN DIV FORM ---------------------------------------------------->
+<div id="mainDiv" class="container">
+    <form id="weatherForm" class="form-horizontal" role="form">
+
+        <label for="zipcode" class="col-md-3 control-label">Zipcode:</label>
+        <div class="col-md-2">
+            <input type="text" id="zipcode" class="form-control" maxlength="5" placeholder="Enter Zipcode" required/>
+        </div>
+
+        <label for="unitSelect" class="col-md-1 control-label">Units: </label>
+        <div class="col-md-2">
+            <select id="unitSelect" class="form-control">
+                <option value="imperial">Imperial</option>
+                <option value="metric">Metric</option>
+            </select>
+        </div>
+
+        <button type="button" id="getWeatherButton" class="btn btn-primary">Get Weather</button>
+
+    </form>
+</div>
+<hr />
+
+<!--- CURRENT CONDITIONS ------------------------------------------->
+<div id="currentConditionsDiv" class="container" style="display:none">
+    <div id="currentConditionsLeftDiv" class="col-md-6"></div>
+    <div id="currentConditionsRightDiv" class="col-md-6"></div>
+</div>
+
+
+<!--FIVE DAY FORECAST------------------------------------------------>
+<div id="fiveDayForecastDiv" class="container" style="display:none">
+
+</div>
+
+
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/home.js"></script>
+
+</body>
+</html>
