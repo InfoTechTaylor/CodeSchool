@@ -73,16 +73,80 @@ function getFiveDayForecast(result){
                 tempChar = 'C';
             }
 
+            var startingIndex=0;
+            var endingIndex=0
             $.each(resultArray.list, function(index, weatherForecast) {
-                // console.log(weatherForecast.weather[0].icon);
-                $('#day' + index).append(weatherForecast.dt_txt)
-                .append('<img src="http://openweathermap.org/img/w/' + weatherForecast.weather[0].icon + '.png" />')
-                .append('<p>' + weatherForecast.weather[0].main + '</p>')
-                .append('<p>H ' + weatherForecast.main.temp_max + ' ' + tempChar + ' ' + 'L ' + weatherForecast.main.temp_min + ' ' + tempChar);
+                var date = new Date(weatherForecast.dt_txt);
+                var hour = date.getUTCHours();
+                console.log(date.getDay());
+                endingIndex++;
 
-                return index < 4;
+                if(hour === 21){
+                    startingIndex = index;
+                    return false;
+                }
             });
 
+            // First Day
+            var listItem = resultArray.list;
+            var date = new Date(listItem[startingIndex].dt_txt);
+            var day = listItem[startingIndex].dt_txt.substring(8,10);
+            var month = date.toLocaleString("en-us", { month : "long"});
+            // console.log(weatherForecast.weather[0].icon);
+            $('#day0').append('<p>' + day + ' ' + month + '</p>')
+                .append('<img src="http://openweathermap.org/img/w/' + listItem[startingIndex].weather[0].icon + '.png" />')
+                .append('<p>' + listItem[startingIndex].weather[0].main + '</p>')
+                .append('<p>H ' + listItem[startingIndex].main.temp_max + ' ' + tempChar + ' ' + 'L ' + listItem[startingIndex].main.temp_min + ' ' + tempChar);
+
+            // second Day
+            listItem = resultArray.list;
+            date = new Date(listItem[startingIndex + 8].dt_txt);
+            day = listItem[startingIndex + 8].dt_txt.substring(8,10);
+            month = date.toLocaleString("en-us", { month : "long"});
+            // console.log(weatherForecast.weather[0].icon);
+            $('#day1').append('<p>' + day + ' ' + month + '</p>')
+                .append('<img src="http://openweathermap.org/img/w/' + listItem[startingIndex + 8].weather[0].icon + '.png" />')
+                .append('<p>' + listItem[startingIndex + 8].weather[0].main + '</p>')
+                .append('<p>H ' + listItem[startingIndex + 8].main.temp_max + ' ' + tempChar + ' ' + 'L ' + listItem[startingIndex + 8].main.temp_min + ' ' + tempChar);
+
+            // third Day
+            listItem = resultArray.list;
+            date = new Date(listItem[startingIndex + 16].dt_txt);
+            console.log(date);
+            day = listItem[startingIndex+ 16].dt_txt.substring(8,10);
+            console.log(day);
+            month = date.toLocaleString("en-us", { month : "long"});
+            // console.log(weatherForecast.weather[0].icon);
+            $('#day2').append('<p>' + day + ' ' + month + '</p>')
+                .append('<img src="http://openweathermap.org/img/w/' + listItem[startingIndex + 16].weather[0].icon + '.png" />')
+                .append('<p>' + listItem[startingIndex + 16].weather[0].main + '</p>')
+                .append('<p>H ' + listItem[startingIndex + 16].main.temp_max + ' ' + tempChar + ' ' + 'L ' + listItem[startingIndex + 16].main.temp_min + ' ' + tempChar);
+
+            // fourth Day
+            listItem = resultArray.list;
+            date = new Date(listItem[startingIndex + 24].dt_txt);
+            console.log(date);
+            day = listItem[startingIndex + 24].dt_txt.substring(8,10);
+            console.log(day);
+            month = date.toLocaleString("en-us", { month : "long"});
+            // console.log(weatherForecast.weather[0].icon);
+            $('#day3').append('<p>' + day + ' ' + month + '</p>')
+                .append('<img src="http://openweathermap.org/img/w/' + listItem[startingIndex + 24].weather[0].icon + '.png" />')
+                .append('<p>' + listItem[startingIndex + 24].weather[0].main + '</p>')
+                .append('<p>H ' + listItem[startingIndex + 24].main.temp_max + ' ' + tempChar + ' ' + 'L ' + listItem[startingIndex + 24].main.temp_min + ' ' + tempChar);
+
+            // fifth Day
+            listItem = resultArray.list;
+            date = new Date(listItem[startingIndex + 32].dt_txt);
+            console.log(date);
+            day = listItem[startingIndex + 32].dt_txt.substring(8,10);
+            console.log(day);
+            month = date.toLocaleString("en-us", { month : "long"});
+            // console.log(weatherForecast.weather[0].icon);
+            $('#day4').append('<p>' + day + ' ' + month + '</p>')
+                .append('<img src="http://openweathermap.org/img/w/' + listItem[startingIndex + 32].weather[0].icon + '.png" />')
+                .append('<p>' + listItem[startingIndex + 32].weather[0].main + '</p>')
+                .append('<p>H ' + listItem[startingIndex + 32].main.temp_max + ' ' + tempChar + ' ' + 'L ' + listItem[startingIndex + 32].main.temp_min + ' ' + tempChar);
         },
         error: function() {
             // $('#errorMessages').append('<li>').attr({class: 'list-group-item list-group-item-danger'})
