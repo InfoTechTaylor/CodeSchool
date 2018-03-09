@@ -17,76 +17,6 @@
     <div id="vendingMachineItemDiv" class="col-lg-9 col-sm-9">
         <!-- ITEM ONE -->
         <div id="vendingMachineItemRowDiv" class="row">
-            <!--<div id="itemOneDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemOneNumber" class="text-left">test</p>-->
-                <!--<p id="itemOneName" class="text-center"></p>-->
-                <!--<p id="itemOnePrice" class="text-center"></p>-->
-                <!--<p id="itemOneQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM TWO &ndash;&gt;-->
-            <!--<div id="itemTwoDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemTwoNumber" class="text-left">test</p>-->
-                <!--<p id="itemTwoName" class="text-center"></p>-->
-                <!--<p id="itemTwoPrice" class="text-center"></p>-->
-                <!--<p id="itemTwoQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM THREE &ndash;&gt;-->
-            <!--<div id="itemThreeDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemThreeNumber" class="text-left">test</p>-->
-                <!--<p id="itemThreeName" class="text-center"></p>-->
-                <!--<p id="itemThreePrice" class="text-center"></p>-->
-                <!--<p id="itemThreeQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM FOUR &ndash;&gt;-->
-            <!--<div id="itemFourDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemFourNumber" class="text-left">test</p>-->
-                <!--<p id="itemFourName" class="text-center"></p>-->
-                <!--<p id="itemFourPrice" class="text-center"></p>-->
-                <!--<p id="itemFourQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM FIVE &ndash;&gt;-->
-            <!--<div id="itemFiveDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemFiveNumber" class="text-left">test</p>-->
-                <!--<p id="itemFiveName" class="text-center"></p>-->
-                <!--<p id="itemFivePrice" class="text-center"></p>-->
-                <!--<p id="itemFiveQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM SIX &ndash;&gt;-->
-            <!--<div id="itemSixDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemSixNumber" class="text-left">test</p>-->
-                <!--<p id="itemSixName" class="text-center"></p>-->
-                <!--<p id="itemSixPrice" class="text-center"></p>-->
-                <!--<p id="itemSixQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM SEVEN &ndash;&gt;-->
-            <!--<div id="itemSevenDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemSevenNumber" class="text-left">test</p>-->
-                <!--<p id="itemSevenName" class="text-center"></p>-->
-                <!--<p id="itemSevenPrice" class="text-center"></p>-->
-                <!--<p id="itemSevenQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM EIGHT &ndash;&gt;-->
-            <!--<div id="itemEightDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemEightNumber" class="text-left">test</p>-->
-                <!--<p id="itemEightName" class="text-center"></p>-->
-                <!--<p id="itemEightPrice" class="text-center"></p>-->
-                <!--<p id="itemEightQuantity" class="text-center"></p>-->
-            <!--</div>-->
-
-            <!--&lt;!&ndash; ITEM NINE &ndash;&gt;-->
-            <!--<div id="itemNineDiv" class="col-lg-4 col-sm-4 panel panel-primary">-->
-                <!--<p id="itemNineNumber" class="text-left">test</p>-->
-                <!--<p id="itemNineName" class="text-center"></p>-->
-                <!--<p id="itemNinePrice" class="text-center"></p>-->
-                <!--<p id="itemNineQuantity" class="text-center"></p>-->
-            <!--</div>-->
 
         </div> <!-- END vendingMachineItemRowDiv -->
     </div> <!--END Left Div of vending machine items -->
@@ -98,7 +28,7 @@
                 <div id="totalMoneyDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Total $ In</h2>
                     <form id="totalMoneyForm">
-                        <input id="moneyInText" type="text" class="form-control" />
+                        <input id="currentMoneyAmt" type="text" class="form-control" disabled/>
                         <button id="addDollarBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6">Add Dollar</button>
                         <button id="addQuarterBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6">Add Quarter</button>
                         <button id="addDimeBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6">Add Dime</button>
@@ -113,11 +43,11 @@
                 <div id="messagesDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Messages</h2>
                     <form id="messagesForm">
-                        <input id="messagesTextBox" type="text" class="form-control col-sm-12 col-lg-12" />
+                        <input id="messagesTextBox" type="text" class="form-control col-sm-12 col-lg-12" disabled/>
                         <div class="form-group">
                             <label for="itemText" class="control-label col-sm-6 col-lg-6">Item: </label>
                             <div id="itemTextDiv" class="col-sm-6 col-lg-6">
-                                <input id="itemText" type="text" class="form-control"/>
+                                <input id="itemText" type="text" class="form-control" disabled/>
                             </div>
                         </div>
                         <button id="makePurchasBtn" type="button" class="btn btn-primary col-sm-12 col-lg-12">Make Purchase</button>
@@ -131,7 +61,7 @@
                 <div id="changeDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Change</h2>
                     <form id="changeForm">
-                        <input id="changeText" type="text" class="form-control col-sm-12 col-lg-12" />
+                        <input id="changeText" type="text" class="form-control col-sm-12 col-lg-12" disabled/>
                         <button id="changeBtn" type="button" class="btn btn-primary col-sm-12 col-lg-12">Change Return</button>
                     </form>
 

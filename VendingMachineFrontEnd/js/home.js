@@ -1,7 +1,32 @@
 $(document).ready(function() {
+    clearTextBoxes();
     loadInventory();
-});
 
+    // on add dollar button
+    $('#addDollarBtn').click(function(){
+        addMoney(1.00);
+
+    }); // end on click addDollarBtn
+
+    // on add quarter button
+    $('#addQuarterBtn').click(function(){
+       addMoney(.25);
+
+    }); // end on click addQuarterBtn
+
+    // on click add dime button
+    $('#addDimeBtn').click(function(){
+        addMoney(.10);
+    }); // end on click addDimeBtn
+
+    // on click add nickel button
+    $('#addNickelBtn').click(function(){
+        addMoney(.05);
+    }); // end on click addNickelBtn
+
+}); // end document ready function
+
+/*###########################FUNCTIONS################################*/
 function loadInventory(){
 
     $.ajax({
@@ -21,6 +46,16 @@ function loadInventory(){
         error: function(){
             alert('FAILURE');
         }
-    })
+    }) // end get all inventory
+} // end loadInventory()
+
+function clearTextBoxes(){
+    $('#currentMoneyAmt').val('');
+}
+
+function addMoney(amount){
+    var currentAmt = $('#currentMoneyAmt').val();
+    currentAmt = +currentAmt + amount;
+    $('#currentMoneyAmt').val(currentAmt.toFixed(2));
 }
 
