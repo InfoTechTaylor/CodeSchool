@@ -24,6 +24,7 @@ $(document).ready(function () {
         $('#itemText').val($(this).find('.text-left').text());
         $('.panel').css('background-color', '')
         $(this).find('.panel').css('background-color', '#dff0d8');
+        $('#messagesTextBox').val('Item selected. ').css('background-color', '');
 
     });
 
@@ -40,7 +41,7 @@ function loadInventory() {
             $.each(inventoryArray, function (index, inventoryItem) {
                 // create a new panel div for each item in the inventory
                 $('#vendingMachineItemRowDiv').append('<div id="item' + inventoryItem.id +
-                    '" class="col-lg-4 col-sm-4"><div style="margin-right: 1%; padding: 2%;" class="panel panel-primary">' +
+                    '" class="col-lg-4 col-sm-4"><div style="margin-right: 1%; padding: 2%;" class="panel panel-primary square">' +
                     '<p id="id' + inventoryItem.id + '"class="text-left">' + inventoryItem.id + '</p>' +
                     '<p class="text-center">' + inventoryItem.name + '</p>' +
                     '<p class="text-center">$' + (inventoryItem.price).toFixed(2) + '</p>' +
