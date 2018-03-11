@@ -1,5 +1,5 @@
 $(document).ready(function() {
-    clearTextBoxes();
+    clearTextBoxesAndReset();
     loadInventory();
 
     // on add dollar button
@@ -31,12 +31,16 @@ $(document).ready(function() {
 
     // get change on click
     $('#changeBtn').click(function(){
-       getChange();
-        $('#currentMoneyAmt').val('');
-        $('#itemText').val('');
+       clearTextBoxesAndReset();
+    });
+
+    // click event for all the item divs to fill in item field
+    $('#vendingMachineItemRowDiv').on('click', 'div', function () {
+        $('#itemText').val($(this).find('.text-left').text());
     });
 
 }); // end document ready function
+
 
 /*###########################FUNCTIONS################################*/
 function loadInventory(){
@@ -48,8 +52,8 @@ function loadInventory(){
             // loop through all items in the inventory
             $.each(inventoryArray, function(index, inventoryItem){
                 // create a new panel div for each item in the inventory
-                $('#vendingMachineItemRowDiv').append('<div class="col-lg-4 col-sm-4 panel panel-primary">' +
-                    '<p class="text-left">' + inventoryItem.id + '</p>' +
+                $('#vendingMachineItemRowDiv').append('<div id="item' + inventoryItem.id + '" class="col-lg-4 col-sm-4 panel panel-primary">' +
+                    '<p id="id' + inventoryItem.id +'"class="text-left">' + inventoryItem.id + '</p>' +
                     '<p class="text-center">' + inventoryItem.name + '</p>' +
                     '<p class="text-center">$' + inventoryItem.price + '</p>' +
                     '<p class="text-center">Quantity Left: '+ inventoryItem.quantity +'</p></div>');
@@ -61,10 +65,11 @@ function loadInventory(){
     }); // end get all inventory ajax call
 } // end loadInventory()
 
-function clearTextBoxes(){
-    $('#currentMoneyAmt').val('');
+function clearTextBoxesAndReset(){
+    $('#currentMoneyAmt').val(0);
     $('#itemText').val('');
     $('#changeText').val('');
+    $('#messagesTextBox').val('WELCOME! Select an item on the left you wish to purchase.');
 }
 
 function addMoney(amount){
@@ -80,22 +85,22 @@ function purchaseItem(usersChoice){
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/money/' + currentAmount + '/item/' + usersChoice,
-        success: function(){
-            alert("SUCCESS");
+        success: function(result){
+            //getChange();
+            $('#messagesTextBox').val('Thank You!!!');
+            $('#vendingMachineItemRowDiv').empty();
+            loadInventory();
+            // display change
+            $('#changeText').val('Quarters: ' + result.quarters + '\nDimes: ' + result.dimes + '\nNickels: ' + result.nickels + '\nPennies: ' + result.pennies);
             // update current amount in the total $ in text box
-            // api call returns change, make method to convert change to dollars
+            $('#currentMoneyAmt').val((result.quarters *.25) + (result.dimes * .10) + (result.nickels * .05) + (result.pennies * .01));
         },
         error: function(error){
-            console.log(error.responseJSON.message);
-            alert(error.message);
-
-            // handle no inventory error
-
-            // handle insufficient funds error
+            // $('#messagesTextBox').css('background-color', 'Tomato');
+            $('#messagesTextBox').val(error.responseJSON.message);
         }
     }); // end
-    $('#vendingMachineItemRowDiv').empty();
-    loadInventory();
+
 }
 
 function getChange(){
