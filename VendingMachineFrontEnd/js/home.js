@@ -1,37 +1,36 @@
-$(document).ready(function() {
+$(document).ready(function () {
     clearTextBoxesAndReset();
     loadInventory();
 
     // on add dollar button
-    $('#addDollarBtn').click(function(){
+    $('#addDollarBtn').click(function () {
         addMoney(1.00);
-
     }); // end on click addDollarBtn
 
     // on add quarter button
-    $('#addQuarterBtn').click(function(){
-       addMoney(.25);
+    $('#addQuarterBtn').click(function () {
+        addMoney(.25);
     }); // end on click addQuarterBtn
 
     // on click add dime button
-    $('#addDimeBtn').click(function(){
+    $('#addDimeBtn').click(function () {
         addMoney(.10);
     }); // end on click addDimeBtn
 
     // on click add nickel button
-    $('#addNickelBtn').click(function(){
+    $('#addNickelBtn').click(function () {
         addMoney(.05);
     }); // end on click addNickelBtn
 
     // make purchase on click
-    $('#makePurchaseBtn').click(function() {
+    $('#makePurchaseBtn').click(function () {
         var usersChoice = $('#itemText').val();
         purchaseItem(usersChoice);
     });
 
     // get change on click
-    $('#changeBtn').click(function(){
-       clearTextBoxesAndReset();
+    $('#changeBtn').click(function () {
+        clearTextBoxesAndReset();
     });
 
     // click event for all the item divs to fill in item field
@@ -41,68 +40,74 @@ $(document).ready(function() {
 
 }); // end document ready function
 
-
 /*###########################FUNCTIONS################################*/
-function loadInventory(){
+function loadInventory() {
 
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/items',
-        success: function(inventoryArray){
+        success: function (inventoryArray) {
             // loop through all items in the inventory
-            $.each(inventoryArray, function(index, inventoryItem){
+            $.each(inventoryArray, function (index, inventoryItem) {
                 // create a new panel div for each item in the inventory
-                $('#vendingMachineItemRowDiv').append('<div id="item' + inventoryItem.id + '" class="col-lg-4 col-sm-4 panel panel-primary">' +
-                    '<p id="id' + inventoryItem.id +'"class="text-left">' + inventoryItem.id + '</p>' +
+                $('#vendingMachineItemRowDiv').append('<div id="item' + inventoryItem.id +
+                    '" class="col-lg-4 col-sm-4"><div style="margin-right: 1%; padding: 2%;" class="panel panel-primary">' +
+                    '<p id="id' + inventoryItem.id + '"class="text-left">' + inventoryItem.id + '</p>' +
                     '<p class="text-center">' + inventoryItem.name + '</p>' +
-                    '<p class="text-center">$' + inventoryItem.price + '</p>' +
-                    '<p class="text-center">Quantity Left: '+ inventoryItem.quantity +'</p></div>');
+                    '<p class="text-center">$' + (inventoryItem.price).toFixed(2) + '</p>' +
+                    '<p class="text-center">Quantity Left: ' + inventoryItem.quantity + '</p></div></div>');
             });
         },
-        error: function(){
+        error: function () {
             alert('FAILURE');
         }
     }); // end get all inventory ajax call
 } // end loadInventory()
 
-function clearTextBoxesAndReset(){
-    $('#currentMoneyAmt').val(0);
+function clearTextBoxesAndReset() {
+    $('#currentMoneyAmt').val(0.00.toFixed(2));
     $('#itemText').val('');
     $('#changeText').val('');
-    $('#messagesTextBox').val('WELCOME! Select an item on the left you wish to purchase.');
+    $('#messagesTextBox').val('WELCOME! Select an Item.');
+    $('#messagesTextBox').css('background-color', '');
 }
 
-function addMoney(amount){
+function addMoney(amount) {
     var currentAmt = $('#currentMoneyAmt').val();
     currentAmt = +currentAmt + amount;
     $('#currentMoneyAmt').val(currentAmt.toFixed(2));
 }
 
-function purchaseItem(usersChoice){
+function purchaseItem(usersChoice) {
 
     var currentAmount = $('#currentMoneyAmt').val();
 
     $.ajax({
         type: 'GET',
         url: 'http://localhost:8080/money/' + currentAmount + '/item/' + usersChoice,
-        success: function(result){
-            //getChange();
+        success: function (result) {
             $('#messagesTextBox').val('Thank You!!!');
+            $('#messagesTextBox').css('background-color', '#dff0d8');
             $('#vendingMachineItemRowDiv').empty();
-            loadInventory();
+            loadInventory(); // reload inventory to reflect new quantity
             // display change
-            $('#changeText').val('Quarters: ' + result.quarters + '\nDimes: ' + result.dimes + '\nNickels: ' + result.nickels + '\nPennies: ' + result.pennies);
+            $('#changeText').val('Quarters: ' + result.quarters + '\nDimes: '
+                + result.dimes + '\nNickels: ' + result.nickels + '\nPennies: ' + result.pennies);
             // update current amount in the total $ in text box
-            $('#currentMoneyAmt').val((result.quarters *.25) + (result.dimes * .10) + (result.nickels * .05) + (result.pennies * .01));
+            $('#currentMoneyAmt').val(((result.quarters * .25) +
+                (result.dimes * .10) + (result.nickels * .05) + (result.pennies * .01)).toFixed(2));
         },
-        error: function(error){
-            // $('#messagesTextBox').css('background-color', 'Tomato');
+        error: function (error) {
+            getChange();
+            $('#messagesTextBox').css('background-color', '#f2dede');
             $('#messagesTextBox').val(error.responseJSON.message);
         }
     }); // end
-
 }
 
+// getChange is only for if the user adds money and gets an error to be able to display the change
+// since it seems the api doesn't return the change with the error but it is needed if they decide they
+// no longer want to make purchase
 function getChange(){
     var currentAmt = $('#currentMoneyAmt').val();
     var currentAmtAsPennies = +currentAmt * 100;
@@ -135,5 +140,6 @@ function getChange(){
 
     $('#changeText').val('Quarters: ' + numQuarters + '\nDimes: ' + numDimes + '\nNickels: ' + numNickels + '\nPennies: ' + numPennies);
 }
+
 
 
