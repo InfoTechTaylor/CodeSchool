@@ -2,30 +2,16 @@ $(document).ready(function () {
     clearTextBoxesAndReset();
     loadInventory();
 
-    // on add dollar button
-    $('#addDollarBtn').click(function () {
-        addMoney(1.00);
-    }); // end on click addDollarBtn
-
-    // on add quarter button
-    $('#addQuarterBtn').click(function () {
-        addMoney(.25);
-    }); // end on click addQuarterBtn
-
-    // on click add dime button
-    $('#addDimeBtn').click(function () {
-        addMoney(.10);
-    }); // end on click addDimeBtn
-
-    // on click add nickel button
-    $('#addNickelBtn').click(function () {
-        addMoney(.05);
-    }); // end on click addNickelBtn
-
     // make purchase on click
     $('#makePurchaseBtn').click(function () {
         var usersChoice = $('#itemText').val();
         purchaseItem(usersChoice);
+    });
+
+    // add money on click
+    $('#totalMoneyDiv').on('click', 'button', function() {
+        var buttonVal = $(this).val();
+        addMoney(+buttonVal);
     });
 
     // get change on click
@@ -36,6 +22,9 @@ $(document).ready(function () {
     // click event for all the item divs to fill in item field
     $('#vendingMachineItemRowDiv').on('click', 'div', function () {
         $('#itemText').val($(this).find('.text-left').text());
+        $('.panel').css('background-color', '')
+        $(this).find('.panel').css('background-color', '#dff0d8');
+
     });
 
 }); // end document ready function
@@ -140,6 +129,7 @@ function getChange(){
 
     $('#changeText').val('Quarters: ' + numQuarters + '\nDimes: ' + numDimes + '\nNickels: ' + numNickels + '\nPennies: ' + numPennies);
 }
+
 
 
 
