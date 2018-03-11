@@ -48,7 +48,7 @@ function loadInventory() {
             });
         },
         error: function () {
-            alert('FAILURE');
+            $('#messagesTextBox').val('Unable to load items.');
         }
     }); // end get all inventory ajax call
 } // end loadInventory()
@@ -89,7 +89,12 @@ function purchaseItem(usersChoice) {
         error: function (error) {
             getChange();
             $('#messagesTextBox').css('background-color', '#f2dede');
-            $('#messagesTextBox').val(error.responseJSON.message);
+            if($('#itemText').val() === ''){
+                $('#messagesTextBox').val('Select an item to purchase.');
+            } else {
+                $('#messagesTextBox').val(error.responseJSON.message);
+            }
+
         }
     }); // end
 }
