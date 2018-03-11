@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <title>Vending Machine</title>
     <link href="css/bootstrap.css" rel="stylesheet"/>
+    <style>
+        .square{
+            width: 100%;
+        }
+        .square:after {
+            content: "";
+            display: block;
+            padding-bottom:30%;
+        }
+    </style>
 </head>
 <body>
 
@@ -16,7 +26,7 @@
     <!--Left Div of vending machine items ----------------------------------------------->
     <div id="vendingMachineItemDiv" class="col-lg-9 col-sm-9">
         <!-- ITEM ONE -->
-        <div id="vendingMachineItemRowDiv" class="row">
+        <div id="vendingMachineItemRowDiv" class="row" >
 
         </div> <!-- END vendingMachineItemRowDiv -->
     </div> <!--END Left Div of vending machine items -->
@@ -29,12 +39,12 @@
                 <h2 class="text-center">Total $ In</h2>
                 <form id="totalMoneyForm">
                     <input id="currentMoneyAmt" type="text" class="form-control" style="margin-bottom: 2%" disabled/>
-                    <button id="addDollarBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%">Add Dollar
+                    <button id="addDollarBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%" value="1.00">Add Dollar
                     </button>
-                    <button id="addQuarterBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%">Add Quarter
+                    <button id="addQuarterBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%" value=".25">Add Quarter
                     </button>
-                    <button id="addDimeBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%">Add Dime</button>
-                    <button id="addNickelBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%">Add Nickel
+                    <button id="addDimeBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%" value=".10">Add Dime</button>
+                    <button id="addNickelBtn" type="button" class="btn btn-primary col-sm-6 col-lg-6" style="margin-bottom: 2%" value=".05">Add Nickel
                     </button>
 
                 </form>
