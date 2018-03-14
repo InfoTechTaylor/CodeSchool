@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="FlooringCalculatorJSPServlet:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="flooringcalculatorservlet.war">
+      <element id="artifact" artifact-name="FlooringCalculatorJSPServlet:war exploded" />
+    </root>
+  </artifact>
+</component>

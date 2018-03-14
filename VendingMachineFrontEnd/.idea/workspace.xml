@@ -2,65 +2,39 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a0e836e-d378-4a52-b253-e6c28f16aec2" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/DvdLibraryFrontEnd.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/home.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/home.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/jquery-2.2.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/VendingMachineFrontEnd.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/VendingMachineRESTWebService.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/VendingMachineRESTWebService.zip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/home.js.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/home.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/jquery-2.2.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/home.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/jquery-2.2.4.min.js" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" afterPath="$PROJECT_DIR$/js/home.js" />
       <change beforePath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -72,23 +46,25 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="home.js.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/home.js.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
+            <state relative-caret-position="37">
+              <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="68" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="70">
-              <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="616">
+              <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+              <folding>
+                <marker date="1520873495598" expanded="true" signature="1536:1566" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,6 +78,12 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>dan</find>
+      <find>success</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
@@ -113,8 +95,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/js/home.js" />
         <option value="$PROJECT_DIR$/home.js.html" />
+        <option value="$PROJECT_DIR$/home.html" />
+        <option value="$PROJECT_DIR$/js/home.js" />
       </list>
     </option>
   </component>
@@ -148,8 +131,6 @@
     <panes>
       <pane id="Scope" />
       <pane id="AndroidView" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -160,12 +141,19 @@
             <path>
               <item name="VendingMachineFrontEnd" type="b2602c69:ProjectViewProjectNode" />
               <item name="VendingMachineFrontEnd" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="VendingMachineFrontEnd" type="b2602c69:ProjectViewProjectNode" />
+              <item name="VendingMachineFrontEnd" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -174,14 +162,16 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DvdLibraryFrontEnd" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd" />
+      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd\css" />
       <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd\js" />
+      <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd" />
       <recent name="C:\Users\n0250996\Desktop\repos\taylor-lapointe-individual-work\VendingMachineFrontEnd\.idea" />
     </key>
   </component>
@@ -293,15 +283,97 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1520607860403</updated>
-      <workItem from="1520607864151" duration="2607000" />
+      <workItem from="1520607864151" duration="20849000" />
+      <workItem from="1520640020252" duration="27160000" />
+      <workItem from="1520858267519" duration="595000" />
+      <workItem from="1520863229174" duration="2513000" />
     </task>
+    <task id="LOCAL-00001" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 setup intial file structure and got left div with vending machine items setup">
+      <created>1520610547697</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1520610547697</updated>
+    </task>
+    <task id="LOCAL-00002" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 created loadInventory() function in js file to load in vending machine items and create divs dynamically">
+      <created>1520621287187</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1520621287187</updated>
+    </task>
+    <task id="LOCAL-00003" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 created addMoney method and four on click events to add money for each of the four money types">
+      <created>1520625033491</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1520625033491</updated>
+    </task>
+    <task id="LOCAL-00004" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 added purchase item and get change">
+      <created>1520630774562</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1520630774562</updated>
+    </task>
+    <task id="LOCAL-00005" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 made item divs clickable to purchase item, fixed purchase so the current amount updates after purchase, added &lt;hr&gt; tags">
+      <created>1520728863300</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1520728863300</updated>
+    </task>
+    <task id="LOCAL-00006" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 added remaining requirements. minor changes and updates to ui. Still need to make minor adjustments to UI and add one new message for when a user trys to make a purchase and doesn't enter an item to select.">
+      <created>1520740415391</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1520740415391</updated>
+    </task>
+    <task id="LOCAL-00007" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 consolidated 4 click events for adding money into one by adding value attribute in the html. Added css to set background color on div that is selected.">
+      <created>1520778601919</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1520778601919</updated>
+    </task>
+    <task id="LOCAL-00008" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 added message for if user doesn't select an item to say 'please select an item to purchase' because otherwise it would just say no messages available.">
+      <created>1520778844846</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1520778844846</updated>
+    </task>
+    <task id="LOCAL-00009" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 made item boxes more square">
+      <created>1520782303623</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1520782303623</updated>
+    </task>
+    <task id="LOCAL-00010" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 fixed add money buttons so they were spaced apart better and all same size width">
+      <created>1520782970258</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1520782970258</updated>
+    </task>
+    <task id="LOCAL-00011" summary="TAYLORLAPOINTEINDIVIDUALWORK-99 added message on click of item div to say item selected.">
+      <created>1520783166848</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1520783166848</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2607000" />
+    <option name="totallyTimeSpent" value="51117000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -315,7 +387,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1609375" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -324,12 +396,40 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14305556" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -337,20 +437,46 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 setup intial file structure and got left div with vending machine items setup" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 created loadInventory() function in js file to load in vending machine items and create divs dynamically" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 created addMoney method and four on click events to add money for each of the four money types" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 added purchase item and get change" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 made item divs clickable to purchase item, fixed purchase so the current amount updates after purchase, added &lt;hr&gt; tags" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 added remaining requirements. minor changes and updates to ui. Still need to make minor adjustments to UI and add one new message for when a user trys to make a purchase and doesn't enter an item to select." />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 consolidated 4 click events for adding money into one by adding value attribute in the html. Added css to set background color on div that is selected." />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 added message for if user doesn't select an item to say 'please select an item to purchase' because otherwise it would just say no messages available." />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 made item boxes more square" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 fixed add money buttons so they were spaced apart better and all same size width" />
+    <MESSAGE value="TAYLORLAPOINTEINDIVIDUALWORK-99 added message on click of item div to say item selected." />
+    <option name="LAST_COMMIT_MESSAGE" value="TAYLORLAPOINTEINDIVIDUALWORK-99 added message on click of item div to say item selected." />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/jquery-2.2.4.min.js">
+    <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="1190">
+          <caret line="34" column="116" lean-forward="false" selection-start-line="34" selection-start-column="116" selection-end-line="34" selection-end-column="116" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3570">
+          <caret line="102" column="48" lean-forward="true" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
+          <folding>
+            <marker date="1520873495598" expanded="true" signature="1536:1566" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-2.2.4.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -362,23 +488,41 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.bundle.js" />
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="31" column="51" lean-forward="false" selection-start-line="31" selection-start-column="51" selection-end-line="31" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="2838" column="27" lean-forward="false" selection-start-line="2838" selection-start-column="20" selection-end-line="2838" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="37">
+          <caret line="43" column="68" lean-forward="true" selection-start-line="43" selection-start-column="56" selection-end-line="43" selection-end-column="68" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="94" column="0" lean-forward="false" selection-start-line="94" selection-start-column="0" selection-end-line="94" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="616">
+          <caret line="62" column="44" lean-forward="false" selection-start-line="62" selection-start-column="44" selection-end-line="62" selection-end-column="44" />
+          <folding>
+            <marker date="1520873495598" expanded="true" signature="1536:1566" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>

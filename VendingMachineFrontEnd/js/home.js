@@ -22,7 +22,7 @@ $(document).ready(function () {
     // click event for all the item divs to fill in item field
     $('#vendingMachineItemRowDiv').on('click', 'div', function () {
         $('#itemText').val($(this).find('.text-left').text());
-        $('.panel').css('background-color', '')
+        $('.panel').css('background-color', '');
         $(this).find('.panel').css('background-color', '#dff0d8');
         $('#messagesTextBox').val('Item selected. ').css('background-color', '');
 
@@ -60,6 +60,7 @@ function clearTextBoxesAndReset() {
     $('#changeText').val('');
     $('#messagesTextBox').val('WELCOME! Select an Item.');
     $('#messagesTextBox').css('background-color', '');
+    $('.panel').css('background-color', '');
 }
 
 function addMoney(amount) {

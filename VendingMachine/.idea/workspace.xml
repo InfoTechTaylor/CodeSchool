@@ -2,107 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="630b2d3f-f495-40cb-8e20-284b2d4740e0" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-44 moved the validation of having only items shown with quantity greater than zero from the view to the service layer. Added a unit test for that validation which required making changes to the dao stub impl class">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../BaseballLeague/src/test/java/service/BaseballLeagueServiceLayerTest.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/advice/LoggingAdvice.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/resources/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/resources/applicationContext.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMastery/test_config.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Milestone4/src/main/java/datetimecodealong/App.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__junit_junit_4_12.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../Person/src/main/java/dto/Person.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ServerInventory/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_aspectj_aspectjtools_1_5_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_4_3_4_RELEASE.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/controller/BaseballLeagueController.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/controller/BaseballLeagueController.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDao.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDaoPlayer.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDaoPlayer.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDaoPlayerFileImpl.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dao/BaseballLeagueDaoPlayerFileImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Player.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Player.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Team.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/dto/Team.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/service/BaseballLeagueServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/service/BaseballLeagueServiceLayerImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../BaseballLeague/src/main/java/ui/BaseballLeagueView.java" afterPath="$PROJECT_DIR$/../BaseballLeague/src/main/java/ui/BaseballLeagueView.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRoster/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/ClassRosterMaven.iml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" afterPath="$PROJECT_DIR$/../ClassRosterMaven/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" afterPath="$PROJECT_DIR$/../ClassRosterMaven/roster.txt" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/App.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/dto/Student.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/main/java/com/sg/classroster/service/ClassRosterServiceLayerImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" afterPath="$PROJECT_DIR$/../ClassRosterMaven/src/test/java/com/sg/classroster/service/ClassRosterServiceLayerTest.java" />
-      <change beforePath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DVDLibrary/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/dvds.txt" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/src/main/java/com/sg/dvdlibrary/ui/DvdLibraryView.java" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/Orders_02202000.txt" afterPath="$PROJECT_DIR$/../FlooringMastery/Orders_02202000.txt" />
-      <change beforePath="$PROJECT_DIR$/../FlooringMastery/orderNumberConfig.txt" afterPath="$PROJECT_DIR$/../FlooringMastery/orderNumberConfig.txt" />
-      <change beforePath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../MavenTesting/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../PracticeW3/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/audit.txt" afterPath="$PROJECT_DIR$/audit.txt" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java" afterPath="$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/vendingMachineItems_prod.txt" afterPath="$PROJECT_DIR$/vendingMachineItems_prod.txt" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/vcs.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/DvdLibraryFrontEnd.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-grid.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/home.html" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.bundle.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/bootstrap.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/home.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/js/jquery-2.2.4.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/home.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/jquery-2.2.4.min.js" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css.map" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/home.html" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/home.html" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/bootstrap.min.js" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" />
+      <change beforePath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -115,7 +80,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1009">
@@ -125,11 +90,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachineDaoFileImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineDaoFileImpl.java">
+      <file leaf-file-name="VendingMachineServiceLayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="59" column="98" lean-forward="false" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="98" />
+            <state relative-caret-position="315">
+              <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VendingMachineServiceLayerImpl.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayerImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-1770">
+              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -138,7 +113,7 @@
       <file leaf-file-name="VendingMachineDaoTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/dao/VendingMachineDaoTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
+            <state relative-caret-position="735">
               <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -148,18 +123,8 @@
       <file leaf-file-name="VendingMachineView.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ui/VendingMachineView.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1410">
+            <state relative-caret-position="1645">
               <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VendingMachinePersistenceException.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachinePersistenceException.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -168,7 +133,7 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
+            <state relative-caret-position="350">
               <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="43" selection-end-column="12" />
               <folding />
             </state>
@@ -178,7 +143,7 @@
       <file leaf-file-name="audit.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/audit.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="480">
+            <state relative-caret-position="560">
               <caret line="16" column="0" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="16" selection-end-column="0" />
               <folding />
             </state>
@@ -188,7 +153,7 @@
       <file leaf-file-name="LoggingAdvice.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1260">
+            <state relative-caret-position="1470">
               <caret line="42" column="69" lean-forward="false" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -202,7 +167,7 @@
       <file leaf-file-name="VendingMachineAuditDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineAuditDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
+            <state relative-caret-position="70">
               <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
               <folding />
             </state>
@@ -212,7 +177,7 @@
       <file leaf-file-name="VendingMachineAuditDaoFileImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineAuditDaoFileImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
+            <state relative-caret-position="700">
               <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
               <folding />
             </state>
@@ -274,6 +239,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
@@ -298,8 +269,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -311,6 +280,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -431,12 +401,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -691,6 +664,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1518130392025</updated>
+      <workItem from="1520629007621" duration="54000" />
     </task>
     <task id="LOCAL-00001" summary="removed the catch NullPointerExceptions as I have learned they really shouldn't be caught and null should just be checked for in the code.">
       <created>1518131221405</created>
@@ -979,6 +953,9 @@
       <configuration name="VendingMachineServiceLayerTest.testRetrieveAllVendingMachineItems" configurationId="JUnit" />
     </history-entry>
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="54000" />
+  </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
     <editor active="true" />
@@ -990,18 +967,20 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2504013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2504013" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985553" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25078124" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29362297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29362297" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1038,6 +1017,9 @@
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -1323,13 +1305,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendingMachineItems_prod.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1341,15 +1316,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayerImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1373,7 +1339,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2400">
           <caret line="90" column="39" lean-forward="false" selection-start-line="90" selection-start-column="39" selection-end-line="90" selection-end-column="39" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1387,7 +1352,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineDaoFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
+        <state relative-caret-position="1925">
           <caret line="59" column="98" lean-forward="false" selection-start-line="59" selection-start-column="58" selection-end-line="59" selection-end-column="98" />
           <folding />
         </state>
@@ -1395,7 +1360,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachinePersistenceException.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
+        <state relative-caret-position="280">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
@@ -1403,7 +1368,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="350">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="43" selection-end-column="12" />
           <folding />
         </state>
@@ -1411,7 +1376,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/audit.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
+        <state relative-caret-position="560">
           <caret line="16" column="0" lean-forward="false" selection-start-line="15" selection-start-column="61" selection-end-line="16" selection-end-column="0" />
           <folding />
         </state>
@@ -1419,7 +1384,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/dao/VendingMachineDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
+        <state relative-caret-position="735">
           <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
           <folding />
         </state>
@@ -1427,7 +1392,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/ui/VendingMachineView.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1410">
+        <state relative-caret-position="1645">
           <caret line="56" column="54" lean-forward="false" selection-start-line="56" selection-start-column="54" selection-end-line="56" selection-end-column="54" />
           <folding />
         </state>
@@ -1435,7 +1400,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineAuditDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
+        <state relative-caret-position="70">
           <caret line="2" column="2" lean-forward="false" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
           <folding />
         </state>
@@ -1443,7 +1408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineAuditDaoFileImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
+        <state relative-caret-position="700">
           <caret line="23" column="20" lean-forward="false" selection-start-line="23" selection-start-column="20" selection-end-line="23" selection-end-column="20" />
           <folding />
         </state>
@@ -1451,7 +1416,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/advice/LoggingAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
+        <state relative-caret-position="1470">
           <caret line="42" column="69" lean-forward="false" selection-start-line="42" selection-start-column="69" selection-end-line="42" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1465,6 +1430,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1009">
           <caret line="63" column="0" lean-forward="false" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="14" column="60" lean-forward="false" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/VendingMachineServiceLayerImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1770">
+          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding />
         </state>
       </provider>
