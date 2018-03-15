@@ -41,7 +41,7 @@
       <file leaf-file-name="FlooringCalculatorServlet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/flooringcalculator/FlooringCalculatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
+            <state relative-caret-position="1015">
               <caret line="37" column="13" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="44" selection-end-column="67" />
               <folding />
             </state>
@@ -52,7 +52,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
-              <caret line="17" column="9" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="9" />
+              <caret line="17" column="9" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -113,7 +113,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2582" />
@@ -393,7 +393,7 @@
     <option name="totallyTimeSpent" value="19524000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -542,7 +542,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
-          <caret line="17" column="9" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="9" />
+          <caret line="17" column="9" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -557,7 +557,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/flooringcalculator/FlooringCalculatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
+        <state relative-caret-position="1015">
           <caret line="37" column="13" lean-forward="false" selection-start-line="36" selection-start-column="8" selection-end-line="44" selection-end-column="67" />
           <folding />
         </state>
