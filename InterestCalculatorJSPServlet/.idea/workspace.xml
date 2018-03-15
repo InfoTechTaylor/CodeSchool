@@ -7,110 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c8723fa-4731-4de1-a690-044f922f8919" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_ear_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/FactorizorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/META-INF/application.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/java/com/sg/factorizor/FactorizorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/artifacts/FlooringCalculatorJSPServletTakeTwo_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/artifacts/FlooringCalculatorJSPServletTakeTwo_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/FlooringCalculatorJSPServletTakeTwo.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/src/main/java/com/sg/flooringcalculator/FlooringCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/InterestCalculatorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/sg/interestcalculator/InterestCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/artifacts/LuckySevensJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/artifacts/LuckySevensJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/LuckySevensJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/java/com/sg/luckysevens/LuckySevensServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/java/com/sg/luckysevens/Result.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/artifacts/TipCalculatorJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/artifacts/TipCalculatorJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/TipCalculatorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/src/main/java/com/sg/tipcalculator/TipCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/home.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/jquery-2.2.4.min.js" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" />
-      <change beforePath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../interestcalculator/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../interestcalculator/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -498,7 +400,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13964687" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
