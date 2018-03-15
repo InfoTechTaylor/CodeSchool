@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 @Controller
-public class InterestCalculator {
+public class InterestCalculatorController {
 
     @RequestMapping(value="/calculateInterest", method= RequestMethod.POST)
     public String calculateInterest(HttpServletRequest request, Map<String, Object> model) {

@@ -7,10 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4c8723fa-4731-4de1-a690-044f922f8919" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/src/main/java/com/sg/interestcalculator/InterestCalculator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/src/main/webapp/jsp/result.jsp" />
-      <change beforePath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../FlooringCalculatorSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FlooringCalculatorSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -68,7 +66,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/interestcalculator/InterestCalculatorServlet.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="691">
-              <caret line="55" column="38" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
+              <caret line="55" column="38" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
               <folding />
             </state>
           </provider>
@@ -372,12 +370,12 @@
       <updated>1520965383465</updated>
       <workItem from="1520965392411" duration="7779000" />
       <workItem from="1521031039596" duration="1753000" />
-      <workItem from="1521074160699" duration="542000" />
+      <workItem from="1521074160699" duration="1022000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10074000" />
+    <option name="totallyTimeSpent" value="10554000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -536,7 +534,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/interestcalculator/InterestCalculatorServlet.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="691">
-          <caret line="55" column="38" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
+          <caret line="55" column="38" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="55" selection-end-column="38" />
           <folding />
         </state>
       </provider>

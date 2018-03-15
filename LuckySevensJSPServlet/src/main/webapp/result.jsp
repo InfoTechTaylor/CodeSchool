@@ -16,7 +16,7 @@
 <body>
 <h1>Lucky Seven Results!</h1>
 
-<p>You bet ${startingBet}</p>
+<p>You bet $${startingBet}</p>
 <p>You are broke after ${resultObj.totalNumberOfRolls} rolls</p>
 <p>You should have quit after ${resultObj.numberOfRollsAtMaxAmount} rolls when you had $${resultObj.maxAmount}</p>
 
