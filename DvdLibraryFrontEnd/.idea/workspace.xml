@@ -2,111 +2,127 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="336a611a-d106-4c9d-b69f-9f18d763c3bb" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_ear_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/artifacts/FactorizorJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/FactorizorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/META-INF/application.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/java/com/sg/factorizor/FactorizorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/index.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FactorizorJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/artifacts/FlooringCalculatorJSPServletTakeTwo_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/artifacts/FlooringCalculatorJSPServletTakeTwo_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/FlooringCalculatorJSPServletTakeTwo.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/src/main/java/com/sg/flooringcalculator/FlooringCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorJSPServletTakeTwo/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringCalculatorServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/.idea/vcs.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/InterestCalculatorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/src/main/java/com/sg/interestcalculator/InterestCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../InterestCalculatorJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/artifacts/LuckySevensJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/artifacts/LuckySevensJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/LuckySevensJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/java/com/sg/luckysevens/LuckySevensServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/java/com/sg/luckysevens/Result.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/artifacts/TipCalculatorJSPServlet_war.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/artifacts/TipCalculatorJSPServlet_war_exploded.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/compiler.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__javax_javaee_web_api_7_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/libraries/Maven__junit_junit_3_8_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/misc.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/modules.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/TipCalculatorJSPServlet.iml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/pom.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/src/main/java/com/sg/tipcalculator/TipCalculatorServlet.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/src/main/webapp/result.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-grid.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap-reboot.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.bundle.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/bootstrap.min.js.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/home.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd_Bootstrap4/js/jquery-2.2.4.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/artifacts/ContactListSpringMVC_war.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/artifacts/ContactListSpringMVC_war_exploded.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_aspectj_aspectjtools_1_8_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_2_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_core_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_test_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/ContactListSpringMVC.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/controller/ContactController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/controller/SearchController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/dao/ContactListDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/dao/ContactListDaoInMemImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/dao/SearchTerm.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/java/com/sg/contactlistspringmvc/model/Contact.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/webapp/jsp/contactDetails.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/webapp/jsp/contacts.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/webapp/jsp/editContactForm.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/webapp/jsp/search.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/artifacts/DvdLibrarySpringMVC_war.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/artifacts/DvdLibrarySpringMVC_war_exploded.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_aspectj_aspectjtools_1_8_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_2_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_core_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_test_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/uiDesigner.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/DvdLibrarySpringMVC.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/DvdController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/SearchController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/model/Dvd.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-grid.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-grid.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-grid.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-grid.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-reboot.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-reboot.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-reboot.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap-reboot.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.bundle.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.bundle.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.bundle.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.bundle.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/bootstrap.min.js.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/home.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/js/jquery-2.2.4.min.js" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap-theme.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/css/bootstrap.min.css.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/bootstrap.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/js/home.js" />
-      <change beforePath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../WeatherApp/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../interestcalculator/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../interestcalculator/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/home.html" afterPath="$PROJECT_DIR$/home.html" />
+      <change beforePath="$PROJECT_DIR$/js/home.js" afterPath="$PROJECT_DIR$/js/home.js" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryMaven/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../FactorizorSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../FactorizorSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../InterestCaclulatorSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../LuckySevensJSPServlet/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../LuckySevensSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../LuckySevensSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TipCalculatorJSPServlet/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../TipCalculatorSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../TipCalculatorSpringMVC/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -118,21 +134,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="35">
+            <state relative-caret-position="4830">
               <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-              <folding>
-                <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="home.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="home.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/home.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1260">
@@ -180,7 +192,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2582" />
@@ -209,7 +221,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FlooringCalculatorServlet" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DvdLibraryMaven" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -337,6 +349,8 @@
       <workItem from="1520863230327" duration="2356000" />
       <workItem from="1520951028474" duration="1342000" />
       <workItem from="1521031021818" duration="576000" />
+      <workItem from="1521117266794" duration="568000" />
+      <workItem from="1521120049264" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="got a good portion of dvd library implemented. I have added the load dvds and create dvd function. The create dvd function may have a bug where it occassionally doesn't reload the dvds after a successful creation.">
       <created>1520814747598</created>
@@ -349,10 +363,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24411000" />
+    <option name="totallyTimeSpent" value="27409000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -362,8 +376,8 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -373,8 +387,8 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -400,73 +414,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4830">
           <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4830">
-          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4830">
-          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -482,11 +432,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -502,11 +528,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -540,23 +562,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/js/home.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1260">
           <caret line="36" column="14" lean-forward="false" selection-start-line="36" selection-start-column="14" selection-end-line="36" selection-end-column="14" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/home.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#dvd#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
