@@ -29,11 +29,14 @@
         <div id="vendingMachineItemDiv" class="col-lg-9 col-sm-9">
 
             <c:forEach var="currentItem" items="${itemInventory}">
-                <div class="col-lg-4 col-sm-4"><div style="margin-right: 1%; padding: 2%;" class="panel panel-primary square">
-                    <p class="text-left"> <c:out value="${currentItem.itemId}" /> </p>
+                <form action="selectItem" method="POST">
+                    <input type="hidden" name="hiddenItemId" value="<c:out value="${currentItem.itemId}" />" />
+                <div class="col-lg-4 col-sm-4"><button style="margin-right: 1%; padding: 2%;" class="panel panel-primary square" type="submit">
+                    <p class="text-left"><c:out value="${currentItem.itemId}" /></p>
                     <p class="text-center"> <c:out value="${currentItem.itemName}" /></p>
                     <p class="text-center">$<c:out value="${currentItem.itemCost}" /></p>
-                    <p class="text-center">Quantity Left: <c:out value="${currentItem.itemQuantity}" /></p></div></div>
+                    <p class="text-center">Quantity Left: <c:out value="${currentItem.itemQuantity}" /></p></button></div>
+                </form>
             </c:forEach>
 
 
@@ -49,25 +52,33 @@
                 <div id="totalMoneyDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Total $ In</h2>
                     <form id="totalMoneyForm">
-                        <input id="currentMoneyAmt" type="text" class="form-control" style="margin-bottom: 2%" disabled/>
+                        <input id="currentMoneyAmt" type="text" class="form-control" style="margin-bottom: 2%" value="<c:out value="${currentMoneyAmount}" />" disabled/>
                         <div class="col-sm-6 col-lg-6">
-                            <button id="addDollarBtn" type="button" style="margin-right: 1%; margin-bottom: 2%; width: 100%;"
-                                    class="btn btn-primary" value="1.00">Add Dollar
-                            </button>
+                            <a href="addMoney?coinAmount=1.00" class="btn btn-primary"
+                               style="margin-right: 1%; margin-bottom: 2%; width: 100%;">Add Dollar</a>
+                            <%--<button id="addDollarBtn" type="button" style="margin-right: 1%; margin-bottom: 2%; width: 100%;"--%>
+                                    <%--class="btn btn-primary" value="1.00">Add Dollar--%>
+                            <%--</button>--%>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <button id="addQuarterBtn" type="button" class="btn btn-primary"
-                                    style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".25">Add Quarter
-                            </button>
+                            <a href="addMoney?coinAmount=.25" class="btn btn-primary"
+                               style="margin-bottom: 2%; margin-right: 1%; width: 100%;">Add Quarter</a>
+                            <%--<button id="addQuarterBtn" type="button" class="btn btn-primary"--%>
+                                    <%--style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".25">Add Quarter--%>
+                            <%--</button>--%>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <button id="addDimeBtn" type="button" class="btn btn-primary"
-                                    style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".10">Add Dime</button>
+                            <a href="addMoney?coinAmount=.10" class="btn btn-primary"
+                               style="margin-bottom: 2%; margin-right: 1%; width: 100%;">Add Dime</a>
+                            <%--<button id="addDimeBtn" type="button" class="btn btn-primary"--%>
+                                    <%--style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".10">Add Dime</button>--%>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <button id="addNickelBtn" type="button" class="btn btn-primary"
-                                    style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".05">Add Nickel
-                            </button>
+                            <a href="addMoney?coinAmount=.05" class="btn btn-primary"
+                               style="margin-bottom: 2%; margin-right: 1%; width: 100%;">Add Nickel</a>
+                            <%--<button id="addNickelBtn" type="button" class="btn btn-primary"--%>
+                                    <%--style="margin-bottom: 2%; margin-right: 1%; width: 100%;" value=".05">Add Nickel--%>
+                            <%--</button>--%>
                         </div>
 
                     </form>
@@ -80,16 +91,18 @@
                 <!-- MESSAGES DIV -->
                 <div id="messagesDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Messages</h2>
-                    <form id="messagesForm">
+                    <form id="messagesForm" action="purchaseItem" method="POST">
+                        <input type="hidden" name="hiddenItemId" value="<c:out value="${hiddenItemId}" />" />
                         <input id="messagesTextBox" type="text" class="form-control col-sm-12 col-lg-12" style="margin-bottom: 2%"
-                               disabled/>
-                        <div class="form-group">
-                            <label for="itemText" class="control-label col-sm-4 col-lg-4">Item: </label>
-                            <div id="itemTextDiv" class="col-sm-8 col-lg-8" style="margin-bottom: 2%">
-                                <input id="itemText" type="text" class="form-control" disabled />
+                               value="<c:out value="${message}" />" disabled/>
+                        <div class="form-group row">
+                            <label for="itemSelectedId" class="control-label col-sm-4 col-lg-4">Item: </label>
+                            <div id="itemTextDiv" class="col-sm-2 col-lg-3" style="margin-bottom: 2%">
+                                    <input id="itemSelectedId" name="itemSelectedId" type="text" class="col-sm-4 col-lg-4 form-control"
+                                           value="<c:out value="${hiddenItemId}" />" disabled />
                             </div>
                         </div>
-                        <button id="makePurchaseBtn" type="button" class="btn btn-primary col-sm-12 col-lg-12">
+                        <button id="makePurchaseBtn" type="submit" class="btn btn-primary col-sm-12 col-lg-12">
                             Make Purchase
                         </button>
                     </form>

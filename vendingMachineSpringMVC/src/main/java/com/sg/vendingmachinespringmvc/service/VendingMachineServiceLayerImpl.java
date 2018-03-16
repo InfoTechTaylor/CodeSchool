@@ -25,14 +25,15 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException {
-        List<VendingMachineItem> itemList = dao.retrieveAllVendingMachineItems();
-        List<VendingMachineItem> filteredList = new ArrayList<>();
-        for(VendingMachineItem currentItem : itemList){
-            if(currentItem.getItemQuantity() != 0){
-                filteredList.add(currentItem);
-            }
-        }
-        return filteredList;
+        //List<VendingMachineItem> itemList = dao.retrieveAllVendingMachineItems();
+        //List<VendingMachineItem> filteredList = new ArrayList<>();
+//        for(VendingMachineItem currentItem : itemList){
+//            if(currentItem.getItemQuantity() != 0){
+//                filteredList.add(currentItem);
+//            }
+//        }
+        //return filteredList;
+        return dao.retrieveAllVendingMachineItems();
     }
 
     @Override
@@ -116,7 +117,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             return true;
         } else if (itemToValidate != null && itemToValidate.getItemQuantity() == 0) {
 //            return false;
-            throw new NoItemInventoryException("That item is currently out of stock. ");
+            throw new NoItemInventoryException("SOLD OUT!!!");
         } else {
             throw new NoItemInventoryException("Cannot find item with given ID. ");
         }
@@ -128,7 +129,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             return true;
         } else {
 //            return false;
-            throw new InsufficientFundsException("Not enough money available to make purchase.");
+            throw new InsufficientFundsException("Please insert: " + item.getItemCost().subtract(remainingMoney));
         }
     }
 
