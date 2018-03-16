@@ -1,12 +1,18 @@
 package com.sg.dvdlibraryspringmvc.model;
 
-import java.time.LocalDate;
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 import java.util.Objects;
 
 public class Dvd {
 
     private int dvdId;
+
+    @NotEmpty(message="Please enter a title for the DVD.")
     private String title;
+
+    @Length(min=4, max=4, message="Please enter a 4-digit year.")
     private String releaseYear;
     private String director;
     private String rating;

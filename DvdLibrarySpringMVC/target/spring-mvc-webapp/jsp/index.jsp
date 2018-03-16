@@ -17,21 +17,26 @@
                     <a href="/displayCreateDvdForm" class="btn btn-outline-primary">Create Dvd</a>
                 </div>
 
-                <div class="col-md-1">
-                    <button id="searchButton" type="button" class="btn btn-outline-primary">Search</button>
-                </div>
+                <form action="search" method="GET">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-outline-primary">Search</button>
+                        </div>
 
-                <div class="col-md-3">
-                    <select id="searchCategory" class="form-control">
-                        <option value="searchCategory">Search Category</option>
-                        <option value="title">Title</option>
-                        <option value="releaseYear">Release Year</option>
-                        <option value="directorName">Director Name</option>
-                        <option value="rating">Rating</option>
-                    </select>
-                </div>
+                        <div class="col-md-5">
+                            <select id="searchCategory" name="searchCategory" class="form-control">
+                                <option value="searchCategory">Search Category</option>
+                                <option value="title">Title</option>
+                                <option value="releaseYear">Release Year</option>
+                                <option value="directorName">Director Name</option>
+                                <option value="rating">Rating</option>
+                            </select>
+                        </div>
 
-                <input id="searchBox" class="form-control col-md-3" type="text" placeholder="Search Term" />
+                        <input id="searchBox" name="searchBox" class="form-control col-md-5" type="text" placeholder="Search Term" />
+                    </div>
+                </form>
+            </div>
                 <div class="col-sm-12 col-lg-12">
                     <br />
                     <hr />
@@ -67,7 +72,8 @@
                                     </td>
                                     <td>
                                         <a href="displayEditDvdForm?dvdId=${currentDvd.dvdId}">Edit</a> |
-                                        <a href="deleteDvd?dvdId=${currentDvd.dvdId}">Delete</a>
+                                        <a href="deleteDvd?dvdId=${currentDvd.dvdId}"
+                                           onclick="return confirm('Are you sure you want to delete this DVD?')">Delete</a>
                                     </td>
                                 </tr>
                             </c:forEach>
@@ -75,7 +81,7 @@
                     </table>
 
                 </div>
-        </div>
+
         </div>
         <!-- Placed at the end of the document so the pages load faster -->
         <script src="${pageContext.request.contextPath}/js/jquery-3.1.1.min.js"></script>

@@ -28,13 +28,14 @@
             <label for="editDvdTitleInput" class="col-sm-2 col-lg-2">Dvd Title:</label>
             <div id="editDvdTitleDiv" class="col-sm-6 col-lg-6">
                 <sf:input type="text" id="editDvdTitleInput" class="form-control" path="title"/>
-
+                <sf:errors path="title" cssClass="error"></sf:errors>
             </div>
         </div>
         <div class="form-group row">
             <label for="editDvdReleaseYearInput" class="col-sm-2 col-lg-2">Release Year:</label>
             <div id="editDvdReleaseYearDiv" class="col-sm-6 col-lg-6">
                 <sf:input id="editDvdReleaseYearInput" class="form-control" type="text" path="releaseYear"/>
+                <sf:errors path="releaseYear" cssClass="error"></sf:errors>
             </div>
         </div>
         <div class="form-group row">
@@ -46,12 +47,12 @@
         <div class="form-group row">
             <label for="editDvdRatingInput" class="col-sm-2 col-lg-2">Rating:</label>
             <div id="editDvdRatingDiv" class="col-sm-2 col-lg-2">
-                <form:select id="editDvdRatingInput" class="form-control" path="rating">
-                    <form:option value="G">G</form:option>
-                    <form:option value="PG">PG</form:option>
-                    <form:option value="PG-13">PG-13</form:option>
-                    <form:option value="R">R</form:option>
-                </form:select>
+                <sf:select id="editDvdRatingInput" class="form-control" path="rating">
+                    <sf:option value="G">G</sf:option>
+                    <sf:option value="PG">PG</sf:option>
+                    <sf:option value="PG-13">PG-13</sf:option>
+                    <sf:option value="R">R</sf:option>
+                </sf:select>
                 <sf:hidden path="dvdId"/>
             </div>
         </div>
