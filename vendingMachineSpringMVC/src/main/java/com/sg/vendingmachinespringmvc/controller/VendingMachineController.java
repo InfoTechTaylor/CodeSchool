@@ -50,9 +50,6 @@ public class VendingMachineController {
             model.addAttribute("numNickels", change.getNickels());
             model.addAttribute("numPennies", change.getPennies());
 
-
-
-
         } catch (VendingMachinePersistenceException e){
             String message = e.getMessage();
             model.addAttribute("message", message);

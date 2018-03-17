@@ -26,14 +26,6 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     @Override
     public List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException {
-        //List<VendingMachineItem> itemList = dao.retrieveAllVendingMachineItems();
-        //List<VendingMachineItem> filteredList = new ArrayList<>();
-//        for(VendingMachineItem currentItem : itemList){
-//            if(currentItem.getItemQuantity() != 0){
-//                filteredList.add(currentItem);
-//            }
-//        }
-        //return filteredList;
         return dao.retrieveAllVendingMachineItems();
     }
 
@@ -50,20 +42,17 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     @Override
     public VendingMachineChange purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
         VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
-        boolean isValidChoice = validateItemChoice(itemId);
-        boolean validFunds = validateFunds(itemToPurchase);
+        validateItemChoice(itemId);
+        validateFunds(itemToPurchase);
 
-        if (isValidChoice && validFunds) {
+        // update VendingMachineItem quantity
+        itemToPurchase.setItemQuantity(itemToPurchase.getItemQuantity() - 1);
+        dao.updateItem(itemToPurchase);
+        // update remainingMoney
+        updateMoneyAmountInMemory(itemToPurchase.getItemCost());
+        changeAmount = convertDollarsToCoinsAndGetChange();
+        resetRemainingMoneyToZero();
 
-            // update VendingMachineItem quantity
-            itemToPurchase.setItemQuantity(itemToPurchase.getItemQuantity() - 1);
-            dao.updateItem(itemToPurchase);
-            // update remainingMoney
-            updateMoneyAmountInMemory(itemToPurchase.getItemCost());
-            changeAmount = convertDollarsToCoinsAndGetChange();
-            resetRemainingMoneyToZero();
-
-        }
         return changeAmount;
     }
 
@@ -113,25 +102,24 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
 
-    private boolean validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
+    private void validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
 
         VendingMachineItem itemToValidate = dao.retrieveItemById(itemId);
-        if (itemToValidate != null && itemToValidate.getItemQuantity() != 0) {
-            return true;
-        } else if (itemToValidate != null && itemToValidate.getItemQuantity() == 0) {
-//            return false;
-            throw new NoItemInventoryException("SOLD OUT!!!");
-        } else {
+        if (itemId.equals("")) {
+            throw new NoItemInventoryException("Please select an item.");
+        }
+        if (itemToValidate == null){
             throw new NoItemInventoryException("Cannot find item with given ID. ");
         }
+        if (itemToValidate.getItemQuantity() == 0) {
+            throw new NoItemInventoryException("SOLD OUT!!!");
+        }
+
 
     }
 
-    private boolean validateFunds(VendingMachineItem item) throws InsufficientFundsException {
-        if ((item.getItemCost()).compareTo(remainingMoney) <= 0) {
-            return true;
-        } else {
-//            return false;
+    private void validateFunds(VendingMachineItem item) throws InsufficientFundsException {
+        if (!((item.getItemCost()).compareTo(remainingMoney) <= 0)) {
             throw new InsufficientFundsException("Please insert: " + item.getItemCost().subtract(remainingMoney));
         }
     }
