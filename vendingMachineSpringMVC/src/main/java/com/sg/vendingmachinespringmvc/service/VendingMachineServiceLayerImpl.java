@@ -16,6 +16,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     private VendingMachineDao dao;
     private VendingMachineAuditDao auditDao;
     private BigDecimal remainingMoney = new BigDecimal("0");
+    private VendingMachineChange changeAmount = new VendingMachineChange(0, 0, 0, 0);
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao auditDao) {
 
@@ -47,7 +48,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public VendingMachineItem purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
+    public VendingMachineChange purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
         VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
         boolean isValidChoice = validateItemChoice(itemId);
         boolean validFunds = validateFunds(itemToPurchase);
@@ -59,9 +60,11 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             dao.updateItem(itemToPurchase);
             // update remainingMoney
             updateMoneyAmountInMemory(itemToPurchase.getItemCost());
-        }
+            changeAmount = convertDollarsToCoinsAndGetChange();
+            resetRemainingMoneyToZero();
 
-        return itemToPurchase;
+        }
+        return changeAmount;
     }
 
     @Override
@@ -100,13 +103,13 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             if (amountOfPennies >= 1) {
                 countsOfCoins.setPennies(remainderOfPennies);
             }
-
+            changeAmount = countsOfCoins;
             resetRemainingMoneyToZero();
         } else {
             throw new InsufficientFundsException("No money left to get change.");
         }
 
-        return countsOfCoins;
+        return changeAmount;
     }
 
 
@@ -152,5 +155,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     public VendingMachineItem retrieveVendingMachineItemById(String itemId) throws VendingMachinePersistenceException {
         return dao.retrieveItemById(itemId);
+    }
+
+    public VendingMachineChange getChangeAmount() {
+        return changeAmount;
     }
 }

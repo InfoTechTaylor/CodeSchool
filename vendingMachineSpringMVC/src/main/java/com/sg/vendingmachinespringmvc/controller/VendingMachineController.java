@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 import com.sg.vendingmachinespringmvc.dao.VendingMachinePersistenceException;
+import com.sg.vendingmachinespringmvc.dto.VendingMachineChange;
 import com.sg.vendingmachinespringmvc.dto.VendingMachineItem;
 import com.sg.vendingmachinespringmvc.service.InsufficientFundsException;
 import com.sg.vendingmachinespringmvc.service.InvalidAmountException;
@@ -38,10 +39,20 @@ public class VendingMachineController {
             BigDecimal currentMoneyAmount = service.getRemainingMoney();
             String message = request.getParameter("message");
 
+            VendingMachineChange change = service.getChangeAmount();
+
             model.addAttribute("itemInventory", itemInventory);
             model.addAttribute("hiddenItemId", hiddenItemId);
             model.addAttribute("currentMoneyAmount", currentMoneyAmount);
             model.addAttribute("message", message);
+            model.addAttribute("numQuarters", change.getQuarters());
+            model.addAttribute("numDimes", change.getDimes());
+            model.addAttribute("numNickels", change.getNickels());
+            model.addAttribute("numPennies", change.getPennies());
+
+
+
+
         } catch (VendingMachinePersistenceException e){
             String message = e.getMessage();
             model.addAttribute("message", message);
@@ -60,10 +71,10 @@ public class VendingMachineController {
 
     @RequestMapping(value="/addMoney", method=RequestMethod.GET)
     public String addMoney(HttpServletRequest request, Model model){
+
         try {
             String coinAmount = request.getParameter("coinAmount");
             BigDecimal currentMoneyAmount = service.addMoneyToMemory(new BigDecimal(coinAmount));
-            model.addAttribute("currentMoneyAmount", currentMoneyAmount);
         } catch (InvalidAmountException e){
             String message = e.getMessage();
             model.addAttribute("message", message);
@@ -73,16 +84,33 @@ public class VendingMachineController {
 
     @RequestMapping(value="/purchaseItem", method=RequestMethod.POST)
     public String purchaseItem(HttpServletRequest request, Model model){
+        VendingMachineChange change;
         try {
             String itemSelectedId = request.getParameter("hiddenItemId");
-            service.purchaseItem(itemSelectedId);
+            change = service.purchaseItem(itemSelectedId);
             String message = "Thank you!!!";
             model.addAttribute("message", message);
+            model.addAttribute("quarters", change.getQuarters());
+            model.addAttribute("nickels", change.getNickels());
+            model.addAttribute("dimes", change.getDimes());
+            model.addAttribute("pennies", change.getPennies());
         } catch (VendingMachinePersistenceException | NoItemInventoryException | InsufficientFundsException e){
             String message = e.getMessage();
             model.addAttribute("message", message);
         }
 
+        return "redirect:/";
+    }
+
+    @RequestMapping(value="/getChange", method=RequestMethod.GET)
+    public String getChange(Model model){
+        try {
+            VendingMachineChange change = service.convertDollarsToCoinsAndGetChange();
+            model.addAttribute("change", change);
+        } catch (InsufficientFundsException e){
+            String message = e.getMessage();
+            model.addAttribute("message", message);
+        }
         return "redirect:/";
     }
 }

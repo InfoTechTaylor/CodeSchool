@@ -115,10 +115,14 @@
                 <!-- CHANGE DIV -->
                 <div id="changeDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Change</h2>
-                    <form id="changeForm">
-                    <textarea rows="4" id="changeText" type="text" class="form-control col-sm-12 col-lg-12" style="margin-bottom: 2%"
-                              disabled></textarea>
-                        <button id="changeBtn" type="button" class="btn btn-primary col-sm-12 col-lg-12">Change Return
+                    <form id="changeForm" action="getChange" method="GET">
+                    <div id="changeText" class="col-sm-12 col-lg-12">
+                        <p>Quarters: <c:out value="${numQuarters}" /></p>
+                        <p>Nickels: <c:out value="${numDimes}" /></p>
+                        <p>Dimes: <c:out value="${numNickels}" /></p>
+                        <p>Pennies: <c:out value="${numPennies}" /></p>
+                    </div>
+                        <button id="changeBtn" type="submit" class="btn btn-primary col-sm-12 col-lg-12">Change Return
                         </button>
                     </form>
 

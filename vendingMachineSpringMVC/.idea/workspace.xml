@@ -21,9 +21,12 @@
       <file leaf-file-name="VendingMachineServiceLayerImpl.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="131" column="114" lean-forward="true" selection-start-line="131" selection-start-column="114" selection-end-line="131" selection-end-column="114" />
-              <folding />
+            <state relative-caret-position="420">
+              <caret line="61" column="68" lean-forward="false" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
+              <folding>
+                <element signature="e#6281#6282#0" expanded="true" />
+                <element signature="e#6316#6317#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -31,14 +34,24 @@
       <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="81">
-              <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
+            <state relative-caret-position="490">
+              <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
-                <marker date="1521237874177" expanded="false" signature="3632:3681" ph="..." />
-                <marker date="1521237874177" expanded="false" signature="4177:4226" ph="..." />
-                <marker date="1521237874177" expanded="false" signature="4686:4735" ph="..." />
+                <marker date="1521245009482" expanded="false" signature="3632:3681" ph="..." />
+                <marker date="1521245009482" expanded="false" signature="4177:4226" ph="..." />
+                <marker date="1521245009482" expanded="false" signature="4686:4735" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VendingMachineChange.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineChange.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="595">
+              <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -46,11 +59,23 @@
       <file leaf-file-name="VendingMachineController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="524">
-              <caret line="78" column="44" lean-forward="true" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+            <state relative-caret-position="619">
+              <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
               <folding>
-                <element signature="e#1121#1122#0" expanded="true" />
-                <element signature="e#1159#1160#0" expanded="true" />
+                <element signature="e#1185#1186#0" expanded="true" />
+                <element signature="e#1223#1224#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VendingMachineServiceLayer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="469">
+              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -72,7 +97,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/VendingMachineChange.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/model/VendingMachineChange.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/InsufficientFundsException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.java" />
@@ -83,7 +107,9 @@
         <option value="$PROJECT_DIR$/src/test/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/index.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineChange.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java" />
       </list>
     </option>
@@ -612,7 +638,7 @@
       <option name="presentableId" value="Default" />
       <updated>1521215011833</updated>
       <workItem from="1521215021676" duration="4415000" />
-      <workItem from="1521224984641" duration="13111000" />
+      <workItem from="1521224984641" duration="19426000" />
     </task>
     <servers />
   </component>
@@ -628,7 +654,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="17526000" />
+    <option name="totallyTimeSpent" value="23841000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="3829" y="-11" width="2902" height="1597" extended-state="6" />
@@ -644,7 +670,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45314685" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3881119" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32867134" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -684,12 +710,24 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java</url>
-          <line>77</line>
+          <line>89</line>
           <properties />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java</url>
+          <line>107</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java</url>
+          <line>36</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="7" />
+      <option name="time" value="10" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -735,8 +773,8 @@
         <state relative-caret-position="840">
           <caret line="35" column="32" lean-forward="true" selection-start-line="35" selection-start-column="32" selection-end-line="35" selection-end-column="32" />
           <folding>
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -775,9 +813,9 @@
           <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1521237874177" expanded="false" signature="3632:3681" ph="..." />
-            <marker date="1521237874177" expanded="false" signature="4177:4226" ph="..." />
-            <marker date="1521237874177" expanded="false" signature="4686:4735" ph="..." />
+            <marker date="1521245009482" expanded="false" signature="3632:3681" ph="..." />
+            <marker date="1521245009482" expanded="false" signature="4177:4226" ph="..." />
+            <marker date="1521245009482" expanded="false" signature="4686:4735" ph="..." />
           </folding>
         </state>
       </provider>
@@ -821,23 +859,6 @@
         <state relative-caret-position="70">
           <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="35">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineChange.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -952,6 +973,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendingMachineItems_prod.txt" />
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="4" column="81015" lean-forward="false" selection-start-line="4" selection-start-column="81015" selection-end-line="4" selection-end-column="81015" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
@@ -968,43 +997,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/css/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="4" column="81015" lean-forward="false" selection-start-line="4" selection-start-column="81015" selection-end-line="4" selection-end-column="81015" />
-          <folding />
+        <state relative-caret-position="490">
+          <caret line="122" column="62" lean-forward="false" selection-start-line="122" selection-start-column="62" selection-end-line="122" selection-end-column="62" />
+          <folding>
+            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1521245009482" expanded="false" signature="3632:3681" ph="..." />
+            <marker date="1521245009482" expanded="false" signature="4177:4226" ph="..." />
+            <marker date="1521245009482" expanded="false" signature="4686:4735" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="469">
+          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="524">
-          <caret line="78" column="44" lean-forward="true" selection-start-line="78" selection-start-column="44" selection-end-line="78" selection-end-column="44" />
+        <state relative-caret-position="619">
+          <caret line="50" column="66" lean-forward="false" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
           <folding>
-            <element signature="e#1121#1122#0" expanded="true" />
-            <element signature="e#1159#1160#0" expanded="true" />
+            <element signature="e#1185#1186#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineChange.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="81">
-          <caret line="92" column="57" lean-forward="true" selection-start-line="92" selection-start-column="57" selection-end-line="92" selection-end-column="57" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#form#0;n#div#0;n#div#0;n#div#2;n#div#0;n#html#0;n#!!top" expanded="true" />
-            <marker date="1521237874177" expanded="false" signature="3632:3681" ph="..." />
-            <marker date="1521237874177" expanded="false" signature="4177:4226" ph="..." />
-            <marker date="1521237874177" expanded="false" signature="4686:4735" ph="..." />
-          </folding>
+        <state relative-caret-position="595">
+          <caret line="17" column="35" lean-forward="false" selection-start-line="17" selection-start-column="35" selection-end-line="17" selection-end-column="35" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="131" column="114" lean-forward="true" selection-start-line="131" selection-start-column="114" selection-end-line="131" selection-end-column="114" />
-          <folding />
+        <state relative-caret-position="420">
+          <caret line="61" column="68" lean-forward="false" selection-start-line="61" selection-start-column="68" selection-end-line="61" selection-end-column="68" />
+          <folding>
+            <element signature="e#6281#6282#0" expanded="true" />
+            <element signature="e#6316#6317#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

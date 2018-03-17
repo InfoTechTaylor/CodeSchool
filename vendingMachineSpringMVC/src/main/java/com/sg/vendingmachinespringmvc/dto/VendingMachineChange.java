@@ -8,6 +8,16 @@ public class VendingMachineChange {
     private int nickels;
     private int pennies;
 
+    public VendingMachineChange(int quarters, int dimes, int nickels, int pennies) {
+        this.quarters = quarters;
+        this.dimes = dimes;
+        this.nickels = nickels;
+        this.pennies = pennies;
+    }
+
+    public VendingMachineChange() {
+    }
+
     public int getQuarters() {
         return quarters;
     }
