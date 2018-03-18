@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" description="model.addAttribute(&quot;hiddenItemId&quot;, hiddenItemId);" line="71" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="5a0e836e-d378-4a52-b253-e6c28f16aec2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />

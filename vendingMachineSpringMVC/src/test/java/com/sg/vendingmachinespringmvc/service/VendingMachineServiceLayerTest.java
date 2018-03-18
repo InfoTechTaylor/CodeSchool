@@ -24,7 +24,7 @@ public class VendingMachineServiceLayerTest {
 
 
     public VendingMachineServiceLayerTest() {
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persistence.xml");
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("test-applicationContext.xml");
         service = ctx.getBean("serviceLayer", VendingMachineServiceLayer.class);
     }
 
@@ -40,50 +40,25 @@ public class VendingMachineServiceLayerTest {
 
     @Test
     public void testRetrieveAllVendingMachineItems() throws Exception{
-        assertEquals(1, service.retrieveAllVendingMachineItems().size());
+        assertEquals(2, service.retrieveAllVendingMachineItems().size());
     }
 
-    @Test
-    public void testAllItemsHaveQuantityGreaterThan0() throws Exception {
-        // arrange -- all set in stub, created two items, one with a quantity of zero
-
-        // act
-        List<VendingMachineItem> listToValidate = service.retrieveAllVendingMachineItems();
-
-        // assert
-        for(VendingMachineItem currentItem : listToValidate){
-            assertNotEquals(0, currentItem.getItemQuantity());
-        }
-    }
 
     @Test
     public void testAddMoneyToMemory() throws Exception{
-        service.addMoneyToMemory(new BigDecimal("1.00"));
+        service.addMoneyToMemory(Money.valueOf("DOLLAR"));
         assertEquals(new BigDecimal("1.00"), service.getRemainingMoney());
-    }
-
-    @Test
-    public void testAddMoneyInvalidAmountException() {
-        // arrange
-        //act
-        try {
-            service.addMoneyToMemory(new BigDecimal("-1"));
-            fail("Expected InsufficientFundsException was not thrown");
-        } catch (InvalidAmountException e){
-            // do nothing, test passes
-        }
-
     }
 
     @Test
     public void testPurchaseItemQuantityAndRemainingMoney() throws Exception{
         //arrange
-        service.addMoneyToMemory(new BigDecimal("1.00"));
+        service.addMoneyToMemory(Money.valueOf("DOLLAR"));
         //act, id of 1 is our only item in the daoStubImpl
         service.purchaseItem("1");
         //assert, may not need the first assert as update is tested in dao tests
         assertEquals(2, service.retrieveAllVendingMachineItems().get(0).getItemQuantity());
-        assertEquals(new BigDecimal("0.00"), service.getRemainingMoney());
+        assertEquals(new BigDecimal("0"), service.getRemainingMoney());
     }
 
     @Test
@@ -115,31 +90,20 @@ public class VendingMachineServiceLayerTest {
 
     @Test
     public void testConvertDollarsToChange() throws Exception {
-        service.addMoneyToMemory(new BigDecimal("1.17"));
+        service.addMoneyToMemory(Money.valueOf("DOLLAR"));
+        service.addMoneyToMemory(Money.valueOf("DIME"));
+        service.addMoneyToMemory(Money.valueOf("NICKEL"));
         VendingMachineChange change = service.convertDollarsToCoinsAndGetChange();
         assertEquals(4, change.getQuarters());
         assertEquals(1, change.getDimes());
         assertEquals(1, change.getNickels());
-        assertEquals(2, change.getPennies());
-    }
-
-    @Test
-    public void testConvertDollarsToChangeInsufficientFunds() {
-        // arrange - remainingBalance is set to zero in setUp()
-        try{
-            // act
-            service.convertDollarsToCoinsAndGetChange();
-            // assert
-            fail("Expected InsufficientFundsException never thrown.");
-        } catch (InsufficientFundsException e){
-            // test passes
-        }
+        assertEquals(0, change.getPennies());
     }
 
     @Test
     public void testRetrieveRemainingMoney() throws Exception{
         // arrange
-        service.addMoneyToMemory(new BigDecimal("1.00"));
+        service.addMoneyToMemory(Money.valueOf("DOLLAR"));
         // act & assert
         assertEquals(new BigDecimal("1.00"), service.getRemainingMoney());
     }

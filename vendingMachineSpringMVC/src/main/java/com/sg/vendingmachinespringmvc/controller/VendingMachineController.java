@@ -7,10 +7,8 @@ import java.util.Map;
 import com.sg.vendingmachinespringmvc.dao.VendingMachinePersistenceException;
 import com.sg.vendingmachinespringmvc.dto.VendingMachineChange;
 import com.sg.vendingmachinespringmvc.dto.VendingMachineItem;
-import com.sg.vendingmachinespringmvc.service.InsufficientFundsException;
-import com.sg.vendingmachinespringmvc.service.InvalidAmountException;
-import com.sg.vendingmachinespringmvc.service.NoItemInventoryException;
-import com.sg.vendingmachinespringmvc.service.VendingMachineServiceLayer;
+import com.sg.vendingmachinespringmvc.service.*;
+import javafx.collections.ListChangeListener;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.HttpRequestHandler;
@@ -35,65 +33,80 @@ public class VendingMachineController {
     public String loadMachine(HttpServletRequest request, Model model) {
         try {
             List<VendingMachineItem> itemInventory = service.retrieveAllVendingMachineItems();
-            String hiddenItemId = request.getParameter("hiddenItemId");
+            // get item choice and message from the request
+            String selectedItemId = request.getParameter("selectedItemId");
+
+            // get change and current amount from service
             BigDecimal currentMoneyAmount = service.getRemainingMoney();
-            String message = request.getParameter("message");
-
             VendingMachineChange change = service.getChangeAmount();
+            String message = service.getMessage();
 
+            // determine if show/hide the get change button and change div
+            if(change == null && currentMoneyAmount.equals(new BigDecimal("0"))) {
+                // on startup, change is null and current amount is zero, hide button and change div
+                model.addAttribute("showButton", false);
+                model.addAttribute("showChangeDiv", false);
+            } else if (change == null) {
+                // user added money but hasn't gotten change or made purchase, show button, hid change div
+                model.addAttribute("showButton", true);
+                model.addAttribute("showChangeDiv", false);
+            } else if (change != null && currentMoneyAmount.equals(new BigDecimal("0"))){
+                // purchase was made, change amount displayed and button hides
+                model.addAttribute("showButton", false);
+                model.addAttribute("showChangeDiv", true);
+            } else {
+                model.addAttribute("showButton", true);
+                model.addAttribute("showChangeDiv", true);
+
+            }
+            // if change is not null, add change amounts to the model
+            if(change != null){
+                model.addAttribute("numQuarters", change.getQuarters());
+                model.addAttribute("numDimes", change.getDimes());
+                model.addAttribute("numNickels", change.getNickels());
+                model.addAttribute("numPennies", change.getPennies());
+            }
+
+            // add remaining model attributes
             model.addAttribute("itemInventory", itemInventory);
-            model.addAttribute("hiddenItemId", hiddenItemId);
+            model.addAttribute("selectedItemId", selectedItemId);
             model.addAttribute("currentMoneyAmount", currentMoneyAmount);
             model.addAttribute("message", message);
-            model.addAttribute("numQuarters", change.getQuarters());
-            model.addAttribute("numDimes", change.getDimes());
-            model.addAttribute("numNickels", change.getNickels());
-            model.addAttribute("numPennies", change.getPennies());
 
         } catch (VendingMachinePersistenceException e){
-            String message = e.getMessage();
-            model.addAttribute("message", message);
-            return "index";
+            e.printStackTrace();
         }
         return "index";
     }
 
     @RequestMapping(value="/selectItem", method=RequestMethod.POST)
     public String selectItem(HttpServletRequest request, Model model){
-        String hiddenItemId = request.getParameter("hiddenItemId");
+        String selectedItemId = request.getParameter("selectedItemId");
 
-        model.addAttribute("hiddenItemId", hiddenItemId);
+        model.addAttribute("selectedItemId", selectedItemId);
         return "redirect:/";
     }
 
     @RequestMapping(value="/addMoney", method=RequestMethod.GET)
-    public String addMoney(HttpServletRequest request, Model model){
+    public String addMoney(HttpServletRequest request){
 
         try {
             String coinAmount = request.getParameter("coinAmount");
-            BigDecimal currentMoneyAmount = service.addMoneyToMemory(new BigDecimal(coinAmount));
+            service.addMoneyToMemory(Money.valueOf(coinAmount.toUpperCase()));
         } catch (InvalidAmountException e){
-            String message = e.getMessage();
-            model.addAttribute("message", message);
+            e.getStackTrace();
         }
         return "redirect:/";
     }
 
     @RequestMapping(value="/purchaseItem", method=RequestMethod.POST)
     public String purchaseItem(HttpServletRequest request, Model model){
-        VendingMachineChange change;
         try {
-            String itemSelectedId = request.getParameter("hiddenItemId");
-            change = service.purchaseItem(itemSelectedId);
-            String message = "Thank you!!!";
+            String itemSelectedId = request.getParameter("selectedItemId");
+            String message = service.purchaseItem(itemSelectedId);
             model.addAttribute("message", message);
-            model.addAttribute("quarters", change.getQuarters());
-            model.addAttribute("nickels", change.getNickels());
-            model.addAttribute("dimes", change.getDimes());
-            model.addAttribute("pennies", change.getPennies());
         } catch (VendingMachinePersistenceException | NoItemInventoryException | InsufficientFundsException e){
-            String message = e.getMessage();
-            model.addAttribute("message", message);
+            e.getStackTrace();
         }
 
         return "redirect:/";
@@ -105,9 +118,9 @@ public class VendingMachineController {
             VendingMachineChange change = service.convertDollarsToCoinsAndGetChange();
             model.addAttribute("change", change);
         } catch (InsufficientFundsException e){
-            String message = e.getMessage();
-            model.addAttribute("message", message);
+            e.getStackTrace();
         }
         return "redirect:/";
     }
+
 }

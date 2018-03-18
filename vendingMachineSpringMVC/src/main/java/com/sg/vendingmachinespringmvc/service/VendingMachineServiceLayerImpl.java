@@ -16,7 +16,8 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     private VendingMachineDao dao;
     private VendingMachineAuditDao auditDao;
     private BigDecimal remainingMoney = new BigDecimal("0");
-    private VendingMachineChange changeAmount = new VendingMachineChange(0, 0, 0, 0);
+    private VendingMachineChange changeAmount = null;
+    private String message = "WELCOME!";
 
     public VendingMachineServiceLayerImpl(VendingMachineDao dao, VendingMachineAuditDao auditDao) {
 
@@ -30,17 +31,30 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public BigDecimal addMoneyToMemory(BigDecimal amount) throws InvalidAmountException {
+    public BigDecimal addMoneyToMemory(Money type) throws InvalidAmountException {
+        BigDecimal amount = new BigDecimal("0");
+
+        if(type == Money.DOLLAR){
+            amount = new BigDecimal("1.00");
+        } else if (type == Money.QUARTER){
+            amount = new BigDecimal(".25");
+        } else if (type == Money.DIME){
+            amount = new BigDecimal(".10");
+        } else if (type == Money.NICKEL){
+            amount = new BigDecimal(".05");
+        }
+
         if (amount.compareTo(new BigDecimal("0")) > 0) {
             remainingMoney = (remainingMoney.add(amount)).setScale(2, RoundingMode.HALF_UP);
         } else {
-            throw new InvalidAmountException("Must add positive amount to the machine.");
+            message = "Must add positive amount to the machine.";
+            throw new InvalidAmountException(message);
         }
         return remainingMoney;
     }
 
     @Override
-    public VendingMachineChange purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
+    public String purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
         VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
         validateItemChoice(itemId);
         validateFunds(itemToPurchase);
@@ -52,8 +66,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         updateMoneyAmountInMemory(itemToPurchase.getItemCost());
         changeAmount = convertDollarsToCoinsAndGetChange();
         resetRemainingMoneyToZero();
+        message = "Thank you!!!";
 
-        return changeAmount;
+        return message;
     }
 
     @Override
@@ -95,10 +110,13 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
             changeAmount = countsOfCoins;
             resetRemainingMoneyToZero();
         } else {
-            throw new InsufficientFundsException("No money left to get change.");
+            countsOfCoins.setDimes(0);
+            countsOfCoins.setNickels(0);
+            countsOfCoins.setQuarters(0);
+            countsOfCoins.setPennies(0);
         }
-
-        return changeAmount;
+        message = "WELCOME!";
+        return countsOfCoins;
     }
 
 
@@ -106,13 +124,16 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
         VendingMachineItem itemToValidate = dao.retrieveItemById(itemId);
         if (itemId.equals("")) {
-            throw new NoItemInventoryException("Please select an item.");
+            message = "Please select an item.";
+            throw new NoItemInventoryException(message);
         }
         if (itemToValidate == null){
-            throw new NoItemInventoryException("Cannot find item with given ID. ");
+            message = "Cannot find item with given ID. ";
+            throw new NoItemInventoryException(message);
         }
         if (itemToValidate.getItemQuantity() == 0) {
-            throw new NoItemInventoryException("SOLD OUT!!!");
+            message = "SOLD OUT!!!";
+            throw new NoItemInventoryException(message);
         }
 
 
@@ -120,7 +141,8 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     private void validateFunds(VendingMachineItem item) throws InsufficientFundsException {
         if (!((item.getItemCost()).compareTo(remainingMoney) <= 0)) {
-            throw new InsufficientFundsException("Please insert: " + item.getItemCost().subtract(remainingMoney));
+            message = "Please insert: " + item.getItemCost().subtract(remainingMoney);
+            throw new InsufficientFundsException(message);
         }
     }
 
@@ -147,5 +169,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
 
     public VendingMachineChange getChangeAmount() {
         return changeAmount;
+    }
+
+    public String getMessage() {
+        return message;
     }
 }

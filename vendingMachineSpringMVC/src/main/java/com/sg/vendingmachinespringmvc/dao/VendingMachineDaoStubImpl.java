@@ -36,9 +36,9 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
     @Override
     public void updateItem(VendingMachineItem item)  {
         if(item.getItemId().equals(firstVendingMachineItem.getItemId())){
-            vendingMachineItemList.set(0, item);
+            firstVendingMachineItem.setItemQuantity(item.getItemQuantity());
         } else if (item.getItemId().equals(secondVendingMachineItem.getItemId())){
-            vendingMachineItemList.set(1, item);
+            secondVendingMachineItem.setItemQuantity(item.getItemQuantity());
         }
     }
 
@@ -74,4 +74,6 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
             return null;
         }
     }
+
+
 }

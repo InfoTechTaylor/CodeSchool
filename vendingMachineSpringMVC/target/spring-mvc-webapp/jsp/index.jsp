@@ -21,7 +21,7 @@
 
             <c:forEach var="currentItem" items="${itemInventory}">
                 <form action="selectItem" method="POST">
-                    <input type="hidden" name="hiddenItemId" value="<c:out value="${currentItem.itemId}" />" />
+                    <input type="hidden" name="selectedItemId" value="<c:out value="${currentItem.itemId}" />" />
                 <div class="col-lg-4 col-sm-4"><button class="panel panel-primary square itemPadding" type="submit">
                     <p class="text-left"><c:out value="${currentItem.itemId}" /></p>
                     <p class="text-center"> <c:out value="${currentItem.itemName}" /></p>
@@ -46,16 +46,16 @@
                         <input id="currentMoneyAmt" type="text" class="form-control bottomMargin"
                                value="<c:out value="${currentMoneyAmount}" />" disabled/>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="addMoney?coinAmount=1.00" class="btn btn-primary addMoneyButtonStyle">Add Dollar</a>
+                            <a href="addMoney?coinAmount=DOLLAR" class="btn btn-primary addMoneyButtonStyle">Add Dollar</a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="addMoney?coinAmount=.25" class="btn btn-primary addMoneyButtonStyle">Add Quarter</a>
+                            <a href="addMoney?coinAmount=QUARTER" class="btn btn-primary addMoneyButtonStyle">Add Quarter</a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="addMoney?coinAmount=.10" class="btn btn-primary addMoneyButtonStyle">Add Dime</a>
+                            <a href="addMoney?coinAmount=DIME" class="btn btn-primary addMoneyButtonStyle">Add Dime</a>
                         </div>
                         <div class="col-sm-6 col-lg-6">
-                            <a href="addMoney?coinAmount=.05" class="btn btn-primary addMoneyButtonStyle">Add Nickel</a>
+                            <a href="addMoney?coinAmount=NICKEL" class="btn btn-primary addMoneyButtonStyle">Add Nickel</a>
                         </div>
 
                     </form>
@@ -69,14 +69,14 @@
                 <div id="messagesDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Messages</h2>
                     <form id="messagesForm" action="purchaseItem" method="POST">
-                        <input type="hidden" name="hiddenItemId" value="<c:out value="${hiddenItemId}" />" />
+                        <input type="hidden" name="selectedItemId" value="<c:out value="${selectedItemId}" />" />
                         <input id="messagesTextBox" type="text" class="form-control col-sm-12 col-lg-12 bottomMargin"
                                value="<c:out value="${message}" />" disabled/>
                         <div class="form-group row">
                             <label for="itemSelectedId" class="control-label col-sm-4 col-lg-4">Item: </label>
                             <div id="itemTextDiv" class="col-sm-2 col-lg-3 bottomMargin">
                                     <input id="itemSelectedId" name="itemSelectedId" type="text" class="col-sm-4 col-lg-4 form-control"
-                                           value="<c:out value="${hiddenItemId}" />" disabled />
+                                           value="<c:out value="${selectedItemId}" />" disabled />
                             </div>
                         </div>
                         <button id="makePurchaseBtn" type="submit" class="btn btn-primary col-sm-12 col-lg-12">
@@ -93,14 +93,18 @@
                 <div id="changeDiv" class="col-sm-12 col-lg-12">
                     <h2 class="text-center">Change</h2>
                     <form id="changeForm" action="getChange" method="GET">
-                    <div id="changeText" class="col-sm-12 col-lg-12 bottomMargin">
-                        <p>Quarters: <c:out value="${numQuarters}" /></p>
-                        <p>Nickels: <c:out value="${numNickels}" /></p>
-                        <p>Dimes: <c:out value="${numDimes}" /></p>
-                        <p>Pennies: <c:out value="${numPennies}" /></p>
+                    <div id="changeText" class="col-sm-12 col-lg-12 bottomMargin panel panel-default panel-heading">
+                    <c:if test = "${showChangeDiv == true}">
+                        <p><c:out value="Quarters: ${numQuarters}" /></p>
+                        <p><c:out value="Nickels: ${numNickels}" /></p>
+                        <p><c:out value="Dimes: ${numDimes}" /></p>
+                        <p><c:out value="Pennies: ${numPennies}" /></p>
+                    </c:if>
                     </div>
-                        <button id="changeBtn" type="submit" class="btn btn-primary col-sm-12 col-lg-12">Change Return
-                        </button>
+                        <c:if test = "${showButton == true}">
+                            <button id="changeBtn" type="submit" class="btn btn-primary col-sm-12 col-lg-12">Change Return
+                            </button>
+                        </c:if>
                     </form>
 
                 </div>
