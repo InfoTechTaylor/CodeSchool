@@ -65,6 +65,7 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         // update remainingMoney
         updateMoneyAmountInMemory(itemToPurchase.getItemCost());
         changeAmount = convertDollarsToCoinsAndGetChange();
+//        resetChangeToNull();
         resetRemainingMoneyToZero();
         message = "Thank you!!!";
 
@@ -119,6 +120,19 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return countsOfCoins;
     }
 
+    private void resetChangeToNull(){
+        changeAmount = null;
+    }
+
+    public boolean showChangeButton(VendingMachineChange change){
+        // determine if show/hide the get change button and change div
+        if(change == null && remainingMoney.equals(new BigDecimal("0"))) {
+            return false;
+        } else {
+            return true;
+        }
+    }
+
 
     private void validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
 
@@ -163,9 +177,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
         return remainingMoney;
     }
 
-    public VendingMachineItem retrieveVendingMachineItemById(String itemId) throws VendingMachinePersistenceException {
-        return dao.retrieveItemById(itemId);
-    }
+//    public VendingMachineItem retrieveVendingMachineItemById(String itemId) throws VendingMachinePersistenceException {
+//        return dao.retrieveItemById(itemId);
+//    }
 
     public VendingMachineChange getChangeAmount() {
         return changeAmount;

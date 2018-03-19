@@ -15,6 +15,7 @@ public interface VendingMachineServiceLayer {
     BigDecimal getRemainingMoney();
     VendingMachineChange getChangeAmount();
     String getMessage();
+    boolean showChangeButton(VendingMachineChange change);
 
 
 

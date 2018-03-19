@@ -21,3 +21,15 @@
     margin-bottom: 2%;
     width: 100%;
 }
+
+.greenBackground{
+    background-color: #dff0d8;
+}
+
+.redBackground{
+    background-color: #f2dede;
+}
+
+.noBackground{
+    background-color: initial;
+}

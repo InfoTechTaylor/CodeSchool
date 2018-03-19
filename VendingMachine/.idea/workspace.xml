@@ -2,26 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="630b2d3f-f495-40cb-8e20-284b2d4740e0" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-44 moved the validation of having only items shown with quantity greater than zero from the view to the service layer. Added a unit test for that validation which required making changes to the dao stub impl class">
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.java" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/css/customStyle.css" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/css/customStyle.css" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.java" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/css/customStyle.css" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/css/customStyle.css" />
       <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -67,7 +66,7 @@
       <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="505">
+            <state relative-caret-position="665">
               <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
               <folding />
             </state>
@@ -236,6 +235,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -340,7 +340,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -605,6 +604,7 @@
       <workItem from="1520629007621" duration="54000" />
       <workItem from="1521214789199" duration="3028000" />
       <workItem from="1521224980969" duration="558000" />
+      <workItem from="1521461710988" duration="570000" />
     </task>
     <task id="LOCAL-00001" summary="removed the catch NullPointerExceptions as I have learned they really shouldn't be caught and null should just be checked for in the code.">
       <created>1518131221405</created>
@@ -894,7 +894,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3640000" />
+    <option name="totallyTimeSpent" value="4210000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -1383,7 +1383,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="505">
+        <state relative-caret-position="665">
           <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
           <folding />
         </state>

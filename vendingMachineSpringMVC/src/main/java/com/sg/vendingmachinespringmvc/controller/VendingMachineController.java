@@ -41,7 +41,7 @@ public class VendingMachineController {
             VendingMachineChange change = service.getChangeAmount();
             String message = service.getMessage();
 
-            // determine if show/hide the get change button and change div
+//            // determine if show/hide the get change button and change div
             if(change == null && currentMoneyAmount.equals(new BigDecimal("0"))) {
                 // on startup, change is null and current amount is zero, hide button and change div
                 model.addAttribute("showButton", false);
@@ -59,12 +59,10 @@ public class VendingMachineController {
                 model.addAttribute("showChangeDiv", true);
 
             }
+
             // if change is not null, add change amounts to the model
             if(change != null){
-                model.addAttribute("numQuarters", change.getQuarters());
-                model.addAttribute("numDimes", change.getDimes());
-                model.addAttribute("numNickels", change.getNickels());
-                model.addAttribute("numPennies", change.getPennies());
+                model.addAttribute("change", change);
             }
 
             // add remaining model attributes
@@ -80,43 +78,38 @@ public class VendingMachineController {
     }
 
     @RequestMapping(value="/selectItem", method=RequestMethod.POST)
-    public String selectItem(HttpServletRequest request, Model model){
+    public String selectItem(HttpServletRequest request){
         String selectedItemId = request.getParameter("selectedItemId");
-
-        model.addAttribute("selectedItemId", selectedItemId);
-        return "redirect:/";
+        return "redirect:/?selectedItemId=" + selectedItemId;
     }
 
     @RequestMapping(value="/addMoney", method=RequestMethod.GET)
     public String addMoney(HttpServletRequest request){
-
+        String selectedItemId = request.getParameter("selectedItemId");
         try {
             String coinAmount = request.getParameter("coinAmount");
             service.addMoneyToMemory(Money.valueOf(coinAmount.toUpperCase()));
         } catch (InvalidAmountException e){
             e.getStackTrace();
         }
-        return "redirect:/";
+        return "redirect:/?selectedItemId=" + selectedItemId;
     }
 
     @RequestMapping(value="/purchaseItem", method=RequestMethod.POST)
-    public String purchaseItem(HttpServletRequest request, Model model){
+    public String purchaseItem(HttpServletRequest request){
+        String itemSelectedId = request.getParameter("selectedItemId");
         try {
-            String itemSelectedId = request.getParameter("selectedItemId");
-            String message = service.purchaseItem(itemSelectedId);
-            model.addAttribute("message", message);
+            service.purchaseItem(itemSelectedId);
         } catch (VendingMachinePersistenceException | NoItemInventoryException | InsufficientFundsException e){
             e.getStackTrace();
         }
-
-        return "redirect:/";
+        return "redirect:/?selectedItemId=" + itemSelectedId;
     }
 
     @RequestMapping(value="/getChange", method=RequestMethod.GET)
-    public String getChange(Model model){
+    public String getChange(HttpServletRequest request){
         try {
-            VendingMachineChange change = service.convertDollarsToCoinsAndGetChange();
-            model.addAttribute("change", change);
+            service.convertDollarsToCoinsAndGetChange();
         } catch (InsufficientFundsException e){
             e.getStackTrace();
         }
