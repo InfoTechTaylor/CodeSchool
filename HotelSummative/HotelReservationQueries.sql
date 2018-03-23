@@ -10,13 +10,14 @@ SELECT r.RoomNum AS RoomNumber,
         r.OccupantLimit AS MaxOccupants, 
         rt.RoomType,
         rr.Rate AS CurrentRate,
-        a.AmmenityName
+        GROUP_CONCAT(a.AmmenityName SEPARATOR ', ') AS Ammenities
 FROM Room r
 	INNER JOIN RoomType rt ON r.RoomTypeID = rt.RoomTypeID
     INNER JOIN RoomRate rr ON rt.RoomTypeID = rr.RoomTypeID
     INNER JOIN RoomAmmenity ra ON ra.RoomNum = r.RoomNum
     INNER JOIN Ammenity a ON a.AmmenityID = ra.AmmenityID
 WHERE rr.EndDate IS NULL
+GROUP by r.RoomNum
 ORDER BY r.RoomNum ASC;
 
 
@@ -55,7 +56,7 @@ USE hotelreservation;
 SELECT 	res.reservationID,
 		DATE_FORMAT(date(res.StartDate), "%m/%d/%Y") AS StartDate, 
 		DATE_FORMAT(date(res.EndDate),"%m/%d/%Y") AS EndDate, 
-        r.RoomNum,
+        GROUP_CONCAT(r.RoomNum SEPARATOR ', ') AS RoomNumbers,
         concat(per.FirstName, ' ', per.LastName) AS Customer, 
         TIMESTAMPDIFF(YEAR, per.DOB, CURDATE()) AS CustomerAge,
         per.phone, 
@@ -70,6 +71,7 @@ FROM Reservation res
 	LEFT OUTER JOIN Person gper ON g.PersonID = gper.PersonID
 	LEFT OUTER JOIN RoomReservation rres ON rres.ReservationID = res.ReservationID
 	LEFT OUTER JOIN Room r ON r.RoomNum = rres.RoomNum
+GROUP BY res.ReservationID
 ORDER BY res.StartDate, per.LastName, per.FirstName;
 
 
