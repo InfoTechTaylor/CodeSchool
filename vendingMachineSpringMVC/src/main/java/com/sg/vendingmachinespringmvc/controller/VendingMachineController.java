@@ -14,6 +14,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.HttpRequestHandler;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
@@ -50,7 +51,7 @@ public class VendingMachineController {
                 // user added money but hasn't gotten change or made purchase, show button, hid change div
                 model.addAttribute("showButton", true);
                 model.addAttribute("showChangeDiv", false);
-            } else if (change != null && currentMoneyAmount.equals(new BigDecimal("0"))){
+            } else if (currentMoneyAmount.equals(new BigDecimal("0"))){
                 // purchase was made, change amount displayed and button hides
                 model.addAttribute("showButton", false);
                 model.addAttribute("showChangeDiv", true);
@@ -69,6 +70,7 @@ public class VendingMachineController {
             model.addAttribute("itemInventory", itemInventory);
             model.addAttribute("selectedItemId", selectedItemId);
             model.addAttribute("currentMoneyAmount", currentMoneyAmount);
+//            String message = request.getParameter("message");
             model.addAttribute("message", message);
 
         } catch (VendingMachinePersistenceException e){
@@ -96,12 +98,16 @@ public class VendingMachineController {
     }
 
     @RequestMapping(value="/purchaseItem", method=RequestMethod.POST)
-    public String purchaseItem(HttpServletRequest request){
+    public String purchaseItem(HttpServletRequest request, RedirectAttributes redirectAttrs){
         String itemSelectedId = request.getParameter("selectedItemId");
         try {
             service.purchaseItem(itemSelectedId);
-        } catch (VendingMachinePersistenceException | NoItemInventoryException | InsufficientFundsException e){
-            e.getStackTrace();
+        } catch (VendingMachinePersistenceException e){
+            //
+        } catch (NoItemInventoryException e){
+            redirectAttrs.addFlashAttribute("message", "out.of.stock");
+        } catch (InsufficientFundsException e){
+            redirectAttrs.addFlashAttribute("message", "insufficient.funds");
         }
         return "redirect:/?selectedItemId=" + itemSelectedId;
     }

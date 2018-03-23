@@ -14,7 +14,7 @@ public class DvdLibraryDaoInMemImpl implements DvdLibraryDao {
         Dvd newDvd1 = new Dvd();
         newDvd1.setDvdId(1);
         newDvd1.setTitle("Harry Potter and the Sorcerer's Stone");
-        newDvd1.setReleaseYear("2000");
+        newDvd1.setReleaseDate(LocalDate.parse("2000-01-01"));
         newDvd1.setRating("PG");
         newDvd1.setDirector("unknown");
         newDvd1.setNotes("Great movie");

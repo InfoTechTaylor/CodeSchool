@@ -34,6 +34,12 @@
         <constructor-arg ref="vendingMachineAuditDao" />
     </bean>
 
+    <!--<bean id=“messageSource” class=“org.springframework.context.support.ResourceBundleMessageSource”>-->
+        <!--<property name=“basename”>-->
+        <!--<value>classpath:messages</value>-->
+        <!--</property>-->
+        <!--</bean>-->
+
     <!--<bean id="controller" class="com.sg.vendingmachinespringmvc.controller.VendingMachineController">-->
         <!--<constructor-arg ref="serviceLayer" />-->
         <!--<constructor-arg ref="view" />-->

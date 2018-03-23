@@ -21,7 +21,7 @@
     <h1 id="dvdInfoH1"><c:out value="${dvd.title}" /></h1>
     <hr class="col-lg-12 col-sm-12" />
     <div>
-        <p class="col-sm-2 col-lg-2">Release Year: <c:out value="${dvd.releaseYear}"/></p>
+        <p class="col-sm-2 col-lg-2">Release Date: <c:out value="${dvd.releaseDate}"/></p>
         <p class="col-sm-2 col-lg-2">Director: <c:out value="${dvd.director}"/></p>
         <p class="col-sm-2 col-lg-2">Rating: <c:out value="${dvd.rating}"/></p>
         <p class="col-sm-2 col-lg-2">Notes: <c:out value="${dvd.notes}"/></p>

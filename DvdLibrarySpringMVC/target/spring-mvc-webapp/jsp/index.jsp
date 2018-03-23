@@ -27,7 +27,7 @@
                             <select id="searchCategory" name="searchCategory" class="form-control">
                                 <option value="searchCategory">Search Category</option>
                                 <option value="title">Title</option>
-                                <option value="releaseYear">Release Year</option>
+                                <option value="releaseDate">Release Date</option>
                                 <option value="directorName">Director Name</option>
                                 <option value="rating">Rating</option>
                             </select>
@@ -62,7 +62,7 @@
                                     <c:out value="${currentDvd.title}" /></a>
                                     </td>
                                     <td>
-                                        <c:out value="${currentDvd.releaseYear}" />
+                                        <c:out value="${currentDvd.releaseDate}" />
                                     </td>
                                     <td>
                                         <c:out value="${currentDvd.director}" />

@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import javax.inject.Inject;
 import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -33,25 +34,24 @@ public class DvdController {
     }
 
     @RequestMapping(value="/displayCreateDvdForm", method=RequestMethod.GET)
-    public String displayCreateDvdForm(){
+    public String displayCreateDvdForm(@Valid @ModelAttribute("dvd")Dvd dvd){
         return "createDvdForm";
     }
 
     @RequestMapping(value="/addDvd", method=RequestMethod.POST)
-    public String addDvd(@Valid @ModelAttribute("dvd")Dvd dvd, BindingResult result, HttpServletRequest request, Model model){
+    public String addDvd(@Valid @ModelAttribute("dvd")Dvd dvd, BindingResult result, HttpServletRequest request){
         if(result.hasErrors()){
             return "editDvdForm";
         }
 
-        Dvd newDvd = new Dvd();
-        newDvd.setTitle(request.getParameter("title"));
-        newDvd.setReleaseYear(request.getParameter("releaseYear"));
-        newDvd.setDirector(request.getParameter("director"));
-        newDvd.setRating(request.getParameter("rating"));
-        newDvd.setNotes(request.getParameter("notes"));
+        Dvd createDvd = new Dvd();
+        createDvd.setTitle(request.getParameter("title"));
+        createDvd.setReleaseDate(LocalDate.parse(request.getParameter("releaseYear")));
+        createDvd.setDirector(request.getParameter("director"));
+        createDvd.setRating(request.getParameter("rating"));
+        createDvd.setNotes(request.getParameter("notes"));
 
-        dao.addDvd(newDvd);
-        model.addAttribute(newDvd);
+        dao.addDvd(createDvd);
         return "redirect:/";
     }
 
@@ -101,7 +101,7 @@ public class DvdController {
                     filteredDvds.add(currentDvd);
                 }
             } else if (searchCategory.equals("releaseYear")){
-                if(currentDvd.getReleaseYear().equals(searchTerm)) {
+                if(currentDvd.getReleaseDate().equals(searchTerm)) {
                     filteredDvds.add(currentDvd);
                 }
             } else if (searchCategory.equals("directorName")){

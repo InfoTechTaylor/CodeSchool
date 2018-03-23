@@ -37,7 +37,7 @@
                                     <c:out value="${currentDvd.title}" /></a>
                                     </td>
                                     <td>
-                                        <c:out value="${currentDvd.releaseYear}" />
+                                        <c:out value="${currentDvd.releaseDate}" />
                                     </td>
                                     <td>
                                         <c:out value="${currentDvd.director}" />

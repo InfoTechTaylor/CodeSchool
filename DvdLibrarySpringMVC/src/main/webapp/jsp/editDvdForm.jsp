@@ -34,8 +34,8 @@
         <div class="form-group row">
             <label for="editDvdReleaseYearInput" class="col-sm-2 col-lg-2">Release Year:</label>
             <div id="editDvdReleaseYearDiv" class="col-sm-6 col-lg-6">
-                <sf:input id="editDvdReleaseYearInput" class="form-control" type="text" path="releaseYear"/>
-                <sf:errors path="releaseYear" cssClass="error"></sf:errors>
+                <sf:input id="editDvdReleaseYearInput" class="form-control" type="text" path="releaseDate"/>
+                <sf:errors path="releaseDate" cssClass="error"></sf:errors>
             </div>
         </div>
         <div class="form-group row">

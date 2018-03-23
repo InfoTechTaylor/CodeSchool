@@ -71,6 +71,7 @@
                         <input type="hidden" name="selectedItemId" value="<c:out value="${selectedItemId}" />" />
                         <input id="messagesTextBox" type="text" class="form-control col-sm-12 col-lg-12 bottomMargin"
                                value="<c:out value="${message}" />" disabled/>
+                        <%--<s:message code="${message}" />--%>
                         <div class="form-group row">
                             <label for="itemSelectedId" class="control-label col-sm-4 col-lg-4">Item: </label>
                             <div id="itemTextDiv" class="col-sm-2 col-lg-3 bottomMargin">

@@ -3,6 +3,7 @@ package com.sg.dvdlibraryspringmvc.model;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 public class Dvd {
@@ -13,7 +14,7 @@ public class Dvd {
     private String title;
 
     @Length(min=4, max=4, message="Please enter a 4-digit year.")
-    private String releaseYear;
+    private LocalDate releaseDate;
     private String director;
     private String rating;
     private String notes;
@@ -34,12 +35,12 @@ public class Dvd {
         this.title = title;
     }
 
-    public String getReleaseYear() {
-        return releaseYear;
+    public LocalDate getReleaseDate() {
+        return releaseDate;
     }
 
-    public void setReleaseYear(String releaseYear) {
-        this.releaseYear = releaseYear;
+    public void setReleaseDate(LocalDate releaseYear) {
+        this.releaseDate = releaseYear;
     }
 
     public String getDirector() {
@@ -73,7 +74,7 @@ public class Dvd {
         Dvd dvd = (Dvd) o;
         return dvdId == dvd.dvdId &&
                 Objects.equals(title, dvd.title) &&
-                Objects.equals(releaseYear, dvd.releaseYear) &&
+                Objects.equals(releaseDate, dvd.releaseDate) &&
                 Objects.equals(director, dvd.director) &&
                 Objects.equals(rating, dvd.rating);
     }
@@ -81,6 +82,6 @@ public class Dvd {
     @Override
     public int hashCode() {
 
-        return Objects.hash(dvdId, title, releaseYear, director, rating);
+        return Objects.hash(dvdId, title, releaseDate, director, rating);
     }
 }
