@@ -22,6 +22,12 @@ public class ContactListDaoTest {
 
         ApplicationContext ctx = new ClassPathXmlApplicationContext("test-applicationContext.xml");
         dao = ctx.getBean("contactListDao", ContactListDao.class);
+
+        // remove all of the contacts
+        List<Contact> contacts = dao.getAllContacts();
+        for (Contact currentContact : contacts) {
+            dao.removeContact(currentContact.getContactId());
+        }
     }
 
     @After

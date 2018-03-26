@@ -366,7 +366,8 @@ VALUES ('Internet'),
 /*BillAddOn*/
 INSERT INTO BillAddOn(BillID, AddOnID)
 VALUES(1, 2),
-(2, 2);
+(2, 2),
+(2,1);
 
 /*AddOnRate*/
 INSERT INTO AddOnRate(StartDate, EndDate, Rate, AddOnID)

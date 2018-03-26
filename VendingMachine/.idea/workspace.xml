@@ -3,34 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="630b2d3f-f495-40cb-8e20-284b2d4740e0" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-44 moved the validation of having only items shown with quantity greater than zero from the view to the service layer. Added a unit test for that validation which required making changes to the dao stub impl class">
       <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/DvdController.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/DvdController.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/model/Dvd.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/model/Dvd.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/createDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/createDvdForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/editDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/editDvdForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/searchResults.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/searchResults.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/viewDvd.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/viewDvd.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/jsp/createDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/jsp/createDvdForm.jsp" />
+      <change beforePath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" afterPath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -73,7 +57,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/resources/applicationContext.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="665">
@@ -83,11 +67,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VendingMachineDaoTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/dao/VendingMachineDaoTest.java">
+      <file leaf-file-name="vendingMachineItems_prod.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vendingMachineItems_prod.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="735">
-              <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+            <state relative-caret-position="140">
+              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -208,7 +192,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-11" />
     <option name="y" value="-11" />
     <option name="width" value="2582" />
@@ -232,8 +216,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <expand>
@@ -349,7 +334,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -357,6 +341,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="settings.editor.selected.configurable" value="http.proxy" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -617,6 +602,7 @@
       <workItem from="1521461710988" duration="570000" />
       <workItem from="1521547728734" duration="564000" />
       <workItem from="1521655342767" duration="573000" />
+      <workItem from="1522085626722" duration="1408000" />
     </task>
     <task id="LOCAL-00001" summary="removed the catch NullPointerExceptions as I have learned they really shouldn't be caught and null should just be checked for in the code.">
       <created>1518131221405</created>
@@ -906,10 +892,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5347000" />
+    <option name="totallyTimeSpent" value="6755000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1249,13 +1235,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendingMachineItems_prod.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/dao/VendingMachineAuditDaoStubImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
@@ -1397,6 +1376,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="665">
           <caret line="19" column="58" lean-forward="false" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendingMachineItems_prod.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>

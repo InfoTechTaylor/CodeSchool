@@ -3,34 +3,18 @@
   <component name="ChangeListManager">
     <list default="true" id="336a611a-d106-4c9d-b69f-9f18d763c3bb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" />
+      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/DvdController.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/controller/DvdController.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/model/Dvd.java" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/java/com/sg/dvdlibraryspringmvc/model/Dvd.java" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/createDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/createDvdForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/editDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/editDvdForm.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/searchResults.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/searchResults.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/viewDvd.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/src/main/webapp/jsp/viewDvd.jsp" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/controller/DvdController.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/dao/DvdLibraryDaoInMemImpl.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/dvdlibraryspringmvc/model/Dvd.class" />
-      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/jsp/createDvdForm.jsp" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/target/spring-mvc-webapp/jsp/createDvdForm.jsp" />
+      <change beforePath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" afterPath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" />
       <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/webapp/jsp/index.jsp" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/jsp/index.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -264,6 +248,7 @@
       <workItem from="1521461703877" duration="2071000" />
       <workItem from="1521547723788" duration="563000" />
       <workItem from="1521655340400" duration="570000" />
+      <workItem from="1522085600785" duration="593000" />
     </task>
     <task id="LOCAL-00001" summary="got a good portion of dvd library implemented. I have added the load dvds and create dvd function. The create dvd function may have a bug where it occassionally doesn't reload the dvds after a successful creation.">
       <created>1520814747598</created>
@@ -276,7 +261,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31766000" />
+    <option name="totallyTimeSpent" value="32359000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -325,6 +310,22 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4830">
+          <caret line="138" column="46" lean-forward="false" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1715">
+          <caret line="49" column="41" lean-forward="false" selection-start-line="49" selection-start-column="41" selection-end-line="49" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/home.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4830">
