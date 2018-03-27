@@ -11,14 +11,14 @@ public class DvdLibraryDaoInMemImpl implements DvdLibraryDao {
     int dvdIdCounter = 2;
 
     public DvdLibraryDaoInMemImpl(){
-        Dvd newDvd1 = new Dvd();
-        newDvd1.setDvdId(1);
-        newDvd1.setTitle("Harry Potter and the Sorcerer's Stone");
-        newDvd1.setReleaseDate(LocalDate.parse("2000-01-01"));
-        newDvd1.setRating("PG");
-        newDvd1.setDirector("unknown");
-        newDvd1.setNotes("Great movie");
-        dvdMap.put(newDvd1.getDvdId(), newDvd1);
+//        Dvd newDvd1 = new Dvd();
+//        newDvd1.setDvdId(1);
+//        newDvd1.setTitle("Harry Potter and the Sorcerer's Stone");
+//        newDvd1.setReleaseDate(LocalDate.parse("2000-01-01"));
+//        newDvd1.setRating("PG");
+//        newDvd1.setDirector("unknown");
+//        newDvd1.setNotes("Great movie");
+//        dvdMap.put(newDvd1.getDvdId(), newDvd1);
     }
 
     @Override
@@ -27,13 +27,13 @@ public class DvdLibraryDaoInMemImpl implements DvdLibraryDao {
     }
 
     @Override
-    public ArrayList<Dvd> getAllDvds() {
+    public List<Dvd> getAllDvds() {
         return new ArrayList<Dvd>(dvdMap.values());
     }
 
     @Override
-    public Dvd removeDvd(int dvdId) {
-        return dvdMap.remove(dvdId);
+    public void removeDvd(int dvdId) {
+        dvdMap.remove(dvdId);
     }
 
     @Override
@@ -46,5 +46,10 @@ public class DvdLibraryDaoInMemImpl implements DvdLibraryDao {
     @Override
     public Dvd editDvd(Dvd dvd) {
         return dvdMap.replace(dvd.getDvdId(), dvd);
+    }
+
+    @Override
+    public List<Dvd> searchDvds(Map<SearchTerm, String> criteria) {
+        return null;
     }
 }

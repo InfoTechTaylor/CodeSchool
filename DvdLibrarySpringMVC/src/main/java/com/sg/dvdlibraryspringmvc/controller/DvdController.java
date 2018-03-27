@@ -1,6 +1,7 @@
 package com.sg.dvdlibraryspringmvc.controller;
 
 import com.sg.dvdlibraryspringmvc.dao.DvdLibraryDao;
+import com.sg.dvdlibraryspringmvc.dao.SearchTerm;
 import com.sg.dvdlibraryspringmvc.model.Dvd;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,7 +15,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Controller
@@ -34,7 +37,7 @@ public class DvdController {
     }
 
     @RequestMapping(value="/displayCreateDvdForm", method=RequestMethod.GET)
-    public String displayCreateDvdForm(@Valid @ModelAttribute("dvd")Dvd dvd){
+    public String displayCreateDvdForm(@Valid @ModelAttribute("dvd")Dvd dvd, BindingResult result){
         return "createDvdForm";
     }
 
@@ -44,14 +47,14 @@ public class DvdController {
             return "editDvdForm";
         }
 
-        Dvd createDvd = new Dvd();
-        createDvd.setTitle(request.getParameter("title"));
-        createDvd.setReleaseDate(LocalDate.parse(request.getParameter("releaseYear")));
-        createDvd.setDirector(request.getParameter("director"));
-        createDvd.setRating(request.getParameter("rating"));
-        createDvd.setNotes(request.getParameter("notes"));
+//        Dvd createDvd = new Dvd();
+//        createDvd.setTitle(request.getParameter("title"));
+//        createDvd.setReleaseDate(LocalDate.parse(request.getParameter("releaseYear")));
+//        createDvd.setDirector(request.getParameter("director"));
+//        createDvd.setRating(request.getParameter("rating"));
+//        createDvd.setNotes(request.getParameter("notes"));
 
-        dao.addDvd(createDvd);
+        dao.addDvd(dvd);
         return "redirect:/";
     }
 
@@ -89,31 +92,36 @@ public class DvdController {
 
     @RequestMapping(value="/search", method=RequestMethod.GET)
     public String search(HttpServletRequest request, Model model) {
-        List<Dvd> allDvds = dao.getAllDvds();
-
+//        List<Dvd> allDvds = dao.getAllDvds();
+//
+//        String searchTerm = request.getParameter("searchBox");
+//        String searchCategory = request.getParameter("searchCategory");
+//
+//        List<Dvd> filteredDvds = new ArrayList<>();
+//        for(Dvd currentDvd : allDvds){
+//            if(searchCategory.equals("title")){
+//                if(currentDvd.getTitle().equals(searchTerm)) {
+//                    filteredDvds.add(currentDvd);
+//                }
+//            } else if (searchCategory.equals("releaseYear")){
+//                if(currentDvd.getReleaseDate().equals(searchTerm)) {
+//                    filteredDvds.add(currentDvd);
+//                }
+//            } else if (searchCategory.equals("directorName")){
+//                if(currentDvd.getDirector().equals(searchTerm)) {
+//                    filteredDvds.add(currentDvd);
+//                }
+//            } else if (searchCategory.equals("rating")){
+//                if(currentDvd.getRating().equals(searchTerm)) {
+//                    filteredDvds.add(currentDvd);
+//                }
+//            }
+//        }
         String searchTerm = request.getParameter("searchBox");
-        String searchCategory = request.getParameter("searchCategory");
-
-        List<Dvd> filteredDvds = new ArrayList<>();
-        for(Dvd currentDvd : allDvds){
-            if(searchCategory.equals("title")){
-                if(currentDvd.getTitle().equals(searchTerm)) {
-                    filteredDvds.add(currentDvd);
-                }
-            } else if (searchCategory.equals("releaseYear")){
-                if(currentDvd.getReleaseDate().equals(searchTerm)) {
-                    filteredDvds.add(currentDvd);
-                }
-            } else if (searchCategory.equals("directorName")){
-                if(currentDvd.getDirector().equals(searchTerm)) {
-                    filteredDvds.add(currentDvd);
-                }
-            } else if (searchCategory.equals("rating")){
-                if(currentDvd.getRating().equals(searchTerm)) {
-                    filteredDvds.add(currentDvd);
-                }
-            }
-        }
+        SearchTerm searchCategory = SearchTerm.valueOf((request.getParameter("searchCategory")).toUpperCase());
+        Map<SearchTerm, String> criteria = new HashMap<>();
+        criteria.put(searchCategory, searchTerm);
+        List<Dvd> filteredDvds = dao.searchDvds(criteria);
 
         model.addAttribute("allDvds", filteredDvds);
         return "searchResults";

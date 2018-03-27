@@ -2,6 +2,7 @@ package com.sg.dvdlibraryspringmvc.model;
 
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -13,7 +14,7 @@ public class Dvd {
     @NotEmpty(message="Please enter a title for the DVD.")
     private String title;
 
-    @Length(min=4, max=4, message="Please enter a 4-digit year.")
+    @DateTimeFormat(pattern="MM/dd/yyyy")
     private LocalDate releaseDate;
     private String director;
     private String rating;

@@ -26,10 +26,10 @@
                         <div class="col-md-5">
                             <select id="searchCategory" name="searchCategory" class="form-control">
                                 <option value="searchCategory">Search Category</option>
-                                <option value="title">Title</option>
-                                <option value="releaseDate">Release Date</option>
-                                <option value="directorName">Director Name</option>
-                                <option value="rating">Rating</option>
+                                <option value="DVDTITLE">Title</option>
+                                <option value="RELEASEDATE">Release Date</option>
+                                <option value="DIRECTOR">Director Name</option>
+                                <option value="MPAARATING">Rating</option>
                             </select>
                         </div>
 

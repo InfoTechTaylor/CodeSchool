@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="336a611a-d106-4c9d-b69f-9f18d763c3bb" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" afterPath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" />
       <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachineFrontEnd/.idea/workspace.xml" />
     </list>
@@ -248,7 +240,7 @@
       <workItem from="1521461703877" duration="2071000" />
       <workItem from="1521547723788" duration="563000" />
       <workItem from="1521655340400" duration="570000" />
-      <workItem from="1522085600785" duration="593000" />
+      <workItem from="1522085600785" duration="1317000" />
     </task>
     <task id="LOCAL-00001" summary="got a good portion of dvd library implemented. I have added the load dvds and create dvd function. The create dvd function may have a bug where it occassionally doesn't reload the dvds after a successful creation.">
       <created>1520814747598</created>
@@ -261,7 +253,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32359000" />
+    <option name="totallyTimeSpent" value="33083000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />

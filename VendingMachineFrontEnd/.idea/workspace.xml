@@ -6,16 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="5a0e836e-d378-4a52-b253-e6c28f16aec2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/main/resources/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/java/com/sg/contactlistspringmvc/dao/ContactListDaoTest.java" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/src/test/resources/test-applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/com/sg/contactlistspringmvc/dao/ContactListDaoTest.class" />
-      <change beforePath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../ContactListSpringMVC/target/test-classes/test-applicationContext.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibraryFrontEnd/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" afterPath="$PROJECT_DIR$/../HotelSummative/HotelReservation.sql" />
       <change beforePath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../VendingMachine/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
