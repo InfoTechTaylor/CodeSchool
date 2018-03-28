@@ -6,7 +6,11 @@ import addressbookspringmvc.dto.Address;
 import java.util.List;
 
 public class AddressBookView {
-    UserIO io = new UserIOConsoleImpl();
+    UserIO io;
+
+    public AddressBookView(UserIO io){
+        this.io = io;
+    }
 
     public int printMenuAndGetSelection(){
         return io.readInt("\tPlease select the operation you wish to perform:\n" +
@@ -26,7 +30,7 @@ public class AddressBookView {
         String streetAddress = io.readString("\tPlease enter Street Address: ");
         String city = io.readString("\tPlease enter City: ");
         String state = io.readString("\tPlease enter State: ");
-        int zip = io.readInt("\tPlease enter Zip Code: ");
+        String zip = io.readString("\tPlease enter Zip Code: ");
 
         Address newAddress = new Address(firstName,lastName,streetAddress,city,state,zip);
         return newAddress;
@@ -88,5 +92,9 @@ public class AddressBookView {
 
     public void displayRemoveAddressSuccessBanner(){
         io.readString("Address successfully removed. Please hit enter to continue. ");
+    }
+
+    public void displayText(String message){
+        io.print(message);
     }
 }

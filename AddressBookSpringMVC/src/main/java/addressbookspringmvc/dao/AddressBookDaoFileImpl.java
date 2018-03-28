@@ -20,8 +20,8 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
     }
 
     @Override
-    public Address deleteAddress(String lastName) {
-        Address removedAddress = addresses.remove(lastName);
+    public Address deleteAddress(int dvdId) {
+        Address removedAddress = addresses.remove(dvdId);
         return removedAddress;
     }
 
@@ -31,9 +31,9 @@ public class AddressBookDaoFileImpl implements AddressBookDao {
     }
 
     @Override
-    public Address getAddressCount() {
+    public int getAddressCount() {
         ArrayList list = new ArrayList<Address>(addresses.values());
-        return null;
+        return list.size();
     }
 
     @Override

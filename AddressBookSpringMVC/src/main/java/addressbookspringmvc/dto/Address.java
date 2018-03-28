@@ -1,21 +1,32 @@
 package addressbookspringmvc.dto;
 
 public class Address {
-
+    private int addressId;
     private String firstName;
     private String lastName;
     private String streetAddress;
     private String city;
     private String state;
-    private int zip;
+    private String zip;
 
-    public Address(String firstName, String lastName, String streetAddress, String city, String state, int zip) {
+    public Address(String firstName, String lastName, String streetAddress, String city, String state, String zip) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.streetAddress = streetAddress;
         this.city = city;
         this.state = state;
         this.zip = zip;
+    }
+
+    public Address() {
+    }
+
+    public int getAddressId() {
+        return addressId;
+    }
+
+    public void setAddressId(int addressId) {
+        this.addressId = addressId;
     }
 
     public String getFirstName() {
@@ -58,11 +69,11 @@ public class Address {
         this.state = state;
     }
 
-    public int getZip() {
+    public String getZip() {
         return zip;
     }
 
-    public void setZip(int zip) {
+    public void setZip(String zip) {
         this.zip = zip;
     }
 }

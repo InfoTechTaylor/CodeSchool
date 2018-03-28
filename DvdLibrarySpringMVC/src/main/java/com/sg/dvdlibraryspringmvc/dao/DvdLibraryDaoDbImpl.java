@@ -35,17 +35,6 @@ public class DvdLibraryDaoDbImpl implements DvdLibraryDao {
     private static final String SQL_SELECT_ALL_DVDS
             = "SELECT * FROM dvd";
 
-    private static final String SQL_SELECT_DVDS_BY_TITLE
-            = "SELECT * FROM dvd WHERE title = ?";
-
-    private static final String SQL_SELECT_DVDS_BY_RELEASE_DATE
-            = "SELECT * FROM dvd WHERE releaseDate = ?";
-
-    private static final String SQL_SELECT_DVDS_BY_DIRECTOR
-            = "SELECT * FROM dvd WHERE director = ?";
-
-    private static final String SQL_SELECT_DVDS_BY_MPAARATING
-            = "SELECT * FROM dvd WHERE mpaaRating = ?";
 
     // Injecting the JdbcTemplate
     private JdbcTemplate jdbcTemplate;

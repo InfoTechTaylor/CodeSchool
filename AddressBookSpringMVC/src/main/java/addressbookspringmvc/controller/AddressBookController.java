@@ -1,6 +1,7 @@
 package addressbookspringmvc.controller;
 
 import addressbookspringmvc.dao.AddressBookDao;
+import addressbookspringmvc.dao.AddressBookDaoDBImpl;
 import addressbookspringmvc.dao.AddressBookDaoFileImpl;
 import addressbookspringmvc.dto.Address;
 import addressbookspringmvc.ui.AddressBookView;
@@ -10,10 +11,13 @@ import addressbookspringmvc.ui.UserIOConsoleImpl;
 import java.util.List;
 
 public class AddressBookController {
-    AddressBookView view = new AddressBookView();
-    // instantiate object of UserIOConsoleImpl in order to interact with user
-    private UserIO io = new UserIOConsoleImpl();
-    AddressBookDao dao = new AddressBookDaoFileImpl();
+    AddressBookView view;
+    AddressBookDao dao;
+
+    public AddressBookController(AddressBookView view, AddressBookDao dao){
+        this.view = view;
+        this.dao = dao;
+    }
 
     // create a run method for all the main controller logic
     public void run(){
@@ -22,8 +26,8 @@ public class AddressBookController {
 
         // run program until user chooses to exit, in which keepGoing will be set to false
         while(keepGoing){
-            io.print("==========");
-            io.print("Initial Menu:");
+            view.displayText("==========");
+            view.displayText("Initial Menu:");
 
             menuChoice = getMenuChoice();
 
@@ -38,7 +42,7 @@ public class AddressBookController {
                     viewAddress();
                     break;
                 case 4:
-                    io.print("LIST ADDRESS COUNT");
+                    view.displayText("LIST ADDRESS COUNT");
                     break;
                 case 5:
                     getAllAddresses();
@@ -81,7 +85,8 @@ public class AddressBookController {
     private void removeAddress(){
         view.displayRemoveAddressBanner();
         String lastName = view.getAddressLastNameChoice();
-        dao.deleteAddress(lastName);
+        Address fromDao = dao.getAddress(lastName);
+        dao.deleteAddress(fromDao.getAddressId());
         view.displayRemoveAddressSuccessBanner();
     }
 }

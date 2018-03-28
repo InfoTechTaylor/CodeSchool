@@ -17,13 +17,13 @@ public interface AddressBookDao {
     Address addAddress(String lastName, Address address);
 
 
-    Address deleteAddress(String lastName);
+    Address deleteAddress(int dvdId);
 
 
     Address getAddress(String lastName);
 
 
-    Address getAddressCount();
+    int getAddressCount();
 
 
     List<Address> getAllAddresses();
