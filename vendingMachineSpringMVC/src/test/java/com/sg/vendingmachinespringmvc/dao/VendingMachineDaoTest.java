@@ -9,9 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.math.BigDecimal;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 //import org.junit.After;
 
@@ -21,15 +19,17 @@ public class VendingMachineDaoTest {
     private VendingMachineDao dao;
 
     public VendingMachineDaoTest(){
-        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persistence.xml");
-        dao = ctx.getBean("vendingMachineDao", VendingMachineDao.class);
+
     }
 
     @Before
     public void setUp() throws Exception {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("spring-persistence.xml");
+        dao = ctx.getBean("vendingMachineDao", VendingMachineDao.class);
+
         List<VendingMachineItem> allItems = dao.retrieveAllVendingMachineItems();
         for (VendingMachineItem currentItem : allItems){
-            dao.removeVendingMachineItem(currentItem.getItemId());
+            dao.removeVendingMachineItem(currentItem);
         }
     }
 
@@ -41,13 +41,13 @@ public class VendingMachineDaoTest {
     @Test
     public void retrieveAllVendingMachineItems() throws Exception{
         // arrange
-        VendingMachineItem item = new VendingMachineItem("1");
+        VendingMachineItem item = new VendingMachineItem(1);
         item.setItemName("Chips");
         item.setItemCost(new BigDecimal(".75"));
         item.setItemQuantity(4);
         dao.createVendingMachineItem(item);
 
-        VendingMachineItem item2 = new VendingMachineItem("2");
+        VendingMachineItem item2 = new VendingMachineItem(2);
         item2.setItemName("Soda");
         item2.setItemCost(new BigDecimal("1.75"));
         item2.setItemQuantity(5);
@@ -62,47 +62,50 @@ public class VendingMachineDaoTest {
     @Test
     public void updateItem() throws Exception {
         //arrange
-        VendingMachineItem item = new VendingMachineItem("1");
+        VendingMachineItem item = new VendingMachineItem(1);
         item.setItemName("Chips");
         item.setItemCost(new BigDecimal(".75"));
         item.setItemQuantity(4);
         dao.createVendingMachineItem(item);
-        VendingMachineItem originalItem = dao.retrieveItemById("1");
+        VendingMachineItem originalItem = dao.retrieveItemById(item);
         // act
         item.setItemQuantity(10);
         dao.updateItem(item);
         //assert
-        assertNotEquals(dao.retrieveItemById("1"), originalItem);
+        assertNotEquals(dao.retrieveItemById(item), originalItem);
     }
 
     @Test
     public void testRemoveVendingMachineItem() throws Exception{
         //arrange
-        VendingMachineItem item = new VendingMachineItem("1");
+        VendingMachineItem item = new VendingMachineItem();
         item.setItemName("Chips");
         item.setItemCost(new BigDecimal(".75"));
         item.setItemQuantity(4);
-        dao.createVendingMachineItem(item);
+        VendingMachineItem newItem = dao.createVendingMachineItem(item);
         //act
-        dao.removeVendingMachineItem(item.getItemId());
+        dao.removeVendingMachineItem(newItem);
+        VendingMachineItem itemFromDao = dao.retrieveItemById(newItem);
         //assert
-        assertEquals(dao.retrieveItemById(item.getItemId()), null);
+        assertNull(itemFromDao);
     }
 
     @Test
     public void testCreateGetVendingMachineItem() throws Exception{
         // arrange
-        VendingMachineItem item = new VendingMachineItem("1");
+        VendingMachineItem item = new VendingMachineItem(1);
         item.setItemName("Chips");
         item.setItemCost(new BigDecimal(".75"));
         item.setItemQuantity(4);
 
         //act
-        dao.createVendingMachineItem(item);
-        VendingMachineItem itemFromDao = dao.retrieveItemById("1");
+        VendingMachineItem newItem = dao.createVendingMachineItem(item);
+        VendingMachineItem itemFromDao = dao.retrieveItemById(newItem);
 
         // assert
-        assertEquals(item, itemFromDao);
+        assertEquals(item.getItemName(), itemFromDao.getItemName());
+        assertEquals(item.getItemCost(), itemFromDao.getItemCost());
+        assertEquals(item.getItemQuantity(), itemFromDao.getItemQuantity());
         assertNotNull(item);
 
     }

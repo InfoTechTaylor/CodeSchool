@@ -101,7 +101,9 @@ public class VendingMachineController {
     public String purchaseItem(HttpServletRequest request, RedirectAttributes redirectAttrs){
         String itemSelectedId = request.getParameter("selectedItemId");
         try {
-            service.purchaseItem(itemSelectedId);
+            VendingMachineItem item = new VendingMachineItem();
+            item.setItemId(Integer.parseInt(itemSelectedId));
+            service.purchaseItem(item);
         } catch (VendingMachinePersistenceException e){
             //
         } catch (NoItemInventoryException e){

@@ -8,7 +8,7 @@ public interface VendingMachineDao {
 
     List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException;
     void updateItem(VendingMachineItem item) throws VendingMachinePersistenceException;
-    VendingMachineItem retrieveItemById(String itemId) throws VendingMachinePersistenceException;
-    VendingMachineItem removeVendingMachineItem(String item) throws VendingMachinePersistenceException;
+    VendingMachineItem retrieveItemById(VendingMachineItem item) throws VendingMachinePersistenceException;
+    VendingMachineItem removeVendingMachineItem(VendingMachineItem item) throws VendingMachinePersistenceException;
     VendingMachineItem createVendingMachineItem(VendingMachineItem item) throws VendingMachinePersistenceException;
 }

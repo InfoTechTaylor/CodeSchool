@@ -10,7 +10,7 @@ import java.util.List;
 public interface VendingMachineServiceLayer {
     List<VendingMachineItem> retrieveAllVendingMachineItems() throws VendingMachinePersistenceException;
     BigDecimal addMoneyToMemory(Money type) throws InvalidAmountException;
-    String purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException;
+    String purchaseItem(VendingMachineItem item) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException;
     VendingMachineChange convertDollarsToCoinsAndGetChange() throws InsufficientFundsException;
     BigDecimal getRemainingMoney();
     VendingMachineChange getChangeAmount();

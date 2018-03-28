@@ -14,13 +14,13 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
 
 
     public VendingMachineDaoStubImpl(){
-        this.firstVendingMachineItem = new VendingMachineItem("1");
+        this.firstVendingMachineItem = new VendingMachineItem(1);
         firstVendingMachineItem.setItemName("Chips");
         firstVendingMachineItem.setItemCost(new BigDecimal("1.00"));
         firstVendingMachineItem.setItemQuantity(3);
         vendingMachineItemList.add(firstVendingMachineItem);
 
-        this.secondVendingMachineItem = new VendingMachineItem("2");
+        this.secondVendingMachineItem = new VendingMachineItem(2);
         secondVendingMachineItem.setItemName("Soda");
         secondVendingMachineItem.setItemCost(new BigDecimal("1.50"));
         secondVendingMachineItem.setItemQuantity(0);
@@ -35,18 +35,18 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
 
     @Override
     public void updateItem(VendingMachineItem item)  {
-        if(item.getItemId().equals(firstVendingMachineItem.getItemId())){
+        if(item.getItemId() == firstVendingMachineItem.getItemId()){
             firstVendingMachineItem.setItemQuantity(item.getItemQuantity());
-        } else if (item.getItemId().equals(secondVendingMachineItem.getItemId())){
+        } else if (item.getItemId() == (secondVendingMachineItem.getItemId())){
             secondVendingMachineItem.setItemQuantity(item.getItemQuantity());
         }
     }
 
     @Override
-    public VendingMachineItem retrieveItemById(String itemId)  {
-        if(itemId.equals(firstVendingMachineItem.getItemId())){
+    public VendingMachineItem retrieveItemById(VendingMachineItem item)  {
+        if(item.getItemId() == firstVendingMachineItem.getItemId()){
             return firstVendingMachineItem;
-        } else if (itemId.equals(secondVendingMachineItem.getItemId())){
+        } else if (item.getItemId() == secondVendingMachineItem.getItemId()){
             return secondVendingMachineItem;
         } else {
             return null;
@@ -54,10 +54,10 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
     }
 
     @Override
-    public VendingMachineItem removeVendingMachineItem(String itemId)  {
-        if(itemId.equals(firstVendingMachineItem.getItemId())){
+    public VendingMachineItem removeVendingMachineItem(VendingMachineItem item)  {
+        if(item.getItemId() == firstVendingMachineItem.getItemId()){
             return firstVendingMachineItem;
-        } else if (itemId.equals(secondVendingMachineItem.getItemId())){
+        } else if (item.getItemId() == secondVendingMachineItem.getItemId()){
             return secondVendingMachineItem;
         } else {
             return null;
@@ -66,9 +66,9 @@ public class VendingMachineDaoStubImpl implements VendingMachineDao{
 
     @Override
     public VendingMachineItem createVendingMachineItem(VendingMachineItem item) {
-        if(item.getItemId().equals(firstVendingMachineItem.getItemId())){
+        if(item.getItemId() == firstVendingMachineItem.getItemId()){
             return firstVendingMachineItem;
-        } else if (item.getItemId().equals(secondVendingMachineItem.getItemId())){
+        } else if (item.getItemId() == secondVendingMachineItem.getItemId()){
             return secondVendingMachineItem;
         } else {
             return null;

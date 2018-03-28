@@ -2,34 +2,118 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bcc4408b-8d11-4a25-8fcf-319295aaece9" name="Default" comment="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/Contact-List-REST-Service.zip" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/ContactListRESTService.jar" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap-theme.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/eq-height-row.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/css/sticky-footer.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/home.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/jquery-2.2.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../ContactListRestService/js/jquery-3.0.0.min.js" />
-      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../.idea/taylor-lapointe-individual-work.iml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/artifacts/FlooringMasterySpringMVC_war.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/artifacts/FlooringMasterySpringMVC_war_exploded.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/compiler.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__com_fasterxml_classmate_1_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_6_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_6_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__javax_inject_javax_inject_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__javax_servlet_javax_servlet_api_3_1_0.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__javax_servlet_jsp_jsp_api_2_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__javax_servlet_jstl_1_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__javax_validation_validation_api_1_1_0_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__junit_junit_4_12.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_36.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_apache_commons_commons_dbcp2_2_1_1.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_apache_commons_commons_pool2_2_4_2.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_aspectj_aspectjtools_1_8_7.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_hamcrest_hamcrest_core_1_3.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_hibernate_hibernate_validator_5_2_2_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_2_1_Final.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_aop_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_beans_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_context_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_core_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_expression_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_jdbc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_test_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_tx_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_web_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/libraries/Maven__org_springframework_spring_webmvc_4_3_6_RELEASE.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/misc.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/modules.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/.idea/workspace.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/FlooringMasterySpringMVC.iml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/pom.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/App.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/advice/LoggingAdvice.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/controller/FlooringController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/ConfigDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/ConfigDaoImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/ConfigDaoStubImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoAudit.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoAuditFileImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProducts.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsFileImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsStubImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxes.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesDBImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesFileImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesStubImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dao/FlooringPersistenceException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dto/Order.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dto/Product.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/dto/Tax.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/DateNotFoundException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayerImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/OrderNotFoundException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/ProductMaterialNotFoundException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/service/TaxStateNotFoundException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/ui/FlooringView.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/ui/UserIO.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/main/java/flooringmasteryspringmvc/ui/UserIOConsoleImpl.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImplTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../FlooringMasterySpringMVC/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesDBImplTest.java" />
+      <change beforePath="$PROJECT_DIR$/../AddressBook/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AddressBook/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../AddressBook/InstallAddressBookDB.sql" afterPath="$PROJECT_DIR$/../AddressBook/InstallAddressBookDB.sql" />
+      <change beforePath="$PROJECT_DIR$/../AddressBookSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../AddressBookSpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../BaseballLeague/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../DvdLibrarySpringMVC/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../Library/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../Library/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/InstallVendingMachineDB.sql" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/InstallVendingMachineDB.sql" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/controller/VendingMachineController.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/main/resources/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoTest.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoTest.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.java" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/java/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.java" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/resources/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/src/test/resources/test-applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/controller/VendingMachineController.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDao.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoFileImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoStubImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/dto/VendingMachineItem.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayer.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerImpl.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/spring-mvc-webapp/WEB-INF/classes/spring-persistence.xml" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoTest.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/dao/VendingMachineDaoTest.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.class" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/com/sg/vendingmachinespringmvc/service/VendingMachineServiceLayerTest.class" />
+      <change beforePath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/test-applicationContext.xml" afterPath="$PROJECT_DIR$/../vendingMachineSpringMVC/target/test-classes/test-applicationContext.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,8 +164,18 @@
       <file leaf-file-name="FlooringDaoTaxesTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
+            <state relative-caret-position="1075">
+              <caret line="92" column="5" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoProductsTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoProductsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1075">
+              <caret line="84" column="5" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -107,7 +201,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlooringServiceLayerTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlooringServiceLayerTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1113">
@@ -120,21 +214,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+      <file leaf-file-name="Orders_02202000.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Orders_02202000.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="560">
-              <caret line="16" column="31" lean-forward="false" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="applicationContext.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2205">
-              <caret line="63" column="82" lean-forward="false" selection-start-line="63" selection-start-column="82" selection-end-line="63" selection-end-column="82" />
+            <state relative-caret-position="35">
+              <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -301,54 +385,6 @@
               <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="advice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dto" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="FlooringMastery" type="b2602c69:ProjectViewProjectNode" />
-              <item name="FlooringMastery" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -384,10 +420,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -656,6 +692,7 @@
       <workItem from="1520277246679" duration="50000" />
       <workItem from="1520447417348" duration="172000" />
       <workItem from="1520447622907" duration="134000" />
+      <workItem from="1522257608738" duration="2708000" />
     </task>
     <task id="LOCAL-00001" summary="TAYLORLAPOINTEINDIVIDUALWORK-85 Flooring MasteryTAYLORLAPOINTEINDIVIDUALWORK-86 setup initial package and file structure according to our UML diagram">
       <created>1519146095976</created>
@@ -994,7 +1031,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10379000" />
+    <option name="totallyTimeSpent" value="13087000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -1180,13 +1217,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Orders_03212017.txt" />
     <entry file="file://$PROJECT_DIR$/Orders_01012000.txt" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoProductsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="46" lean-forward="false" selection-start-line="20" selection-start-column="35" selection-end-line="20" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12.jar!/org/junit/internal/runners/model/ReflectiveCallable.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="390">
@@ -1273,13 +1303,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="2" column="0" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Orders_02202000.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1438,14 +1461,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="34" column="62" lean-forward="false" selection-start-line="34" selection-start-column="8" selection-end-line="34" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/service/FlooringServiceLayerTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1113">
@@ -1454,6 +1469,30 @@
             <element signature="e#5845#5846#0" expanded="true" />
             <element signature="e#5895#5896#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Orders_02202000.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="35">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoTaxesTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="92" column="5" lean-forward="true" selection-start-line="43" selection-start-column="4" selection-end-line="92" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/dao/FlooringDaoProductsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1075">
+          <caret line="84" column="5" lean-forward="true" selection-start-line="33" selection-start-column="4" selection-end-line="84" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

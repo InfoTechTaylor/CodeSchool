@@ -55,7 +55,9 @@ public class VendingMachineServiceLayerTest {
         //arrange
         service.addMoneyToMemory(Money.valueOf("DOLLAR"));
         //act, id of 1 is our only item in the daoStubImpl
-        service.purchaseItem("1");
+        VendingMachineItem item = new VendingMachineItem();
+        item.setItemId(1);
+        service.purchaseItem(item);
         //assert, may not need the first assert as update is tested in dao tests
         assertEquals(2, service.retrieveAllVendingMachineItems().get(0).getItemQuantity());
         assertEquals(new BigDecimal("0"), service.getRemainingMoney());
@@ -68,7 +70,9 @@ public class VendingMachineServiceLayerTest {
 
         try{
             //act
-            service.purchaseItem("23");
+            VendingMachineItem item = new VendingMachineItem();
+            item.setItemId(23);
+            service.purchaseItem(item);
             fail("Expected NoItemInventoryException was not thrown");
         } catch (NoItemInventoryException e){
             // do nothing, test passes
@@ -81,7 +85,9 @@ public class VendingMachineServiceLayerTest {
 
         try{
             //act
-            service.purchaseItem("1");
+            VendingMachineItem item = new VendingMachineItem();
+            item.setItemId(1);
+            service.purchaseItem(item);
             fail("Expected InsufficientFundsException was not thrown");
         } catch (InsufficientFundsException e){
             // do nothing, test passes

@@ -23,8 +23,35 @@
         <!--<constructor-arg ref="userIO" />-->
     <!--</bean>-->
 
-    <bean id="vendingMachineDao" class="com.sg.vendingmachinespringmvc.dao.VendingMachineDaoFileImpl">
-        <constructor-arg value="vendingMachineItems_prod.txt" />
+    <!--<bean id="vendingMachineDao" class="com.sg.vendingmachinespringmvc.dao.VendingMachineDaoFileImpl">-->
+        <!--<constructor-arg value="vendingMachineItems_prod.txt" />-->
+    <!--</bean>-->
+
+    <tx:annotation-driven />
+
+    <bean id="dataSource"
+          class="org.apache.commons.dbcp2.BasicDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url"
+                  value="jdbc:mysql://localhost:3306/VendingMachine" />
+        <property name="username" value="root" />
+        <property name="password" value="root" />
+        <property name="initialSize" value="5" />
+        <property name="maxTotal" value="10" />
+    </bean>
+
+    <bean id="transactionManager"
+          class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="jdbcTemplate"
+          class="org.springframework.jdbc.core.JdbcTemplate">
+        <property name="dataSource" ref="dataSource" />
+    </bean>
+
+    <bean id="vendingMachineDao" class="com.sg.vendingmachinespringmvc.dao.VendingMachineDaoDBImpl" >
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
 
     <bean id="vendingMachineAuditDao" class="com.sg.vendingmachinespringmvc.dao.VendingMachineAuditDaoFileImpl" />
@@ -34,60 +61,6 @@
         <constructor-arg ref="vendingMachineAuditDao" />
     </bean>
 
-    <!--<bean id=â€œmessageSourceâ€? class=â€œorg.springframework.context.support.ResourceBundleMessageSourceâ€?>-->
-        <!--<property name=â€œbasenameâ€?>-->
-        <!--<value>classpath:messages</value>-->
-        <!--</property>-->
-        <!--</bean>-->
 
-    <!--<bean id="controller" class="com.sg.vendingmachinespringmvc.controller.VendingMachineController">-->
-        <!--<constructor-arg ref="serviceLayer" />-->
-        <!--<constructor-arg ref="view" />-->
-    <!--</bean>-->
-
-    <!--<bean id="loggingAdvice" class="advice.LoggingAdvice">-->
-        <!--<constructor-arg ref="vendingMachineAuditDao"/>-->
-    <!--</bean>-->
-
-    <!--<aop:config>-->
-        <!--<aop:aspect id="log" ref="loggingAdvice">-->
-            <!--&lt;!&ndash;***************************************************************&ndash;&gt;-->
-            <!--&lt;!&ndash;Pointcut (method) for PurchaseItem() defining the WHERE)&ndash;&gt;-->
-            <!--<aop:pointcut id="purchaseItem"-->
-                          <!--expression = "execution(* service.VendingMachineServiceLayerImpl.purchaseItem(..))" />-->
-
-            <!--&lt;!&ndash;The below two tags are the advice (what and when) for the purchaseItem pointcut&ndash;&gt;-->
-            <!--<aop:after-returning pointcut-ref="purchaseItem"-->
-                                 <!--returning = "itemToPurchase" method="createAuditEntry" />-->
-
-            <!--<aop:after-throwing pointcut-ref = "purchaseItem"-->
-                                <!--throwing = "e" method="createExceptionAuditEntry" />-->
-
-            <!--&lt;!&ndash;***************************************************************&ndash;&gt;-->
-            <!--&lt;!&ndash;Pointcut for convertDollarsToCoinsAndGetChange() defining WHERE &ndash;&gt;-->
-            <!--<aop:pointcut id="getChange"-->
-                          <!--expression = "execution(* service.VendingMachineServiceLayerImpl.convertDollarsToCoinsAndGetChange(..))" />-->
-
-            <!--&lt;!&ndash;below tags are for the advice for pointcut getChange&ndash;&gt;-->
-            <!--<aop:after-returning pointcut-ref="getChange"-->
-                                 <!--returning="countsOfCoins" method="createAuditEntry" />-->
-
-            <!--<aop:after-throwing pointcut-ref="getChange"-->
-                                <!--throwing = "e" method="createExceptionAuditEntry" />-->
-
-            <!--&lt;!&ndash;***************************************************************&ndash;&gt;-->
-            <!--&lt;!&ndash;Pointcut for addMoney()&ndash;&gt;-->
-            <!--<aop:pointcut id="addMoney"-->
-                          <!--expression = "execution(* service.VendingMachineServiceLayerImpl.addMoneyToMemory(..))" />-->
-
-            <!--<aop:after-returning pointcut-ref="addMoney"-->
-                                 <!--returning = "remainingMoney" method="createAuditEntry" />-->
-
-            <!--<aop:after-throwing pointcut-ref="addMoney"-->
-                                <!--throwing = "e" method="createExceptionAuditEntry" />-->
-
-
-        <!--</aop:aspect>-->
-    <!--</aop:config>-->
 
 </beans>

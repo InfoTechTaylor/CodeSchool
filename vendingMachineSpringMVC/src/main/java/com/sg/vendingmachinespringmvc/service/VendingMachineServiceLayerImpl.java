@@ -54,9 +54,9 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
     @Override
-    public String purchaseItem(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
-        VendingMachineItem itemToPurchase = dao.retrieveItemById(itemId);
-        validateItemChoice(itemId);
+    public String purchaseItem(VendingMachineItem item) throws VendingMachinePersistenceException, NoItemInventoryException, InsufficientFundsException {
+        VendingMachineItem itemToPurchase = dao.retrieveItemById(item);
+        validateItemChoice(item);
         validateFunds(itemToPurchase);
 
         // update VendingMachineItem quantity
@@ -134,10 +134,10 @@ public class VendingMachineServiceLayerImpl implements VendingMachineServiceLaye
     }
 
 
-    private void validateItemChoice(String itemId) throws VendingMachinePersistenceException, NoItemInventoryException {
+    private void validateItemChoice(VendingMachineItem item) throws VendingMachinePersistenceException, NoItemInventoryException {
 
-        VendingMachineItem itemToValidate = dao.retrieveItemById(itemId);
-        if (itemId.equals("")) {
+        VendingMachineItem itemToValidate = dao.retrieveItemById(item);
+        if (item.getItemId() == 0) {
             message = "Please select an item.";
             throw new NoItemInventoryException(message);
         }

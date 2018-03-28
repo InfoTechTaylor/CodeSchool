@@ -10,7 +10,7 @@ import java.util.*;
 
 public class VendingMachineDaoFileImpl implements VendingMachineDao {
 
-    private Map<String, VendingMachineItem> vendingMachineItemMap = new HashMap<>();
+    private Map<Integer, VendingMachineItem> vendingMachineItemMap = new HashMap<>();
     private final String VENDING_MACHINE_ITEMS_TEXT;
     private final String STRING_DELIMITER = "::";
 
@@ -33,14 +33,14 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
     }
 
     @Override
-    public VendingMachineItem retrieveItemById(String itemId) throws VendingMachinePersistenceException{
+    public VendingMachineItem retrieveItemById(VendingMachineItem item) throws VendingMachinePersistenceException{
         loadVendingMachineItems();
-        return vendingMachineItemMap.get(itemId);
+        return vendingMachineItemMap.get(item.getItemId());
     }
 
     @Override
-    public VendingMachineItem removeVendingMachineItem(String itemId) throws VendingMachinePersistenceException{
-        VendingMachineItem itemToRemove = vendingMachineItemMap.remove(itemId);
+    public VendingMachineItem removeVendingMachineItem(VendingMachineItem item) throws VendingMachinePersistenceException{
+        VendingMachineItem itemToRemove = vendingMachineItemMap.remove(item.getItemId());
         writeVendingMachineItems();
         return itemToRemove;
     }
@@ -76,7 +76,7 @@ public class VendingMachineDaoFileImpl implements VendingMachineDao {
             // break up the line into tokens
             currentTokens = currentLine.split(STRING_DELIMITER);
             // create a new VendingMachineItem object and put it into the map vendingMachineItemMap
-            VendingMachineItem currentItem = new VendingMachineItem(currentTokens[0]);
+            VendingMachineItem currentItem = new VendingMachineItem(Integer.parseInt(currentTokens[0]));
             // set the remaining values on currentItem manually
             currentItem.setItemName(currentTokens[1]);
             currentItem.setItemCost(new BigDecimal(currentTokens[2]));

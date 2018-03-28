@@ -42,3 +42,6 @@ CREATE TABLE Contact
 INSERT INTO Contact (firstName, lastName, streetAddress, city, state, zip)
 VALUES('Brett', 'Hicklin', '5 Gretchens Way', 'Barrington', 'NH', '03825'),
 ('Brian', 'Lapointe', '6 Main Street', 'Manchester', 'NH', '03030');
+
+USE AddressBook_test;
+SELECT * FROM Contact;

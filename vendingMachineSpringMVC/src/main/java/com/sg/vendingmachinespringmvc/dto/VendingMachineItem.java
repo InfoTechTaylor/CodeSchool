@@ -5,20 +5,24 @@ import java.util.Objects;
 
 public class VendingMachineItem {
 
-    private String itemId;
+    private int itemId;
     private String itemName;
     private BigDecimal itemCost;
     private int itemQuantity;
 
-    public VendingMachineItem(String itemId) {
+    public VendingMachineItem(int itemId) {
         this.itemId = itemId;
     }
 
-    public String getItemId() {
+    public VendingMachineItem(){}
+
+    public int getItemId() {
         return itemId;
     }
 
-// KEEP NO SETTER FOR itemId so that it is read only
+    public void setItemId(int itemId) {
+        this.itemId = itemId;
+    }
 
     public String getItemName() {
         return itemName;
