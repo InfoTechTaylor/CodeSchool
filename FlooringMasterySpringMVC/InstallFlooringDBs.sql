@@ -94,3 +94,6 @@ FOREIGN KEY (taxId) REFERENCES tax(taxId);
 ALTER TABLE customer_order
 ADD CONSTRAINT fk_customer_order_product
 FOREIGN KEY (productId) REFERENCES product(productId);
+
+USE flooringdb_test;
+SELECT * FROM Product;

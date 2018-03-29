@@ -4,6 +4,8 @@ import flooringmasteryspringmvc.dto.Product;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -52,6 +54,7 @@ public class FlooringDaoProductsDBImpl implements FlooringDaoProducts{
     }
 
     @Override
+    @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
     public Product createProduct(Product productObj) throws FlooringPersistenceException {
         jdbcTemplate.update(SQL_INSERT_PRODUCT,
                 productObj.getProductType(),

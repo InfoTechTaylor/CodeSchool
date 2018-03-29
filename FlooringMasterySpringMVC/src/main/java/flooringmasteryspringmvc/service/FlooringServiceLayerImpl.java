@@ -76,9 +76,9 @@ public class FlooringServiceLayerImpl implements FlooringServiceLayer {
         // calculate and set totals on orderObj
         orderObj = calculateAndSetTotals(orderObj);
 
-        if(orderObj.getOrderNumber() == null) {
-            orderObj.setOrderNumber(daoConfig.generateOrderNumber());
-        }
+//        if(orderObj.getOrderNumber() == null) {
+//            orderObj.setOrderNumber(daoConfig.generateOrderNumber());
+//        }
 
         return daoOrder.createOrder(orderObj.getOrderDate(), orderObj);
     }
