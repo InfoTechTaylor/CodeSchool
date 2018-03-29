@@ -1,0 +1,36 @@
+package baseball.service;
+
+import baseball.dao.TeamDao;
+import baseball.dto.Team;
+
+import javax.inject.Inject;
+
+public class TeamServiceImpl implements TeamService {
+
+    TeamDao teamDao;
+
+    @Inject
+    public TeamServiceImpl(TeamDao teamDao){
+        this.teamDao = teamDao;
+    }
+
+    @Override
+    public Team create(Team team) {
+        return teamDao.create(team);
+    }
+
+    @Override
+    public Team read(Long id) {
+        return teamDao.read(id);
+    }
+
+    @Override
+    public void update(Team team) {
+        teamDao.update(team);
+    }
+
+    @Override
+    public void delete(Team team) {
+        teamDao.delete(team);
+    }
+}

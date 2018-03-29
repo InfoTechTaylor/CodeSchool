@@ -40,8 +40,13 @@
         <property name="dataSource" ref="dataSource" />
     </bean>
 
-    <bean id="dao"
+    <bean id="teamDao"
           class="baseball.dao.TeamDaoDBImpl">
     </bean>
-    
+
+    <bean id="service"
+          class="baseball.service.TeamServiceImpl" />
+
+    <bean id="playerDao"
+          class="baseball.dao.PlayerDaoDBImpl" />
 </beans>

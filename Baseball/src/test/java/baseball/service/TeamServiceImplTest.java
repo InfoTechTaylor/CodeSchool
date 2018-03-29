@@ -1,5 +1,6 @@
-package baseball.dao;
+package baseball.service;
 
+import baseball.dao.TeamDao;
 import baseball.dto.Team;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,10 +18,10 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Transactional
 @Rollback
-public class TeamDaoDBImplTest {
+public class TeamServiceImplTest {
 
     @Inject
-    TeamDao dao;
+    TeamService TeamService;
 
     @Before
     public void setUp() throws Exception {
@@ -35,7 +36,7 @@ public class TeamDaoDBImplTest {
         team.setNickname("Pirates");
 
         // act
-        Team createdTeam = dao.create(team);
+        Team createdTeam = TeamService.create(team);
 
         // assert
         assertNotNull(createdTeam.getId());
@@ -52,10 +53,10 @@ public class TeamDaoDBImplTest {
         Team team = new Team();
         team.setCity("Pittsburgh");
         team.setNickname("Pirates");
-        Team createdTeam = dao.create(team);
+        Team createdTeam = TeamService.create(team);
 
         // act
-        Team readTeam = dao.read(createdTeam.getId());
+        Team readTeam = TeamService.read(createdTeam.getId());
 
         // assert
         assertNotNull(readTeam);
@@ -69,17 +70,17 @@ public class TeamDaoDBImplTest {
         Team team = new Team();
         team.setCity("Pittsburgh");
         team.setNickname("Pirates");
-        Team createdTeam = dao.create(team);
-        Team readTeam = dao.read(createdTeam.getId());
+        Team createdTeam = TeamService.create(team);
+        Team readTeam = TeamService.read(createdTeam.getId());
 
         readTeam.setNickname("The Red Team");
         readTeam.setCity("Boston");
 
         // act
-        dao.update(readTeam);
+        TeamService.update(readTeam);
 
         // assert
-        Team updateTeam = dao.read(readTeam.getId());
+        Team updateTeam = TeamService.read(readTeam.getId());
         assertEquals("The Red Team", updateTeam.getNickname());
         assertEquals("Boston", updateTeam.getCity());
     }
@@ -90,13 +91,13 @@ public class TeamDaoDBImplTest {
         Team team = new Team();
         team.setCity("Pittsburgh");
         team.setNickname("Pirates");
-        Team createdTeam = dao.create(team);
+        Team createdTeam = TeamService.create(team);
         assertNotNull(createdTeam.getId());
 
         // act
-        dao.delete(createdTeam);
+        TeamService.delete(createdTeam);
 
         // assert
-        assertNull(dao.read(createdTeam.getId()));
+        assertNull(TeamService.read(createdTeam.getId()));
     }
 }
