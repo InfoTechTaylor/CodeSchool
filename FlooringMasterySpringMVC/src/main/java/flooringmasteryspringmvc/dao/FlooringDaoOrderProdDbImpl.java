@@ -30,7 +30,7 @@ public class FlooringDaoOrderProdDbImpl implements FlooringDaoOrder {
             + "values (?, ?, ?, ?, ?, ?, ?, ?, ?)";
 
     private static final String SQL_SELECT_ORDER_BY_ID
-            = "select from customer_order where orderNumber = ?";
+            = "select * from customer_order where orderNumber = ?";
 
     private static final String SQL_UPDATE_ORDER
             = "update customer_order set orderDate = ?, customerName = ?, taxId = ?, productId = ?, "
@@ -55,6 +55,12 @@ public class FlooringDaoOrderProdDbImpl implements FlooringDaoOrder {
         return jdbcTemplate.query(SQL_SELECT_ORDER_BY_DATE,
                 new orderMapper(),
                 date);
+    }
+
+    @Override
+    public List<Order> retrieveAllOrders() {
+        return jdbcTemplate.query(SQL_SELECT_ALL_ORDERS,
+                new orderMapper());
     }
 
     @Override

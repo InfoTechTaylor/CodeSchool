@@ -82,4 +82,9 @@ public class FlooringDaoOrderStubImpl implements FlooringDaoOrder {
     public void saveOrders() throws FlooringPersistenceException {
 
     }
+
+    @Override
+    public List<Order> retrieveAllOrders() {
+        return null;
+    }
 }

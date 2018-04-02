@@ -44,9 +44,24 @@
           class="baseball.dao.TeamDaoDBImpl">
     </bean>
 
-    <bean id="service"
+    <bean id="teamService"
           class="baseball.service.TeamServiceImpl" />
 
     <bean id="playerDao"
           class="baseball.dao.PlayerDaoDBImpl" />
+
+    <bean id="playerService"
+          class="baseball.service.PlayerServiceImpl" />
+
+    <bean id="positionDao"
+          class="baseball.dao.PositionDaoDBImpl" />
+
+    <bean id="positionService"
+          class="baseball.service.PositionServiceImpl" />
+
+    <bean id="playerPositionDao"
+          class="baseball.dao.PlayerPositionDaoImpl" />
+
+    <bean id="playerPositionService"
+          class="baseball.service.PlayerPositionServiceImpl" />
 </beans>

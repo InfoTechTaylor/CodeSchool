@@ -146,6 +146,10 @@ public class FlooringDaoOrderTrainingFileImpl implements FlooringDaoOrder {
         //writeOrders();
     }
 
+    @Override
+    public List<Order> retrieveAllOrders() {
+        return null;
+    }
 
 
 }

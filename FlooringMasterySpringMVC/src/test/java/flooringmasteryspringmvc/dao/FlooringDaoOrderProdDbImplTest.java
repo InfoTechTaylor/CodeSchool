@@ -26,7 +26,7 @@ public class FlooringDaoOrderProdDbImplTest {
         ApplicationContext ctx = new ClassPathXmlApplicationContext("test-applicationContext.xml");
         dao = ctx.getBean("prodOrderDao", FlooringDaoOrder.class);
 
-        List<Order> allOrders = dao.retrieveAllOrdersByDate(orderDate);
+        List<Order> allOrders = dao.retrieveAllOrders();
         if(allOrders != null) {
             for (Order currentOrder : allOrders) {
                 if (currentOrder != null) {
@@ -40,33 +40,8 @@ public class FlooringDaoOrderProdDbImplTest {
     @Test
     public void retrieveOrdersByDate() throws Exception {
         //act
-        Product newProduct = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));
-        Tax newTaxObj = new Tax();
-        newTaxObj.setTaxId(1);
-        Order orderObj = new Order();
-        orderObj.setTaxObject(newTaxObj);
-        orderObj.setProductObject(newProduct);
-        orderObj.setCustomerName("Taylor Lapointe");
-        orderObj.setOrderDate(orderDate);
-        orderObj.setArea(new BigDecimal("5"));
-        orderObj.setTotalCost(new BigDecimal("5"));
-        orderObj.setTotalTax(new BigDecimal("5"));
-        orderObj.setTotalMaterialCost(new BigDecimal("5"));
-        orderObj.setTotalLaborCost(new BigDecimal("5"));
-        dao.createOrder(orderDate, orderObj);
+        Order orderObj = createTestOrder();
 
-        Order secondorderObj = new Order();
-        secondorderObj.setTaxObject(newTaxObj);
-//        secondorderObj.setOrderNumber(3);
-        secondorderObj.setProductObject(newProduct);
-        secondorderObj.setCustomerName("TaylorLapointe");
-        secondorderObj.setOrderDate(orderDate);
-        secondorderObj.setArea(new BigDecimal("5"));
-        secondorderObj.setTotalCost(new BigDecimal("5"));
-        secondorderObj.setTotalTax(new BigDecimal("5"));
-        secondorderObj.setTotalMaterialCost(new BigDecimal("5"));
-        secondorderObj.setTotalLaborCost(new BigDecimal("5"));
-        dao.createOrder(orderDate, secondorderObj);
         //act
         List<Order> allOrdersForOneDate = dao.retrieveAllOrdersByDate(orderDate);
         //assert
@@ -77,43 +52,26 @@ public class FlooringDaoOrderProdDbImplTest {
     @Test
     public void testCreateAndRetrieveOrderByDateAndId() throws Exception{
         //act
-        Product newProduct = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));
-        Tax newTaxObj = new Tax();
-        newTaxObj.setTaxId(1);
-
-
-
-        Order secondorderObj = new Order();
-        secondorderObj.setTaxObject(newTaxObj);
-//        secondorderObj.setOrderNumber(3);
-        secondorderObj.setProductObject(newProduct);
-        secondorderObj.setCustomerName("TaylorLapointe");
-        secondorderObj.setOrderDate(orderDate);
-        secondorderObj.setArea(new BigDecimal("5"));
-        secondorderObj.setTotalCost(new BigDecimal("5"));
-        secondorderObj.setTotalTax(new BigDecimal("5"));
-        secondorderObj.setTotalMaterialCost(new BigDecimal("5"));
-        secondorderObj.setTotalLaborCost(new BigDecimal("5"));
-        dao.createOrder(orderDate, secondorderObj);
+        Order orderObj = createTestOrder();
 
         //act
 
-        Order secondorderFromDao = dao.retrieveOrderByDateAndId(orderDate, secondorderObj.getOrderNumber());
+        Order secondorderFromDao = dao.retrieveOrderByDateAndId(orderDate, orderObj.getOrderNumber());
 
         // assert
 
-        assertEquals(secondorderObj, secondorderFromDao);
+        assertEquals(orderObj.getCustomerName(), secondorderFromDao.getCustomerName());
     }
 
-    @Test
-    public void updateOrder() throws Exception{
-        //act
-        Product newProduct = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));
-        Tax newTaxObj = new Tax("NH", new BigDecimal("5.75"));
+    private Order createTestOrder() throws FlooringPersistenceException {
+        Product newProduct = new Product();
+        newProduct.setProductId(1);
+        Tax newTaxObj = new Tax();
+        newTaxObj.setTaxId(1);
         Order orderObj = new Order();
         orderObj.setTaxObject(newTaxObj);
         orderObj.setProductObject(newProduct);
-        orderObj.setCustomerName("Taylor Lapointe");
+        orderObj.setCustomerName("TaylorLapointe");
         orderObj.setOrderDate(orderDate);
         orderObj.setArea(new BigDecimal("5"));
         orderObj.setTotalCost(new BigDecimal("5"));
@@ -121,6 +79,13 @@ public class FlooringDaoOrderProdDbImplTest {
         orderObj.setTotalMaterialCost(new BigDecimal("5"));
         orderObj.setTotalLaborCost(new BigDecimal("5"));
         dao.createOrder(orderDate, orderObj);
+        return orderObj;
+    }
+
+    @Test
+    public void updateOrder() throws Exception{
+        //act
+        Order orderObj = createTestOrder();
 
         //act
         Order orderToUpdate = dao.retrieveOrderByDateAndId(orderDate, orderObj.getOrderNumber());
@@ -137,19 +102,7 @@ public class FlooringDaoOrderProdDbImplTest {
     @Test
     public void removeOrder() throws Exception{
         //act
-        Product newProduct = new Product("Carpet",new BigDecimal("2.25"),new BigDecimal("2.10"));
-        Tax newTaxObj = new Tax("NH", new BigDecimal("5.75"));
-        Order orderObj = new Order();
-        orderObj.setTaxObject(newTaxObj);
-        orderObj.setProductObject(newProduct);
-        orderObj.setCustomerName("Taylor Lapointe");
-        orderObj.setOrderDate(orderDate);
-        orderObj.setArea(new BigDecimal("5"));
-        orderObj.setTotalCost(new BigDecimal("5"));
-        orderObj.setTotalTax(new BigDecimal("5"));
-        orderObj.setTotalMaterialCost(new BigDecimal("5"));
-        orderObj.setTotalLaborCost(new BigDecimal("5"));
-        dao.createOrder(orderDate, orderObj);
+        Order orderObj = createTestOrder();
 
         // act
         dao.removeOrder(orderDate, orderObj.getOrderNumber());

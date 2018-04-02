@@ -1,6 +1,7 @@
 package baseball.dao;
 
 import baseball.dto.Player;
+import baseball.dto.Position;
 import baseball.dto.Team;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,8 +9,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import java.lang.management.GarbageCollectorMXBean;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class PlayerDaoDBImpl implements PlayerDao {
 
@@ -25,6 +28,13 @@ public class PlayerDaoDBImpl implements PlayerDao {
             + "team_id = ? where id = ?";
 
     private static final String SQL_DELETE = "delete from player where id = ?";
+
+    private static final String SQL_GET_PLAYERS_BY_TEAM = "select * from player where team_id = ? limit ? offset ?";
+
+    private static final String SQL_GET_PLAYERS_BY_POSITION = "select * from player p " +
+            "inner join player_position pp on " +
+            "p.id = pp.player_id " +
+            "where pp.position_id = ? limit ? offset ?";
 
     @Inject
     public PlayerDaoDBImpl(JdbcTemplate jdbcTemplate) {
@@ -59,7 +69,7 @@ public class PlayerDaoDBImpl implements PlayerDao {
     public Player read(Long id) {
         try {
             return jdbcTemplate.queryForObject(SQL_READ,
-                    new playerMapper(),
+                    new PlayerMapper(),
                     id);
         } catch (EmptyResultDataAccessException ex) {
             return null;
@@ -91,9 +101,29 @@ public class PlayerDaoDBImpl implements PlayerDao {
                 player.getId());
     }
 
+    @Override
+    public List<Player> getPlayersByTeam(Team team, int limit, int offset) {
+
+        List<Player> players = jdbcTemplate.query(SQL_GET_PLAYERS_BY_TEAM,
+                new PlayerMapper(),
+                team.getId(),
+                limit,
+                offset);
+        return players;
+    }
+
+    @Override
+    public List<Player> getPlayersByPosition(Position position, int limit, int offset) {
+        return jdbcTemplate.query(SQL_GET_PLAYERS_BY_POSITION,
+                                    new PlayerMapper(),
+                                    position.getId(),
+                                    limit,
+                                    offset);
+    }
+
 
     // mapper
-    private static final class playerMapper implements RowMapper<Player> {
+    private static final class PlayerMapper implements RowMapper<Player> {
 
         public Player mapRow(ResultSet rs, int rowNum) throws SQLException {
             Player player = new Player();

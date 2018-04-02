@@ -16,7 +16,7 @@
       <file leaf-file-name="FlooringDaoTaxesDBImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesDBImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
+            <state relative-caret-position="1540">
               <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -36,7 +36,7 @@
       <file leaf-file-name="FlooringDaoProductsDBImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
+            <state relative-caret-position="1015">
               <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -53,39 +53,40 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlooringDaoProductsDBImplTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImplTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2135">
-              <caret line="71" column="66" lean-forward="false" selection-start-line="71" selection-start-column="66" selection-end-line="71" selection-end-column="66" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlooringDaoOrderProdDbImpl.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="FlooringDaoOrderProdDbImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+            <state relative-caret-position="560">
+              <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1522333340819" expanded="true" signature="903:1104" ph="insert into customer_order... " />
-                <marker date="1522333340819" expanded="true" signature="1178:1226" ph="select from customer_order... " />
-                <marker date="1522333340819" expanded="true" signature="1294:1515" ph="update customer_order... " />
-                <marker date="1522333340819" expanded="true" signature="1583:1631" ph="delete from customer_order... " />
-                <marker date="1522333340819" expanded="true" signature="1808:1854" ph="select from customer_order... " />
-                <marker date="1522333340819" expanded="true" signature="3278:3301" ph="select LAST_... " />
+                <marker date="1522370319523" expanded="true" signature="903:1104" ph="insert into customer_order... " />
+                <marker date="1522370319523" expanded="true" signature="1178:1228" ph="select from customer_order... " />
+                <marker date="1522370319523" expanded="true" signature="1296:1517" ph="update customer_order... " />
+                <marker date="1522370319523" expanded="true" signature="1585:1633" ph="delete from customer_order... " />
+                <marker date="1522370319523" expanded="true" signature="1706:1734" ph="select * fro... customer_order" />
+                <marker date="1522370319523" expanded="true" signature="1810:1856" ph="select from customer_order... " />
+                <marker date="1522370319523" expanded="true" signature="3439:3462" ph="select LAST_... " />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FlooringDaoOrderProdDbImplTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="FlooringDaoOrder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="490">
+              <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoOrderProdDbImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="109">
-              <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+            <state relative-caret-position="879">
+              <caret line="99" column="5" lean-forward="false" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -94,7 +95,7 @@
       <file leaf-file-name="FlooringServiceLayerImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayerImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="2450">
               <caret line="79" column="56" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="56" />
               <folding />
             </state>
@@ -104,9 +105,38 @@
       <file leaf-file-name="FlooringDaoOrderProdFileImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
-              <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="42" />
-              <folding />
+            <state relative-caret-position="6860">
+              <caret line="205" column="8" lean-forward="false" selection-start-line="205" selection-start-column="8" selection-end-line="205" selection-end-column="20" />
+              <folding>
+                <element signature="e#8223#8224#0" expanded="true" />
+                <element signature="e#8250#8251#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoOrderStubImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2730">
+              <caret line="87" column="8" lean-forward="false" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="20" />
+              <folding>
+                <element signature="e#2788#2789#0" expanded="true" />
+                <element signature="e#2815#2816#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FlooringDaoOrderTrainingFileImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4865">
+              <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="20" />
+              <folding>
+                <element signature="e#5697#5698#0" expanded="true" />
+                <element signature="e#5724#5725#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,28 +144,8 @@
       <file leaf-file-name="ConfigDaoImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/ConfigDaoImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
+            <state relative-caret-position="140">
               <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dto/Order.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="17" column="33" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="17" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FlooringDaoProductsStubImpl.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsStubImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1120">
-              <caret line="36" column="26" lean-forward="false" selection-start-line="36" selection-start-column="26" selection-end-line="36" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -167,10 +177,6 @@
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/service/ProductMaterialNotFoundException.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/advice/LoggingAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/controller/FlooringController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayer.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/ui/FlooringView.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/App.java" />
@@ -189,8 +195,12 @@
         <option value="$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImplTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayerImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImpl.java" />
-        <option value="$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java" />
       </list>
     </option>
   </component>
@@ -201,10 +211,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-11" />
+    <option name="x" value="3829" />
     <option name="y" value="-11" />
-    <option name="width" value="2582" />
-    <option name="height" value="1416" />
+    <option name="width" value="2902" />
+    <option name="height" value="1777" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -221,6 +231,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -347,10 +359,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -359,7 +369,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../DvdLibrarySpringMVC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -384,7 +395,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId">
+  <component name="RunManager" selected="JUnit.FlooringDaoOrderProdDbImplTest">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -600,8 +611,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.FlooringDaoOrderProdDbImplTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.FlooringDaoOrderProdDbImplTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.FlooringDaoProductsDBImplTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.FlooringDaoTaxesDBImplTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.FlooringDaoTaxesDBImplTest.retrieveTaxByState" />
@@ -623,76 +634,78 @@
       <updated>1522257682758</updated>
       <workItem from="1522257686210" duration="9858000" />
       <workItem from="1522329576795" duration="5181000" />
+      <workItem from="1522367827499" duration="2633000" />
+      <workItem from="1522414781339" duration="597000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 10h 13m 06s.xml">
+    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 20h 22m 13s.xml">
       <configuration name="FlooringDaoOrderProdDbImplTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 10h 21m 06s.xml">
+    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 20h 39m 44s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 20h 40m 51s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 20h 42m 50s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringDaoOrderProdDbImplTest - 2018.03.29 at 20h 45m 08s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 20h 28m 22s.xml">
       <configuration name="FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 10h 22m 29s.xml">
+    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 20h 36m 31s.xml">
       <configuration name="FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlooringDaoProductsDBImplTest - 2018.03.28 at 15h 34m 34s.xml">
-      <configuration name="FlooringDaoProductsDBImplTest" configurationId="JUnit" />
+    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 20h 37m 49s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlooringDaoProductsDBImplTest - 2018.03.28 at 15h 34m 45s.xml">
-      <configuration name="FlooringDaoProductsDBImplTest" configurationId="JUnit" />
+    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 20h 38m 47s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="FlooringDaoProductsDBImplTest - 2018.03.28 at 15h 37m 27s.xml">
-      <configuration name="FlooringDaoProductsDBImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlooringDaoProductsDBImplTest - 2018.03.28 at 15h 38m 15s.xml">
-      <configuration name="FlooringDaoProductsDBImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlooringDaoTaxesDBImplTest - 2018.03.28 at 14h 59m 31s.xml">
-      <configuration name="FlooringDaoTaxesDBImplTest" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlooringDaoTaxesDBImplTest_retrieveTaxByState - 2018.03.28 at 14h 57m 10s.xml">
-      <configuration name="FlooringDaoTaxesDBImplTest.retrieveTaxByState" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="FlooringDaoTaxesDBImplTest_retrieveTaxByState - 2018.03.28 at 14h 58m 48s.xml">
-      <configuration name="FlooringDaoTaxesDBImplTest.retrieveTaxByState" configurationId="JUnit" />
+    <history-entry file="FlooringDaoOrderProdDbImplTest_testCreateAndRetrieveOrderByDateAndId - 2018.03.29 at 20h 39m 31s.xml">
+      <configuration name="FlooringDaoOrderProdDbImplTest.testCreateAndRetrieveOrderByDateAndId" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15039000" />
+    <option name="totallyTimeSpent" value="18269000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
+    <frame x="3829" y="-11" width="2902" height="1777" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18651685" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22307692" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32746196" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11875" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20798612" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18651685" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
@@ -854,12 +867,13 @@
           <caret line="60" column="97" lean-forward="false" selection-start-line="60" selection-start-column="97" selection-end-line="60" selection-end-column="97" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1522333340819" expanded="true" signature="903:1104" ph="insert into customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1178:1226" ph="select from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1294:1515" ph="update customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1583:1631" ph="delete from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1808:1854" ph="select from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="3278:3301" ph="select LAST_... " />
+            <marker date="1522370319523" expanded="true" signature="903:1104" ph="insert into customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1178:1228" ph="select from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1296:1517" ph="update customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1585:1633" ph="delete from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1706:1734" ph="select * fro... customer_order" />
+            <marker date="1522370319523" expanded="true" signature="1810:1856" ph="select from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="3439:3462" ph="select LAST_... " />
           </folding>
         </state>
       </provider>
@@ -901,36 +915,6 @@
         <state relative-caret-position="140">
           <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2365">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2500">
-          <caret line="123" column="46" lean-forward="false" selection-start-line="123" selection-start-column="46" selection-end-line="123" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1171,23 +1155,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/ConfigDaoImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
+        <state relative-caret-position="140">
           <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="46" column="42" lean-forward="false" selection-start-line="46" selection-start-column="34" selection-end-line="46" selection-end-column="42" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/service/FlooringServiceLayerImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="2450">
           <caret line="79" column="56" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="56" />
           <folding />
         </state>
@@ -1195,7 +1171,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoTaxesDBImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
+        <state relative-caret-position="1540">
           <caret line="55" column="72" lean-forward="false" selection-start-line="55" selection-start-column="4" selection-end-line="55" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1213,7 +1189,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoProductsDBImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
+        <state relative-caret-position="1015">
           <caret line="40" column="8" lean-forward="false" selection-start-line="40" selection-start-column="8" selection-end-line="46" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1229,27 +1205,69 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="109">
-          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+        <state relative-caret-position="490">
+          <caret line="17" column="43" lean-forward="false" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6860">
+          <caret line="205" column="8" lean-forward="false" selection-start-line="205" selection-start-column="8" selection-end-line="205" selection-end-column="20" />
+          <folding>
+            <element signature="e#8223#8224#0" expanded="true" />
+            <element signature="e#8250#8251#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderStubImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2730">
+          <caret line="87" column="8" lean-forward="false" selection-start-line="87" selection-start-column="8" selection-end-line="87" selection-end-column="20" />
+          <folding>
+            <element signature="e#2788#2789#0" expanded="true" />
+            <element signature="e#2815#2816#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderTrainingFileImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4865">
+          <caret line="150" column="8" lean-forward="false" selection-start-line="150" selection-start-column="8" selection-end-line="150" selection-end-column="20" />
+          <folding>
+            <element signature="e#5697#5698#0" expanded="true" />
+            <element signature="e#5724#5725#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="57" column="5" lean-forward="false" selection-start-line="57" selection-start-column="5" selection-end-line="57" selection-end-column="5" />
+        <state relative-caret-position="560">
+          <caret line="32" column="24" lean-forward="false" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1522333340819" expanded="true" signature="903:1104" ph="insert into customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1178:1226" ph="select from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1294:1515" ph="update customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1583:1631" ph="delete from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="1808:1854" ph="select from customer_order... " />
-            <marker date="1522333340819" expanded="true" signature="3278:3301" ph="select LAST_... " />
+            <marker date="1522370319523" expanded="true" signature="903:1104" ph="insert into customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1178:1228" ph="select from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1296:1517" ph="update customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1585:1633" ph="delete from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="1706:1734" ph="select * fro... customer_order" />
+            <marker date="1522370319523" expanded="true" signature="1810:1856" ph="select from customer_order... " />
+            <marker date="1522370319523" expanded="true" signature="3439:3462" ph="select LAST_... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/flooringmasteryspringmvc/dao/FlooringDaoOrderProdDbImplTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="879">
+          <caret line="99" column="5" lean-forward="false" selection-start-line="99" selection-start-column="5" selection-end-line="99" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>

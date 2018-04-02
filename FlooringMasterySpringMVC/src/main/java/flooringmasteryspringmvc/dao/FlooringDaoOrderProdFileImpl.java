@@ -201,4 +201,9 @@ public class FlooringDaoOrderProdFileImpl implements FlooringDaoOrder{
         writeOrders();
     }
 
+    @Override
+    public List<Order> retrieveAllOrders() {
+        return null;
+    }
+
 }

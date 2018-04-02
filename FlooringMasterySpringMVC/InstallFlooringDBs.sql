@@ -23,7 +23,7 @@ CREATE TABLE product
 
 CREATE TABLE customer_order
 (
-	orderNumber VARCHAR(128) NOT NULL,
+	orderNumber int NOT NULL auto_increment,
     orderDate DATE NOT NULL,
     customerName VARCHAR(60) NOT NULL,
     taxId int NOT NULL,
@@ -74,7 +74,7 @@ CREATE TABLE product
 
 CREATE TABLE customer_order
 (
-	orderNumber VARCHAR(128) NOT NULL,
+	orderNumber int NOT NULL auto_increment,
     orderDate DATE NOT NULL,
     customerName VARCHAR(60) NOT NULL,
     taxId int NOT NULL,
@@ -95,5 +95,10 @@ ALTER TABLE customer_order
 ADD CONSTRAINT fk_customer_order_product
 FOREIGN KEY (productId) REFERENCES product(productId);
 
-USE flooringdb_test;
-SELECT * FROM Product;
+
+use flooringDB_test;
+INSERT INTO tax (taxId, state, taxrate)
+values (1, "NH", .06);
+
+INSERT INTO product(productId, productType, materialcostpersquarefoot, laborcostpersquarefoot)
+VALUES(1, "Tile", 4.5, 10);
