@@ -1,13 +1,21 @@
 package com.sg.service;
 
 
+import com.sg.dao.PowerDao;
 import com.sg.dto.Person;
 import com.sg.dto.Power;
 
+import javax.inject.Inject;
 import java.util.List;
 
 public class PowerServiceImpl implements PowerService {
 
+    PowerDao powerServiceDao;
+
+    @Inject
+    public PowerServiceImpl(PowerDao powerServiceDao) {
+        this.powerServiceDao = powerServiceDao;
+    }
 
     @Override
     public Power create(Power power) {

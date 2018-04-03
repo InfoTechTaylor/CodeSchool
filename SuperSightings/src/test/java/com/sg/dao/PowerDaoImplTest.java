@@ -22,18 +22,16 @@ import static org.junit.Assert.*;
 @Rollback
 @Transactional
 public class PowerDaoImplTest {
+
     @Inject
     private PowerDao powerDao;
+
     @Inject
     private PersonService personService;
+
     @Inject
     private PersonPowerService personPowerService;
-    @Before
-    public void setUp() throws Exception {
-    }
-    @After
-    public void tearDown() throws Exception {
-    }
+
     @Test
     public void create() {
         //Arrange
@@ -42,9 +40,10 @@ public class PowerDaoImplTest {
         //Act
         Power createdPower = powerDao.create(power);
         //Assert
-        assert createdPower.getId() != null;
-        assert "Flying".equals(createdPower.getName());
+        assertNotNull(createdPower.getId());
+        assertEquals("Flying", createdPower.getName());
     }
+
     @Test
     public void read() {
         //Arrange
@@ -54,8 +53,9 @@ public class PowerDaoImplTest {
         //Act
         Power readPower = powerDao.read(createdPower);
         //Assert
-        assert "Flying".equals(readPower.getName());
+        assertEquals("Flying", readPower.getName());
     }
+
     @Test
     public void update() {
         //Arrange
@@ -68,21 +68,24 @@ public class PowerDaoImplTest {
         powerDao.update(readPower);
         //Assert
         Power updatePower = powerDao.read(readPower);
-        assert "Speed".equals(updatePower.getName());
+        assertEquals("Speed", updatePower.getName());
     }
+
     @Test
     public void delete() {
         //Arrange
         Power power = new Power();
         power.setName("Flying");
         Power createdPower = powerDao.create(power);
-        assert createdPower.getId() != null;
+        assertNotNull(createdPower.getId());
         //Act
         powerDao.delete(createdPower);
         //Assert
         Power readPower = powerDao.read(createdPower);
-        assert readPower == null;
+        assertNull(readPower);
+
     }
+
     @Test
     public void retrieveAllPowers() {
         Power power1 = new Power();
@@ -93,11 +96,12 @@ public class PowerDaoImplTest {
         powerDao.create(power2);
         assertEquals(2, powerDao.retrieveAllPowers(Integer.MAX_VALUE, 0).size());
     }
+
     @Test
     public void retrieveAllPowersByPerson() {
         //Arrange
         Person person = new Person();
-        person.setName("Kelly");
+        person.setName("Taylor");
         person.setType("Super hero");
         person.setDescription("Super Awesome");
         personService.create(person);

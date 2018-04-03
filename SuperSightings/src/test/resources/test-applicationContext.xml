@@ -43,4 +43,5 @@
     <bean id="locationService" class="com.sg.service.LocationServiceImpl"/>
     <bean id="personService" class="com.sg.service.PersonServiceImpl"/>
     <bean id="personPowerService" class="com.sg.service.PersonPowerServiceImpl" />
+    <bean id="sightingService" class="com.sg.service.SightingServiceImpl" />
 </beans>

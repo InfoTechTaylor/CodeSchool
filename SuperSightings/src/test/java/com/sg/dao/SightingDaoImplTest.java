@@ -22,7 +22,7 @@ public class SightingDaoImplTest {
 
     @Inject
     SightingDao sightingDao;
-    
+
     @Inject
     LocationService locationService;
 
@@ -32,11 +32,14 @@ public class SightingDaoImplTest {
 
     @Test
     public void create() {
+        // arrange & act
         Sighting createdSighting = createTestSighting();
-        assert createdSighting.getId() != null;
+
+        //assert
+        assertNotNull(createdSighting.getId());
         assertNotNull(createdSighting.getLocation().getId());
         assertEquals(LocalDate.parse("2018-03-02"), createdSighting.getSightingDate());
-        assert "It was really fast!".equals(createdSighting.getDescription());
+        assertEquals("It was really fast!", createdSighting.getDescription());
     }
 
     @Test
@@ -46,47 +49,54 @@ public class SightingDaoImplTest {
         //act
         Sighting readSighting = sightingDao.read(createdSighting);
         //assert
-        assert readSighting.getId() != null;
+        assertNotNull(readSighting.getId());
         assertNotNull(createdSighting.getLocation().getId());
         assertEquals(LocalDate.parse("2018-03-02"), readSighting.getSightingDate());
-        assert "It was really fast!".equals(readSighting.getDescription());
+        assertEquals("It was really fast!", readSighting.getDescription());
     }
 
     @Test
     public void update() {
         //arrange
         Sighting createdSighting = createTestSighting();
-        //act
+
         Sighting readSighting = sightingDao.read(createdSighting);
-        //update details
+
         readSighting.setSightingDate(LocalDate.parse("2018-04-03"));
         readSighting.setDescription("Not as fast as the last one");
+
+        // act
         sightingDao.update(readSighting);
+
         //assert
         Sighting updatedSighting = sightingDao.read(readSighting);
         assertEquals(createdSighting.getLocation().getId(), updatedSighting.getLocation().getId());
         assertEquals(LocalDate.parse("2018-04-03"), updatedSighting.getSightingDate());
-        assert "Not as fast as the last one".equals(updatedSighting.getDescription());
+        assertEquals("Not as fast as the last one", updatedSighting.getDescription());
+
     }
 
     @Test
     public void delete() {
         //arrange
         Sighting createdSighting = createTestSighting();
+
         //act
         sightingDao.delete(createdSighting);
+
         //assert
         Sighting readsighting = sightingDao.read(createdSighting);
-        assert readsighting == null;
+        assertNull(readsighting);
+
     }
 
     @Test
     public void retrieveAllSightings() {
         //arrange
-        Sighting createdSighting = createTestSighting();
-        Sighting createdSighting2 = createTestSighting();
-        //act - 2 already created
-        //assert
+        createTestSighting();
+        createTestSighting();
+
+        //act & assert
         assertEquals(2, sightingDao.retrieveAllSightings(Integer.MAX_VALUE, 0).size());
     }
 

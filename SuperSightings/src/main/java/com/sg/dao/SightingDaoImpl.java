@@ -23,23 +23,31 @@ public class SightingDaoImpl implements SightingDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    static String CREATE_QUERY
+    private static final String CREATE_QUERY
             = "insert into sighting (location_id, sighting_date, description) Values (?,?,?)";
 
-    static String READ_QUERY
+    private static final String READ_QUERY
             = "select * from sighting where id = ?";
 
-    static String DELETE_QUERY
+    private static final String DELETE_QUERY
             = "delete from sighting where id = ?";
 
-    static String UPDATE_QUERY
+    private static final String UPDATE_QUERY
             = "update sighting set location_id = ?, sighting_date = ?, description = ? where id = ?";
 
-    static String READ_ALL_QUERY
+    private static final String READ_ALL_QUERY
             = "select * from sighting limit ? offset ?";
 
-    //    static String RETRIEVE_SIGHTINGS_BY_PERSON = "select * from player p inner join player_position pp on p.id = pp.player_id " +
-//            "where pp.position_id = ? LIMIT ? OFFSET ?";
+    private static final String RETRIEVE_SIGHTINGS_BY_PERSON = "select * from sighting s " +
+            "inner join person_sighting ps on ps.sighting_id = s.id " +
+            "inner join person p on ps.person_id = p.id where p.id = ? limit ? offset ?";
+
+    private static final String RETRIEVE_SIGHTINGS_BY_LOCATION = "select * from sighting s " +
+            "inner join location l on l.id = s.location_id " +
+            "where l.id = ? limit ? offset ?";
+
+    private static final String RETRIEVE_SIGHTINGS_BY_DATE = "select * from sighting s " +
+            "where sighting_date = ? limit ? offset ?";
 
     @Override
     @Transactional
