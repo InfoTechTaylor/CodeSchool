@@ -129,6 +129,7 @@ public class PersonPowerDaoImpl implements PersonPowerDao{
                 personPower.setPower(power);
             }
 
+            personPower.setId(resultSet.getLong("id"));
             return personPower;
         }
     }

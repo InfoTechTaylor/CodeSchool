@@ -2,12 +2,14 @@ package com.sg.dao;
 import com.sg.dto.Organization;
 import com.sg.dto.Person;
 import com.sg.dto.PersonOrganization;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import javax.inject.Inject;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.List;
 
 public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
@@ -54,12 +56,16 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
             org_id = personOrganization.getOrganization().getId();
         }
 
+        Date endDate = null;
+        if(personOrganization.getEndDate() != null){
+            endDate = Date.valueOf(personOrganization.getEndDate());
+        }
+
         jdbcTemplate.update(CREATE_QUERY,
                 person_id,
                 org_id,
                 Date.valueOf(personOrganization.getStartDate()),
-                Date.valueOf(personOrganization.getEndDate())
-        );
+                endDate);
 
         long id = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
         personOrganization.setId(id);
@@ -68,8 +74,11 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
 
     @Override
     public PersonOrganization read(PersonOrganization personOrganization) {
-
-        return jdbcTemplate.queryForObject(READ_QUERY, new PersonOrgMapper(), personOrganization.getId());
+        try {
+            return jdbcTemplate.queryForObject(READ_QUERY, new PersonOrgMapper(), personOrganization.getId());
+        } catch (EmptyResultDataAccessException e){
+            return null;
+        }
     }
 
     @Override
@@ -85,11 +94,16 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
             org_id = personOrganization.getOrganization().getId();
         }
 
+        Date endDate = null;
+        if(personOrganization.getEndDate() != null){
+            endDate = Date.valueOf(personOrganization.getEndDate());
+        }
+
         jdbcTemplate.update(UPDATE_QUERY,
                 person_id,
                 org_id,
                 Date.valueOf(personOrganization.getStartDate()),
-                Date.valueOf(personOrganization.getEndDate()),
+                endDate,
                 personOrganization.getId()
         );
     }
@@ -130,7 +144,13 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
             }
 
             personOrganization.setStartDate(rs.getDate("start_date").toLocalDate());
-            personOrganization.setEndDate(rs.getDate("end_date").toLocalDate());
+
+            LocalDate endDate = null;
+            if(rs.getDate("end_Date") != null){
+                endDate = rs.getDate("end_Date").toLocalDate();
+            }
+            personOrganization.setEndDate(endDate);
+
             return personOrganization;
         }
     }

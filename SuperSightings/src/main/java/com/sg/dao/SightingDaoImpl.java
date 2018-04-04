@@ -99,12 +99,12 @@ public class SightingDaoImpl implements SightingDao {
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByLocation(Location location, int i, int i1) {
+    public List<Sighting> retrieveAllSightingsByLocation(Location location, int limit, int offset) {
         return null;
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, int i, int i1) {
+    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, int limit, int offset) {
         return null;
     }
 

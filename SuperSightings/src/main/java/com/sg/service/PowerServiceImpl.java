@@ -19,31 +19,31 @@ public class PowerServiceImpl implements PowerService {
 
     @Override
     public Power create(Power power) {
-        return null;
+        return powerServiceDao.create(power);
     }
 
     @Override
     public Power read(Power power) {
-        return null;
+        return powerServiceDao.read(power);
     }
 
     @Override
     public void update(Power power) {
-
+        powerServiceDao.update(power);
     }
 
     @Override
     public void delete(Power power) {
-
+        powerServiceDao.delete(power);
     }
 
     @Override
-    public List<Power> retrieveAllPowers(int i, int i1) {
-        return null;
+    public List<Power> retrieveAllPowers(int limit, int offset) {
+        return powerServiceDao.retrieveAllPowers(limit, offset);
     }
 
     @Override
-    public List<Power> retrieveAllPowersByPerson(Person person, int i, int i1) {
-        return null;
+    public List<Power> retrieveAllPowersByPerson(Person person, int limit, int offset) {
+        return powerServiceDao.retrieveAllPowersByPerson(person, limit, offset);
     }
 }

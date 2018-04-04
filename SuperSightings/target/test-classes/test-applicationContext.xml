@@ -41,7 +41,11 @@
     <bean id="sightingDao" class="com.sg.dao.SightingDaoImpl"/>
 
     <bean id="locationService" class="com.sg.service.LocationServiceImpl"/>
+    <bean id="organizationService" class="com.sg.service.OrganizationServiceImpl"/>
     <bean id="personService" class="com.sg.service.PersonServiceImpl"/>
-    <bean id="personPowerService" class="com.sg.service.PersonPowerServiceImpl" />
-    <bean id="sightingService" class="com.sg.service.SightingServiceImpl" />
+    <bean id="personOrgService" class="com.sg.service.PersonOrganizationServiceImpl"/>
+    <bean id="personPowerService" class="com.sg.service.PersonPowerServiceImpl"/>
+    <bean id="personSightingService" class="com.sg.service.PersonSightingServiceImpl"/>
+    <bean id="powerService" class="com.sg.service.PowerServiceImpl"/>
+    <bean id="sightingService" class="com.sg.service.SightingServiceImpl"/>
 </beans>

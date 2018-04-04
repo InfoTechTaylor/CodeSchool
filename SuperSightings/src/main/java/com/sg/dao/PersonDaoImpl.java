@@ -36,7 +36,7 @@ public class PersonDaoImpl implements PersonDao {
     private static final String GET_ALL_PERSONS_BY_ORG_QUERY = "select * from person p inner join personorganization po " +
             "on p.id = po.person_id inner join organization o on o.id = po.organization_id limit ? offset ?";
 
-    private static final String GET_ALL_PERSONS_BY_POWER_QUERY = "select * from person p inner join personpower pp on " +
+    private static final String GET_ALL_PERSONS_BY_POWER_QUERY = "select * from person p left join personpower pp on " +
             "p.id = pp.person_id inner join power pw on pp.power_id = pw.id " +
             "where pw.id = ? limit ? offest ?";
 
