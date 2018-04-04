@@ -41,9 +41,10 @@ public class LocationDaoImpl implements LocationDao{
                     "where id = ?";
 
     private static final String READ_ALL_QUERY_BY_PERSON =
-            "select * from location l " +
-                    "inner join sighting s on s.location_id = l.id" +
-                    "inner join person_sighting ps on ps.sighting_id = s.id" +
+            "select DISTINCT l.id, l.latitude, l.longitude, l.name, l.description, l.street, l.city, l.state, l.zip, l.country " +
+                    "from location l " +
+                    "inner join sighting s on s.location_id = l.id " +
+                    "inner join person_sighting ps on ps.sighting_id = s.id " +
                     "inner join person p on p.id = ps.person_id " +
                     "where p.id = ? limit ? offset ?";
 

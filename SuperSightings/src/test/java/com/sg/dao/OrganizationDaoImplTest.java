@@ -5,6 +5,8 @@ import com.sg.dto.Organization;
 import com.sg.dto.Person;
 import com.sg.dto.PersonOrganization;
 import com.sg.service.LocationService;
+import com.sg.service.PersonOrganizationService;
+import com.sg.service.PersonService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -32,6 +34,12 @@ public class OrganizationDaoImplTest {
     @Inject
     LocationService locationService;
 
+    @Inject
+    PersonService personService;
+
+    @Inject
+    PersonOrganizationService personOrganizationService;
+
     private Location createTestLocation() {
         Location location = new Location();
         location.setLatitude(43.1979);
@@ -47,6 +55,14 @@ public class OrganizationDaoImplTest {
         return createdLocation;
     }
 
+    private Person createTestPerson() {
+        Person person = new Person();
+        person.setType("person");
+        person.setName("Batman");
+        person.setDescription("Man dressed like bat");
+        return personService.create(person);
+    }
+
     private Organization createTestOrgAvengers() {
         Location location = createTestLocation();
 
@@ -57,6 +73,14 @@ public class OrganizationDaoImplTest {
         organizationDao.create(organization);
 
         return organization;
+    }
+
+    private PersonOrganization createTestPersonOrg(Organization org1, Person personFromDB) {
+        PersonOrganization personOrg = new PersonOrganization();
+        personOrg.setOrganization(org1);
+        personOrg.setPerson(personFromDB);
+        personOrg.setStartDate(LocalDate.parse("1990-01-01"));
+        return personOrganizationService.create(personOrg);
     }
 
     private void assertEqualsOrganization(Organization org, Long locationId) {
@@ -144,22 +168,25 @@ public class OrganizationDaoImplTest {
         Organization org1 = createTestOrgAvengers();
         Organization org2 = createTestOrgAvengers();
 
-        Person person = new Person();
-        person.setType("person");
-        person.setName("Batman");
-        person.setDescription("Man dressed like bat");
-        //Person personFromDB = personService.create(person);
+        Person personFromDB = createTestPerson();
+        Person personFromDB2 = createTestPerson();
 
-        PersonOrganization personOrg = new PersonOrganization();
-        personOrg.setOrganization(org1);
-        //personOrg.setPersonId(personFromDB.getId());
-        personOrg.setStartDate(LocalDate.parse("1990-01-01"));
-        // PersonOrganization personOrgFromDB = personOrganizationService.create(personOrg);
+        createTestPersonOrg(org1, personFromDB);
+        createTestPersonOrg(org2, personFromDB2);
+        createTestPersonOrg(org1, personFromDB2);
 
         // act
-        //List<Organization> allOrgs = organizationDao.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, 0);
+        List<Organization> allOrgsPerson1
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, 0);
+        List<Organization> allOrgsPerson2
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, Integer.MAX_VALUE, 0);
 
         // assert
-        //assertEquals(1, allOrgs.size());
+        assertEquals(1, allOrgsPerson1.size());
+        assertEquals(2, allOrgsPerson2.size());
     }
+
+
+
+
 }

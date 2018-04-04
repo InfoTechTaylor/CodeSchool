@@ -1,6 +1,13 @@
 package com.sg.dao;
 
 import com.sg.dto.Location;
+import com.sg.dto.Person;
+import com.sg.dto.PersonSighting;
+import com.sg.dto.Sighting;
+import com.sg.service.PersonService;
+import com.sg.service.PersonSightingService;
+import com.sg.service.SightingService;
+import com.sg.service.SightingServiceImpl;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +20,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -29,12 +37,62 @@ import static org.junit.Assert.*;
         @Inject
         LocationDao locationDao;
 
-        @Before
-        public void setUp() throws Exception {
+        @Inject
+        PersonService personService;
+
+        @Inject
+        SightingService sightingService;
+
+        @Inject
+        PersonSightingService personSightingService;
+
+        private Person createTestPerson(){
+            Person person = new Person();
+            person.setName("Bruce Wayne");
+            person.setDescription("Rich man that dresses like a bat.");
+            person.setType("Person");
+            return personService.create(person);
         }
 
-        @After
-        public void tearDown() throws Exception {
+        private Sighting createTestSighting(Location location){
+            Sighting sighting = new Sighting();
+            sighting.setSightingDate(LocalDate.parse("2018-04-04"));
+            sighting.setLocation(location);
+            sighting.setDescription("He was really fast.");
+            return sightingService.create(sighting);
+        }
+
+        private PersonSighting createTestPersonSighting(Person person, Sighting sighting){
+            PersonSighting personSighting = new PersonSighting();
+            personSighting.setPerson(person);
+            personSighting.setSighting(sighting);
+            return personSightingService.create(personSighting);
+        }
+
+        private Location createTestLocation() {
+            Location location = new Location();
+            location.setLatitude(40.779287);
+            location.setLongitude(-73.969326);
+            location.setName("Central Park");
+            location.setDescription("near Belvedere Castle");
+            location.setStreet("79th Street");
+            location.setCity("New York");
+            location.setState("NY");
+            location.setZip("10021");
+            location.setCountry("USA");
+            return locationDao.create(location);
+        }
+
+        private void assertTestFields(Location location) {
+            assertEquals(40.779287, location.getLatitude(), 0);
+            assertEquals(-73.969326, location.getLongitude(), 0);
+            assertEquals("Central Park", location.getName());
+            assertEquals("near Belvedere Castle", location.getDescription());
+            assertEquals("79th Street", location.getStreet());
+            assertEquals("New York", location.getCity());
+            assertEquals("NY", location.getState());
+            assertEquals("10021", location.getZip());
+            assertEquals("USA", location.getCountry());
         }
 
         @Test
@@ -107,41 +165,52 @@ import static org.junit.Assert.*;
 
         @Test
         public void retrieveAllLocations() {
+            // arrange
             Location location = createTestLocation();
             Location location2 = createTestLocation();
+
+            // act
             List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, 0);
+
+            // assert
             assertEquals(2, locationList.size());
         }
 
         @Test
         public void retrieveAllLocationsByPerson() {
+            // arrange
+            Location location = createTestLocation();
+            Location location2 = createTestLocation();
+
+            Person person = createTestPerson();
+            Person person2 = createTestPerson();
+
+            Sighting sighting = createTestSighting(location);
+            Sighting sighting2= createTestSighting(location);
+            Sighting sighting3 = createTestSighting(location2);
+            Sighting sighting4 = createTestSighting(location2);
+            Sighting sighting5 = createTestSighting(location);
+
+            createTestPersonSighting(person, sighting);
+            createTestPersonSighting(person, sighting2);
+            createTestPersonSighting(person2, sighting3);
+            createTestPersonSighting(person2, sighting4);
+            createTestPersonSighting(person2, sighting5);
+
+            // act
+            List<Location> allLocationsByPerson =
+                    locationDao.retrieveAllLocationsByPerson(person, Integer.MAX_VALUE, 0);
+            List<Location> allLocationsByPerson2 =
+                    locationDao.retrieveAllLocationsByPerson(person2, Integer.MAX_VALUE, 0);
+
+            // assert
+            assertEquals(1, allLocationsByPerson.size());
+            assertEquals(location.getId(), allLocationsByPerson.get(0).getId());
+            assertEquals(2, allLocationsByPerson2.size());
+
         }
 
 
-        private Location createTestLocation() {
-            Location location = new Location();
-            location.setLatitude(40.779287);
-            location.setLongitude(-73.969326);
-            location.setName("Central Park");
-            location.setDescription("near Belvedere Castle");
-            location.setStreet("79th Street");
-            location.setCity("New York");
-            location.setState("NY");
-            location.setZip("10021");
-            location.setCountry("USA");
-            return locationDao.create(location);
-        }
 
-        private void assertTestFields(Location location) {
-            assertEquals(40.779287, location.getLatitude(), 0);
-            assertEquals(-73.969326, location.getLongitude(), 0);
-            assertEquals("Central Park", location.getName());
-            assertEquals("near Belvedere Castle", location.getDescription());
-            assertEquals("79th Street", location.getStreet());
-            assertEquals("New York", location.getCity());
-            assertEquals("NY", location.getState());
-            assertEquals("10021", location.getZip());
-            assertEquals("USA", location.getCountry());
-        }
 
     }

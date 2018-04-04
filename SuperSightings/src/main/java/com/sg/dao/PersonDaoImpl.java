@@ -33,19 +33,22 @@ public class PersonDaoImpl implements PersonDao {
 
     private static final String GET_ALL_PERSONS_QUERY = "select * from person limit ? offset ?";
 
-    private static final String GET_ALL_PERSONS_BY_ORG_QUERY = "select * from person p inner join personorganization po " +
-            "on p.id = po.person_id inner join organization o on o.id = po.organization_id limit ? offset ?";
+    private static final String GET_ALL_PERSONS_BY_ORG_QUERY = "select * from person p inner join person_organization po " +
+            "on p.id = po.person_id inner join organization o on o.id = po.organization_id " +
+            "where o.id = ? limit ? offset ?";
 
-    private static final String GET_ALL_PERSONS_BY_POWER_QUERY = "select * from person p left join personpower pp on " +
-            "p.id = pp.person_id inner join power pw on pp.power_id = pw.id " +
-            "where pw.id = ? limit ? offest ?";
+    private static final String GET_ALL_PERSONS_BY_POWER_QUERY = "select * from person p left join person_power pp on " +
+            "p.id = pp.person_id inner join superpower pw on pp.power_id = pw.id " +
+            "where pw.id = ? limit ? offset ?";
 
-    private static final String GET_ALL_PERSONS_BY_SIGHTING_QUERY = "select * from person p inner join personsighting ps " +
+    private static final String GET_ALL_PERSONS_BY_SIGHTING_QUERY = "select * from person p inner join person_sighting ps " +
             "on p.id = ps.person_id inner join sighting s on ps.sighting_id = s.id " +
             "where s.id = ? limit ? offset ?";
 
-    private static final String GET_ALL_PERSONS_BY_LOCATION_QUERY = "select * from person p inner join personlocation pl " +
-            "on p.id = pl.person_id inner join location l on l.id = pl.location_id " +
+    private static final String GET_ALL_PERSONS_BY_LOCATION_QUERY = "select DISTINCT p.id, p.type, p.name, p.description " +
+            "from person p inner join person_sighting ps " +
+            "on p.id = ps.person_id inner join sighting s on ps.sighting_id = s.id " +
+            "inner join location l on l.id = s.location_id " +
             "where l.id = ? limit ? offset ?";
 
     @Override
