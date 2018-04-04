@@ -1,15 +1,9 @@
-package com.sg.dao;
+package com.sg.service;
 
 import com.sg.dto.Location;
 import com.sg.dto.Person;
 import com.sg.dto.PersonSighting;
 import com.sg.dto.Sighting;
-import com.sg.service.PersonService;
-import com.sg.service.PersonSightingService;
-import com.sg.service.SightingService;
-import com.sg.service.SightingServiceImpl;
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
@@ -26,16 +20,15 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 
-
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Rollback(true)
 @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-public class LocationDaoImplTest {
+public class LocationServiceImplTest {
 
 
     @Inject
-    private LocationDao locationDao;
+    private LocationService locationService;
 
     @Inject
     private PersonService personService;
@@ -80,7 +73,7 @@ public class LocationDaoImplTest {
         location.setState("NY");
         location.setZip("10021");
         location.setCountry("USA");
-        return locationDao.create(location);
+        return locationService.create(location);
     }
 
     private void assertTestFields(Location location) {
@@ -112,7 +105,7 @@ public class LocationDaoImplTest {
         Location location = createTestLocation();
 
         //Act
-        Location readLocation = locationDao.read(location);
+        Location readLocation = locationService.read(location);
         assertEquals(location.getId(), readLocation.getId());
         assertTestFields(readLocation);
     }
@@ -121,7 +114,7 @@ public class LocationDaoImplTest {
     public void update() {
         //Arrange
         Location location = createTestLocation();
-        Location readLocation = locationDao.read(location);
+        Location readLocation = locationService.read(location);
         readLocation.setLatitude(51.503157);
         readLocation.setLongitude(-0.119715);
         readLocation.setName("London Eye");
@@ -133,10 +126,10 @@ public class LocationDaoImplTest {
         readLocation.setCountry("UK");
 
         //Act
-        locationDao.update(readLocation);
+        locationService.update(readLocation);
 
         //Assert
-        Location updatedLocation = locationDao.read(readLocation);
+        Location updatedLocation = locationService.read(readLocation);
         assertEquals(readLocation.getId(), updatedLocation.getId());
         assertEquals(51.503157, updatedLocation.getLatitude(), 0.001);
         assertEquals(-0.119715, updatedLocation.getLongitude(), 0.001);
@@ -156,10 +149,10 @@ public class LocationDaoImplTest {
         assertNotNull(location);
 
         //Act
-        locationDao.delete(location);
+        locationService.delete(location);
 
         //Assert
-        Location readLocation = locationDao.read(location);
+        Location readLocation = locationService.read(location);
         assertNull(readLocation);
     }
 
@@ -170,7 +163,7 @@ public class LocationDaoImplTest {
         Location location2 = createTestLocation();
 
         // act
-        List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, 0);
+        List<Location> locationList = locationService.retrieveAllLocations(Integer.MAX_VALUE, 0);
 
         // assert
         assertEquals(2, locationList.size());
@@ -199,9 +192,9 @@ public class LocationDaoImplTest {
 
         // act
         List<Location> allLocationsByPerson =
-                locationDao.retrieveAllLocationsByPerson(person, Integer.MAX_VALUE, 0);
+                locationService.retrieveAllLocationsByPerson(person, Integer.MAX_VALUE, 0);
         List<Location> allLocationsByPerson2 =
-                locationDao.retrieveAllLocationsByPerson(person2, Integer.MAX_VALUE, 0);
+                locationService.retrieveAllLocationsByPerson(person2, Integer.MAX_VALUE, 0);
 
         // assert
         assertEquals(1, allLocationsByPerson.size());

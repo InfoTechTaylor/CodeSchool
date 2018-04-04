@@ -27,16 +27,16 @@ import static org.junit.Assert.*;
 public class PersonOrganizationDaoImplTest {
 
     @Inject
-    PersonOrganizationDao personOrganizationDao;
+    private PersonOrganizationDao personOrganizationDao;
 
     @Inject
-    PersonService personService;
+    private PersonService personService;
 
     @Inject
-    OrganizationService organizationService;
+    private OrganizationService organizationService;
 
     @Inject
-    LocationService locationService;
+    private LocationService locationService;
 
 
     // HELPER METHODS *******************************************************************

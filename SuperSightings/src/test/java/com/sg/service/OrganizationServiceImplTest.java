@@ -1,13 +1,9 @@
-package com.sg.dao;
+package com.sg.service;
 
 import com.sg.dto.Location;
 import com.sg.dto.Organization;
 import com.sg.dto.Person;
 import com.sg.dto.PersonOrganization;
-import com.sg.service.LocationService;
-import com.sg.service.PersonOrganizationService;
-import com.sg.service.PersonService;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
@@ -26,10 +22,10 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Transactional
 @Rollback
-public class OrganizationDaoImplTest {
+public class OrganizationServiceImplTest {
 
     @Inject
-    private OrganizationDao organizationDao;
+    private OrganizationService organizationService;
 
     @Inject
     private LocationService locationService;
@@ -70,7 +66,7 @@ public class OrganizationDaoImplTest {
         organization.setName("The Avengers");
         organization.setDescription("Earth's No. 1 team.");
         organization.setLocation(location);
-        organizationDao.create(organization);
+        organizationService.create(organization);
 
         return organization;
     }
@@ -108,7 +104,7 @@ public class OrganizationDaoImplTest {
         Organization org = createTestOrgAvengers();
 
         // act
-        Organization orgFromDB = organizationDao.read(org);
+        Organization orgFromDB = organizationService.read(org);
 
         // assert
         assertNotNull(orgFromDB);
@@ -121,16 +117,16 @@ public class OrganizationDaoImplTest {
         // arrange
         Location location = createTestLocation();
         Organization org = createTestOrgAvengers();
-        Organization orgFromDB = organizationDao.read(org);
+        Organization orgFromDB = organizationService.read(org);
         orgFromDB.setName("Justice League");
         orgFromDB.setDescription("The DC org.");
         orgFromDB.setLocation(location);
 
         // act
-        organizationDao.update(orgFromDB);
+        organizationService.update(orgFromDB);
 
         // assert
-        Organization updatedOrg = organizationDao.read(orgFromDB);
+        Organization updatedOrg = organizationService.read(orgFromDB);
         assertEquals("Justice League", updatedOrg.getName());
         assertEquals("The DC org.", updatedOrg.getDescription());
         assertEquals(location.getId(), updatedOrg.getLocation().getId());
@@ -143,10 +139,10 @@ public class OrganizationDaoImplTest {
         Organization org = createTestOrgAvengers();
 
         // act
-        organizationDao.delete(org);
+        organizationService.delete(org);
 
         // assert
-        assertNull(organizationDao.read(org));
+        assertNull(organizationService.read(org));
     }
 
     @Test
@@ -156,7 +152,7 @@ public class OrganizationDaoImplTest {
         Organization org2 = createTestOrgAvengers();
 
         // act
-        List<Organization> allOrgs = organizationDao.retrieveAllOrganizations(Integer.MAX_VALUE, 0);
+        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(Integer.MAX_VALUE, 0);
 
         // assert
         assertEquals(2, allOrgs.size());
@@ -177,9 +173,9 @@ public class OrganizationDaoImplTest {
 
         // act
         List<Organization> allOrgsPerson1
-                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, 0);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, 0);
         List<Organization> allOrgsPerson2
-                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, Integer.MAX_VALUE, 0);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, Integer.MAX_VALUE, 0);
 
         // assert
         assertEquals(1, allOrgsPerson1.size());

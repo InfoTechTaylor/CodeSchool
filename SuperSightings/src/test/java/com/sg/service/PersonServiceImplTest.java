@@ -1,8 +1,6 @@
-package com.sg.dao;
+package com.sg.service;
 
 import com.sg.dto.*;
-import com.sg.service.*;
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
@@ -21,11 +19,11 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Rollback
 @Transactional
-public class PersonDaoImplTest {
+public class PersonServiceImplTest {
 
 
     @Inject
-    private PersonDao personDao;
+    private PersonService personService;
 
     @Inject
     private PowerService powerService;
@@ -57,7 +55,7 @@ public class PersonDaoImplTest {
 
         person.setDescription("Taxidermist by day. Protector of cable tv by night." + personIndex);
 
-        return personDao.create(person);
+        return personService.create(person);
     }
 
     private Power createTestPower(int index){
@@ -128,7 +126,7 @@ public class PersonDaoImplTest {
         Person person = createTestPerson(0);
 
         //Act
-        Person createdPerson = personDao.create(person);
+        Person createdPerson = personService.create(person);
 
         //Assert
         assertNotNull(person.getId());
@@ -144,7 +142,7 @@ public class PersonDaoImplTest {
         Person createdPerson = createTestPerson(0);
 
         //Act
-        Person readPerson = personDao.read(createdPerson);
+        Person readPerson = personService.read(createdPerson);
 
         //Assert
         assertEquals("Person0", readPerson.getType());
@@ -157,16 +155,16 @@ public class PersonDaoImplTest {
     public void update() {
         //Arrange
         Person createdPerson = createTestPerson(0);
-        Person readPerson = personDao.read(createdPerson);
+        Person readPerson = personService.read(createdPerson);
         readPerson.setType("hero");
         readPerson.setName("Taylor");
         readPerson.setDescription("GoForCoder");
 
         //Act
-        personDao.update(readPerson);
+        personService.update(readPerson);
 
         //Assert
-        Person updatedPerson = personDao.read(readPerson);
+        Person updatedPerson = personService.read(readPerson);
         assertEquals("hero", updatedPerson.getType());
         assertEquals("Taylor", updatedPerson.getName());
         assertEquals("GoForCoder", updatedPerson.getDescription());
@@ -179,10 +177,10 @@ public class PersonDaoImplTest {
         Person createdPerson = createTestPerson(0);
 
         //Act
-        personDao.delete(createdPerson);
+        personService.delete(createdPerson);
 
         //Assert
-        Person readPerson = personDao.read(createdPerson);
+        Person readPerson = personService.read(createdPerson);
         assertNull(readPerson);
     }
 
@@ -194,7 +192,7 @@ public class PersonDaoImplTest {
         createTestPerson(2);
 
         //Act
-        List<Person> allPersons = personDao.retrieveAllPersons(Integer.MAX_VALUE,0);
+        List<Person> allPersons = personService.retrieveAllPersons(Integer.MAX_VALUE,0);
 
         //Assert
         assertEquals(3, allPersons.size());
@@ -219,8 +217,8 @@ public class PersonDaoImplTest {
         createTestPersonOrganization(person3, organization);
 
         //Act
-        List<Person> allPersonsByOrg = personDao.retrieveAllPersonsByOrg(organization, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsByOrg1 = personDao.retrieveAllPersonsByOrg(organization1, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByOrg = personService.retrieveAllPersonsByOrg(organization, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByOrg1 = personService.retrieveAllPersonsByOrg(organization1, Integer.MAX_VALUE, 0);
 
         //Assert
         assertEquals(4, allPersonsByOrg.size());
@@ -245,8 +243,8 @@ public class PersonDaoImplTest {
         createTestPersonPower(person3, power1);
 
         //Act
-        List<Person> allPersonsByPower = personDao.retrieveAllPersonsByPower(power, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsByPower1 = personDao.retrieveAllPersonsByPower(power1, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByPower = personService.retrieveAllPersonsByPower(power, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByPower1 = personService.retrieveAllPersonsByPower(power1, Integer.MAX_VALUE, 0);
 
         //Assert
         assertEquals(2, allPersonsByPower.size());
@@ -274,8 +272,8 @@ public class PersonDaoImplTest {
         createTestPersonSighting(person3, sighting1);
 
         //Act
-        List<Person> allPersonsBySighting = personDao.retrieveAllPersonsBySighting(sighting, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsBySighting1 = personDao.retrieveAllPersonsBySighting(sighting1, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsBySighting = personService.retrieveAllPersonsBySighting(sighting, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsBySighting1 = personService.retrieveAllPersonsBySighting(sighting1, Integer.MAX_VALUE, 0);
 
         //Assert
         assertEquals(3, allPersonsBySighting.size());
@@ -307,9 +305,9 @@ public class PersonDaoImplTest {
         createTestPersonSighting(person3, sighting1);
 
         //Act
-        List<Person> allPersonsByLocation = personDao.retrieveAllPersonsByLocation(location, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsByLocation1 = personDao.retrieveAllPersonsByLocation(location1, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsByLocation2 = personDao.retrieveAllPersonsByLocation(location2, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByLocation = personService.retrieveAllPersonsByLocation(location, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByLocation1 = personService.retrieveAllPersonsByLocation(location1, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByLocation2 = personService.retrieveAllPersonsByLocation(location2, Integer.MAX_VALUE, 0);
 
         //Assert
         assertEquals(2, allPersonsByLocation.size());

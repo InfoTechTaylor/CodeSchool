@@ -1,8 +1,9 @@
 package com.sg.service;
 
-import com.sg.dao.PersonDao;
-import com.sg.dao.PersonOrganizationDao;
-import com.sg.dto.*;
+import com.sg.dto.Location;
+import com.sg.dto.Organization;
+import com.sg.dto.Person;
+import com.sg.dto.PersonOrganization;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
@@ -11,8 +12,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
-
 import java.time.LocalDate;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
@@ -23,16 +24,16 @@ import static org.junit.Assert.*;
 public class PersonOrganizationServiceImplTest {
 
     @Inject
-    PersonOrganizationDao personOrganizationDao;
+    private PersonOrganizationService personOrganizationService;
 
     @Inject
-    PersonService personService;
+    private PersonService personService;
 
     @Inject
-    OrganizationService organizationService;
+    private OrganizationService organizationService;
 
     @Inject
-    LocationService locationService;
+    private LocationService locationService;
 
 
     // HELPER METHODS *******************************************************************
@@ -72,7 +73,7 @@ public class PersonOrganizationServiceImplTest {
         personOrg.setOrganization(organization);
         personOrg.setStartDate(LocalDate.parse("2000-01-01"));
         personOrg.setEndDate(null);
-        return personOrganizationDao.create(personOrg);
+        return personOrganizationService.create(personOrg);
     }
 
     @Test
@@ -110,7 +111,7 @@ public class PersonOrganizationServiceImplTest {
         PersonOrganization personOrg = createTestPersonOrganization(person, org);
 
         // act
-        PersonOrganization personOrgFromDB = personOrganizationDao.read(personOrg);
+        PersonOrganization personOrgFromDB = personOrganizationService.read(personOrg);
 
         // assert
         assertNotNull(personOrgFromDB);
@@ -125,13 +126,74 @@ public class PersonOrganizationServiceImplTest {
 
     @Test
     public void update() {
+        // arrange
+        Location location = createTestLocation();
+        Organization org = createTestOrganization(location);
+        Person person = createTestPerson();
+        PersonOrganization personOrg = createTestPersonOrganization(person, org);
+
+        Organization newOrg = new Organization();
+        newOrg.setName("The Avengers");
+        newOrg.setDescription("Earth's No. 1 Team");
+        newOrg.setLocation(location);
+        Organization createdOrg = organizationService.create(newOrg);
+        assertNotNull(createdOrg.getId());
+
+        personOrg.setOrganization(newOrg);
+
+        // act
+        personOrganizationService.update(personOrg);
+
+        // assert
+        PersonOrganization updatedPerOrg = personOrganizationService.read(personOrg);
+        assertEquals(newOrg.getId(), updatedPerOrg.getOrganization().getId());
     }
 
     @Test
     public void delete() {
+        // arrange
+        Location location = createTestLocation();
+        Organization org = createTestOrganization(location);
+        Person person = createTestPerson();
+        PersonOrganization personOrg = createTestPersonOrganization(person, org);
+
+        // act
+        personOrganizationService.delete(personOrg);
+
+        // assert
+        assertNull(personOrganizationService.read(personOrg));
     }
 
     @Test
     public void retrieveAllPersonOrganization() {
+        // arrange
+        Location location = createTestLocation();
+        Organization org = createTestOrganization(location);
+        Person person = createTestPerson();
+        createTestPersonOrganization(person, org);  // create first PersonOrganization object
+
+        // create a different org for second object
+        Organization newOrg = new Organization();
+        newOrg.setName("The Avengers");
+        newOrg.setDescription("Earth's No. 1 Team");
+        newOrg.setLocation(location);
+        Organization createdOrg = organizationService.create(newOrg);
+        assertNotNull(createdOrg.getId());
+
+        PersonOrganization newPersonOrg = new PersonOrganization();
+        newPersonOrg.setOrganization(newOrg);
+        newPersonOrg.setPerson(person);
+        newPersonOrg.setStartDate(LocalDate.parse("2001-01-01"));
+        newPersonOrg.setEndDate(null);
+
+        personOrganizationService.create(newPersonOrg); // create second PersonOrganization object
+
+        // act
+        List<PersonOrganization> allPersonOrgs = personOrganizationService.retrieveAllPersonOrganization(Integer.MAX_VALUE, 0);
+
+        // assert
+        assertEquals(2, allPersonOrgs.size());
+
+
     }
 }

@@ -1,7 +1,6 @@
-package com.sg.dao;
+package com.sg.service;
 import com.sg.dto.Location;
 import com.sg.dto.Sighting;
-import com.sg.service.LocationService;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -18,10 +17,10 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Rollback
 @Transactional
-public class SightingDaoImplTest {
+public class SightingServiceImplTest {
 
     @Inject
-    private SightingDao sightingDao;
+    private SightingService sightingService;
 
     @Inject
     private LocationService locationService;
@@ -47,7 +46,7 @@ public class SightingDaoImplTest {
         //arrange
         Sighting createdSighting = createTestSighting();
         //act
-        Sighting readSighting = sightingDao.read(createdSighting);
+        Sighting readSighting = sightingService.read(createdSighting);
         //assert
         assertNotNull(readSighting.getId());
         assertNotNull(createdSighting.getLocation().getId());
@@ -60,16 +59,16 @@ public class SightingDaoImplTest {
         //arrange
         Sighting createdSighting = createTestSighting();
 
-        Sighting readSighting = sightingDao.read(createdSighting);
+        Sighting readSighting = sightingService.read(createdSighting);
 
         readSighting.setSightingDate(LocalDate.parse("2018-04-03"));
         readSighting.setDescription("Not as fast as the last one");
 
         // act
-        sightingDao.update(readSighting);
+        sightingService.update(readSighting);
 
         //assert
-        Sighting updatedSighting = sightingDao.read(readSighting);
+        Sighting updatedSighting = sightingService.read(readSighting);
         assertEquals(createdSighting.getLocation().getId(), updatedSighting.getLocation().getId());
         assertEquals(LocalDate.parse("2018-04-03"), updatedSighting.getSightingDate());
         assertEquals("Not as fast as the last one", updatedSighting.getDescription());
@@ -82,10 +81,10 @@ public class SightingDaoImplTest {
         Sighting createdSighting = createTestSighting();
 
         //act
-        sightingDao.delete(createdSighting);
+        sightingService.delete(createdSighting);
 
         //assert
-        Sighting readsighting = sightingDao.read(createdSighting);
+        Sighting readsighting = sightingService.read(createdSighting);
         assertNull(readsighting);
 
     }
@@ -97,7 +96,7 @@ public class SightingDaoImplTest {
         createTestSighting();
 
         //act & assert
-        assertEquals(2, sightingDao.retrieveAllSightings(Integer.MAX_VALUE, 0).size());
+        assertEquals(2, sightingService.retrieveAllSightings(Integer.MAX_VALUE, 0).size());
     }
 
     @Test
@@ -110,7 +109,7 @@ public class SightingDaoImplTest {
         sighting.setLocation(newLocation);
         sighting.setSightingDate(LocalDate.parse("2018-03-02"));
         sighting.setDescription("It was really fast!");
-        return sightingDao.create(sighting);
+        return sightingService.create(sighting);
     }
 
     private Location createTestLocation() {

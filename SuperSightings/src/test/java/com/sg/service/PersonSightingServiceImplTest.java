@@ -1,13 +1,9 @@
-package com.sg.dao;
+package com.sg.service;
 
 import com.sg.dto.Location;
 import com.sg.dto.Person;
 import com.sg.dto.PersonSighting;
 import com.sg.dto.Sighting;
-import com.sg.service.LocationService;
-import com.sg.service.PersonService;
-import com.sg.service.SightingService;
-import com.sg.service.SightingServiceImpl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.test.annotation.Rollback;
@@ -27,11 +23,11 @@ import static org.junit.Assert.*;
 @ContextConfiguration(locations = {"/test-applicationContext.xml"})
 @Rollback(true)
 @Transactional(propagation = Propagation.REQUIRED, readOnly = false)
-public class PersonSightingDaoImplTest {
+public class PersonSightingServiceImplTest {
 
 
     @Inject
-    private PersonSightingDao personSightingDao;
+    private PersonSightingService personSightingService;
 
     @Inject
     private PersonService personService;
@@ -76,7 +72,7 @@ public class PersonSightingDaoImplTest {
         PersonSighting personSighting = new PersonSighting();
         personSighting.setPerson(person);
         personSighting.setSighting(sighting);
-        return personSightingDao.create(personSighting);
+        return personSightingService.create(personSighting);
     }
 
     @Test
@@ -110,7 +106,7 @@ public class PersonSightingDaoImplTest {
         PersonSighting personSighting = createTestPersonSighting(person, sighting);
 
         // act
-        PersonSighting personSightingFromDB = personSightingDao.read(personSighting);
+        PersonSighting personSightingFromDB = personSightingService.read(personSighting);
 
         // assert
         assertNotNull(personSightingFromDB);
@@ -126,7 +122,7 @@ public class PersonSightingDaoImplTest {
         Person person = createTestPerson();
         Sighting sighting = createTestSighting(location);
         PersonSighting personSighting = createTestPersonSighting(person, sighting);
-        PersonSighting personSightingFromDB = personSightingDao.read(personSighting);
+        PersonSighting personSightingFromDB = personSightingService.read(personSighting);
 
         Sighting newSighting = new Sighting();
         newSighting.setDescription("He beat the Joker.");
@@ -137,10 +133,10 @@ public class PersonSightingDaoImplTest {
         personSightingFromDB.setSighting(createdNewSighting);
 
         // act
-        personSightingDao.update(personSightingFromDB);
+        personSightingService.update(personSightingFromDB);
 
         // assert
-        PersonSighting updatedPersonSighting = personSightingDao.read(personSightingFromDB);
+        PersonSighting updatedPersonSighting = personSightingService.read(personSightingFromDB);
         assertEquals(createdNewSighting.getId(), updatedPersonSighting.getSighting().getId());
         assertEquals(person.getId(), updatedPersonSighting.getPerson().getId());
 
@@ -155,10 +151,10 @@ public class PersonSightingDaoImplTest {
         PersonSighting personSighting = createTestPersonSighting(person, sighting);
 
         // act
-        personSightingDao.delete(personSighting);
+        personSightingService.delete(personSighting);
 
         // assert
-        assertNull(personSightingDao.read(personSighting));
+        assertNull(personSightingService.read(personSighting));
     }
 
     @Test
@@ -178,10 +174,10 @@ public class PersonSightingDaoImplTest {
         PersonSighting newPersonSighting = new PersonSighting();
         newPersonSighting.setSighting(newSighting);
         newPersonSighting.setPerson(person);
-        personSightingDao.create(newPersonSighting);
+        personSightingService.create(newPersonSighting);
 
         // act
-        List<PersonSighting> personSightList = personSightingDao.retrieveAllPersonSightings(Integer.MAX_VALUE, 0);
+        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(Integer.MAX_VALUE, 0);
 
         // assert
         assertEquals(2, personSightList.size());
