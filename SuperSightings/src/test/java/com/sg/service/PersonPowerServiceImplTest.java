@@ -156,4 +156,31 @@ public class PersonPowerServiceImplTest {
         assertEquals(2, allPersonPowers.size());
 
     }
+
+    @Test
+    public void retrieveAllPersonPowersPagination() {
+        // arrange, original person, power to set personPower
+        Person person = createTestPerson();
+        Power power = createTestPower();
+        createTestPersonPower(person, power);
+
+        Power newPower = new Power();
+        newPower.setName("Super Strength");
+        Power newPowerCreated = powerService.create(power);
+        assertNotNull(newPowerCreated.getId());
+
+        PersonPower personPower = new PersonPower();
+        personPower.setPower(newPowerCreated);
+        personPower.setPerson(person);
+        personPowerService.create(personPower);
+
+        // act
+        List<PersonPower> allPersonPowers = personPowerService.retrieveAllPersonPowers(1, 0);
+        List<PersonPower> allPersonPowers1 = personPowerService.retrieveAllPersonPowers(1, 1);
+
+        // assert
+        assertEquals(1, allPersonPowers.size());
+        assertEquals(1, allPersonPowers1.size());
+
+    }
 }

@@ -100,9 +100,6 @@ public class OrganizationDaoImplTest {
         assertEqualsOrganization(org, org.getLocation().getId());
     }
 
-
-
-
     @Test
     public void read() {
         // arrange
@@ -164,6 +161,21 @@ public class OrganizationDaoImplTest {
     }
 
     @Test
+    public void retrieveAllOrganizationsPagination() {
+        // arrange
+        Organization org1 = createTestOrgAvengers();
+        Organization org2 = createTestOrgAvengers();
+
+        // act
+        List<Organization> allOrgs = organizationDao.retrieveAllOrganizations(1, 0);
+        List<Organization> allOrgs1 = organizationDao.retrieveAllOrganizations(1, 1);
+
+        // assert
+        assertEquals(1, allOrgs.size());
+        assertEquals(1, allOrgs1.size());
+    }
+
+    @Test
     public void retrieveAllOrganizationsByPerson() {
         // arrange
         Organization org1 = createTestOrgAvengers();
@@ -185,6 +197,32 @@ public class OrganizationDaoImplTest {
         // assert
         assertEquals(1, allOrgsPerson1.size());
         assertEquals(2, allOrgsPerson2.size());
+    }
+
+    @Test
+    public void retrieveAllOrganizationsByPersonPagination() {
+        // arrange
+        Organization org1 = createTestOrgAvengers();
+        Organization org2 = createTestOrgAvengers();
+        Organization org3 = createTestOrgAvengers();
+
+        Person personFromDB = createTestPerson();
+        Person personFromDB2 = createTestPerson();
+
+        createTestPersonOrg(org1, personFromDB);
+        createTestPersonOrg(org2, personFromDB2);
+        createTestPersonOrg(org1, personFromDB2);
+        createTestPersonOrg(org3, personFromDB2);
+
+        // act
+        List<Organization> allOrgsPerson1
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, 2, 0);
+        List<Organization> allOrgsPerson2
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, 2, 2);
+
+        // assert
+        assertEquals(2, allOrgsPerson1.size());
+        assertEquals(1, allOrgsPerson2.size());
     }
 
 

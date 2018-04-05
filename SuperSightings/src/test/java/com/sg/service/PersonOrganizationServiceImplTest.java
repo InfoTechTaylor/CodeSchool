@@ -197,4 +197,39 @@ public class PersonOrganizationServiceImplTest {
 
 
     }
+
+    @Test
+    public void retrieveAllPersonOrganizationPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Organization org = createTestOrganization(location);
+        Person person = createTestPerson();
+        createTestPersonOrganization(person, org);  // create first PersonOrganization object
+
+        // create a different org for second object
+        Organization newOrg = new Organization();
+        newOrg.setName("The Avengers");
+        newOrg.setDescription("Earth's No. 1 Team");
+        newOrg.setLocation(location);
+        Organization createdOrg = organizationService.create(newOrg);
+        assertNotNull(createdOrg.getId());
+
+        PersonOrganization newPersonOrg = new PersonOrganization();
+        newPersonOrg.setOrganization(newOrg);
+        newPersonOrg.setPerson(person);
+        newPersonOrg.setStartDate(LocalDate.parse("2001-01-01"));
+        newPersonOrg.setEndDate(null);
+
+        personOrganizationService.create(newPersonOrg); // create second PersonOrganization object
+
+        // act
+        List<PersonOrganization> allPersonOrgs = personOrganizationService.retrieveAllPersonOrganization(1, 0);
+        List<PersonOrganization> allPersonOrgs1 = personOrganizationService.retrieveAllPersonOrganization(1, 1);
+
+        // assert
+        assertEquals(1, allPersonOrgs.size());
+        assertEquals(1, allPersonOrgs1.size());
+
+
+    }
 }

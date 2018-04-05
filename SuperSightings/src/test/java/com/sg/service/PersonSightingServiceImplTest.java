@@ -183,4 +183,33 @@ public class PersonSightingServiceImplTest {
         assertEquals(2, personSightList.size());
 
     }
+
+    @Test
+    public void retrieveAllPersonSightingsPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Person person = createTestPerson();
+        Sighting sighting = createTestSighting(location);
+        createTestPersonSighting(person, sighting);
+
+        Sighting newSighting = new Sighting();
+        newSighting.setDescription("He beat the Joker.");
+        newSighting.setLocation(location);
+        newSighting.setSightingDate(LocalDate.parse("2018-04-01"));
+        sightingService.create(newSighting);
+
+        PersonSighting newPersonSighting = new PersonSighting();
+        newPersonSighting.setSighting(newSighting);
+        newPersonSighting.setPerson(person);
+        personSightingService.create(newPersonSighting);
+
+        // act
+        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(1, 0);
+        List<PersonSighting> personSightList1 = personSightingService.retrieveAllPersonSightings(1, 1);
+
+        // assert
+        assertEquals(1, personSightList.size());
+        assertEquals(1, personSightList1.size());
+
+    }
 }

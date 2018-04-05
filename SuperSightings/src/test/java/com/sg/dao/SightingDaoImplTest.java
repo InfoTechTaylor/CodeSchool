@@ -227,5 +227,89 @@ public class SightingDaoImplTest {
 
     }
 
+    @Test
+    public void retrieveAllSightingsPagination() {
+        //arrange
+        Location location = createTestLocation();
+        createTestSighting(location);
+        createTestSighting(location);
+
+        //act & assert
+        assertEquals(1, sightingDao.retrieveAllSightings(1, 0).size());
+        assertEquals(1, sightingDao.retrieveAllSightings(1, 1).size());
+    }
+
+    @Test
+    public void retrieveAllSightingsByPersonPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Person person = createTestPerson();
+        Person person1 = createTestPerson();
+
+        Sighting sighting = createTestSighting(location);
+        Sighting sighting1 = createTestSighting(location);
+        Sighting sighting2 = createTestSighting(location);
+        Sighting sighting3 = createTestSighting(location);
+
+        createTestPersonSighting(person, sighting);
+        createTestPersonSighting(person, sighting1);
+        createTestPersonSighting(person1, sighting2);
+        createTestPersonSighting(person, sighting3);
+
+        // act
+        List<Sighting> allSightingsByPerson = sightingDao.retrieveAllSightingsByPerson(person, 2, 0);
+        List<Sighting> allSightingsByPerson1 = sightingDao.retrieveAllSightingsByPerson(person, 2, 2);
+
+        // assert
+        assertEquals(2, allSightingsByPerson.size());
+        assertEquals(1, allSightingsByPerson1.size());
+
+
+    }
+
+    @Test
+    public void retrieveAllSightingsByLocationPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Location location1 = createTestLocation();
+
+        createTestSighting(location);
+        createTestSighting(location1);
+        createTestSighting(location);
+        createTestSighting(location);
+
+        // act
+        List<Sighting> allSightingsByLocation = sightingDao.retrieveAllSightingsByLocation(location, 2,0);
+        List<Sighting> allSightingsByLocation1 = sightingDao.retrieveAllSightingsByLocation(location, 2, 2);
+
+        // assert
+        assertEquals(2, allSightingsByLocation.size());
+        assertEquals(1, allSightingsByLocation1.size());
+    }
+
+    @Test
+    public void retrieveAllSightingsByDatePagination() {
+        // arrange
+        Location location = createTestLocation();
+        Location location1 = createTestLocation();
+
+        createTestSighting(location);
+        createTestSighting(location1);
+        Sighting sighting2 = createTestSighting(location);
+        sighting2.setSightingDate(LocalDate.parse("2018-04-05"));
+        sightingService.update(sighting2);
+        createTestSighting(location);
+
+        // act
+        List<Sighting> allSightingsOntheFourth = sightingDao.retrieveAllSightingsByDate(LocalDate.parse("2018-04-04"), 2, 0);
+        List<Sighting> allSightingsOnTheFifth = sightingDao.retrieveAllSightingsByDate(LocalDate.parse("2018-04-04"), 2,2);
+
+        // assert
+        assertEquals(2, allSightingsOntheFourth.size());
+        assertEquals(1, allSightingsOnTheFifth.size());
+
+
+    }
+
 
 }

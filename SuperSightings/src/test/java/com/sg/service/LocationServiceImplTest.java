@@ -170,6 +170,21 @@ public class LocationServiceImplTest {
     }
 
     @Test
+    public void retrieveAllLocationsPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Location location2 = createTestLocation();
+
+        // act
+        List<Location> locationList = locationService.retrieveAllLocations(1, 0);
+        List<Location> locationList1 = locationService.retrieveAllLocations(1, 1);
+
+        // assert
+        assertEquals(1, locationList.size());
+        assertEquals(1, locationList1.size());
+    }
+
+    @Test
     public void retrieveAllLocationsByPerson() {
         // arrange
         Location location = createTestLocation();
@@ -203,6 +218,39 @@ public class LocationServiceImplTest {
 
     }
 
+    @Test
+    public void retrieveAllLocationsByPersonPagination() {
+        // arrange
+        Location location = createTestLocation();
+        Location location2 = createTestLocation();
+        Location location3 = createTestLocation();
+
+        Person person = createTestPerson();
+        Person person2 = createTestPerson();
+
+        Sighting sighting = createTestSighting(location);
+        Sighting sighting2= createTestSighting(location);
+        Sighting sighting3 = createTestSighting(location);
+        Sighting sighting4 = createTestSighting(location2);
+        Sighting sighting5 = createTestSighting(location3);
+
+        createTestPersonSighting(person, sighting);
+        createTestPersonSighting(person, sighting2);
+        createTestPersonSighting(person2, sighting3);
+        createTestPersonSighting(person2, sighting4);
+        createTestPersonSighting(person2, sighting5);
+
+        // act
+        List<Location> allLocationsByPerson =
+                locationService.retrieveAllLocationsByPerson(person2, 2, 0);
+        List<Location> allLocationsByPerson2 =
+                locationService.retrieveAllLocationsByPerson(person2, 2, 2);
+
+        // assert
+        assertEquals(2, allLocationsByPerson.size());
+        assertEquals(1, allLocationsByPerson2.size());
+
+    }
 
 
 

@@ -201,6 +201,8 @@ public class PersonDaoImplTest {
         assertEquals(3, allPersons.size());
     }
 
+
+
     @Test
     public void retrieveAllPersonsByOrg() {
         //Arrange
@@ -316,6 +318,140 @@ public class PersonDaoImplTest {
         assertEquals(2, allPersonsByLocation.size());
         assertEquals(2, allPersonsByLocation1.size());
         assertEquals(1, allPersonsByLocation2.size());
+
+    }
+
+    @Test
+    public void retrieveAllPersonsPagination() {
+        //Arrange
+        createTestPerson(0);
+        createTestPerson(1);
+        createTestPerson(2);
+
+        //Act
+        List<Person> allPersons = personDao.retrieveAllPersons(2,0);
+        List<Person> allPersons2 = personDao.retrieveAllPersons(2,2);
+
+        //Assert
+        assertEquals(2, allPersons.size());
+        assertEquals(1, allPersons2.size());
+    }
+
+    @Test
+    public void retrieveAllPersonsByOrgPagination() {
+        //Arrange
+        Location location = createTestLocation();
+        Organization organization = createTestOrganization(location);
+        Organization organization1 = createTestOrganization(location);
+
+        Person person = createTestPerson(0);
+        Person person1 = createTestPerson(1);
+        Person person2 = createTestPerson(2);
+        Person person3 = createTestPerson(3);
+
+        createTestPersonOrganization(person, organization);
+        createTestPersonOrganization(person1, organization1);
+        createTestPersonOrganization(person1, organization);
+        createTestPersonOrganization(person2, organization);
+        createTestPersonOrganization(person3, organization);
+
+        //Act
+        List<Person> allPersonsByOrg = personDao.retrieveAllPersonsByOrg(organization, 2, 0);
+        List<Person> allPersonsByOrg1 = personDao.retrieveAllPersonsByOrg(organization, 2, 2);
+
+        //Assert
+        assertEquals(2, allPersonsByOrg.size());
+        assertEquals(2, allPersonsByOrg1.size());
+    }
+
+    @Test
+    public void retrieveAllPersonsByPowerPagination() {
+        //Arrange
+        Person person = createTestPerson(0);
+        Person person1 = createTestPerson(1);
+        Person person2 = createTestPerson(2);
+        Person person3 = createTestPerson(3);
+
+        Power power = createTestPower(0);
+        Power power1 = createTestPower(1);
+
+        createTestPersonPower(person, power);
+        createTestPersonPower(person, power1);
+        createTestPersonPower(person1, power);
+        createTestPersonPower(person2, power1);
+        createTestPersonPower(person3, power1);
+
+        //Act
+        List<Person> allPersonsByPower = personDao.retrieveAllPersonsByPower(power1, 2, 0);
+        List<Person> allPersonsByPower1 = personDao.retrieveAllPersonsByPower(power1, 2, 2);
+
+        //Assert
+        assertEquals(2, allPersonsByPower.size());
+        assertEquals(1, allPersonsByPower1.size());
+    }
+
+    @Test
+    public void retrieveAllPersonsBySightingPagination() {
+        //Arrange
+        Location location = createTestLocation();
+        Location location1 = createTestLocation();
+
+        Person person = createTestPerson(0);
+        Person person1 = createTestPerson(1);
+        Person person2 = createTestPerson(2);
+        Person person3 = createTestPerson(3);
+
+        Sighting sighting = createTestSighting(location);
+        Sighting sighting1 = createTestSighting(location1);
+
+        createTestPersonSighting(person, sighting);
+        createTestPersonSighting(person, sighting1);
+        createTestPersonSighting(person1, sighting);
+        createTestPersonSighting(person2, sighting);
+        createTestPersonSighting(person3, sighting1);
+
+        //Act
+        List<Person> allPersonsBySighting = personDao.retrieveAllPersonsBySighting(sighting, 2, 0);
+        List<Person> allPersonsBySighting1 = personDao.retrieveAllPersonsBySighting(sighting, 2, 2);
+
+        //Assert
+        assertEquals(2, allPersonsBySighting.size());
+        assertEquals(1, allPersonsBySighting1.size());
+    }
+
+    @Test
+    public void retrieveAllPersonsByLocationPagination() {
+        //Arrange
+        Location location = createTestLocation();
+        Location location1 = createTestLocation();
+        Location location2 = createTestLocation();
+
+        Person person = createTestPerson(0);
+        Person person1 = createTestPerson(1);
+        Person person2 = createTestPerson(2);
+        Person person3 = createTestPerson(3);
+
+        Sighting sighting = createTestSighting(location);
+        Sighting sighting1 = createTestSighting(location1);
+        Sighting sighting2 = createTestSighting(location);
+        Sighting sighting3 = createTestSighting(location);
+
+        createTestPersonSighting(person, sighting);
+        createTestPersonSighting(person, sighting3);
+        createTestPersonSighting(person, sighting1);
+        createTestPersonSighting(person1, sighting);
+        createTestPersonSighting(person2, sighting2);
+        createTestPersonSighting(person3, sighting1);
+
+        //Act
+        List<Person> allPersonsByLocation = personDao.retrieveAllPersonsByLocation(location, 2, 0);
+        List<Person> allPersonsByLocation1 = personDao.retrieveAllPersonsByLocation(location, 2, 2);
+
+
+        //Assert
+        assertEquals(2, allPersonsByLocation.size());
+        assertEquals(1, allPersonsByLocation1.size());
+
 
     }
 

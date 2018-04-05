@@ -183,7 +183,46 @@ public class OrganizationServiceImplTest {
         assertEquals(2, allOrgsPerson2.size());
     }
 
+    @Test
+    public void retrieveAllOrganizationsByPersonPagination() {
+        // arrange
+        Organization org1 = createTestOrgAvengers();
+        Organization org2 = createTestOrgAvengers();
+        Organization org3 = createTestOrgAvengers();
 
+        Person personFromDB = createTestPerson();
+        Person personFromDB2 = createTestPerson();
+
+        createTestPersonOrg(org1, personFromDB);
+        createTestPersonOrg(org2, personFromDB2);
+        createTestPersonOrg(org1, personFromDB2);
+        createTestPersonOrg(org3, personFromDB2);
+
+        // act
+        List<Organization> allOrgsPerson1
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, 2, 0);
+        List<Organization> allOrgsPerson2
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, 2, 2);
+
+        // assert
+        assertEquals(2, allOrgsPerson1.size());
+        assertEquals(1, allOrgsPerson2.size());
+    }
+
+    @Test
+    public void retrieveAllOrganizationsPagination() {
+        // arrange
+        Organization org1 = createTestOrgAvengers();
+        Organization org2 = createTestOrgAvengers();
+
+        // act
+        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(1, 0);
+        List<Organization> allOrgs1 = organizationService.retrieveAllOrganizations(1, 1);
+
+        // assert
+        assertEquals(1, allOrgs.size());
+        assertEquals(1, allOrgs1.size());
+    }
 
 
 }

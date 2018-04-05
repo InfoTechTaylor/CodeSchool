@@ -139,4 +139,40 @@ public class PowerServiceImplTest {
         assertEquals(3, powerList.size());
         assertEquals(1, powerList1.size());
     }
+
+    @Test
+    public void retrieveAllPowersPagination() {
+        Power power1 = new Power();
+        power1.setName("Flying");
+        powerService.create(power1);
+        Power power2 = new Power();
+        power2.setName("Speed");
+        powerService.create(power2);
+        assertEquals(1, powerService.retrieveAllPowers(1,0).size());
+        assertEquals(1, powerService.retrieveAllPowers(1,1).size());
+    }
+
+    @Test
+    public void retrieveAllPowersByPersonPagination() {
+        //Arrange
+        Person person = createTestPerson();
+        Person person1 = createTestPerson();
+
+        Power power1 = createTestPower("Flying");
+        Power power2 = createTestPower("Speed");
+        Power power3 = createTestPower("Strength");
+
+        createTestPersonPower(person, power1);
+        createTestPersonPower(person, power2);
+        createTestPersonPower(person, power3);
+        createTestPersonPower(person1, power1);
+
+        //Act
+        List<Power> powerList = powerService.retrieveAllPowersByPerson(person, 2, 0);
+        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person, 2, 2);
+
+        //Assert
+        assertEquals(2, powerList.size());
+        assertEquals(1, powerList1.size());
+    }
 }
