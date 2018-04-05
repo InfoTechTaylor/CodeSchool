@@ -63,6 +63,29 @@ public class SightingServiceImplTest {
         return personSightingService.create(personSighting);
     }
 
+    private Sighting createTestSighting() {
+        Sighting sighting = new Sighting();
+        Location newLocation = createTestLocation();
+        sighting.setLocation(newLocation);
+        sighting.setSightingDate(LocalDate.parse("2018-03-02"));
+        sighting.setDescription("It was really fast!");
+        return sightingService.create(sighting);
+    }
+
+    private Location createTestLocation() {
+        Location location = new Location();
+        location.setLatitude(40.779287);
+        location.setLongitude(-73.969326);
+        location.setName("Central Park");
+        location.setDescription("near Belvedere Castle");
+        location.setStreet("79th Street");
+        location.setCity("New York");
+        location.setState("NY");
+        location.setZip("10021");
+        location.setCountry("USA");
+        return locationService.create(location);
+    }
+
     @Test
     public void create() {
         // arrange & act
@@ -131,30 +154,6 @@ public class SightingServiceImplTest {
 
         //act & assert
         assertEquals(2, sightingService.retrieveAllSightings(Integer.MAX_VALUE, 0).size());
-    }
-
-
-    private Sighting createTestSighting() {
-        Sighting sighting = new Sighting();
-        Location newLocation = createTestLocation();
-        sighting.setLocation(newLocation);
-        sighting.setSightingDate(LocalDate.parse("2018-03-02"));
-        sighting.setDescription("It was really fast!");
-        return sightingService.create(sighting);
-    }
-
-    private Location createTestLocation() {
-        Location location = new Location();
-        location.setLatitude(40.779287);
-        location.setLongitude(-73.969326);
-        location.setName("Central Park");
-        location.setDescription("near Belvedere Castle");
-        location.setStreet("79th Street");
-        location.setCity("New York");
-        location.setState("NY");
-        location.setZip("10021");
-        location.setCountry("USA");
-        return locationService.create(location);
     }
 
     @Test

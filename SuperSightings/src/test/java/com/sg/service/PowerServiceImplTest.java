@@ -28,6 +28,29 @@ public class PowerServiceImplTest {
     @Inject
     private PersonPowerService personPowerService;
 
+    private Person createTestPerson() {
+        Person person = new Person();
+        person.setName("Taylor");
+        person.setType("Super hero");
+        person.setDescription("Super Awesome");
+        Person personCreated = personService.create(person);
+        return person;
+    }
+
+    private void createTestPersonPower(Person person, Power power1) {
+        PersonPower personPower1 = new PersonPower();
+        personPower1.setPerson(person);
+        personPower1.setPower(power1);
+        PersonPower personPower = personPowerService.create(personPower1);
+    }
+
+    private Power createTestPower(String powerName) {
+        Power power1 = new Power();
+        power1.setName(powerName);
+        Power power = powerService.create(power1);
+        return power1;
+    }
+
     @Test
     public void create() {
         //Arrange
@@ -96,52 +119,24 @@ public class PowerServiceImplTest {
     @Test
     public void retrieveAllPowersByPerson() {
         //Arrange
-        Person person = new Person();
-        person.setName("Taylor");
-        person.setType("Super hero");
-        person.setDescription("Super Awesome");
-        personService.create(person);
-        Power power1 = new Power();
-        power1.setName("Flying");
-        powerService.create(power1);
-        Power power2 = new Power();
-        power2.setName("Speed");
-        powerService.create(power2);
-        Power power3 = new Power();
-        power3.setName("Strength");
-        powerService.create(power3);
-        PersonPower personPower1 = new PersonPower();
-        personPower1.setPerson(person);
-        personPower1.setPower(power1);
-        personPowerService.create(personPower1);
-        PersonPower personPower2 = new PersonPower();
-        personPower2.setPerson(person);
-        personPower2.setPower(power2);
-        personPowerService.create(personPower2);
-        PersonPower personPower3 = new PersonPower();
-        personPower3.setPerson(person);
-        personPower3.setPower(power3);
-        personPowerService.create(personPower3);
+        Person person = createTestPerson();
+        Person person1 = createTestPerson();
+
+        Power power1 = createTestPower("Flying");
+        Power power2 = createTestPower("Speed");
+        Power power3 = createTestPower("Strength");
+
+        createTestPersonPower(person, power1);
+        createTestPersonPower(person, power2);
+        createTestPersonPower(person, power3);
+        createTestPersonPower(person1, power1);
+
         //Act
         List<Power> powerList = powerService.retrieveAllPowersByPerson(person, Integer.MAX_VALUE, 0);
+        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person1, Integer.MAX_VALUE, 0);
+
         //Assert
-        boolean power1Found = false;
-        boolean power2Found = false;
-        boolean power3Found = false;
-        for (Power power : powerList){
-            if (power.getName().equals(power1.getName())){
-                power1Found = true;
-            }
-            if (power.getName().equals(power2.getName())){
-                power2Found = true;
-            }
-            if (power.getName().equals(power3.getName())){
-                power3Found = true;
-            }
-        }
-        assert powerList.size() == 3;
-        assert power1Found;
-        assert power2Found;
-        assert power3Found;
+        assertEquals(3, powerList.size());
+        assertEquals(1, powerList1.size());
     }
 }
