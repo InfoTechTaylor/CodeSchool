@@ -58,8 +58,8 @@
       <file leaf-file-name="PowerServiceImplTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/sg/service/PowerServiceImplTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="726">
-              <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+            <state relative-caret-position="3780">
+              <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -425,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.All in SuperSightingsImpl">
+  <component name="RunManager" selected="JUnit.PowerServiceImplTest.retrieveAllPowersByPerson">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -542,20 +542,20 @@
       <envs />
       <patterns />
     </configuration>
-    <configuration name="SightingDaoImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PowerServiceImplTest.retrieveAllPowersByPerson" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.sg.dao.*" />
+          <option name="PATTERN" value="com.sg.service.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="SuperSightingsImpl" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="com.sg.dao" />
-      <option name="MAIN_CLASS_NAME" value="com.sg.dao.SightingDaoImplTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="com.sg.service" />
+      <option name="MAIN_CLASS_NAME" value="com.sg.service.PowerServiceImplTest" />
+      <option name="METHOD_NAME" value="retrieveAllPowersByPerson" />
+      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
@@ -641,18 +641,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in SuperSightingsImpl" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.SightingDaoImplTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.PersonServiceImplTest.retrieveAllPersons" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.PersonDaoImplTest.retrieveAllPersons" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.PowerDaoImplTest.retrieveAllPowersByPerson" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.PersonServiceImplTest.retrieveAllPersons" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.PersonDaoImplTest.retrieveAllPersons" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.PowerDaoImplTest.retrieveAllPowersByPerson" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.PowerServiceImplTest.retrieveAllPowersByPerson" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in SuperSightingsImpl" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.PowerDaoImplTest.retrieveAllPowersByPerson" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.PersonDaoImplTest.retrieveAllPersons" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.PersonServiceImplTest.retrieveAllPersons" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SightingDaoImplTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.PowerServiceImplTest.retrieveAllPowersByPerson" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in SuperSightingsImpl" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.PowerDaoImplTest.retrieveAllPowersByPerson" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.PersonDaoImplTest.retrieveAllPersons" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.PersonServiceImplTest.retrieveAllPersons" />
       </list>
     </recent_temporary>
   </component>
@@ -673,7 +673,7 @@
       <workItem from="1522692920163" duration="13916000" />
       <workItem from="1522759716994" duration="37516000" />
       <workItem from="1522869495472" duration="4844000" />
-      <workItem from="1522934203970" duration="3210000" />
+      <workItem from="1522934203970" duration="3282000" />
     </task>
     <servers />
   </component>
@@ -696,11 +696,8 @@
     <history-entry file="All_in_SuperSightingsImpl - 2018.04.05 at 09h 23m 01s.xml">
       <configuration name="All in SuperSightingsImpl" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="PersonDaoImplTest_retrieveAllPersons - 2018.04.05 at 09h 17m 32s.xml">
-      <configuration name="PersonDaoImplTest.retrieveAllPersons" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="PersonDaoImplTest_retrieveAllPersons - 2018.04.05 at 09h 17m 38s.xml">
-      <configuration name="PersonDaoImplTest.retrieveAllPersons" configurationId="JUnit" />
+    <history-entry file="All_in_SuperSightingsImpl - 2018.04.05 at 10h 10m 19s.xml">
+      <configuration name="All in SuperSightingsImpl" configurationId="JUnit" />
     </history-entry>
     <history-entry file="PersonDaoImplTest_retrieveAllPersons - 2018.04.05 at 09h 17m 45s.xml">
       <configuration name="PersonDaoImplTest.retrieveAllPersons" configurationId="JUnit" />
@@ -708,9 +705,12 @@
     <history-entry file="PowerDaoImplTest_retrieveAllPowersByPerson - 2018.04.05 at 10h 06m 09s.xml">
       <configuration name="PowerDaoImplTest.retrieveAllPowersByPerson" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="PowerServiceImplTest_retrieveAllPowersByPerson - 2018.04.05 at 10h 11m 20s.xml">
+      <configuration name="PowerServiceImplTest.retrieveAllPowersByPerson" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60639000" />
+    <option name="totallyTimeSpent" value="60711000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2902" height="1597" extended-state="6" />
@@ -733,7 +733,7 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7090909" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05874126" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13333334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1472,8 +1472,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/sg/service/PowerServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="726">
-          <caret line="135" column="45" lean-forward="false" selection-start-line="135" selection-start-column="45" selection-end-line="135" selection-end-column="45" />
+        <state relative-caret-position="3780">
+          <caret line="132" column="0" lean-forward="true" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -37,11 +37,11 @@ public class PowerServiceImplTest {
         return person;
     }
 
-    private void createTestPersonPower(Person person, Power power1) {
+    private PersonPower createTestPersonPower(Person person, Power power1) {
         PersonPower personPower1 = new PersonPower();
         personPower1.setPerson(person);
         personPower1.setPower(power1);
-        PersonPower personPower = personPowerService.create(personPower1);
+        return personPowerService.create(personPower1);
     }
 
     private Power createTestPower(String powerName) {
