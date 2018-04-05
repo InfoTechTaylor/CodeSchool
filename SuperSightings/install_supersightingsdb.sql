@@ -210,16 +210,3 @@ ALTER TABLE organization
 ADD CONSTRAINT fk_organization_location
 FOREIGN KEY (location_id) REFERENCES location (id) ON DELETE NO ACTION;
 
-
-
-
-USE supersightings_test;
-INSERT INTO Location (latitude, longitude, name, description, street, city, state, zip, country)
-values (43.1979, 70.8737, "Dover", "small NH city", "2 Central Ave", "Dover", "NH", "03820", "USA");
-USE supersightings_test;
-INSERT INTO Location (latitude, longitude, name, description, street, city, state, zip, country)
-values (43.1979, 70.8737, "Dover", "small NH city", "2 Central Ave", "Dover", "NH", "03820", "USA");
-
-
-USE supersightings_test;
-Delete from location where id = (1, 2);

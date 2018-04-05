@@ -95,17 +95,28 @@ public class SightingDaoImpl implements SightingDao {
 
     @Override
     public List<Sighting> retrieveAllSightingsByPerson(Person person, int limit, int offset) {
-        return null;
+        return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_PERSON,
+                new SightingMapper(),
+                person.getId(),
+                limit,
+                offset);
     }
-
     @Override
     public List<Sighting> retrieveAllSightingsByLocation(Location location, int limit, int offset) {
-        return null;
+        return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_LOCATION,
+                new SightingMapper(),
+                location.getId(),
+                limit,
+                offset);
     }
-
     @Override
     public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, int limit, int offset) {
-        return null;
+        Date date = Date.valueOf(localDate);
+        return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_DATE,
+                new SightingMapper(),
+                date,
+                limit,
+                offset);
     }
 
     private static final class SightingMapper implements RowMapper<Sighting> {
