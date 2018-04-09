@@ -21,5 +21,7 @@ public interface PlayerDao {
 
     public List<Player> getPlayersByPosition(Position position, int limit, int offset);
 
+    public List<Player> list(int limit, int offset);
+
 
 }

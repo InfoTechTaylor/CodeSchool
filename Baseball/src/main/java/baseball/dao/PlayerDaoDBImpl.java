@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import java.lang.management.GarbageCollectorMXBean;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class PlayerDaoDBImpl implements PlayerDao {
@@ -35,6 +36,8 @@ public class PlayerDaoDBImpl implements PlayerDao {
             "inner join player_position pp on " +
             "p.id = pp.player_id " +
             "where pp.position_id = ? limit ? offset ?";
+
+    private static final String SQL_LIST = "select * from player limit ? offset ?";
 
     @Inject
     public PlayerDaoDBImpl(JdbcTemplate jdbcTemplate) {
@@ -119,6 +122,15 @@ public class PlayerDaoDBImpl implements PlayerDao {
                                     position.getId(),
                                     limit,
                                     offset);
+    }
+
+    @Override
+    public List<Player> list(int limit, int offset) {
+
+        return jdbcTemplate.query(SQL_LIST,
+                new PlayerMapper(),
+                limit,
+                offset);
     }
 
 

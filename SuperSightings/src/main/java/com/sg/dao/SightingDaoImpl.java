@@ -36,7 +36,7 @@ public class SightingDaoImpl implements SightingDao {
             = "update sighting set location_id = ?, sighting_date = ?, description = ? where id = ?";
 
     private static final String READ_ALL_QUERY
-            = "select * from sighting limit ? offset ?";
+            = "select * from sighting order by sighting_date desc limit ? offset ?";
 
     private static final String RETRIEVE_SIGHTINGS_BY_PERSON = "select * from sighting s " +
             "inner join person_sighting ps on ps.sighting_id = s.id " +

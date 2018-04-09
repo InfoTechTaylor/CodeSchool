@@ -17,6 +17,8 @@ public interface PlayerService {
 
     public void delete(Player player);
 
+    public List<Player> list(int limit, int offset);
+
     public List<Player> getPlayersByTeam(Team team, int limit, int offset);
 
     public List<Player> getPlayersByPosition(Position position, int limit, int offset);

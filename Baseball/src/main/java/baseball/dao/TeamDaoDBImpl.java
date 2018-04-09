@@ -9,6 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.inject.Inject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class TeamDaoDBImpl implements TeamDao {
 
@@ -22,6 +23,8 @@ public class TeamDaoDBImpl implements TeamDao {
     private static final String SQL_UPDATE = "update team set city = ?, nickname = ? where id = ?";
 
     private static final String SQL_DELETE = "delete from team where id = ?";
+
+    private static final String SQL_LIST = "select * from team limit ? offset ?";
 
     @Inject
     public TeamDaoDBImpl(JdbcTemplate jdbcTemplate) {
@@ -69,6 +72,14 @@ public class TeamDaoDBImpl implements TeamDao {
     public void delete(Team team) {
         jdbcTemplate.update(SQL_DELETE,
                 team.getId());
+    }
+
+    @Override
+    public List<Team> list(int limit, int offset) {
+        return jdbcTemplate.query(SQL_LIST,
+                new teamMapper(),
+                limit,
+                offset);
     }
 
 

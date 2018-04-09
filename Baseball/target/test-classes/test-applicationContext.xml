@@ -64,4 +64,10 @@
 
     <bean id="playerPositionService"
           class="baseball.service.PlayerPositionServiceImpl" />
+
+    <bean id="teamWebService"
+          class="baseball.webservice.TeamWebServiceImpl" />
+
+    <bean id="playerWebService"
+          class ="baseball.webservice.PlayerWebServiceImpl" />
 </beans>
