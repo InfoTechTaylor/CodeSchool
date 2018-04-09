@@ -37,9 +37,7 @@ public class PlayerDaoDBImpl implements PlayerDao {
             "p.id = pp.player_id " +
             "where pp.position_id = ? limit ? offset ?";
 
-    private static final String SQL_LIST = "select p.*, t.* from player p " +
-            "inner join team t on t.id = p.team_id " +
-            "limit ? offset ?";
+    private static final String SQL_LIST = "SELECT * from player LIMIT ? OFFSET ?";
 
     @Inject
     public PlayerDaoDBImpl(JdbcTemplate jdbcTemplate) {
@@ -130,7 +128,7 @@ public class PlayerDaoDBImpl implements PlayerDao {
     public List<Player> list(int limit, int offset) {
 
         return jdbcTemplate.query(SQL_LIST,
-                new PlayerMapperEagerFetchTeam(),
+                new PlayerMapper(),
                 limit,
                 offset);
     }
