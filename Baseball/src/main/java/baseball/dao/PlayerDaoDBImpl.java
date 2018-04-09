@@ -37,7 +37,9 @@ public class PlayerDaoDBImpl implements PlayerDao {
             "p.id = pp.player_id " +
             "where pp.position_id = ? limit ? offset ?";
 
-    private static final String SQL_LIST = "select * from player limit ? offset ?";
+    private static final String SQL_LIST = "select p.*, t.* from player p " +
+            "inner join team t on t.id = p.team_id " +
+            "limit ? offset ?";
 
     @Inject
     public PlayerDaoDBImpl(JdbcTemplate jdbcTemplate) {
@@ -128,7 +130,7 @@ public class PlayerDaoDBImpl implements PlayerDao {
     public List<Player> list(int limit, int offset) {
 
         return jdbcTemplate.query(SQL_LIST,
-                new PlayerMapper(),
+                new PlayerMapperEagerFetchTeam(),
                 limit,
                 offset);
     }
@@ -149,6 +151,32 @@ public class PlayerDaoDBImpl implements PlayerDao {
             if(teamId != null) {
                 Team team = new Team();
                 team.setId(rs.getLong("team_id"));
+                player.setTeam(team);
+            }
+
+            return player;
+        }
+    }
+
+    // mapper
+    private static final class PlayerMapperEagerFetchTeam implements RowMapper<Player> {
+
+        public Player mapRow(ResultSet rs, int rowNum) throws SQLException {
+            Player player = new Player();
+            player.setId(rs.getLong("p.id"));
+            player.setFirstName(rs.getString("p.first_name"));
+            player.setLastName(rs.getString("p.last_name"));
+            player.setHomeTown(rs.getString("p.home_town"));
+
+            Long teamId = rs.getLong("p.team_id");
+
+            if(teamId != null) {
+                Team team = new Team();
+                team.setId(rs.getLong("team_id"));
+
+                team.setCity(rs.getString("t.city"));
+                team.setNickname(rs.getString("t.nickname"));
+
                 player.setTeam(team);
             }
 

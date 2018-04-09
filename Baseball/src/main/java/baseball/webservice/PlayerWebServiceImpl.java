@@ -61,12 +61,11 @@ public class PlayerWebServiceImpl implements PlayerWebService {
         playerViewModel.setFirstName(player.getFirstName());
         playerViewModel.setLastName(player.getLastName());
 
-        // since we've separated the UI from the business services, this is the only place
-        // we need to care about lazy loading vs eager fetching
+        // Eager fetching
         if(player.getTeam() != null) {
-            Team team = teamService.read(player.getTeam().getId());
-            playerViewModel.setTeamId(team.getId());
-            playerViewModel.setTeamName(team.getNickname());
+//            Team team = teamService.read(player.getTeam().getId());
+            playerViewModel.setTeamId(player.getTeam().getId());
+            playerViewModel.setTeamName(player.getTeam().getNickname());
         }
 
         return playerViewModel;
