@@ -48,4 +48,22 @@
     <bean id="personSightingService" class="com.sg.service.PersonSightingServiceImpl"/>
     <bean id="powerService" class="com.sg.service.PowerServiceImpl"/>
     <bean id="sightingService" class="com.sg.service.SightingServiceImpl"/>
+
+    <bean id="homePageWebService" class="com.sg.webservice.home.HomePageWebServiceImpl"/>
+    <bean id="createListLocationWebService" class="com.sg.webservice.location.CreateListLocationWebServiceImpl"/>
+    <bean id="editLocationWebService" class="com.sg.webservice.location.EditLocationWebServiceImpl"/>
+    <bean id="locationProfileWebService" class="com.sg.webservice.location.LocationProfileWebServiceImpl"/>
+    <bean id="createListOrgWebService" class="com.sg.webservice.organization.CreateListOrgWebServiceImpl"/>
+    <bean id="editOrgWebService" class="com.sg.webservice.organization.EditOrgWebServiceImpl"/>
+    <bean id="orgProfileWebService" class="com.sg.webservice.organization.OrgProfileWebServiceImpl"/>
+    <bean id="createListPersonWebService" class="com.sg.webservice.people.CreateListPersonWebServiceImpl"/>
+    <bean id="editPersonWebService" class="com.sg.webservice.people.EditPersonWebServiceImpl"/>
+    <bean id="personProfileWebService" class="com.sg.webservice.people.PersonProfileWebServiceImpl"/>
+    <bean id="createListPowerWebService" class="com.sg.webservice.power.CreateListPowerWebServiceImpl"/>
+    <bean id="editPowerWebService" class="com.sg.webservice.power.EditPowerWebServiceImpl"/>
+    <bean id="createListSightingWebService" class="com.sg.webservice.sighting.CreateListSightingWebServiceImpl"/>
+    <bean id="editSightingWebService" class="com.sg.webservice.sighting.EditSightingWebServiceImpl"/>
+    <bean id="sightingProfileWebService" class="com.sg.webservice.sighting.SightingProfileWebServiceImpl"/>
+
+    <bean id="helperMethods" class="com.sg.util.TestHelperMethods" />
 </beans>

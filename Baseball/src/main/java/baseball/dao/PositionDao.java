@@ -16,5 +16,7 @@ public interface PositionDao {
 
     public void delete(Position position);
 
+    public List<Position> list(int limit, int offset);
+
     public List<Position> getPositionsByPlayer(Player player, int limit, int offset);
 }

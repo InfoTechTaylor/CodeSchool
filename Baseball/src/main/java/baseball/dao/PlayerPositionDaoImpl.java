@@ -3,7 +3,6 @@ package baseball.dao;
 import baseball.dto.Player;
 import baseball.dto.PlayerPosition;
 import baseball.dto.Position;
-import baseball.dto.Team;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -12,6 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import javax.inject.Inject;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.List;
 
 public class PlayerPositionDaoImpl implements PlayerPositionDao {
 
@@ -24,6 +24,9 @@ public class PlayerPositionDaoImpl implements PlayerPositionDao {
     private static final String SQL_UPDATE = "update player_position set player_id = ?, position_id = ? where id = ?";
 
     private static final String SQL_DELETE = "delete from player_position where id = ?";
+
+    private static final String SQL_GET_ALL_BY_PLAYER = "select * from player_position " +
+            "where player_id = ? limit ? offset ?";
 
     @Inject
     public PlayerPositionDaoImpl(JdbcTemplate jdbcTemplate) {
@@ -61,7 +64,7 @@ public class PlayerPositionDaoImpl implements PlayerPositionDao {
     public PlayerPosition read(Long id) {
         try {
             return jdbcTemplate.queryForObject(SQL_READ,
-                    new teamMapper(),
+                    new PlayerPositionMapper(),
                     id);
         } catch (EmptyResultDataAccessException ex) {
             return null;
@@ -95,9 +98,18 @@ public class PlayerPositionDaoImpl implements PlayerPositionDao {
                 playerPosition.getId());
     }
 
+    @Override
+    public List<PlayerPosition> getPlayerPositionByPlayer(Player player, int limit, int offset) {
+        return jdbcTemplate.query(SQL_GET_ALL_BY_PLAYER,
+                new PlayerPositionMapper(),
+                player.getId(),
+                limit,
+                offset);
+    }
+
 
     // mapper
-    private static final class teamMapper implements RowMapper<PlayerPosition> {
+    private static final class PlayerPositionMapper implements RowMapper<PlayerPosition> {
 
         public PlayerPosition mapRow(ResultSet rs, int rowNum) throws SQLException {
             PlayerPosition playerPosition = new PlayerPosition();

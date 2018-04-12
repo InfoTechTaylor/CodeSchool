@@ -1,7 +1,7 @@
 package baseball.webservice;
 
-import baseball.commandmodel.createteam.CreateTeamCommandModel;
-import baseball.commandmodel.editteam.EditTeamCommandModel;
+import baseball.commandmodel.team.createteam.CreateTeamCommandModel;
+import baseball.commandmodel.team.editteam.EditTeamCommandModel;
 import baseball.dto.Team;
 import baseball.service.TeamService;
 import baseball.viewmodel.team.createteam.CreateTeamViewModel;

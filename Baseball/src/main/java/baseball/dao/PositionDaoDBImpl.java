@@ -30,6 +30,8 @@ public class PositionDaoDBImpl implements PositionDao {
                                 + "inner join player_position pp on p.id = pp.position_id "
                                 + "where pp.player_id = ? limit ? offset ?";
 
+    private static final String SQL_LIST = "select * from position limit ? offset ?";
+
     @Inject
     public PositionDaoDBImpl(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
@@ -74,6 +76,14 @@ public class PositionDaoDBImpl implements PositionDao {
     public void delete(Position position) {
         jdbcTemplate.update(SQL_DELETE,
                 position.getId());
+    }
+
+    @Override
+    public List<Position> list(int limit, int offset) {
+        return jdbcTemplate.query(SQL_LIST,
+                new PositionMapper(),
+                limit,
+                offset);
     }
 
     @Override
