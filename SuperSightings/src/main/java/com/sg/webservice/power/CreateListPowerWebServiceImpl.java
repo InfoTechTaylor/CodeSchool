@@ -31,7 +31,11 @@ public class CreateListPowerWebServiceImpl implements CreateListPowerWebService 
     }
 
     @Override
-    public CreateListPowerViewModel getCreateListPowerViewModel(int limit, int offset, int numPagesToShow) {
+    public CreateListPowerViewModel getCreateListPowerViewModel(Integer limit, Integer offset, Integer numPagesToShow) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+        if(numPagesToShow == null) numPagesToShow = 5;
 
         // instantiate
         CreateListPowerViewModel createListPowerViewModel = new CreateListPowerViewModel();
@@ -49,7 +53,6 @@ public class CreateListPowerWebServiceImpl implements CreateListPowerWebService 
         createListPowerViewModel.setPageNumbers(pages);
         createListPowerViewModel.setCommandModel(createPowerCmdModel);
         createListPowerViewModel.setPowers(translate(powers));
-
 
         return createListPowerViewModel;
     }

@@ -5,6 +5,7 @@ import com.sg.dao.SightingDao;
 import com.sg.dto.Location;
 import com.sg.dto.Person;
 import com.sg.dto.Sighting;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.inject.Inject;
 import java.time.LocalDate;
@@ -40,22 +41,34 @@ public class SightingServiceImpl implements SightingService {
     }
 
     @Override
-    public List<Sighting> retrieveAllSightings(int limit, int offset) {
+    public List<Sighting> retrieveAllSightings(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return sightingDao.retrieveAllSightings(limit, offset);
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByPerson(Person person, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return sightingDao.retrieveAllSightingsByPerson(person, limit, offset);
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByLocation(Location location, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByLocation(Location location, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return sightingDao.retrieveAllSightingsByLocation(location, limit, offset);
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return sightingDao.retrieveAllSightingsByDate(localDate, limit, offset);
     }
 }

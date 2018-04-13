@@ -2,7 +2,9 @@ package com.sg.service;
 
 
 import com.sg.dao.PersonSightingDao;
+import com.sg.dto.Person;
 import com.sg.dto.PersonSighting;
+import com.sg.dto.Sighting;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -37,7 +39,26 @@ public class PersonSightingServiceImpl implements PersonSightingService{
     }
 
     @Override
-    public List<PersonSighting> retrieveAllPersonSightings(int limit, int offset) {
+    public List<PersonSighting> retrieveAllPersonSightings(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personSightingDao.retrieveAllPersonSightings(limit, offset);
+    }
+
+    @Override
+    public List<PersonSighting> retrieveAllPersonSightingsByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return personSightingDao.retrieveAllPersonSightingsByPerson(person, limit, offset);
+    }
+
+    @Override
+    public List<PersonSighting> retrieveAllPersonSightingsBySighting(Sighting sighting, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return personSightingDao.retrieveAllPersonSightingsBySighting(sighting, limit, offset);
     }
 }

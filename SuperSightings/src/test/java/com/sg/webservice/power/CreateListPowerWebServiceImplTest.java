@@ -41,7 +41,7 @@ public class CreateListPowerWebServiceImplTest {
 
         // act
         CreateListPowerViewModel createListPowerViewModel =
-                createListPowerWebService.getCreateListPowerViewModel(5, 0, 5);
+                createListPowerWebService.getCreateListPowerViewModel(Integer.valueOf(5), 0, 5);
 
         // assert
         assert createListPowerViewModel.getPowers().size() == 5; // assert we get 5 powers

@@ -2,6 +2,7 @@ package com.sg.webservice.power;
 
 import com.sg.commandmodel.power.editpower.EditPowerCmdModel;
 import com.sg.dto.Power;
+import com.sg.service.PowerService;
 import com.sg.util.TestHelperMethods;
 import com.sg.viewmodel.power.editpower.EditPowerViewModel;
 import com.sg.webservices.power.CreateListPowerWebService;
@@ -28,6 +29,9 @@ public class EditPowerWebServiceImplTest {
 
     @Inject
     EditPowerWebService editPowerWebService;
+
+    @Inject
+    PowerService powerService;
 
     @Test
     public void getEditPowerViewModel() {
@@ -60,8 +64,9 @@ public class EditPowerWebServiceImplTest {
         Power powerCreated = editPowerWebService.saveEditPowerCmdModel(editPowerCmdModel);
 
         // assert
-        assertNotNull(powerCreated.getId());
-        assertEquals(powerCreated.getId(), power.getId());
-        assertEquals(powerCreated.getName(), power.getName());
+        Power powerFromDB = powerService.read(powerCreated);
+        assertNotNull(powerFromDB.getId());
+        assertEquals(powerFromDB.getId(), power.getId());
+        assertEquals(powerFromDB.getName(), power.getName());
     }
 }

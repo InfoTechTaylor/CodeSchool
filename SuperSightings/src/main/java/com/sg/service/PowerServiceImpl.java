@@ -38,12 +38,18 @@ public class PowerServiceImpl implements PowerService {
     }
 
     @Override
-    public List<Power> retrieveAllPowers(int limit, int offset) {
+    public List<Power> retrieveAllPowers(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return powerServiceDao.retrieveAllPowers(limit, offset);
     }
 
     @Override
-    public List<Power> retrieveAllPowersByPerson(Person person, int limit, int offset) {
+    public List<Power> retrieveAllPowersByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return powerServiceDao.retrieveAllPowersByPerson(person, limit, offset);
     }
 }

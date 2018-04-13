@@ -8,6 +8,7 @@ public class PlayerProfileViewModel {
     private String last;
     private String teamName;
     private Long teamId;
+    private String hometown;
 
     private List<PositionViewModel> positions;
 
@@ -58,5 +59,13 @@ public class PlayerProfileViewModel {
 
     public void setPositions(List<PositionViewModel> positions) {
         this.positions = positions;
+    }
+
+    public String getHometown() {
+        return hometown;
+    }
+
+    public void setHometown(String hometown) {
+        this.hometown = hometown;
     }
 }

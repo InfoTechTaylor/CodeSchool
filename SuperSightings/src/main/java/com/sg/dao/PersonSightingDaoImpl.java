@@ -35,6 +35,12 @@ public class PersonSightingDaoImpl implements PersonSightingDao {
     private static final String READ_ALL_QUERY =
             "select * from person_sighting limit ? offset ?";
 
+    private static final String READ_ALL_BY_PERSON_QUERY =
+            "select * from person_sighting where person_id = ? limit ? offset ?";
+
+    private static final String READ_ALL_BY_SIGHTING_QUERY =
+            "select * from person_sighting where sighting_id = ? limit ? offset ?";
+
 
 
     @Override
@@ -88,8 +94,37 @@ public class PersonSightingDaoImpl implements PersonSightingDao {
     }
 
     @Override
-    public List<PersonSighting> retrieveAllPersonSightings(int i, int i1) {
-        return jdbcTemplate.query(READ_ALL_QUERY, new PersonSightingMapper(), i, i1);
+    public List<PersonSighting> retrieveAllPersonSightings(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_QUERY, new PersonSightingMapper(), limit, offset);
+    }
+
+    @Override
+    public List<PersonSighting> retrieveAllPersonSightingsByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_BY_PERSON_QUERY,
+                new PersonSightingMapper(),
+                person.getId(),
+                limit,
+                offset);
+    }
+
+    @Override
+    public List<PersonSighting> retrieveAllPersonSightingsBySighting(Sighting sighting, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+
+        return jdbcTemplate.query(READ_ALL_BY_SIGHTING_QUERY,
+                new PersonSightingMapper(),
+                sighting.getId(),
+                limit,
+                offset);
     }
 
     private static final class PersonSightingMapper implements RowMapper<PersonSighting>{

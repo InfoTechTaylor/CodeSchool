@@ -71,12 +71,16 @@ public class PowerDaoImpl implements PowerDao {
     public void delete(Power power) {
         jdbcTemplate.update(DELETE_QUERY, power.getId());
     }
+
     @Override
-    public List<Power> retrieveAllPowers(int limit, int offset) {
+    public List<Power> retrieveAllPowers(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return jdbcTemplate.query(READ_ALL_QUERY, new PowerMapper(), limit, offset);
     }
     @Override
-    public List<Power> retrieveAllPowersByPerson(Person person, int limit, int offset) {
+    public List<Power> retrieveAllPowersByPerson(Person person, Integer limit, Integer offset) {
         return jdbcTemplate.query(GET_POWERS_BY_PERSON_QUERY,
                 new PowerMapper(),
                 person.getId(),

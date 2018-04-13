@@ -72,8 +72,6 @@ public class PersonOrganizationServiceImplTest {
         PersonOrganization personOrg = new PersonOrganization();
         personOrg.setPerson(person);
         personOrg.setOrganization(organization);
-        personOrg.setStartDate(LocalDate.parse("2000-01-01"));
-        personOrg.setEndDate(null);
         return personOrganizationService.create(personOrg);
     }
 
@@ -96,8 +94,6 @@ public class PersonOrganizationServiceImplTest {
         assertEquals("Person", personOrg.getPerson().getType());
         assertEquals("The Justice League", personOrg.getOrganization().getName());
         assertEquals("DC's group", personOrg.getOrganization().getDescription());
-        assertEquals(LocalDate.parse("2000-01-01"), personOrg.getStartDate());
-        assertNull(personOrg.getEndDate());
         assertEquals("Central Park", personOrg.getOrganization().getLocation().getName());
 
 
@@ -120,8 +116,6 @@ public class PersonOrganizationServiceImplTest {
         assertNotNull(personOrg.getOrganization());
         assertEquals(personOrg.getPerson().getId(), personOrgFromDB.getPerson().getId());
         assertEquals(personOrg.getOrganization().getId(), personOrgFromDB.getOrganization().getId());
-        assertEquals(LocalDate.parse("2000-01-01"), personOrg.getStartDate());
-        assertNull(personOrg.getEndDate());
 
     }
 
@@ -184,8 +178,7 @@ public class PersonOrganizationServiceImplTest {
         PersonOrganization newPersonOrg = new PersonOrganization();
         newPersonOrg.setOrganization(newOrg);
         newPersonOrg.setPerson(person);
-        newPersonOrg.setStartDate(LocalDate.parse("2001-01-01"));
-        newPersonOrg.setEndDate(null);
+
 
         personOrganizationService.create(newPersonOrg); // create second PersonOrganization object
 
@@ -217,8 +210,7 @@ public class PersonOrganizationServiceImplTest {
         PersonOrganization newPersonOrg = new PersonOrganization();
         newPersonOrg.setOrganization(newOrg);
         newPersonOrg.setPerson(person);
-        newPersonOrg.setStartDate(LocalDate.parse("2001-01-01"));
-        newPersonOrg.setEndDate(null);
+
 
         personOrganizationService.create(newPersonOrg); // create second PersonOrganization object
 

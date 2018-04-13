@@ -38,12 +38,18 @@ public class LocationServiceImpl implements LocationService {
     }
 
     @Override
-    public List<Location> retrieveAllLocations(int limit, int offset) {
+    public List<Location> retrieveAllLocations(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return locationDao.retrieveAllLocations(limit, offset);
     }
 
     @Override
-    public List<Location> retrieveAllLocationsByPerson(Person person, int limit, int offset) {
+    public List<Location> retrieveAllLocationsByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return locationDao.retrieveAllLocationsByPerson(person, limit, offset);
     }
 }

@@ -38,8 +38,6 @@ CREATE TABLE person_organization (
   id bigint NOT NULL AUTO_INCREMENT,
   person_id bigint NOT NULL,
   organization_id bigint NOT NULL,
-  start_date date NOT NULL,
-  end_date date NULL,
   PRIMARY KEY (id)
 );
 
@@ -145,8 +143,6 @@ CREATE TABLE person_organization (
   id bigint NOT NULL AUTO_INCREMENT,
   person_id bigint NOT NULL,
   organization_id bigint NOT NULL,
-  start_date date NOT NULL,
-  end_date date NULL,
   PRIMARY KEY (id)
 );
 

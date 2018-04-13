@@ -26,6 +26,8 @@ public class TeamWebServiceImpl implements TeamWebService {
         this.teamService = teamService;
     }
 
+
+
     // translate a list
     private List<TeamViewModel> translate(List<Team> teams) {
 
@@ -50,7 +52,12 @@ public class TeamWebServiceImpl implements TeamWebService {
     }
 
     @Override
-    public TeamListViewModel getTeamListViewModel(int limit, int offset, int numPagesToShow) {
+    public TeamListViewModel getTeamListViewModel(Integer limit, Integer offset, Integer numPagesToShow) {
+
+        // set default
+        if (limit == null) limit = 5;
+        if (offset == null) offset = 0;
+        if (numPagesToShow == null) numPagesToShow =5;
 
         // instantiate view model
         TeamListViewModel teamListViewModel = new TeamListViewModel();

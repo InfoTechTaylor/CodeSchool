@@ -2,6 +2,8 @@ package com.sg.service;
 
 
 import com.sg.dao.PersonOrganizationDao;
+import com.sg.dto.Organization;
+import com.sg.dto.Person;
 import com.sg.dto.PersonOrganization;
 
 import javax.inject.Inject;
@@ -37,7 +39,17 @@ public class PersonOrganizationServiceImpl implements PersonOrganizationService 
     }
 
     @Override
-    public List<PersonOrganization> retrieveAllPersonOrganization(int limit, int offset) {
+    public List<PersonOrganization> retrieveAllPersonOrganization(Integer limit, Integer offset) {
         return personOrganizationDao.retrieveAllPersonOrganization(limit, offset);
+    }
+
+    @Override
+    public List<PersonOrganization> retrieveAllPersonOrganizationByPerson(Person person, Integer limit, Integer offset) {
+        return personOrganizationDao.retrieveAllPersonOrganizationByPerson(person, limit, offset);
+    }
+
+    @Override
+    public List<PersonOrganization> retrieveAllPersonOrganizationByOrg(Organization organization, Integer limit, Integer offset) {
+        return personOrganizationDao.retrieveAllPersonOrganizationByOrg(organization, limit, offset);
     }
 }

@@ -4,6 +4,7 @@ import com.sg.commandmodel.organization.editorg.EditOrgCmdModel;
 import com.sg.dto.Location;
 import com.sg.dto.Organization;
 import com.sg.service.LocationService;
+import com.sg.service.OrganizationService;
 import com.sg.util.TestHelperMethods;
 import com.sg.viewmodel.organization.editorg.EditOrgViewModel;
 import com.sg.viewmodel.organization.editorg.LocationViewModel;
@@ -34,7 +35,7 @@ public class EditOrgWebServiceImplTest {
     EditOrgWebService editOrgWebService;
 
     @Inject
-    LocationService locationService;
+    OrganizationService organizationService;
 
     @Test
     public void getEditOrgViewModel() {
@@ -55,6 +56,8 @@ public class EditOrgWebServiceImplTest {
         assert editOrgViewModel.getEditCommandModel().getLocationId().equals(org.getLocation().getId());
         assert editOrgViewModel.getLocations().size() == 15;
 
+        // loop through locationviewmodels list that is returned in the act step (act translates list of DTO locations
+        // to LocationViewModel list
         List<LocationViewModel> locations = editOrgViewModel.getLocations();
         int counter = 0;
         for(LocationViewModel locationViewModel : locations){
@@ -80,9 +83,10 @@ public class EditOrgWebServiceImplTest {
         Organization savedOrg = editOrgWebService.saveEditOrgCmdModel(editOrgCmdModel);
 
         // assert
-        assert savedOrg.getId().equals(editOrgCmdModel.getId());
-        assert savedOrg.getName().equals(editOrgCmdModel.getName());
-        assert savedOrg.getDescription().equals(editOrgCmdModel.getDescription());
-        assert savedOrg.getLocation().getId().equals(editOrgCmdModel.getLocationId());
+        Organization orgFromDB = organizationService.read(savedOrg);
+        assert orgFromDB.getId().equals(editOrgCmdModel.getId());
+        assert orgFromDB.getName().equals(editOrgCmdModel.getName());
+        assert orgFromDB.getDescription().equals(editOrgCmdModel.getDescription());
+        assert orgFromDB.getLocation().getId().equals(editOrgCmdModel.getLocationId());
     }
 }

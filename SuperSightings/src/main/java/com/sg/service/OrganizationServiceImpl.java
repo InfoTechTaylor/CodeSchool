@@ -38,12 +38,15 @@ public class OrganizationServiceImpl implements OrganizationService {
     }
 
     @Override
-    public List<Organization> retrieveAllOrganizations(int limit, int offset) {
+    public List<Organization> retrieveAllOrganizations(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return organizationDao.retrieveAllOrganizations(limit, offset);
     }
 
     @Override
-    public List<Organization> retrieveAllOrganizationsByPerson(Person person, int limit, int offset) {
+    public List<Organization> retrieveAllOrganizationsByPerson(Person person, Integer limit, Integer offset) {
         return organizationDao.retrieveAllOrganizationsByPerson(person, limit, offset);
     }
 }

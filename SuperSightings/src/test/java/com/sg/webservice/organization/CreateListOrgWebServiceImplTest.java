@@ -40,7 +40,7 @@ public class CreateListOrgWebServiceImplTest {
 
         // act
         CreateListOrgViewModel createListOrgViewModel =
-                createListOrgWebService.getCreateListOrgViewModel(5, 0, 5);
+                createListOrgWebService.getCreateListOrgViewModel(Integer.valueOf(5), 0, 5);
 
         // assert
         assert createListOrgViewModel.getOrganizations().size() == 5; // assert we get 5 locations

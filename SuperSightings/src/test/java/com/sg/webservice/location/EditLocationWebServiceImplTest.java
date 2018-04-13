@@ -79,16 +79,17 @@ public class EditLocationWebServiceImplTest {
         Location locationCreated = editLocationWebService.saveEditLocationCmdModel(editLocationCmdModel);
 
         // assert
+        Location locationFromDB = locationService.read(locationCreated);
         assert locationCreated.getId() != null;
-        assertEquals(location.getId(), locationCreated.getId());
-        assertEquals(42.779287, locationCreated.getLatitude(), 0);
-        assertEquals(-74.969326, locationCreated.getLongitude(), 0);
-        assertEquals("City Hall", locationCreated.getName());
-        assertEquals("NYC city hall", locationCreated.getDescription());
-        assertEquals("1st Street", locationCreated.getStreet());
-        assertEquals("New York City", locationCreated.getCity());
-        assertEquals("NH", locationCreated.getState());
-        assertEquals("10101", locationCreated.getZip());
-        assertEquals("UK", locationCreated.getCountry());
+        assertEquals(location.getId(), locationFromDB.getId());
+        assertEquals(42.779287, locationFromDB.getLatitude(), 0);
+        assertEquals(-74.969326, locationFromDB.getLongitude(), 0);
+        assertEquals("City Hall", locationFromDB.getName());
+        assertEquals("NYC city hall", locationFromDB.getDescription());
+        assertEquals("1st Street", locationFromDB.getStreet());
+        assertEquals("New York City", locationFromDB.getCity());
+        assertEquals("NH", locationFromDB.getState());
+        assertEquals("10101", locationFromDB.getZip());
+        assertEquals("UK", locationFromDB.getCountry());
     }
 }

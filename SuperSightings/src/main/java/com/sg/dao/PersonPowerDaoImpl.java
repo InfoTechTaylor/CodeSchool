@@ -35,6 +35,12 @@ public class PersonPowerDaoImpl implements PersonPowerDao{
     private static final String RETRIEVE_ALL_QUERY
             = "select * from person_power limit ? offset ?";
 
+    private static final String RETRIEVE_ALL_BY_PERSON_QUERY
+            = "select * from person_power where person_id = ? limit ? offset ?";
+
+    private static final String RETRIEVE_ALL_BY_POWER_QUERY
+            = "select * from person_power where power_id = ? limit ? offset ?";
+
     @Override
     @Transactional
     public PersonPower create(PersonPower personPower) {
@@ -100,9 +106,27 @@ public class PersonPowerDaoImpl implements PersonPowerDao{
     }
 
     @Override
-    public List<PersonPower> retrieveAllPersonPowers(int limit, int offset) {
+    public List<PersonPower> retrieveAllPersonPowers(Integer limit, Integer offset) {
         return jdbcTemplate.query(RETRIEVE_ALL_QUERY,
                 new PersonPowerMapper(),
+                limit,
+                offset);
+    }
+
+    @Override
+    public List<PersonPower> retrieveAllPersonPowerByPerson(Person person, Integer limit, Integer offset) {
+        return jdbcTemplate.query(RETRIEVE_ALL_BY_PERSON_QUERY,
+                new PersonPowerMapper(),
+                person.getId(),
+                limit,
+                offset);
+    }
+
+    @Override
+    public List<PersonPower> retrieveAllPersonPowerByPower(Power power, Integer limit, Integer offset) {
+        return jdbcTemplate.query(RETRIEVE_ALL_BY_POWER_QUERY,
+                new PersonPowerMapper(),
+                power.getId(),
                 limit,
                 offset);
     }

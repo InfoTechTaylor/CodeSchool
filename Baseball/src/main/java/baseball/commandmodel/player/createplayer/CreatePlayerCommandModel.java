@@ -1,8 +1,11 @@
 package baseball.commandmodel.player.createplayer;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class CreatePlayerCommandModel {
 
     private String first;
+    @NotEmpty(message="last name is required")
     private String last;
     private String hometown;
     private Long teamId;

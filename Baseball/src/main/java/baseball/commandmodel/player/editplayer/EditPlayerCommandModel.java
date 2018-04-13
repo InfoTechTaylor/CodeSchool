@@ -1,9 +1,16 @@
 package baseball.commandmodel.player.editplayer;
 
+import org.hibernate.validator.constraints.Length;
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class EditPlayerCommandModel {
 
     private Long id;
+
+    @NotEmpty(message="Must provide player's first name.")
+    @Length(min=4, message="your name is too short")
     private String first;
+    @NotEmpty(message="Must provide player's last name.")
     private String last;
     private String hometown;
     private Long teamId;

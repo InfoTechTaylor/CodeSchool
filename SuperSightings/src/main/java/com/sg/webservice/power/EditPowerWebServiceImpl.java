@@ -49,6 +49,7 @@ public class EditPowerWebServiceImpl implements EditPowerWebService {
 
         // save stuff
         powerService.update(power);
+
         return power;
     }
 }

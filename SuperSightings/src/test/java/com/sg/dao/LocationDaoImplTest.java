@@ -170,7 +170,7 @@ public class LocationDaoImplTest {
         Location location2 = createTestLocation();
 
         // act
-        List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, 0);
+        List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, Integer.valueOf(1));
 
         // assert
         assertEquals(2, locationList.size());
@@ -183,8 +183,8 @@ public class LocationDaoImplTest {
         Location location2 = createTestLocation();
 
         // act
-        List<Location> locationList = locationDao.retrieveAllLocations(1, 0);
-        List<Location> locationList1 = locationDao.retrieveAllLocations(1, 1);
+        List<Location> locationList = locationDao.retrieveAllLocations(Integer.valueOf(1), Integer.valueOf(0));
+        List<Location> locationList1 = locationDao.retrieveAllLocations(Integer.valueOf(1), Integer.valueOf(1));
 
         // assert
         assertEquals(1, locationList.size());
@@ -214,9 +214,9 @@ public class LocationDaoImplTest {
 
         // act
         List<Location> allLocationsByPerson =
-                locationDao.retrieveAllLocationsByPerson(person, Integer.MAX_VALUE, 0);
+                locationDao.retrieveAllLocationsByPerson(person, Integer.MAX_VALUE, Integer.valueOf(0));
         List<Location> allLocationsByPerson2 =
-                locationDao.retrieveAllLocationsByPerson(person2, Integer.MAX_VALUE, 0);
+                locationDao.retrieveAllLocationsByPerson(person2, Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(1, allLocationsByPerson.size());
@@ -249,9 +249,9 @@ public class LocationDaoImplTest {
 
         // act
         List<Location> allLocationsByPerson =
-                locationDao.retrieveAllLocationsByPerson(person2, 2, 0);
+                locationDao.retrieveAllLocationsByPerson(person2, Integer.valueOf(2), Integer.valueOf(0));
         List<Location> allLocationsByPerson2 =
-                locationDao.retrieveAllLocationsByPerson(person2, 2, 2);
+                locationDao.retrieveAllLocationsByPerson(person2, Integer.valueOf(2), Integer.valueOf(2));
 
         // assert
         assertEquals(2, allLocationsByPerson.size());

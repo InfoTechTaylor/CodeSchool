@@ -3,6 +3,7 @@ package com.sg.service;
 
 import com.sg.dao.PersonDao;
 import com.sg.dto.*;
+import org.omg.PortableInterceptor.INACTIVE;
 
 import javax.inject.Inject;
 import java.util.List;
@@ -37,27 +38,42 @@ public class PersonServiceImpl implements PersonService {
     }
 
     @Override
-    public List<Person> retrieveAllPersons(int limit, int offset) {
+    public List<Person> retrieveAllPersons(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personDao.retrieveAllPersons(limit, offset);
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByOrg(Organization organization, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByOrg(Organization organization, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personDao.retrieveAllPersonsByOrg(organization, limit, offset);
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByPower(Power power, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByPower(Power power, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personDao.retrieveAllPersonsByPower(power, limit, offset);
     }
 
     @Override
-    public List<Person> retrieveAllPersonsBySighting(Sighting sighting, int limit, int offset) {
+    public List<Person> retrieveAllPersonsBySighting(Sighting sighting, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personDao.retrieveAllPersonsBySighting(sighting, limit, offset);
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByLocation(Location location, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByLocation(Location location, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return personDao.retrieveAllPersonsByLocation(location, limit, offset);
     }
 }

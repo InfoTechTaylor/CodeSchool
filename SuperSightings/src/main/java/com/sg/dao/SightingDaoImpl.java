@@ -87,14 +87,20 @@ public class SightingDaoImpl implements SightingDao {
     }
 
     @Override
-    public List<Sighting> retrieveAllSightings(int limit, int offset) {
+    public List<Sighting> retrieveAllSightings(Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return jdbcTemplate.query(READ_ALL_QUERY, new SightingMapper(),
                 limit,
                 offset);
     }
 
     @Override
-    public List<Sighting> retrieveAllSightingsByPerson(Person person, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByPerson(Person person, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_PERSON,
                 new SightingMapper(),
                 person.getId(),
@@ -102,7 +108,10 @@ public class SightingDaoImpl implements SightingDao {
                 offset);
     }
     @Override
-    public List<Sighting> retrieveAllSightingsByLocation(Location location, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByLocation(Location location, Integer limit, Integer offset) {
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_LOCATION,
                 new SightingMapper(),
                 location.getId(),
@@ -110,7 +119,7 @@ public class SightingDaoImpl implements SightingDao {
                 offset);
     }
     @Override
-    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, int limit, int offset) {
+    public List<Sighting> retrieveAllSightingsByDate(LocalDate localDate, Integer limit, Integer offset) {
         Date date = Date.valueOf(localDate);
         return jdbcTemplate.query(RETRIEVE_SIGHTINGS_BY_DATE,
                 new SightingMapper(),

@@ -1,14 +1,11 @@
 package com.sg.util;
 
-import com.sg.dto.Location;
-import com.sg.dto.Organization;
-import com.sg.dto.Power;
-import com.sg.service.LocationService;
-import com.sg.service.OrganizationService;
-import com.sg.service.PowerService;
+import com.sg.dto.*;
+import com.sg.service.*;
 import com.sg.viewmodel.organization.editorg.LocationViewModel;
 
 import javax.inject.Inject;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,13 +14,23 @@ public class TestHelperMethods {
     private LocationService locationService;
     private PowerService powerService;
     private OrganizationService organizationService;
+    private SightingService sightingService;
+    private PersonService personService;
+    private PersonOrganizationService personOrganizationService;
 
     @Inject
-    public TestHelperMethods(LocationService locationService, PowerService powerService,
-                             OrganizationService organizationService) {
+    public TestHelperMethods(LocationService locationService,
+                             PowerService powerService,
+                             OrganizationService organizationService,
+                             PersonService personService,
+                             SightingService sightingService,
+                             PersonOrganizationService personOrganizationService) {
         this.locationService = locationService;
         this.powerService = powerService;
         this.organizationService = organizationService;
+        this.personService = personService;
+        this.sightingService = sightingService;
+        this.personOrganizationService = personOrganizationService;
     }
 
     public List<Location> createTestLocations(int numLocations){
@@ -80,16 +87,61 @@ public class TestHelperMethods {
         return orgs;
     }
 
-    public List<LocationViewModel> translateLocationList(List<Location> locations){
-        List<LocationViewModel> locationViewModels = new ArrayList<>();
 
-        for (Location currentLocation : locations){
-            LocationViewModel locationViewModel = new LocationViewModel();
-            locationViewModel.setId(currentLocation.getId());
-            locationViewModel.setName(currentLocation.getName());
-            locationViewModels.add(locationViewModel);
+    public List<Sighting> createTestSightings(int numSightings, Location location){
+        List<Sighting> sightings = new ArrayList<>();
+
+        for(int i=0; i < numSightings; i++){
+            Sighting sighting = new Sighting();
+            sighting.setSightingDate(LocalDate.parse("2018-04-10"));
+            sighting.setLocation(location);
+            sighting.setDescription("Superman vs Batman showdown");
+            Sighting sightingCreated = sightingService.create(sighting);
+            sightings.add(sightingCreated);
         }
-        return locationViewModels;
+        return sightings;
+    }
+
+    public List<Sighting> createTestSightingsTwo(int numSightings, Location location){
+        List<Sighting> sightings = new ArrayList<>();
+
+        for(int i=0; i < numSightings; i++){
+            Sighting sighting = new Sighting();
+            sighting.setSightingDate(LocalDate.parse("2018-04-10"));
+            sighting.setLocation(location);
+            sighting.setDescription("Superman vs Batman showdown" + i);
+            Sighting sightingCreated = sightingService.create(sighting);
+            sightings.add(sightingCreated);
+        }
+        return sightings;
+    }
+
+    public List<Person> createTestPersons(int numPersons){
+        List<Person> persons = new ArrayList<>();
+
+        for(int i=0; i<numPersons; i++){
+            Person person = new Person();
+            person.setName("Bruce Wayne" + i);
+            person.setDescription("Rich Man dresses like bat.");
+            person.setType("Person");
+            Person createdPerson = personService.create(person);
+            persons.add(createdPerson);
+        }
+
+        return persons;
+    }
+
+    public List<PersonOrganization> createPersonOrganizations(int numPersonOrgs, Person person, Organization org){
+        List<PersonOrganization> personOrgs = new ArrayList<>();
+
+        for(int i=0; i<numPersonOrgs; i++){
+            PersonOrganization personOrganization = new PersonOrganization();
+            personOrganization.setPerson(person);
+            personOrganization.setOrganization(org);
+            personOrganizationService.create(personOrganization);
+            personOrgs.add(personOrganization);
+        }
+        return personOrgs;
     }
 
 }

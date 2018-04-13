@@ -50,7 +50,7 @@ public class CreateListOrgWebServiceImpl implements CreateListOrgWebService {
     }
 
     @Override
-    public CreateListOrgViewModel getCreateListOrgViewModel(int limit, int offset, int numPagesToShow) {
+    public CreateListOrgViewModel getCreateListOrgViewModel(Integer limit, Integer offset, Integer numPagesToShow) {
 
         // instantiate
         CreateListOrgViewModel createListOrgViewModel = new CreateListOrgViewModel();
@@ -58,7 +58,7 @@ public class CreateListOrgWebServiceImpl implements CreateListOrgWebService {
 
         // look stuff up
         List<Organization> orgs = organizationService.retrieveAllOrganizations(limit, offset);
-        List<Location> locations = locationService.retrieveAllLocations(limit, offset);
+        List<Location> locations = locationService.retrieveAllLocations(Integer.MAX_VALUE, 0);
 
         // calculate page info
         Integer currentPage = PagingUtil.calculatePageNumber(limit, offset);
@@ -91,8 +91,8 @@ public class CreateListOrgWebServiceImpl implements CreateListOrgWebService {
         org.setLocation(location);
 
         // save stuff
-        organizationService.create(org);
+        Organization createdOrg = organizationService.create(org);
 
-        return org;
+        return createdOrg;
     }
 }

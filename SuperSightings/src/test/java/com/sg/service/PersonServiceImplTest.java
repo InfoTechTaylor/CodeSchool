@@ -91,8 +91,6 @@ public class PersonServiceImplTest {
         PersonOrganization personOrg = new PersonOrganization();
         personOrg.setPerson(person);
         personOrg.setOrganization(organization);
-        personOrg.setStartDate(LocalDate.parse("2000-01-01"));
-        personOrg.setEndDate(null);
         return personOrganizationService.create(personOrg);
     }
 

@@ -24,11 +24,11 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
 
 
     private static final String CREATE_QUERY =
-            "insert into person_organization(person_id, organization_id, start_date, end_date) " +
-                    "values (?,?,?,?)";
+            "insert into person_organization(person_id, organization_id) " +
+                    "values (?,?)";
 
     private static final String UPDATE_QUERY =
-            "update person_organization set person_id = ?, organization_id = ?, start_date = ?, end_date = ? " +
+            "update person_organization set person_id = ?, organization_id = ? " +
                     "where id = ?";
 
     private static final String DELETE_QUERY =
@@ -39,6 +39,12 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
 
     private static final String READ_ALL_QUERY =
             "select * from person_organization limit ? offset ?";
+
+    private static String READ_ALL_BY_PERSON_QUERY =
+            "select * from person_organization where person_id = ? limit ? offset ?";
+
+    private static String READ_ALL_BY_ORG_QUERY =
+            "select * from person_organization where organization_id = ? limit ? offset ?";
 
 
 
@@ -56,16 +62,9 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
             org_id = personOrganization.getOrganization().getId();
         }
 
-        Date endDate = null;
-        if(personOrganization.getEndDate() != null){
-            endDate = Date.valueOf(personOrganization.getEndDate());
-        }
-
         jdbcTemplate.update(CREATE_QUERY,
                 person_id,
-                org_id,
-                Date.valueOf(personOrganization.getStartDate()),
-                endDate);
+                org_id);
 
         long id = jdbcTemplate.queryForObject("select LAST_INSERT_ID()", Long.class);
         personOrganization.setId(id);
@@ -94,16 +93,9 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
             org_id = personOrganization.getOrganization().getId();
         }
 
-        Date endDate = null;
-        if(personOrganization.getEndDate() != null){
-            endDate = Date.valueOf(personOrganization.getEndDate());
-        }
-
         jdbcTemplate.update(UPDATE_QUERY,
                 person_id,
                 org_id,
-                Date.valueOf(personOrganization.getStartDate()),
-                endDate,
                 personOrganization.getId()
         );
     }
@@ -115,9 +107,38 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
     }
 
     @Override
-    public List<PersonOrganization> retrieveAllPersonOrganization(int i, int i1) {
+    public List<PersonOrganization> retrieveAllPersonOrganization(Integer limit, Integer offset) {
 
-        return jdbcTemplate.query(READ_ALL_QUERY, new PersonOrgMapper(), i, i1);
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_QUERY, new PersonOrgMapper(), limit, offset);
+    }
+
+    @Override
+    public List<PersonOrganization> retrieveAllPersonOrganizationByPerson(Person person, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_BY_PERSON_QUERY,
+                new PersonOrgMapper(),
+                person.getId(),
+                limit,
+                offset);
+    }
+
+    @Override
+    public List<PersonOrganization> retrieveAllPersonOrganizationByOrg(Organization organization, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_BY_ORG_QUERY,
+                new PersonOrgMapper(),
+                organization.getId(),
+                limit,
+                offset);
     }
 
     private static final class PersonOrgMapper implements RowMapper<PersonOrganization>{
@@ -143,13 +164,7 @@ public class PersonOrganizationDaoImpl implements PersonOrganizationDao {
                 personOrganization.setOrganization(org);
             }
 
-            personOrganization.setStartDate(rs.getDate("start_date").toLocalDate());
 
-            LocalDate endDate = null;
-            if(rs.getDate("end_Date") != null){
-                endDate = rs.getDate("end_Date").toLocalDate();
-            }
-            personOrganization.setEndDate(endDate);
 
             return personOrganization;
         }

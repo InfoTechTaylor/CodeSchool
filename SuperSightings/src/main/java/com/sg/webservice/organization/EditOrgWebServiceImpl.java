@@ -40,7 +40,7 @@ public class EditOrgWebServiceImpl implements EditOrgWebService {
         // instantiate
         EditOrgViewModel editOrgViewModel = new EditOrgViewModel();
         EditOrgCmdModel editOrgCmdModel = new EditOrgCmdModel();
-        List<Location> locations = locationService.retrieveAllLocations(Integer.MAX_VALUE, 0);
+        List<Location> locations = locationService.retrieveAllLocations(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // lookup stuff
         Organization emptyOrg = new Organization();

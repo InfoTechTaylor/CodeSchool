@@ -1,5 +1,7 @@
 package baseball.dto;
 
+import org.hibernate.validator.constraints.NotEmpty;
+
 public class Player {
 
     private Long id;

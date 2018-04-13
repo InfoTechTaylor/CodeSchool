@@ -80,7 +80,7 @@ public class OrganizationDaoImplTest {
         PersonOrganization personOrg = new PersonOrganization();
         personOrg.setOrganization(org1);
         personOrg.setPerson(personFromDB);
-        personOrg.setStartDate(LocalDate.parse("1990-01-01"));
+
         return personOrganizationService.create(personOrg);
     }
 
@@ -216,9 +216,9 @@ public class OrganizationDaoImplTest {
 
         // act
         List<Organization> allOrgsPerson1
-                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, 2, 0);
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, Integer.valueOf(2), Integer.valueOf(0));
         List<Organization> allOrgsPerson2
-                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, 2, 2);
+                = organizationDao.retrieveAllOrganizationsByPerson(personFromDB2, Integer.valueOf(2), Integer.valueOf(2));
 
         // assert
         assertEquals(2, allOrgsPerson1.size());

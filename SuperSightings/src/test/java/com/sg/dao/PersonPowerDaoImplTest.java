@@ -55,6 +55,14 @@ public class PersonPowerDaoImplTest {
         person.setType("Person");
         return personService.create(person);
     }
+
+    private Power createTestPower(String name){
+        Power power = new Power();
+        power.setName(name);
+        return powerService.create(power);
+    }
+
+
     // END HELPER METHODS ****************************************************************
 
     @Test
@@ -184,5 +192,40 @@ public class PersonPowerDaoImplTest {
         assertEquals(1, allPersonPowers.size());
         assertEquals(1, allPersonPowers1.size());
 
+    }
+
+    @Test
+    public void retrieveAllPersonPowerByPerson() {
+        Person person1 = createTestPerson();
+        Person person2 = createTestPerson();
+        Power power1 = createTestPower("Strength");
+        Power power2 = createTestPower("Wealth");
+        Power power3 = createTestPower("Flying");
+        createTestPersonPower(person1, power1);
+        createTestPersonPower(person1, power2);
+        createTestPersonPower(person1, power3);
+        createTestPersonPower(person2, power2);
+        //Act
+        List<PersonPower> person1Powers = personPowerDao.retrieveAllPersonPowerByPerson(person1, Integer.MAX_VALUE, 0);
+        List<PersonPower> person2Powers = personPowerDao.retrieveAllPersonPowerByPerson(person2, Integer.MAX_VALUE, 0);
+        //Assert
+        assertEquals(3, person1Powers.size());
+        assertEquals(1, person2Powers.size());
+    }
+    @Test
+    public void retrieveAllPersonPowerByPower() {
+        Person person1 = createTestPerson();
+        Person person2 = createTestPerson();
+        Power power1 = createTestPower("Strength");
+        Power power2 = createTestPower("Wealth");
+        createTestPersonPower(person1, power1);
+        createTestPersonPower(person1, power2);
+        createTestPersonPower(person2, power2);
+        //Act
+        List<PersonPower> power1Persons = personPowerDao.retrieveAllPersonPowerByPower(power1, Integer.MAX_VALUE, 0);
+        List<PersonPower> power2Persons = personPowerDao.retrieveAllPersonPowerByPower(power2, Integer.MAX_VALUE, 0);
+        //Assert
+        assertEquals(1, power1Persons.size());
+        assertEquals(2, power2Persons.size());
     }
 }

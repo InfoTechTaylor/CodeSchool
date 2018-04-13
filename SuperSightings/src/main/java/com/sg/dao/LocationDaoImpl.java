@@ -108,16 +108,22 @@ public class LocationDaoImpl implements LocationDao{
     }
 
     @Override
-    public List<Location> retrieveAllLocations(int i, int i1) {
+    public List<Location> retrieveAllLocations(Integer limit, Integer offset) {
 
-        return jdbcTemplate.query(READ_ALL_QUERY, new LocationMapper(), i, i1);
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_QUERY, new LocationMapper(), limit, offset);
 
     }
 
     @Override
-    public List<Location> retrieveAllLocationsByPerson(Person person, int i, int i1) {
+    public List<Location> retrieveAllLocationsByPerson(Person person, Integer limit, Integer offset) {
 
-        return jdbcTemplate.query(READ_ALL_QUERY_BY_PERSON, new LocationMapper(), person.getId(), i, i1);
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
+        return jdbcTemplate.query(READ_ALL_QUERY_BY_PERSON, new LocationMapper(), person.getId(), limit, offset);
 
     }
 

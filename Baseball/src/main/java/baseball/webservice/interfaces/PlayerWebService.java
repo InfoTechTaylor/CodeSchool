@@ -10,7 +10,9 @@ import baseball.viewmodel.player.playerprofile.PlayerProfileViewModel;
 
 public interface PlayerWebService {
 
-    public PlayerListViewModel getPlayerListViewModel(int limit, int offset, int pageNumbers);
+
+
+    public PlayerListViewModel getPlayerListViewModel(Integer limit, Integer offset, Integer pageNumbers);
 
     public PlayerProfileViewModel getPlayerProfileViewModel(Long id);
 

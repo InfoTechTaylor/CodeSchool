@@ -10,7 +10,7 @@ import baseball.viewmodel.team.teamprofile.TeamProfileViewModel;
 
 public interface TeamWebService {
 
-    TeamListViewModel getTeamListViewModel(int limit, int offset, int pageNumbers);
+    TeamListViewModel getTeamListViewModel(Integer limit, Integer offset, Integer pageNumbers);
 
     TeamProfileViewModel getTeamProfileViewModel(Long id);
 

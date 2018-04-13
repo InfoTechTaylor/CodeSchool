@@ -87,7 +87,10 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public List<Person> retrieveAllPersons(int limit, int offset) {
+    public List<Person> retrieveAllPersons(Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
 
         List<Person> personList = jdbcTemplate.query(GET_ALL_PERSONS_QUERY,
                 new PersonMapper(),
@@ -98,7 +101,11 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByOrg(Organization organization, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByOrg(Organization organization, Integer limit, Integer offset) {
+
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
 
         List<Person> personList = jdbcTemplate.query(GET_ALL_PERSONS_BY_ORG_QUERY,
                 new PersonMapper(),
@@ -110,7 +117,10 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByPower(Power power, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByPower(Power power, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
 
         List<Person> personList = jdbcTemplate.query(GET_ALL_PERSONS_BY_POWER_QUERY,
                 new PersonMapper(),
@@ -122,7 +132,10 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public List<Person> retrieveAllPersonsBySighting(Sighting sighting, int limit, int offset) {
+    public List<Person> retrieveAllPersonsBySighting(Sighting sighting, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
 
         List<Person> personList = jdbcTemplate.query(GET_ALL_PERSONS_BY_SIGHTING_QUERY,
                 new PersonMapper(),
@@ -134,7 +147,10 @@ public class PersonDaoImpl implements PersonDao {
     }
 
     @Override
-    public List<Person> retrieveAllPersonsByLocation(Location location, int limit, int offset) {
+    public List<Person> retrieveAllPersonsByLocation(Location location, Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
 
         List<Person> personList = jdbcTemplate.query(GET_ALL_PERSONS_BY_LOCATION_QUERY,
                 new PersonMapper(),

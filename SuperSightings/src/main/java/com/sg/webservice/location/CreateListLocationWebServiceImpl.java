@@ -40,7 +40,11 @@ public class CreateListLocationWebServiceImpl implements CreateListLocationWebSe
     }
 
     @Override
-    public CreateListLocationViewModel getCreateListLocationViewModel(int limit, int offset, int numPagesToShow) {
+    public CreateListLocationViewModel getCreateListLocationViewModel(Integer limit, Integer offset, Integer numPagesToShow) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+        if(numPagesToShow == null) numPagesToShow = 5;
 
         // instantiate
         CreateListLocationViewModel createListLocationViewModel = new CreateListLocationViewModel();

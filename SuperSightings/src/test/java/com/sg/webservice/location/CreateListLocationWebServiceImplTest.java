@@ -39,7 +39,7 @@ public class CreateListLocationWebServiceImplTest {
 
         // act
         CreateListLocationViewModel createListLocationViewModel =
-                createListLocationWebService.getCreateListLocationViewModel(5, 0, 5);
+                createListLocationWebService.getCreateListLocationViewModel(Integer.valueOf(5), Integer.valueOf(0), Integer.valueOf(5));
 
         // assert
         assert createListLocationViewModel.getLocations().size() == 5; // assert we get 5 locations

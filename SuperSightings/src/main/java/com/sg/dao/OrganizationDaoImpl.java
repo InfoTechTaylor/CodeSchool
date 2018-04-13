@@ -31,7 +31,7 @@ public class OrganizationDaoImpl implements OrganizationDao {
             = "select * from Organization where id = ?";
 
     private final static String UPDATE_QUERY
-            = "update organization set name = ?, description = ?, location_id = ?";
+            = "update organization set name = ?, description = ?, location_id = ? WHERE id = ?";
 
     private final static String DELETE_QUERY
             = "delete from organization where id = ?";
@@ -75,7 +75,8 @@ public class OrganizationDaoImpl implements OrganizationDao {
         jdbcTemplate.update(UPDATE_QUERY,
                 organization.getName(),
                 organization.getDescription(),
-                organization.getLocation().getId());
+                organization.getLocation().getId(),
+                organization.getId());
     }
 
     @Override
@@ -85,7 +86,11 @@ public class OrganizationDaoImpl implements OrganizationDao {
     }
 
     @Override
-    public List<Organization> retrieveAllOrganizations(int limit, int offset) {
+    public List<Organization> retrieveAllOrganizations(Integer limit, Integer offset) {
+
+        if(limit == null) limit = 5;
+        if(offset == null) offset = 0;
+
         return jdbcTemplate.query(RETRIEVE_ALL_ORGS_QUERY,
                 new OrganizationMapper(),
                 limit,
@@ -93,7 +98,7 @@ public class OrganizationDaoImpl implements OrganizationDao {
     }
 
     @Override
-    public List<Organization> retrieveAllOrganizationsByPerson(Person person, int limit, int offset) {
+    public List<Organization> retrieveAllOrganizationsByPerson(Person person, Integer limit, Integer offset) {
         return jdbcTemplate.query(RETRIEVE_ALL_ORGS_BY_PERSON_QUERY,
                 new OrganizationMapper(),
                 person.getId(),
