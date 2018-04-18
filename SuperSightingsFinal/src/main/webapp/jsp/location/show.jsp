@@ -8,9 +8,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <div  class="pt-5">
-        <h1>Super Sightings</h1>
-    </div>
+
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
@@ -19,7 +17,9 @@
 <div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
     <div class="mt-5">
+        <div  class="pt-5">
         <h1>Super Sightings</h1>
+    </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
