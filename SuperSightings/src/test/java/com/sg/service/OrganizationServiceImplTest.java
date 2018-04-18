@@ -76,7 +76,6 @@ public class OrganizationServiceImplTest {
         PersonOrganization personOrg = new PersonOrganization();
         personOrg.setOrganization(org1);
         personOrg.setPerson(personFromDB);
-        personOrg.setStartDate(LocalDate.parse("1990-01-01"));
         return personOrganizationService.create(personOrg);
     }
 
@@ -153,7 +152,7 @@ public class OrganizationServiceImplTest {
         Organization org2 = createTestOrgAvengers();
 
         // act
-        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(Integer.MAX_VALUE, 0);
+        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, allOrgs.size());
@@ -174,9 +173,9 @@ public class OrganizationServiceImplTest {
 
         // act
         List<Organization> allOrgsPerson1
-                = organizationService.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, 0);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB, Integer.MAX_VALUE, Integer.valueOf(0));
         List<Organization> allOrgsPerson2
-                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, Integer.MAX_VALUE, 0);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(1, allOrgsPerson1.size());
@@ -200,9 +199,9 @@ public class OrganizationServiceImplTest {
 
         // act
         List<Organization> allOrgsPerson1
-                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, 2, 0);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, Integer.valueOf(2), Integer.valueOf(0));
         List<Organization> allOrgsPerson2
-                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, 2, 2);
+                = organizationService.retrieveAllOrganizationsByPerson(personFromDB2, Integer.valueOf(2), Integer.valueOf(2));
 
         // assert
         assertEquals(2, allOrgsPerson1.size());
@@ -216,8 +215,8 @@ public class OrganizationServiceImplTest {
         Organization org2 = createTestOrgAvengers();
 
         // act
-        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(1, 0);
-        List<Organization> allOrgs1 = organizationService.retrieveAllOrganizations(1, 1);
+        List<Organization> allOrgs = organizationService.retrieveAllOrganizations(Integer.valueOf(1), Integer.valueOf(0));
+        List<Organization> allOrgs1 = organizationService.retrieveAllOrganizations(Integer.valueOf(1), Integer.valueOf(0));
 
         // assert
         assertEquals(1, allOrgs.size());

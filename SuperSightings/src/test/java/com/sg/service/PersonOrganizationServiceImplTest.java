@@ -215,8 +215,8 @@ public class PersonOrganizationServiceImplTest {
         personOrganizationService.create(newPersonOrg); // create second PersonOrganization object
 
         // act
-        List<PersonOrganization> allPersonOrgs = personOrganizationService.retrieveAllPersonOrganization(1, 0);
-        List<PersonOrganization> allPersonOrgs1 = personOrganizationService.retrieveAllPersonOrganization(1, 1);
+        List<PersonOrganization> allPersonOrgs = personOrganizationService.retrieveAllPersonOrganization(Integer.valueOf(1), Integer.valueOf(0));
+        List<PersonOrganization> allPersonOrgs1 = personOrganizationService.retrieveAllPersonOrganization(Integer.valueOf(1), Integer.valueOf(1));
 
         // assert
         assertEquals(1, allPersonOrgs.size());

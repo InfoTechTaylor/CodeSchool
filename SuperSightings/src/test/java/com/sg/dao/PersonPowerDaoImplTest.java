@@ -160,7 +160,7 @@ public class PersonPowerDaoImplTest {
         personPowerDao.create(personPower);
 
         // act
-        List<PersonPower> allPersonPowers = personPowerDao.retrieveAllPersonPowers(Integer.MAX_VALUE, 0);
+        List<PersonPower> allPersonPowers = personPowerDao.retrieveAllPersonPowers(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, allPersonPowers.size());

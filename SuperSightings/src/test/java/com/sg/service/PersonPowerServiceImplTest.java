@@ -150,7 +150,7 @@ public class PersonPowerServiceImplTest {
         personPowerService.create(personPower);
 
         // act
-        List<PersonPower> allPersonPowers = personPowerService.retrieveAllPersonPowers(Integer.MAX_VALUE, 0);
+        List<PersonPower> allPersonPowers = personPowerService.retrieveAllPersonPowers(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, allPersonPowers.size());
@@ -175,8 +175,8 @@ public class PersonPowerServiceImplTest {
         personPowerService.create(personPower);
 
         // act
-        List<PersonPower> allPersonPowers = personPowerService.retrieveAllPersonPowers(1, 0);
-        List<PersonPower> allPersonPowers1 = personPowerService.retrieveAllPersonPowers(1, 1);
+        List<PersonPower> allPersonPowers = personPowerService.retrieveAllPersonPowers(Integer.valueOf(1), Integer.valueOf(0));
+        List<PersonPower> allPersonPowers1 = personPowerService.retrieveAllPersonPowers(Integer.valueOf(1), Integer.valueOf(1));
 
         // assert
         assertEquals(1, allPersonPowers.size());

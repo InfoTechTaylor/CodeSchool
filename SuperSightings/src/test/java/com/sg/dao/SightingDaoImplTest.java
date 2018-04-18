@@ -195,8 +195,8 @@ public class SightingDaoImplTest {
         createTestSighting(location);
 
         // act
-        List<Sighting> allSightingsByLocation = sightingDao.retrieveAllSightingsByLocation(location, Integer.MAX_VALUE,0);
-        List<Sighting> allSightingsByLocation1 = sightingDao.retrieveAllSightingsByLocation(location1, Integer.MAX_VALUE, 0);
+        List<Sighting> allSightingsByLocation = sightingDao.retrieveAllSightingsByLocation(location, Integer.MAX_VALUE,Integer.valueOf(0));
+        List<Sighting> allSightingsByLocation1 = sightingDao.retrieveAllSightingsByLocation(location1, Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(3, allSightingsByLocation.size());

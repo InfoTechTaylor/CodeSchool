@@ -242,9 +242,9 @@ public class LocationServiceImplTest {
 
         // act
         List<Location> allLocationsByPerson =
-                locationService.retrieveAllLocationsByPerson(person2, 2, 0);
+                locationService.retrieveAllLocationsByPerson(person2, Integer.valueOf(2), Integer.valueOf(0));
         List<Location> allLocationsByPerson2 =
-                locationService.retrieveAllLocationsByPerson(person2, 2, 2);
+                locationService.retrieveAllLocationsByPerson(person2, Integer.valueOf(2), Integer.valueOf(2));
 
         // assert
         assertEquals(2, allLocationsByPerson.size());

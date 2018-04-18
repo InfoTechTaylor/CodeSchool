@@ -208,8 +208,8 @@ public class PersonSightingDaoImplTest {
         personSightingDao.create(newPersonSighting);
 
         // act
-        List<PersonSighting> personSightList = personSightingDao.retrieveAllPersonSightings(1, 0);
-        List<PersonSighting> personSightList1 = personSightingDao.retrieveAllPersonSightings(1, 1);
+        List<PersonSighting> personSightList = personSightingDao.retrieveAllPersonSightings(Integer.valueOf(1), Integer.valueOf(0));
+        List<PersonSighting> personSightList1 = personSightingDao.retrieveAllPersonSightings(Integer.valueOf(1), Integer.valueOf(1));
 
         // assert
         assertEquals(1, personSightList.size());

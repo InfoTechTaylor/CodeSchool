@@ -197,8 +197,8 @@ public class SightingServiceImplTest {
         createTestSighting(location);
 
         // act
-        List<Sighting> allSightingsByLocation = sightingService.retrieveAllSightingsByLocation(location, Integer.MAX_VALUE,0);
-        List<Sighting> allSightingsByLocation1 = sightingService.retrieveAllSightingsByLocation(location1, Integer.MAX_VALUE, 0);
+        List<Sighting> allSightingsByLocation = sightingService.retrieveAllSightingsByLocation(location, Integer.MAX_VALUE,Integer.valueOf(0));
+        List<Sighting> allSightingsByLocation1 = sightingService.retrieveAllSightingsByLocation(location1, Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(3, allSightingsByLocation.size());

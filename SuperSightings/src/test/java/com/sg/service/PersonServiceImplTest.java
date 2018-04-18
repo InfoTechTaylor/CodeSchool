@@ -216,8 +216,8 @@ public class PersonServiceImplTest {
         createTestPersonOrganization(person3, organization);
 
         //Act
-        List<Person> allPersonsByOrg = personService.retrieveAllPersonsByOrg(organization, Integer.MAX_VALUE, 0);
-        List<Person> allPersonsByOrg1 = personService.retrieveAllPersonsByOrg(organization1, Integer.MAX_VALUE, 0);
+        List<Person> allPersonsByOrg = personService.retrieveAllPersonsByOrg(organization, Integer.MAX_VALUE, Integer.valueOf(0));
+        List<Person> allPersonsByOrg1 = personService.retrieveAllPersonsByOrg(organization1, Integer.MAX_VALUE, Integer.valueOf(0));
 
         //Assert
         assertEquals(4, allPersonsByOrg.size());
@@ -323,8 +323,8 @@ public class PersonServiceImplTest {
         createTestPerson(2);
 
         //Act
-        List<Person> allPersons = personService.retrieveAllPersons(2,0);
-        List<Person> allPersons2 = personService.retrieveAllPersons(2,2);
+        List<Person> allPersons = personService.retrieveAllPersons(Integer.valueOf(2),Integer.valueOf(0));
+        List<Person> allPersons2 = personService.retrieveAllPersons(Integer.valueOf(2),Integer.valueOf(2));
 
         //Assert
         assertEquals(2, allPersons.size());
@@ -376,8 +376,8 @@ public class PersonServiceImplTest {
         createTestPersonPower(person3, power1);
 
         //Act
-        List<Person> allPersonsByPower = personService.retrieveAllPersonsByPower(power1, 2, 0);
-        List<Person> allPersonsByPower1 = personService.retrieveAllPersonsByPower(power1, 2, 2);
+        List<Person> allPersonsByPower = personService.retrieveAllPersonsByPower(power1, Integer.valueOf(2), Integer.valueOf(0));
+        List<Person> allPersonsByPower1 = personService.retrieveAllPersonsByPower(power1, Integer.valueOf(2), Integer.valueOf(2));
 
         //Assert
         assertEquals(2, allPersonsByPower.size());
@@ -405,8 +405,8 @@ public class PersonServiceImplTest {
         createTestPersonSighting(person3, sighting1);
 
         //Act
-        List<Person> allPersonsBySighting = personService.retrieveAllPersonsBySighting(sighting, 2, 0);
-        List<Person> allPersonsBySighting1 = personService.retrieveAllPersonsBySighting(sighting, 2, 2);
+        List<Person> allPersonsBySighting = personService.retrieveAllPersonsBySighting(sighting, Integer.valueOf(2), Integer.valueOf(0));
+        List<Person> allPersonsBySighting1 = personService.retrieveAllPersonsBySighting(sighting, Integer.valueOf(2), Integer.valueOf(2));
 
         //Assert
         assertEquals(2, allPersonsBySighting.size());
@@ -438,8 +438,8 @@ public class PersonServiceImplTest {
         createTestPersonSighting(person3, sighting1);
 
         //Act
-        List<Person> allPersonsByLocation = personService.retrieveAllPersonsByLocation(location, 2, 0);
-        List<Person> allPersonsByLocation1 = personService.retrieveAllPersonsByLocation(location, 2, 2);
+        List<Person> allPersonsByLocation = personService.retrieveAllPersonsByLocation(location, Integer.valueOf(2), Integer.valueOf(0));
+        List<Person> allPersonsByLocation1 = personService.retrieveAllPersonsByLocation(location, Integer.valueOf(2), Integer.valueOf(2));
 
 
         //Assert

@@ -177,7 +177,7 @@ public class PersonSightingServiceImplTest {
         personSightingService.create(newPersonSighting);
 
         // act
-        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(Integer.MAX_VALUE, 0);
+        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, personSightList.size());
@@ -204,8 +204,8 @@ public class PersonSightingServiceImplTest {
         personSightingService.create(newPersonSighting);
 
         // act
-        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(1, 0);
-        List<PersonSighting> personSightList1 = personSightingService.retrieveAllPersonSightings(1, 1);
+        List<PersonSighting> personSightList = personSightingService.retrieveAllPersonSightings(Integer.valueOf(1), Integer.valueOf(0));
+        List<PersonSighting> personSightList1 = personSightingService.retrieveAllPersonSightings(Integer.valueOf(1), Integer.valueOf(1));
 
         // assert
         assertEquals(1, personSightList.size());

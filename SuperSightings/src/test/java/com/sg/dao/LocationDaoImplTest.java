@@ -170,7 +170,7 @@ public class LocationDaoImplTest {
         Location location2 = createTestLocation();
 
         // act
-        List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, Integer.valueOf(1));
+        List<Location> locationList = locationDao.retrieveAllLocations(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, locationList.size());

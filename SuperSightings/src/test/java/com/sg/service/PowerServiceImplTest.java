@@ -113,7 +113,7 @@ public class PowerServiceImplTest {
         Power power2 = new Power();
         power2.setName("Speed");
         powerService.create(power2);
-        assertEquals(2, powerService.retrieveAllPowers(Integer.MAX_VALUE, 0).size());
+        assertEquals(2, powerService.retrieveAllPowers(Integer.MAX_VALUE, Integer.valueOf(0)).size());
     }
 
     @Test
@@ -132,8 +132,8 @@ public class PowerServiceImplTest {
         createTestPersonPower(person1, power1);
 
         //Act
-        List<Power> powerList = powerService.retrieveAllPowersByPerson(person, Integer.MAX_VALUE, 0);
-        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person1, Integer.MAX_VALUE, 0);
+        List<Power> powerList = powerService.retrieveAllPowersByPerson(person, Integer.MAX_VALUE, Integer.valueOf(0));
+        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person1, Integer.MAX_VALUE, Integer.valueOf(0));
 
         //Assert
         assertEquals(3, powerList.size());
@@ -148,8 +148,8 @@ public class PowerServiceImplTest {
         Power power2 = new Power();
         power2.setName("Speed");
         powerService.create(power2);
-        assertEquals(1, powerService.retrieveAllPowers(1,0).size());
-        assertEquals(1, powerService.retrieveAllPowers(1,1).size());
+        assertEquals(1, powerService.retrieveAllPowers(Integer.valueOf(1),Integer.valueOf(0)).size());
+        assertEquals(1, powerService.retrieveAllPowers(Integer.valueOf(1),Integer.valueOf(1)).size());
     }
 
     @Test
@@ -168,8 +168,8 @@ public class PowerServiceImplTest {
         createTestPersonPower(person1, power1);
 
         //Act
-        List<Power> powerList = powerService.retrieveAllPowersByPerson(person, 2, 0);
-        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person, 2, 2);
+        List<Power> powerList = powerService.retrieveAllPowersByPerson(person, Integer.valueOf(2), Integer.valueOf(0));
+        List<Power> powerList1 = powerService.retrieveAllPowersByPerson(person, Integer.valueOf(2), Integer.valueOf(2));
 
         //Assert
         assertEquals(2, powerList.size());

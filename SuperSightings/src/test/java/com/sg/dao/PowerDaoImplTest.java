@@ -154,8 +154,8 @@ public class PowerDaoImplTest {
         Power power2 = new Power();
         power2.setName("Speed");
         powerDao.create(power2);
-        assertEquals(1, powerDao.retrieveAllPowers(1,0).size());
-        assertEquals(1, powerDao.retrieveAllPowers(1,1).size());
+        assertEquals(1, powerDao.retrieveAllPowers(Integer.valueOf(1),Integer.valueOf(0)).size());
+        assertEquals(1, powerDao.retrieveAllPowers(Integer.valueOf(1),Integer.valueOf(1)).size());
     }
 
     @Test

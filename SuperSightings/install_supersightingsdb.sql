@@ -206,3 +206,19 @@ ALTER TABLE organization
 ADD CONSTRAINT fk_organization_location
 FOREIGN KEY (location_id) REFERENCES location (id) ON DELETE NO ACTION;
 
+
+Use supersightings;
+
+INSERT INTO Person (type, name, description)
+values ("Person", "Bruce Wayne", "Rich man that dresses like bat with fancy toys"),
+("Hero", "Wonder Woman", "Amazon warrior");
+
+INSERT INTO Location(latitude, longitude, name, description, street, city, state, zip, country)
+values (40.779287, -73.969326, "Central Park", "near Belvedere Castle", "79th Street", "New York", "NY", "10021", "USA"),
+(51.503157, -0.119715, "London Eye", "The Ferris Wheel", "The Queen's Walk", "London", "Lambeth", "SE1 7PB", "UK");
+
+INSERT INTO Sighting(location_id, sighting_date, description)
+values (2, "2018-04-10", "Wonder Woman spotted in London beating up men in ally.");
+
+INSERT INTO person_sighting(person_id, sighting_id)
+values(2, 1);

@@ -93,8 +93,6 @@ public class PersonDaoImplTest {
         PersonOrganization personOrg = new PersonOrganization();
         personOrg.setPerson(person);
         personOrg.setOrganization(organization);
-        personOrg.setStartDate(LocalDate.parse("2000-01-01"));
-        personOrg.setEndDate(null);
         return personOrganizationService.create(personOrg);
     }
 
@@ -444,8 +442,8 @@ public class PersonDaoImplTest {
         createTestPersonSighting(person3, sighting1);
 
         //Act
-        List<Person> allPersonsByLocation = personDao.retrieveAllPersonsByLocation(location, 2, 0);
-        List<Person> allPersonsByLocation1 = personDao.retrieveAllPersonsByLocation(location, 2, 2);
+        List<Person> allPersonsByLocation = personDao.retrieveAllPersonsByLocation(location, Integer.valueOf(2), Integer.valueOf(0));
+        List<Person> allPersonsByLocation1 = personDao.retrieveAllPersonsByLocation(location, Integer.valueOf(2), Integer.valueOf(2));
 
 
         //Assert

@@ -186,7 +186,7 @@ public class PersonOrganizationDaoImplTest {
         personOrganizationDao.create(newPersonOrg); // create second PersonOrganization object
 
         // act
-        List<PersonOrganization> allPersonOrgs = personOrganizationDao.retrieveAllPersonOrganization(Integer.MAX_VALUE, 0);
+        List<PersonOrganization> allPersonOrgs = personOrganizationDao.retrieveAllPersonOrganization(Integer.MAX_VALUE, Integer.valueOf(0));
 
         // assert
         assertEquals(2, allPersonOrgs.size());
