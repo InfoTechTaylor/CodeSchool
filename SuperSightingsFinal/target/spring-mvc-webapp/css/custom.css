@@ -1,0 +1,28 @@
+@font-face {
+    font-family: 'PermanentMarker-Regular';
+    src: url('/fonts/PermanentMarker-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+body{
+    background-image: url("/jsp/images/superheroBackground.jpg");
+    height: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.container{
+    background: rgba(246,246,246,0.95);
+}
+
+h1 {
+    font-family: "PermanentMarker-Regular";
+    font-size: 52px;
+}
+h2 {
+    font-family: "PermanentMarker-Regular";
+}

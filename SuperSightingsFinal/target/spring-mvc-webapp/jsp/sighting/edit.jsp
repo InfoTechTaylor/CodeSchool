@@ -12,12 +12,15 @@
     <title>Edit Sighting</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
-
+<div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
@@ -33,7 +36,7 @@
     </div>
 </div>
 
-<div class="container">
+<div>
     <h2>Edit Sighting</h2>
     <sf:form class="form-horizontal" role="form" method="POST" action="/sighting/edit" modelAttribute="commandModel" novalidate="novalidate">
         <div class="form-group row">
@@ -47,6 +50,7 @@
             <label for="add-description" class="col-sm-4 col-lg-4 col-md-4">Description: </label>
             <div class="col-sm-6 col-lg-6 col-md-6">
                 <sf:textarea path="description" rows="3" id="add-description" type="text" class="form-control" name="name" placeholder="Sighting Description" ></sf:textarea>
+                <sf:errors path="description" cssClass="errors"></sf:errors>
             </div><!--end form group col -->
         </div><!--end form group-->
         <div class="form-group row">
@@ -56,7 +60,7 @@
                     <sf:option value="" label="Select Location" />
                     <sf:options items="${viewModel.locations}" itemValue="id" itemLabel="name" />
                 </sf:select>
-
+                <sf:errors path="locationId" cssClass="errors"></sf:errors>
             </div><!--end form group col -->
         </div><!--end form group-->
         <div class="form-group row">
@@ -66,7 +70,9 @@
                     <sf:option value="" label="Select people" />
                     <sf:options items="${viewModel.persons}" itemValue="id" itemLabel="name"  />
                 </sf:select>
+                <sf:errors path="personIds" cssClass="errors"></sf:errors>
                 <sf:hidden path="id" />
+                <sf:errors path="id" cssClass="errors"></sf:errors>
 
             </div><!--end form group col -->
         </div><!--end form group-->
@@ -77,6 +83,7 @@
             </div><!--end form group col -->
         </div><!--end form group-->
     </sf:form>
+</div>
 </div>
 </body>
 </html>

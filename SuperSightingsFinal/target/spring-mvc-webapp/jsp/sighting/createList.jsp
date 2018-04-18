@@ -13,11 +13,15 @@
     <title>Sightings</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
+<div class="container mb-5 pl-5 pr-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
@@ -33,11 +37,11 @@
     </div>
 </div>
 
-<div id="main" class="container mt-5">
-    <div class="container row">
+<div id="main" class="mt-5">
+    <div class="row">
         <!-- Add a col to hold the summary table - have it take up half the row -->
         <div class="col-md-6">
-            <div id="errorMessages" class="alert alert-danger">
+            <div id="errorMessages" class="alert-danger">
                 <p>
                     <c:out value="${errorMessage}"/>
                 </p>
@@ -76,10 +80,14 @@
                     </tr>
                 </c:forEach>
             </table>
-            <c:forEach items="${viewModel.pageNumbers}" var="pageNumber">
-                <!-- do math for page number cause our page utils are wrong -->
-                <a href="/sighting/createList?offset=${(pageNumber-1) * 5}">${pageNumber}</a>
-            </c:forEach>
+            <div class="text-center pb-5">
+                <ul class="pagination">
+                    <c:forEach items="${viewModel.pageNumbers}" var="pageNumber">
+                        <!-- do math for page number cause our page utils are wrong -->
+                        <li class="page-item"><a href="/sighting/createList?offset=${(pageNumber-1) * 5}" class="page-link">${pageNumber}</a></li>
+                    </c:forEach>
+                </ul>
+            </div>
 
         </div><!-- end left col div-->
 
@@ -99,6 +107,7 @@
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <sf:textarea path="description" rows="3" id="add-description" type="text" class="form-control" name="name" placeholder="Sighting Description" ></sf:textarea>
                     </div><!--end form group col -->
+                    <sf:errors path="description" cssClass="errors"></sf:errors>
                 </div><!--end form group-->
                 <div class="form-group row">
                     <label for="add-location" class="col-sm-4 col-lg-4 col-md-4">Location: </label>
@@ -107,7 +116,7 @@
                             <sf:option value="" label="Select Location" />
                             <sf:options items="${viewModel.locations}" itemValue="id" itemLabel="name" />
                         </sf:select>
-
+                        <sf:errors path="locationId" cssClass="errors"></sf:errors>
                     </div><!--end form group col -->
                 </div><!--end form group-->
                 <div class="form-group row">
@@ -117,7 +126,7 @@
                             <sf:option value="" label="Select people" />
                             <sf:options items="${viewModel.persons}" itemValue="id" itemLabel="name" />
                         </sf:select>
-
+                        <sf:errors path="personIds" cssClass="errors"></sf:errors>
                     </div><!--end form group col -->
                 </div><!--end form group-->
                 <div class="form-group">
@@ -129,6 +138,6 @@
         </div><!--end right col div-->
     </div><!--end row div-->
 </div>
-
+</div>
 </body>
 </html>

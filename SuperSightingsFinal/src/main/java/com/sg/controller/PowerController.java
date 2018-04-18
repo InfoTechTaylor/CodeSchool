@@ -36,7 +36,8 @@ public class PowerController {
 
     @RequestMapping(value= "/createList")
     public String listPowers(@RequestParam(required=false) Integer offset,
-                             @RequestParam(required = false) String errorMessage, Model model){
+                             @RequestParam(required = false) String errorMessage,
+                             Model model){
         CreateListPowerViewModel createListPowerViewModel
                 = createListPowerWebService.getCreateListPowerViewModel(5, offset, 5);
         model.addAttribute("powerList", createListPowerViewModel.getPowers());
@@ -54,10 +55,11 @@ public class PowerController {
         if(bindingResult.hasErrors()){
 
             // reload edit form if there are errors
-            CreateListPowerViewModel viewModel = createListPowerWebService.getCreateListPowerViewModel(5, 0, 5);
+            CreateListPowerViewModel viewModel = createListPowerWebService.getCreateListPowerViewModel(5, offset, 5);
 
             model.addAttribute("viewModel", viewModel);
             model.addAttribute("commandModel", commandModel);
+            model.addAttribute("powerList", viewModel.getPowers());
 
             return "power/createList";
         }

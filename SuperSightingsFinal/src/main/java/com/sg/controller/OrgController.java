@@ -53,8 +53,8 @@ public class OrgController {
 
     @RequestMapping(value="/create", method = RequestMethod.POST)
     public String createOrg(@Valid @ModelAttribute("commandModel")CreateOrgCmdModel commandModel,
-                            @RequestParam(required=false) Integer offset,
                             BindingResult bindingResult,
+                            @RequestParam(required=false) Integer offset,
                             Model model){
 
         if(bindingResult.hasErrors()){
@@ -64,6 +64,7 @@ public class OrgController {
 
             model.addAttribute("viewModel", viewModel);
             model.addAttribute("commandModel", commandModel);
+            model.addAttribute("allOrgs", viewModel.getOrganizations());
 
             return "organization/createList";
         }

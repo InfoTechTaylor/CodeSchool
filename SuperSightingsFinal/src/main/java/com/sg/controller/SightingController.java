@@ -61,8 +61,7 @@ public class SightingController {
 
     @RequestMapping(value = "/create", method = RequestMethod.POST)
     public String create(@Valid @ModelAttribute("commandModel") CreateSightingCmdModel commandModel,
-                         @RequestParam(required=false) Integer offset,
-                            BindingResult bindingResult,
+                         BindingResult bindingResult, @RequestParam(required=false) Integer offset,
                             Model model) {
 
         if (bindingResult.hasErrors()) {

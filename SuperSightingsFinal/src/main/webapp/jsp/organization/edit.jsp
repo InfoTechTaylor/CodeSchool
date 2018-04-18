@@ -12,12 +12,15 @@
     <title>Edit Org</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
-
+<div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
@@ -33,7 +36,7 @@
     </div>
 </div>
 
-<div class="container mt-5">
+<div class="mt-5">
     <h2>Edit Organization</h2>
     <sf:form id="editPowerForm" action="/orgs/edit" method="POST"  modelAttribute="commandModel" novalidate="novalidate" >
         <div class="form-group row col-sm-12 col-lg-12 mb-2">
@@ -50,6 +53,7 @@
                     <sf:select path="locationId" id="edit-location" class="form-control">
                         <sf:options items="${viewModel.locations}" itemValue="id" itemLabel="name" />
                     </sf:select>
+                    <sf:errors path="locationId" cssClass="errors"></sf:errors>
 
                 </div><!--end form group col -->
             </div><!--end form group-->
@@ -64,11 +68,12 @@
 
         <div>
             <sf:hidden path="id"/>
+            <sf:errors path="id" cssClass="errors"></sf:errors>
             <a class="btn col-sm-2 col-lg-2 mr-3" href="${pageContext.request.contextPath}/orgs/list">Cancel</a>
             <button id="editOrgBtn" type="submit" class="btn col-sm-2 col-lg-2">Save Changes</button>
         </div>
     </sf:form>
 </div>
-
+</div>
 </body>
 </html>

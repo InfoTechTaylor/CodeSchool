@@ -68,8 +68,8 @@ public class LocationController {
 
     @RequestMapping(value="/create", method = RequestMethod.POST)
     public String create(@Valid @ModelAttribute("commandModel")CreateLocationCmdModel commandModel,
-                         @RequestParam(required=false) Integer offset,
                          BindingResult bindingResult,
+                         @RequestParam(required=false) Integer offset,
                          Model model){
 
         if(bindingResult.hasErrors()){
@@ -79,6 +79,7 @@ public class LocationController {
 
             model.addAttribute("viewModel", viewModel);
             model.addAttribute("commandModel", commandModel);
+            model.addAttribute("allLocations", viewModel.getLocations());
 
             return "location/createList";
         }

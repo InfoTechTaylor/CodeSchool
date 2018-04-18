@@ -12,26 +12,30 @@
     <title>Edit Power</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
+<div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
                 <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/home/latest">Home</a></li>
-                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/people/list">People</a></li>
-                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/jsp/location/createList.jsp">Locations</a></li>
-                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/jsp/sighting/sightingCreateList.jsp">Sightings</a></li>
-                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/orgs/list">Organizations</a></li>
+                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/person/createList">People</a></li>
+                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/location/createList">Locations</a></li>
+                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/sighting/createList">Sightings</a></li>
+                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/organization/createList">Organizations</a></li>
                 <li role="presentation" class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath}/power/createList">Powers</a></li>
             </ul>
         </div>
 
     </div>
 </div>
-<div class="container mt-5">
+<div class="mt-5">
 <h2>Edit Power</h2>
 <sf:form id="editPowerForm" action="/power/edit" method="POST"  modelAttribute="commandModel" novalidate="novalidate" >
     <div class="form-group row col-sm-12 col-lg-12 mb-2">
@@ -43,10 +47,12 @@
     </div>
     <div>
         <sf:hidden path="id"/>
+        <sf:errors path="id" cssClass="errors"></sf:errors>
         <a class="btn col-sm-2 col-lg-2 mr-3" href="${pageContext.request.contextPath}/power/createList">Cancel</a>
         <button id="editPowerBtn" type="submit" class="btn col-sm-2 col-lg-2">Save Changes</button>
     </div>
 </sf:form>
+</div>
 </div>
 </body>
 </html>

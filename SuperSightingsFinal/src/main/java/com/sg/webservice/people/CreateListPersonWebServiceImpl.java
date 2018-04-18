@@ -159,11 +159,13 @@ public class CreateListPersonWebServiceImpl implements CreateListPersonWebServic
         //Look stuff up
         List<Sighting> allSightings = sightingService.retrieveAllSightingsByPerson(readPerson, Integer.MAX_VALUE, Integer.valueOf(0));
         List<PersonPower> allPowers = personPowerService.retrieveAllPersonPowerByPerson(readPerson, Integer.MAX_VALUE, Integer.valueOf(0));
-        if(allSightings.size() == 0 & allPowers.size()==0){
+        List<PersonOrganization> allOrgs = personOrganizationService.retrieveAllPersonOrganizationByPerson(readPerson, Integer.MAX_VALUE, Integer.valueOf(0));
+
+        if(allSightings.size() == 0 & allPowers.size()==0 && allOrgs.size() ==0){
             personService.delete(person);
         }else{
             throw new RelationshipFoundException(allSightings.size() + " sighting(s)  and " + allPowers.size() + " power(s) associated with " +
-                    readPerson.getName() + ".  Action ignored." );
+                    readPerson.getName() + " and " + allOrgs.size() + " orgs associated with " + readPerson.getName() + " Action ignored." );
         }
     }
 }

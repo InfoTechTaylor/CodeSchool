@@ -12,11 +12,15 @@
     <title>Show Sighting</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
+<div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
@@ -32,7 +36,7 @@
     </div>
 </div>
 
-<div class="container mt-5">
+<div class="mt-5">
     <h2>Sighting Profile</h2>
     <p>Date: ${viewModel.date} </p>
     <p>Location: <a href="/location/show?id=${viewModel.locationId}">${viewModel.locationName}</a></p>
@@ -41,6 +45,7 @@
     </c:forEach></p>
     <p>Description: <c:out value="${viewModel.description}"/></p>
     <a class="btn btn-secondary" href="/sighting/createList" >Return</a>
+</div>
 </div>
 </body>
 </html>

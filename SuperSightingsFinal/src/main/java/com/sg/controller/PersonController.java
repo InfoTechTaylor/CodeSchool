@@ -41,7 +41,8 @@ public class PersonController {
     PersonService personService;
 
     @RequestMapping(value="/createList")
-    public String listPeople(@RequestParam(required=false) Integer offset, @RequestParam(required = false) String errorMessage,
+    public String listPeople(@RequestParam(required=false) Integer offset,
+                             @RequestParam(required = false) String errorMessage,
                              Model model){
         CreateListPersonViewModel viewModel = createListPersonWebService.getCreateListPersonViewModel(5, offset, 5);
         model.addAttribute("personsList", viewModel.getPersons());
@@ -53,8 +54,7 @@ public class PersonController {
 
     @RequestMapping(value="/create", method = RequestMethod.POST)
     public String create(@Valid @ModelAttribute("commandModel")CreatePersonCmdModel commandModel,
-                         @RequestParam(required=false) Integer offset,
-                         BindingResult bindingResult,
+                         BindingResult bindingResult, @RequestParam(required=false) Integer offset,
                          Model model){
 
         if(bindingResult.hasErrors()){
@@ -64,6 +64,7 @@ public class PersonController {
 
             model.addAttribute("viewModel", viewModel);
             model.addAttribute("commandModel", commandModel);
+            model.addAttribute("personsList", viewModel.getPersons());
 
             return "person/createList";
         }

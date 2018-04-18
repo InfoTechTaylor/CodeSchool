@@ -13,11 +13,15 @@
     <title>People</title>
     <!-- Bootstrap core CSS -->
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
 </head>
 <body>
+<div class="container mb-5 pl-5 pr-5 rounded">
 <div id="nav">
-    <div class="container mt-5">
-        <h1>Super Sightings</h1>
+    <div class="mt-5">
+        <div  class="pt-5">
+            <h1>Super Sightings</h1>
+        </div>
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
@@ -35,11 +39,11 @@
 
 
 
-<div id="main" class="container mt-5">
-    <div class="container row">
+<div id="main" class="mt-5">
+    <div class="row">
         <!-- Add a col to hold the summary table - have it take up half the row -->
         <div class="col-md-6">
-            <div id="errorMessages" class="alert alert-danger">
+            <div id="errorMessages" class="alert-danger">
                 <p>
                     <c:out value="${errorMessage}"/>
                 </p>
@@ -73,10 +77,14 @@
                     </tr>
                 </c:forEach>
             </table>
-            <c:forEach items="${viewModel.pageNumbers}" var="pageNumber">
-                <!-- do math for page number cause our page utils are wrong -->
-                <a href="/person/createList?offset=${(pageNumber-1) * 5}">${pageNumber}</a>
-            </c:forEach>
+            <div class="text-center pb-5">
+                <ul class="pagination">
+                    <c:forEach items="${viewModel.pageNumbers}" var="pageNumber">
+                        <!-- do math for page number cause our page utils are wrong -->
+                        <li class="page-item"><a href="/person/createList?offset=${(pageNumber-1) * 5}" class="page-link">${pageNumber}</a></li>
+                    </c:forEach>
+                </ul>
+            </div>
 
         </div><!-- end left col div-->
 
@@ -88,6 +96,7 @@
                     <label for="add-name" class="col-sm-4 col-lg-4 col-md-4">Name: </label>
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <sf:input path="name" id="add-name" type="text" class="form-control" name="name" placeholder="Name" />
+                        <sf:errors path="name" cssClass="errors"/>
                     </div><!--end form group col -->
                 </div><!--end form group-->
 
@@ -95,6 +104,7 @@
                     <label for="add-description" class="col-sm-4 col-lg-4 col-md-4">Description: </label>
                     <div class="col-sm-6 col-lg-6 col-md-6">
                         <sf:textarea path="description" rows="3" id="add-description" type="text" class="form-control" name="name" placeholder="Description" ></sf:textarea>
+                        <sf:errors path="description" cssClass="errors"/>
                     </div><!--end form group col -->
                 </div><!--end form group-->
 
@@ -107,6 +117,7 @@
                             <sf:option value="Hero" label="Hero" />
                             <sf:option value="Villian" label="Villian" />
                         </sf:select>
+                        <sf:errors path="type" cssClass="errors"/>
 
                     </div><!--end form group col -->
                 </div><!--end form group-->
@@ -119,6 +130,7 @@
                             <sf:options items="${viewModel.organizations}" itemValue="id" itemLabel="name" />
                         </sf:select>
 
+
                     </div><!--end form group col -->
                 </div><!--end form group-->
 
@@ -129,6 +141,7 @@
                             <sf:option value="" label="Select 1 or more powers" />
                             <sf:options items="${viewModel.powers}" itemValue="id" itemLabel="name" />
                         </sf:select>
+
                     </div><!--end form group col -->
                 </div><!--end form group-->
                 <div class="form-group">
@@ -139,6 +152,7 @@
             </sf:form>
         </div><!--end right col div-->
     </div><!--end row div-->
+</div>
 </div>
 </body>
 </html>
