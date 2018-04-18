@@ -39,6 +39,11 @@
             </li>
         </ul>
     </div>
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <p>Hello : ${pageContext.request.userPrincipal.name}
+            | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+        </p>
+    </c:if>
     <!-- Main Page Content Start -->
 
     <!-- Main Page Content Stop -->

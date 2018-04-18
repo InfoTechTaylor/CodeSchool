@@ -9,6 +9,7 @@
 <%@ taglib prefix="s" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <title>Company Contacts</title>
@@ -40,6 +41,11 @@
             </li>
         </ul>
     </div>
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <p>Hello : ${pageContext.request.userPrincipal.name}
+            | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+        </p>
+    </c:if>
     <!-- Main Page Content Start -->
     <!-- Add a row to our container - this will hold the summary table and the new contact form -->
     <div class="row">
@@ -64,14 +70,18 @@
                             <c:out value="${currentContact.company}" />
                         </td>
                         <td>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <a href="displayEditContactForm?contactId=${currentContact.contactId}">
                                 Edit
                             </a>
+                            </sec:authorize>
                         </td>
                         <td>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <a href="deleteContact?contactId=${currentContact.contactId}">
                                 Delete
                             </a>
+                            </sec:authorize>
                         </td>
                     </tr>
                 </c:forEach>
@@ -81,6 +91,7 @@
 
         <!-- add col to hold the new contact form - have it take up the other half of the row -->
         <div class="col-md-6">
+            <sec:authorize access="hasRole('ROLE_ADMIN')">
             <h2>Add New Contact</h2>
             <form class="form-horizontal" role="form" method="POST" action="createContact">
                 <div class="form-group">
@@ -119,6 +130,7 @@
                     </div><!--end form group col -->
                 </div><!--end form group-->
             </form>
+            </sec:authorize>
         </div><!--end right col div-->
     </div><!--end row div-->
 

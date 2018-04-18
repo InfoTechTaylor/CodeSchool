@@ -41,6 +41,11 @@
             </li>
         </ul>
     </div>
+    <c:if test="${pageContext.request.userPrincipal.name != null}">
+        <p>Hello : ${pageContext.request.userPrincipal.name}
+            | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+        </p>
+    </c:if>
     <sf:form class="form-horizontal" role="form" modelAttribute="contact"
              action="editContact" method="POST" novalidate="novalidate">
         <div class="form-group">

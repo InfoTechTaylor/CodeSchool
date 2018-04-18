@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import javax.inject.Inject;
 
 @Controller
-@RequestMapping(value="/home")
+//@RequestMapping(value="/home")
 public class HomeController {
 
     @Inject
     HomePageWebService homePageWebService;
 
-    @RequestMapping(value="/latest")
+    @RequestMapping(value="/")
     public String loadHomePage(Model model, @RequestParam(required=false) Integer offset){
         HomeViewModel homeViewModel = homePageWebService.getHomeViewModel(10, offset, 5);
         model.addAttribute("viewModel", homeViewModel);

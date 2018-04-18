@@ -43,5 +43,10 @@
     <bean id="contactListDao" class="com.sg.contactlistspringmvc.dao.ContactListDaoDbImpl" >
         <property name="jdbcTemplate" ref="jdbcTemplate" />
     </bean>
+
+    <bean id="userDao"
+          class="com.sg.contactlistspringmvc.dao.UserDaoDbImpl">
+        <property name="jdbcTemplate" ref="jdbcTemplate" />
+    </bean>
     
 </beans>

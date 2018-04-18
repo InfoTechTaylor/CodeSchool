@@ -35,6 +35,11 @@
                 </a>
             </li>
         </ul>
+        <c:if test="${pageContext.request.userPrincipal.name != null}">
+            <p>Hello : ${pageContext.request.userPrincipal.name}
+                | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+            </p>
+        </c:if>
         <div>
             <p>
                 Name: <c:out value="${contact.firstName}"/> <c:out value="${contact.lastName}"/>
