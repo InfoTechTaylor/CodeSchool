@@ -48,8 +48,8 @@
                 <tbody>
                 <c:forEach items="${viewModel.sightings}" var="sighting">
                     <tr>
-                        <td>${sighting.date}</td>
-                        <td>${sighting.locationName}</td>
+                        <td><a href="/sighting/show?id=${sighting.id}">${sighting.date}</a></td>
+                        <td><a href="/location/show?id=${sighting.locationId}"> ${sighting.locationName}</a></td>
                         <td>${sighting.description}</td>
                     </tr>
                 </c:forEach>
