@@ -24,7 +24,7 @@
         <hr/>
         <div id="navbar">
             <ul class="nav nav-tabs">
-                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/home/latest">Home</a></li>
+                <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/">Home</a></li>
                 <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/person/createList">People</a></li>
                 <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/location/createList">Locations</a></li>
                 <li role="presentation" class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath}/sighting/createList">Sightings</a></li>

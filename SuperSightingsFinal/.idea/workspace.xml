@@ -58,7 +58,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="show.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/sighting/show.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="280">
@@ -68,11 +68,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="edit.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/organization/edit.jsp">
+      <file leaf-file-name="createList.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/location/createList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="26" column="118" lean-forward="false" selection-start-line="26" selection-start-column="118" selection-end-line="26" selection-end-column="118" />
+            <state relative-caret-position="280">
+              <caret line="44" column="57" lean-forward="true" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -180,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/sg/controller/PersonController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/css/custom.css" />
         <option value="$PROJECT_DIR$/src/main/java/com/sg/controller/HomeController.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/jsp/location/createList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/location/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/location/show.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/organization/createList.jsp" />
@@ -194,6 +193,7 @@
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/sighting/createList.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/sighting/edit.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/sighting/show.jsp" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/location/createList.jsp" />
       </list>
     </option>
   </component>
@@ -789,7 +789,7 @@
       <workItem from="1523663992416" duration="21792000" />
       <workItem from="1523880893099" duration="20753000" />
       <workItem from="1523906931288" duration="38081000" />
-      <workItem from="1524054411021" duration="15034000" />
+      <workItem from="1524054411021" duration="15148000" />
     </task>
     <servers />
   </component>
@@ -814,7 +814,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="95660000" />
+    <option name="totallyTimeSpent" value="95774000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -1208,14 +1208,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/location/createList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="27" column="117" lean-forward="true" selection-start-line="27" selection-start-column="117" selection-end-line="27" selection-end-column="118" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/location/edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="350">
@@ -1316,6 +1308,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
           <caret line="20" column="27" lean-forward="true" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/location/createList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="44" column="57" lean-forward="true" selection-start-line="44" selection-start-column="57" selection-end-line="44" selection-end-column="57" />
           <folding />
         </state>
       </provider>
