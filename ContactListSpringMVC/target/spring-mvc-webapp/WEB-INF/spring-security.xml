@@ -9,6 +9,9 @@
     <beans:bean id="webexpressionHandler"
                 class="org.springframework.security.web.access.expression.DefaultWebSecurityExpressionHandler"/>
 
+    <beans:bean id="encoder"
+                class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder"/>
+
     <http pattern="/login" security="none" />
     <http pattern="/error" security="none" />
     <http pattern="/css/**" security="none" />
@@ -33,7 +36,10 @@
                        access="ROLE_ADMIN" />
         <intercept-url pattern="/editContact"
                        access="ROLE_ADMIN" />
-
+        <intercept-url pattern="/displayUserList" access="ROLE_ADMIN" />
+        <intercept-url pattern="/deleteUser" access="ROLE_ADMIN" />
+        <intercept-url pattern="/displayUserForm" access="ROLE_ADMIN" />
+        <intercept-url pattern="/addUser" access="ROLE_ADMIN" />
         <intercept-url pattern="/contact/**"
                        access="ROLE_ADMIN" />
         <intercept-url pattern="/contacts"
@@ -45,7 +51,7 @@
     </http>
     <authentication-manager>
         <authentication-provider>
-            <!--<password-encoder ref="encoder"/>-->
+            <password-encoder ref="encoder"/>
             <jdbc-user-service id="userService"
                                data-source-ref="dataSource"
                                users-by-username-query=

@@ -40,4 +40,8 @@ public class User {
     public void setAuthorities(ArrayList<String> authorities) {
         this.authorities = authorities;
     }
+
+    public void addAuthority(String authority) {
+        authorities.add(authority);
+    }
 }
