@@ -14,13 +14,20 @@
     <div class="container mb-5 pl-5 pr-5 rounded">
     <div id="nav">
         <div class="mt-5">
-            <div  class="pt-5">
-                <h1>Super Sightings</h1>
+            <div  class="pt-5 row">
+                <div class="col-lg-8"><h1>Super Sightings</h1></div>
+                <div class="col-lg-4 text-right">
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <p>Hello ${pageContext.request.userPrincipal.name}!
+                        | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+                    </p>
+                </c:if>
+                </div>
             </div>
             <hr/>
             <div id="navbar">
                 <ul class="nav nav-tabs">
-                	<li role="presentation" class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath}/home/latest">Home</a></li>
+                	<li role="presentation" class="nav-item"><a class="nav-link active" href="${pageContext.request.contextPath}/">Home</a></li>
                 	<li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/person/createList">People</a></li>
                     <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/location/createList">Locations</a></li>
                     <li role="presentation" class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/sighting/createList">Sightings</a></li>

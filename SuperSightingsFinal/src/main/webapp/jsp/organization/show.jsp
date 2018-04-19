@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: n0250996
@@ -17,8 +18,15 @@
 <div class="container mb-5 pl-5 pr-5 pb-5 rounded">
 <div id="nav">
     <div class="mt-5">
-        <div  class="pt-5">
-            <h1>Super Sightings</h1>
+        <div  class="pt-5 row">
+            <div class="col-lg-8"><h1>Super Sightings</h1></div>
+            <div class="col-lg-4 text-right">
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <p>Hello ${pageContext.request.userPrincipal.name}!
+                        | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+                    </p>
+                </c:if>
+            </div>
         </div>
         <hr/>
         <div id="navbar">

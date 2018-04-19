@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="sf" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%--
   Created by IntelliJ IDEA.
   User: n0250996
@@ -19,8 +20,15 @@
 <div class="container mb-5 pl-5 pr-5 rounded">
 <div id="nav">
     <div class="mt-5">
-        <div  class="pt-5">
-            <h1>Super Sightings</h1>
+        <div  class="pt-5 row">
+            <div class="col-lg-8"><h1>Super Sightings</h1></div>
+            <div class="col-lg-4 text-right">
+                <c:if test="${pageContext.request.userPrincipal.name != null}">
+                    <p>Hello ${pageContext.request.userPrincipal.name}!
+                        | <a href="<c:url value="/j_spring_security_logout" />" > Logout</a>
+                    </p>
+                </c:if>
+            </div>
         </div>
         <hr/>
         <div id="navbar">
@@ -62,15 +70,19 @@
                             </p>
                         </td>
                         <td>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <a href="/organization/edit?id=${org.id}">
                                 Edit
                             </a>
+                            </sec:authorize>
                         </td>
                         <td>
+                            <sec:authorize access="hasRole('ROLE_ADMIN')">
                             <a href="/organization/delete?id=${org.id}"
                                onclick="return confirm('Are you sure you want to delete ${org.name}?')">
                                 Delete
                             </a>
+                            </sec:authorize>
                         </td>
                     </tr>
                 </c:forEach>
@@ -88,6 +100,7 @@
 
         <!-- add col to hold the new contact form - have it take up the other half of the row -->
         <div class="col-md-6">
+<sec:authorize access="hasRole('ROLE_ADMIN')">
             <h2>Add New Organization</h2>
             <sf:form class="form-horizontal" role="form" method="POST" action="/organization/create" modelAttribute="commandModel">
                 <div class="form-group row">
@@ -121,6 +134,7 @@
                     </div><!--end form group col -->
                 </div><!--end form group-->
             </sf:form>
+</sec:authorize>
         </div><!--end right col div-->
     </div><!--end row div-->
 </div>
