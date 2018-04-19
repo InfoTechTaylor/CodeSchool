@@ -43,9 +43,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1015">
               <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -125,7 +123,7 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/player/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
+            <state relative-caret-position="385">
               <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
               <folding />
             </state>
@@ -250,9 +248,8 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -503,6 +500,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -882,6 +880,7 @@
       <workItem from="1523882601797" duration="2700000" />
       <workItem from="1523917644569" duration="3521000" />
       <workItem from="1524054412134" duration="1383000" />
+      <workItem from="1524140331931" duration="550000" />
     </task>
     <servers />
   </component>
@@ -918,7 +917,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="125948000" />
+    <option name="totallyTimeSpent" value="126498000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="6" />
@@ -944,7 +943,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25078124" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22265625" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -1049,9 +1048,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="770">
           <caret line="86" column="9" lean-forward="true" selection-start-line="62" selection-start-column="8" selection-end-line="86" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1213,7 +1209,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="20" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1249,18 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="791">
           <caret line="415" column="46" lean-forward="false" selection-start-line="415" selection-start-column="46" selection-end-line="415" selection-end-column="46" />
-          <folding>
-            <element signature="method#createTestPlayers#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createTestTeams#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createTestPositions#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createSecondTestPositions#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#getPlayerProfileViewModel#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#getCreatePlayerViewModel#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createTestTeam#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createTestPlayer#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#saveEditPlayerCommandModel#0;class#PlayerWebServiceTest#0" expanded="false" />
-            <element signature="method#createTestPlayerWithTeamAndPositions#0;class#PlayerWebServiceTest#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1268,7 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="18" column="45" lean-forward="true" selection-start-line="18" selection-start-column="45" selection-end-line="18" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1276,9 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,7 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="59" column="54" lean-forward="false" selection-start-line="59" selection-start-column="54" selection-end-line="59" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,7 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1264">
           <caret line="71" column="62" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="71" selection-end-column="62" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1302,7 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="70">
           <caret line="2" column="27" lean-forward="false" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1317,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="24" column="61" lean-forward="false" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="61" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1325,11 +1300,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1365">
           <caret line="63" column="33" lean-forward="false" selection-start-line="63" selection-start-column="33" selection-end-line="63" selection-end-column="33" />
-          <folding>
-            <element signature="e#1246#1247#0" expanded="false" />
-            <element signature="e#1294#1295#0" expanded="false" />
-            <element signature="e#1334#1335#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1397,9 +1367,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1015">
           <caret line="46" column="29" lean-forward="false" selection-start-line="46" selection-start-column="29" selection-end-line="46" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1421,7 +1389,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/player/list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
+        <state relative-caret-position="385">
           <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
           <folding />
         </state>

@@ -42,7 +42,7 @@
     <div class="row">
         <!-- Add a col to hold the summary table - have it take up half the row -->
         <div class="col-md-6">
-            <div id="errorMessages" class="alert-danger">/
+            <div id="errorMessages" class="alert-danger">
                 <p>
                     <c:out value="${errorMessage}"/>
                 </p>

@@ -57,7 +57,7 @@
       <file leaf-file-name="spring-persistence.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/spring-persistence.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1001">
+            <state relative-caret-position="1715">
               <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
               <folding />
             </state>
@@ -67,7 +67,7 @@
       <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/controller/UserController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
+            <state relative-caret-position="938">
               <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -81,7 +81,7 @@
       <file leaf-file-name="UserDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/dao/UserDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
+            <state relative-caret-position="350">
               <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -93,7 +93,7 @@
       <file leaf-file-name="UserDaoDbImpl.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/dao/UserDaoDbImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2100">
+            <state relative-caret-position="1855">
               <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -115,7 +115,7 @@
       <file leaf-file-name="contactDetails.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/contactDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1015">
+            <state relative-caret-position="1435">
               <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
               <folding />
             </state>
@@ -125,7 +125,7 @@
       <file leaf-file-name="editContactForm.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/editContactForm.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="693">
+            <state relative-caret-position="1645">
               <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
               <folding />
             </state>
@@ -135,7 +135,7 @@
       <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/search.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="852">
+            <state relative-caret-position="1575">
               <caret line="45" column="11" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
               <folding />
             </state>
@@ -145,7 +145,7 @@
       <file leaf-file-name="customError.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customError.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
+            <state relative-caret-position="1225">
               <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
               <folding />
             </state>
@@ -246,8 +246,8 @@
     <panes>
       <pane id="Scratches" />
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
       <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -632,6 +632,7 @@
       <workItem from="1522085616611" duration="5475000" />
       <workItem from="1523828456540" duration="2074000" />
       <workItem from="1524076079862" duration="4121000" />
+      <workItem from="1524140329441" duration="552000" />
     </task>
     <servers />
   </component>
@@ -650,7 +651,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42521000" />
+    <option name="totallyTimeSpent" value="43073000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="2582" height="1416" extended-state="7" />
@@ -668,7 +669,6 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -686,6 +686,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3298639" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -748,7 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -756,9 +756,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="29" column="84" lean-forward="false" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -842,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -850,9 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="29" column="84" lean-forward="false" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -927,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -987,9 +979,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="875">
           <caret line="29" column="84" lean-forward="false" selection-start-line="29" selection-start-column="84" selection-end-line="29" selection-end-column="84" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -997,7 +986,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="420">
           <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1005,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1470">
           <caret line="42" column="11" lean-forward="false" selection-start-line="42" selection-start-column="11" selection-end-line="42" selection-end-column="11" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1013,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="595">
           <caret line="28" column="59" lean-forward="false" selection-start-line="28" selection-start-column="59" selection-end-line="28" selection-end-column="59" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,19 +1007,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="52" column="37" lean-forward="false" selection-start-line="52" selection-start-column="37" selection-end-line="52" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1711#1712#0" expanded="false" />
-            <element signature="e#1759#1760#0" expanded="false" />
-            <element signature="e#2532#2533#0" expanded="false" />
-            <element signature="e#2598#2599#0" expanded="false" />
-            <marker date="1522092709418" expanded="true" signature="734:858" ph="insert into contacts... " />
-            <marker date="1522092709418" expanded="true" signature="927:968" ph="delete from contacts... " />
-            <marker date="1522092709418" expanded="true" signature="1037:1080" ph="select * fro... contacts" />
-            <marker date="1522092709418" expanded="true" signature="1149:1305" ph="update contacts... " />
-            <marker date="1522092709418" expanded="true" signature="1379:1401" ph="select * fro... contacts" />
-            <marker date="1522092709418" expanded="true" signature="2292:2315" ph="select LAST_... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1053,9 +1026,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1330">
           <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,7 +1033,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="527">
           <caret line="129" column="21" lean-forward="false" selection-start-line="129" selection-start-column="21" selection-end-line="129" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,13 +1071,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="693">
           <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="95" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/contactDetails.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1015">
+        <state relative-caret-position="1435">
           <caret line="41" column="15" lean-forward="false" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
           <folding />
         </state>
@@ -1116,7 +1084,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="852">
+        <state relative-caret-position="1575">
           <caret line="45" column="11" lean-forward="false" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
           <folding />
         </state>
@@ -1124,7 +1092,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/editContactForm.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="693">
+        <state relative-caret-position="1645">
           <caret line="47" column="11" lean-forward="false" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
           <folding />
         </state>
@@ -1132,7 +1100,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/customError.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
+        <state relative-caret-position="1225">
           <caret line="35" column="11" lean-forward="false" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
           <folding />
         </state>
@@ -1172,7 +1140,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/dao/UserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
+        <state relative-caret-position="350">
           <caret line="12" column="15" lean-forward="false" selection-start-line="12" selection-start-column="15" selection-end-line="12" selection-end-column="15" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1182,7 +1150,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/dao/UserDaoDbImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
+        <state relative-caret-position="1855">
           <caret line="64" column="60" lean-forward="false" selection-start-line="64" selection-start-column="60" selection-end-line="64" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1202,7 +1170,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/spring-persistence.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1001">
+        <state relative-caret-position="1715">
           <caret line="49" column="11" lean-forward="false" selection-start-line="49" selection-start-column="11" selection-end-line="49" selection-end-column="11" />
           <folding />
         </state>
@@ -1210,7 +1178,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/sg/contactlistspringmvc/controller/UserController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
+        <state relative-caret-position="938">
           <caret line="71" column="1" lean-forward="false" selection-start-line="71" selection-start-column="1" selection-end-line="71" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />

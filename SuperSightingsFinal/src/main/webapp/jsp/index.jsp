@@ -64,7 +64,7 @@
                 <ul class="pagination">
                     <c:forEach items="${viewModel.pageNumbers}" var="pageNumber">
                         <!-- do math for page number cause our page utils are wrong -->
-                        <li class="page-item"><a href="/home/latest?offset=${(pageNumber-1) * 5}" class="page-link">${pageNumber}</a></li>
+                        <li class="page-item"><a href="/?offset=${(pageNumber-1) * 5}" class="page-link">${pageNumber}</a></li>
                     </c:forEach>
                 </ul>
             </div>
