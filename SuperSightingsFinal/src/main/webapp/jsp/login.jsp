@@ -14,6 +14,7 @@
     <title>Login</title>
     <link href="${pageContext.request.contextPath}/css/bootstrap.css" rel="stylesheet">
     <link href="${pageContext.request.contextPath}/css/custom.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="${pageContext.request.contextPath}/jsp/images/favicon.png" />
 </head>
 <body>
 <div class="container mb-5 pl-5 pr-5 pb-5 rounded">
