@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> Dover Comfort Food - Contact Us </title>
+     <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+     <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+     <style>
+          #contactForm {
+               padding-top: 20px;
+               padding-bottom: 20px;
+          }
+
+          .rightAlign {
+               display: inline-block;
+               width: 400px;
+               text-align: right;
+          }
+          #submit {
+               width: 400px;
+               text-align: right
+          }
+
+          .required {
+               font-weight: bold;
+          }
+
+
+     </style>
+</head>
+<body>
+     <noscript>
+         <div style="border: 1px solid red; padding: 10px">
+           <span style="color:red">JavaScript is not enabled! This site works best with javascript enabled. </span>
+         </div>
+     </noscript>
+
+     <div id="header">
+          <h1> Dover Comfort Food </h1>
+     </div>
+
+     <div id="navigation">
+          <!-- <hr /> -->
+          <ul class="nav nav-pills">
+               <li class="nav-item">
+                    <a class="nav-link active glyphicon glyphicon-home" href="index.html" target="_blank"> </a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="menu.html" target="_blank"> Menu </a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="contactUs.html" target="_blank"> Contact Us </a>
+               </li>
+          </ul>
+          <!-- <hr /> -->
+     </div>
+
+     <div id="contactForm" class="container">
+
+          <form action="submit.html" method="POST">
+               <div class="form-group row">
+                    <label class="col-form-label col-sm-2 required" for="name" > Name: </label>
+                    <div class="col-sm-5">
+                         <input class="form-control" type="text" name="name"  required />
+                    </div>
+               </div>
+               <div class="form-group row">
+                    <label for="email" class="col-form-label col-sm-2"> Email: </label>
+                    <div class="col-sm-5">
+                         <input class="form-control" type="text" name="email" />
+                    </div>
+               </div>
+               <div class="form-group row">
+                    <label for="phone" class="col-form-label col-sm-2"> Phone: </label>
+                    <div class="col-sm-5">
+                         <input class="form-control" type="text" name="phone" />
+                    </div>
+               </div>
+
+               <div class="form-group row">
+                    <label for="reason" class="col-form-label col-sm-2"> Reason for Inquiry: </label>
+                    <div class="col-sm-5">
+                         <select class="form-control" id="reason" name="reason">
+                              <option value="default" selected> Catering </option>
+                              <option value="privateParty"> Private Party </option>
+                              <option value="feedback"> Feedback </option>
+                              <option value="Other"> Other </option>
+                         </select>
+                    </div>
+               </div>
+
+               <div class="form-group row">
+                    <label for="info" class="col-form-label col-sm-2"> Additional Information </label>
+                    <div class="col-sm-5">
+                         <textarea class="form-control" id="info"></textarea>
+                    </div>
+               </div>
+
+               <div class="form-group row">
+                    <label for="yesNo" class="col-form-label col-sm-2"> Have you been to the restaurant? </label>
+                    <div class="col-sm-5">
+                         <input type="radio" id="choice1" name="yesNo" value="No" />
+                         <label for="choice1" > No </label>
+                         <input type="radio" id="choice2" name="yesNo" value="Yes" />
+                         <label for="choice2" > Yes </label>
+                    </div>
+               </div>
+
+               <div class="form-group row">
+                    <label for="bestDays" class="col-form-label col-sm-2"> Best days to contact you: </label>
+                    <div class="col-sm-5">
+                         <input type="checkbox" id="monday" name="bestDays" value="monday" />
+                         <label for="monday" > M </label>
+                         <input type="checkbox" id="tuesday" name="bestDays" value="tuesday" />
+                         <label for="tuesday" > T </label>
+                         <input type="checkbox" id="wednesday" name="bestDays" value="wednesday" />
+                         <label for="wednesday"> W </label>
+                         <input type="checkbox" id="thursday" name="bestDays" value="thursday" />
+                         <label for="Thursday"> Th </label>
+                         <input type="checkbox" id="friday" name="bestDays" value="friday" />
+                         <label for="friday"> F </label>
+                    </div>
+               </div>
+
+               <div id=submit>
+                    <input class="btn" type="submit" name="submit" value="Send Request"  />
+               </div>
+          </form>
+
+
+     </div>
+
+     <div id="footer">
+          <!-- <hr /> -->
+          <footer>
+               <p> 125 Comfort Lane, Dover , NH, 03820 </p>
+               <p> (603) 888-8888 </p>
+          </footer>
+     </footer>
+
+
+</body>
+</html>

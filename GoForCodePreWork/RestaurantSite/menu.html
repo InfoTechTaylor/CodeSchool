@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> Dover Comfort Food - Menu </title>
+     <link href="./bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet" type="text/css" />
+     <link href="restaurantStyles.css" rel="stylesheet" type="text/css" />
+     <style>
+          #mainMenu {
+               background-color: #F8EDF1;
+               text-align: center;
+          }
+          /* #row1, #row2 {
+               display: flex;
+               flex-direction: row;
+               justify-content: space-around;
+          }
+          #burgerAndFries, #hotDogAndChips, #italianSausageAndPeppers, #tenderloinSandwichAndChips, #houseSalad, #brisketSandwichAndFries {
+               display: flex;
+               flex-direction: column;
+          }
+          #mainMenu p {
+               display: inline;
+               padding: 0;
+               margin: 0;
+          }
+          #navigation {
+               margin-top: 0;
+          } */
+
+          table {
+               display: inline-block;
+               text-align: left;
+               margin-top: 20px;
+               border: 2px solid;
+               width: 400px;
+               background-color: #FFFFFF;
+               padding: 5px;
+          }
+          caption{
+               text-align: left;
+               text-decoration: underline;
+          }
+          td {
+               width: 200px;
+          }
+          tr:nth-child(odd) {
+               background-color: #9B999C;
+          }
+
+
+     </style>
+</head>
+<body>
+     <noscript>
+         <div style="border: 1px solid red; padding: 10px">
+           <span style="color:red">JavaScript is not enabled! This site works best with javascript. </span>
+         </div>
+     </noscript>
+
+     <div id="header">
+          <h1> Dover Comfort Food  </h1>
+     </div>
+
+     <div id="navigation">
+          <!-- <hr /> -->
+          <ul class="nav nav-pills">
+               <li class="nav-item">
+                    <a class="nav-link active glyphicon glyphicon-home" href="index.html" target="_blank"> </a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="menu.html" target="_blank"> Menu </a>
+               </li>
+               <li class="nav-item">
+                    <a class="nav-link" href="contactUs.html" target="_blank"> Contact Us </a>
+               </li>
+          </ul>
+          <!-- <hr /> -->
+     </div>
+
+     <div id="mainMenu">
+          <div class="container">
+               <div id="row1" class="row">
+                    <div id="burgerAndFries" class="col-sm-4">
+                         <h3> Burger and Fries </h3>
+                         <p><em> An American Classic! </em></p>
+                         <p> Your choice - with or without cheese </p>
+                         <p> Pickle, onion, tomato, and lettuce </p>
+                         <p> Served with our famous thick cut </p>
+                         <p> french fries </p>
+                         <p> $7.95 </p>
+                    </div>
+
+                    <div id="hotDogAndChips" class="col-sm-4">
+                         <h3> Hot Dog and Chips </h3>
+                         <p><em> A Summer Classic! </em></p>
+                         <p> Your choice - white or wheat bun </p>
+                         <p> Relish, mustard, and ketchup </p>
+                         <p> Served withour house-made chips </p>
+                         <p> $7.95 </p>
+                    </div>
+
+                    <div id="italianSausageAndPeppers" class="col-sm-4">
+                         <h3> Italian Sausage and Peppers </h3>
+                         <p><em> An All-Time Favorite!! </em></p>
+                         <p> Your choice - mild or spicy </p>
+                         <p> Cole Slaw </p>
+                         <p> Served with garlic mashers </p>
+                         <p> $10.95 </p>
+                    </div>
+               </div>
+
+               <div id="row2" class="row">
+                    <div id="tenderloinSandwichAndChips" class="col-sm-4">
+                         <h3> Tenderloin Sandwich and Chips </h3>
+                         <p><em> Really Hits the Spot! </em></p>
+                         <p> Plain or Sesame Seed Bun </p>
+                         <p> Pickle, onion, tomato, and lettuce </p>
+                         <p> Served with our house-made chips </p>
+                         <p> $8.95 </p>
+                    </div>
+
+                    <div id="houseSalad" class="col-sm-4">
+                         <h3> House Salad </h3>
+                         <p><em> On the Lighter Side </em></p>
+                         <p> Your choice - with or without cheese </p>
+                         <p> Iceberg lettuc, tomatoes, peppers </p>
+                         <p> Thousand Island or Ranch Dressing </p>
+                         <p> Served with a dinner roll </p>
+                         <p> $6.95 </p>
+                    </div>
+
+                    <div id="brisketSandwichAndFries" class="col-sm-4">
+                         <h3> Brisket Sandwich and Fries </h3>
+                         <p><em> A Taste of Texas! </em></p>
+                         <p> Smoked Brisket on thick-cut Texas </p>
+                         <p> Toast </p>
+                         <p> Cole Slaw </p>
+                         <p> Served with our famous thick-cut </p>
+                         <p> french fries </p>
+                         <p> $6.95 </p>
+                    </div>
+               </div>
+
+               <div id="beverages" class="column">
+                    <table>
+                         <caption> Beverages </caption>
+                         <tr>
+                              <td> Root Beer </td>
+                              <td> $3.00 </td>
+                         </tr>
+                         <tr>
+                              <td> Bottled Water </td>
+                              <td> $1.25 </td>
+                         </tr>
+                         <tr>
+                              <td> Lemonade </td>
+                              <td> $1.00 </td>
+                         </tr>
+                         <tr>
+                              <td> Iced Tea </td>
+                              <td> $1.25 </td>
+                         </tr>
+                    </table>
+               </div>
+
+     </div>
+     </div>
+
+     <div id="footer">
+          <!-- <hr /> -->
+          <footer>
+               <p> 125 Comfort Lane, Dover , NH, 03820 </p>
+               <p> (603) 888-8888 </p>
+          </footer>
+     </div>
+
+
+</body>
+</html>

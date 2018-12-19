@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+     <title> Display Evens </title>
+     <script type="text/JavaScript" src="displayEvens.js"></script>
+     <!-- BOOTSTRAP: Latest compiled and minified CSS -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+     <!-- BOOTSTRAP: Optional theme -->
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+     <!-- BOOTSRAP: Latest compiled and minified JavaScript -->
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+     <!-- jquery required for bootstrap -->
+     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+</head>
+<body>
+
+     <div class="container">
+          <h1> Display Evens </h1>
+
+          <form name="displayEvensForm" onsubmit="return displayEvens();">
+               <div class="form-group row" id="startingNumDiv">
+                    <label for="startingNum" class="col-sm-2 col-form-label"> Starting Number </label>
+                    <div class="col-sm-2">
+                         <input class="form-control" type="text" id="startingNum" name="startingNum" /> <br />
+                    </div>
+               </div>
+               <div class="form-group row" id="endingNumbDiv">
+                    <label for="endingNum" class="col-sm-2 col-form-label"> Ending Number </label>
+                    <div class="col-sm-2">
+                         <input class="form-control" type="text" id="endingNum" name="endingNum" /> <br />
+                    </div>
+               </div>
+               <div class="form-group row" id="stepDiv">
+                    <label for="step" class="col-sm-2 col-form-label"> Step </label>
+                    <div class="col-sm-2">
+                         <input class="form-control" type="text" id="step" name="step" /> <br />
+                    </div>
+               </div>
+               <div class="form-group row"  onclick="displayEvens();" id="submitDiv">
+                    <input class="btn" type="submit" id="submit" value="Display Evens" />
+               </div>
+          </form>
+          <div id="evenNumResults" style="display:none;">
+               <p> Here are the even numbers between <span id="startingNumDisplay"></span> and  <span id="endingNumDisplay"></span> by <span id="stepDisplay"></span> 's: <br />
+               </p>
+               <div id="numbers"></div>
+          </div>
+     </div>
+</body>
+</html>

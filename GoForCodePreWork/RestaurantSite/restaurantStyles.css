@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'artBrewery';
+    src: url('fonts/artBrewery.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+h1 {
+     font-family: artBrewery;
+     font-size: 80px;
+}
+h3 {
+     font-family: artBrewery;
+     font-size: 30px;
+}
+
+body {
+     font-family: 'Arial';
+     border: 0;
+     margin: 0;
+}
+
+#header, #footer {
+     background-color: #A3E7EA;
+     font-family: 'Arial';
+     font-weight: bold;
+     text-align: center;
+     padding-top: 10px;
+     padding-bottom: 10px;
+}
+
+#navigation {
+     background-color: #9B999C;
+     padding: 10px;
+}
+
+a:visited {
+     color: #F8EDF1;
+}
+a:hover {
+     font-weight: bold;
+}
+a:active {
+     text-decoration: none;
+}
+a:link {
+     color: #F8EDF1;
+}
+a {
+     padding-left: 20px;
+     color: #F8EDF1s;
+}
+
+hr {
+     display: inline-block;
+     width: 100%;
+     color: black;
+}
+
+/* original solution by https://codepen.io/Rowno/pen/Afykb */
+
+.carousel-fade .carousel-inner .item {
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+.carousel-fade .carousel-inner .item,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    opacity: 0;
+}
+.carousel-fade .carousel-inner .active,
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+    opacity: 1;
+}
+.carousel-fade .carousel-inner .next,
+.carousel-fade .carousel-inner .prev,
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+    left: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+.carousel-fade .carousel-control {
+    z-index: 2;
+}

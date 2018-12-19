@@ -1,0 +1,16 @@
+#Compilations
+*.class
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# Temp files #
+.DS_Store
+*~
+
+/Spring MVC Archetype Project/archetype-spring-mvc/target
